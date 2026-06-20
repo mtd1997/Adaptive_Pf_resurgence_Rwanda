@@ -70,5 +70,8 @@ scripts/
 
 *Plasmodium falciparum* 3D7 reference genome (PlasmoDB release 68).
 
+---
 
+# Availability
 
+This repository accompanies the manuscript describing malaria resurgence in Rwanda and will continue to be updated with the downstream analysis scripts used to generate the final figures and supplementary analyses.
