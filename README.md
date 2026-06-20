@@ -70,11 +70,5 @@ scripts/
 
 *Plasmodium falciparum* 3D7 reference genome (PlasmoDB release 68).
 
----
-
-# Variant annotation
-
-Functional annotation was performed using SnpEff configured with the *Plasmodium falciparum* 3D7 database.
-
 
 
