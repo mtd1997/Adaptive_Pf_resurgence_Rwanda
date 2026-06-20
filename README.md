@@ -72,9 +72,5 @@ scripts/
 
 Functional annotation was performed using SnpEff configured with the *Plasmodium falciparum* 3D7 database.
 
----
 
-# Availability
-
-This repository accompanies the manuscript describing malaria resurgence in Rwanda and will continue to be updated with the downstream analysis scripts used to generate the final figures and supplementary analyses.
 
