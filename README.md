@@ -4,17 +4,17 @@
 
 
 ## Overview
-```text
+
 This repository contains the computational workflow used to process Oxford Nanopore amplicon sequencing data, perform variant calling, annotate variants, and perform population genomic and antimalarial resistance analyses described in the associated manuscript.
-```
+
 ---
 
 ## Data availability
 
-```text
+
 The raw sequencing data (FASTQ files) and variant files (VCF and gVCF) generated in this study have been deposited in the Gene Expression Omnibus (GEO) repository with accession number GSE318440 - https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE318440.
 Because of their size, sequencing data are not included in this repository.
-```
+
 ---
 
 # Repository structure
