@@ -1,65 +1,207 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# =============================================================================
+# align_minimap2.sh — align reads to the 3D7 reference and summarise coverage
+#
+# WHAT IT DOES
+#   For each sample, aligns the Nanopore reads to the P. falciparum 3D7
+#   reference with minimap2, keeps only mapped reads, sorts and indexes the
+#   result, and collects per-sample mapping statistics and per-amplicon depth.
+#
+#   The per-amplicon mean depths are written to one table, coverage_matrix.tsv,
+#   which is the input for the sequencing-depth panel of Figure 2 and for the
+#   coverage threshold applied later at the population-filtering stage.
+#
+# INPUTS
+#   ${MERGED_DIR}   per-sample FASTQ files named <SampleID>.fastq.gz (stage 01)
+#   ${REF_GENOME}   P. falciparum 3D7 v3 reference, PlasmoDB release 68
+#   ${AMPLICON_BED} BED file of the targeted amplicons. Column 4 must hold the
+#                   gene name; the coverage table takes its columns from this
+#                   file, in this order, so adding or removing a locus needs no
+#                   change to this script.
+#
+# OUTPUTS
+#   ${BAM_DIR}/<SampleID>.bam(.bai)        sorted, indexed alignments
+#   ${QC_DIR}/depth/<SampleID>.depth.txt   per-base depth within the amplicons
+#   ${QC_DIR}/mapping/<SampleID>.flagstat.txt
+#   ${QC_DIR}/mapping/<SampleID>.idxstats.txt
+#   ${TABLE_DIR}/coverage_matrix.tsv       mean depth per sample per amplicon
+#   ${TABLE_DIR}/mapping_summary.tsv       reads, mapped reads, mapped % per sample
+#   ${LOG_DIR}/align_failures.txt          samples that failed, if any
+#
+# REQUIRES
+#   minimap2 2.30-r1287, samtools 1.22.1, bedtools 2.31
+#
+# USAGE
+#   bash scripts/02_alignment/align_minimap2.sh
+#
+#   Samples with an existing BAM are skipped, so an interrupted run can simply
+#   be restarted. To force a sample to be redone, delete its BAM first.
+#
+# ALIGNMENT SETTINGS
+#   -ax map-ont      Nanopore long-read preset
+#   --secondary=no   report only the primary alignment for each read, so that
+#                    depth is not inflated by multi-mapping within the
+#                    amplicons
+#   -p 0.9           only keep secondary chains scoring within 90% of the best
+#   -F 4 (samtools)  drop unmapped reads
+#
+# Part of: Diallo et al., Nature Communications (2026)
+#          https://github.com/mtd1997/Adaptive_Pf_resurgence_Rwanda
+# =============================================================================
 
 set -euo pipefail
 
-# Align Oxford Nanopore reads to the P. falciparum 3D7 reference
-# genome using minimap2 and generate BAM quality statistics.
+# --- load shared paths ---------------------------------------------------------
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "${SCRIPT_DIR}/../../config.sh"
 
-PROJECT_DIR="."
+# --- check the tools are available ------------------------------------------------
+for TOOL in minimap2 samtools bedtools; do
+    if ! command -v "${TOOL}" >/dev/null 2>&1; then
+        echo "ERROR: ${TOOL} not found on PATH." >&2
+        echo "       conda env create -f environment.yml && conda activate pf-rwanda" >&2
+        exit 1
+    fi
+done
 
-FASTQ_DIR="${PROJECT_DIR}/trimmed_fastq"
-REF="${PROJECT_DIR}/PlasmoDB-68_Pfalciparum3D7_Genome.fasta"
-BED="${PROJECT_DIR}/amplicons.bed"
+# --- check the inputs exist --------------------------------------------------------
+for FILE in "${REF_GENOME}" "${AMPLICON_BED}"; do
+    if [ ! -f "${FILE}" ]; then
+        echo "ERROR: required file not found: ${FILE}" >&2
+        echo "       Check the paths set in config.sh." >&2
+        exit 1
+    fi
+done
 
-BAM_DIR="${PROJECT_DIR}/bam_files"
-DEPTH_DIR="${PROJECT_DIR}/depth_files"
-SUMMARY_DIR="${PROJECT_DIR}/mapping_summaries"
+if [ ! -d "${MERGED_DIR}" ]; then
+    echo "ERROR: FASTQ folder not found: ${MERGED_DIR}" >&2
+    exit 1
+fi
 
-mkdir -p "${BAM_DIR}"
-mkdir -p "${DEPTH_DIR}"
-mkdir -p "${SUMMARY_DIR}"
+shopt -s nullglob
+FASTQ_FILES=("${MERGED_DIR}"/*.fastq.gz)
+shopt -u nullglob
 
-COVERAGE_MATRIX="${PROJECT_DIR}/coverage_matrix.tsv"
+if [ "${#FASTQ_FILES[@]}" -eq 0 ]; then
+    echo "ERROR: no .fastq.gz files in ${MERGED_DIR}" >&2
+    echo "       Run stage 01 first." >&2
+    exit 1
+fi
 
-echo -e "Sample\tMSP2\tCSP\tMDR1\tCRT\tK13" > "${COVERAGE_MATRIX}"
+DEPTH_DIR="${QC_DIR}/depth"
+MAPPING_DIR="${QC_DIR}/mapping"
+mkdir -p "${BAM_DIR}" "${DEPTH_DIR}" "${MAPPING_DIR}" "${TABLE_DIR}" "${LOG_DIR}"
 
-for fq in "${FASTQ_DIR}"/*.fastq.gz
-do
+# --- build the minimap2 index once -------------------------------------------------
+# Without this, minimap2 re-indexes the reference for every sample, which for a
+# study of this size costs hours of pointless work.
+REF_INDEX="${REF_GENOME%.fasta}.mmi"
+if [ ! -f "${REF_INDEX}" ]; then
+    echo "Building minimap2 index (first run only)..."
+    minimap2 -x map-ont -d "${REF_INDEX}" "${REF_GENOME}"
+fi
 
-    sample=$(basename "${fq}" _trimmed.fastq.gz)
+# --- read the amplicon names from the BED file --------------------------------------
+# bedtools coverage reports intervals in the order they appear in the BED file,
+# so the header built here and the values collected below always line up.
+GENE_NAMES="$(awk 'NF >= 4 {printf "\t%s", $4}' "${AMPLICON_BED}")"
+N_GENES="$(awk 'NF >= 4' "${AMPLICON_BED}" | wc -l | tr -d ' ')"
 
-    echo "Processing ${sample}"
+if [ "${N_GENES}" -eq 0 ]; then
+    echo "ERROR: no usable intervals in ${AMPLICON_BED}" >&2
+    echo "       Expected at least 4 columns, with the gene name in column 4." >&2
+    exit 1
+fi
 
-    minimap2 \
-        -t 8 \
-        -ax map-ont \
-        --secondary=no \
-        -p 0.9 \
-        "${REF}" \
-        "${fq}" \
-    | samtools view -b -F 4 \
-    | samtools sort -o "${BAM_DIR}/${sample}.bam"
+COVERAGE_MATRIX="${TABLE_DIR}/coverage_matrix.tsv"
+MAPPING_SUMMARY="${TABLE_DIR}/mapping_summary.tsv"
+FAILURE_LOG="${LOG_DIR}/align_failures.txt"
 
-    samtools index "${BAM_DIR}/${sample}.bam"
+printf "Sample%s\n" "${GENE_NAMES}"                           > "${COVERAGE_MATRIX}"
+printf "Sample\ttotal_reads\tmapped_reads\tmapped_percent\n"  > "${MAPPING_SUMMARY}"
+: > "${FAILURE_LOG}"
 
-    samtools depth -a "${BAM_DIR}/${sample}.bam" \
-        > "${DEPTH_DIR}/${sample}.depth.txt"
+echo "============================================================"
+echo "Reference  : $(basename "${REF_GENOME}")"
+echo "Amplicons  : ${N_GENES} ($(echo "${GENE_NAMES}" | tr '\t' ' ' | sed 's/^ //'))"
+echo "Samples    : ${#FASTQ_FILES[@]}"
+echo "BAM output : ${BAM_DIR}"
+echo "Threads    : ${THREADS}"
+echo "============================================================"
 
-    samtools flagstat "${BAM_DIR}/${sample}.bam" \
-        > "${SUMMARY_DIR}/${sample}.flagstat.txt"
+# --- align each sample ---------------------------------------------------------------
+INDEX=0
+ALIGNED=0
+SKIPPED=0
+FAILED=0
 
-    samtools idxstats "${BAM_DIR}/${sample}.bam" \
-        > "${SUMMARY_DIR}/${sample}.idxstats.txt"
+for FASTQ in "${FASTQ_FILES[@]}"; do
 
-    MSP2=$(bedtools coverage -a "${BED}" -b "${BAM_DIR}/${sample}.bam" -mean | awk '$4=="MSP2"{print $NF}')
-    CSP=$(bedtools coverage -a "${BED}" -b "${BAM_DIR}/${sample}.bam" -mean | awk '$4=="CSP"{print $NF}')
-    MDR1=$(bedtools coverage -a "${BED}" -b "${BAM_DIR}/${sample}.bam" -mean | awk '$4=="MDR1"{print $NF}')
-    CRT=$(bedtools coverage -a "${BED}" -b "${BAM_DIR}/${sample}.bam" -mean | awk '$4=="CRT"{print $NF}')
-    K13=$(bedtools coverage -a "${BED}" -b "${BAM_DIR}/${sample}.bam" -mean | awk '$4=="K13"{print $NF}')
+    # Stage 01 names files <SampleID>.fastq.gz, so stripping .fastq.gz gives the
+    # sample ID directly.
+    SAMPLE="$(basename "${FASTQ}" .fastq.gz)"
+    INDEX=$((INDEX + 1))
+    BAM="${BAM_DIR}/${SAMPLE}.bam"
 
-    echo -e "${sample}\t${MSP2}\t${CSP}\t${MDR1}\t${CRT}\t${K13}" \
-        >> "${COVERAGE_MATRIX}"
+    if [ -f "${BAM}" ] && [ -f "${BAM}.bai" ]; then
+        echo "  [${INDEX}/${#FASTQ_FILES[@]}] ${SAMPLE}: already aligned, skipping"
+        SKIPPED=$((SKIPPED + 1))
+    else
+        echo "  [${INDEX}/${#FASTQ_FILES[@]}] ${SAMPLE}"
+
+        # A single failed sample should not abort a run of over a thousand, so
+        # errors are caught here and recorded rather than stopping the loop.
+        if ! {
+            minimap2 -t "${THREADS}" -ax map-ont --secondary=no -p 0.9 \
+                     "${REF_INDEX}" "${FASTQ}" 2>/dev/null \
+            | samtools view -b -F 4 - \
+            | samtools sort -@ "${THREADS}" -o "${BAM}" - 2>/dev/null \
+            && samtools index "${BAM}"
+        }; then
+            echo "    FAILED: ${SAMPLE}" >&2
+            echo "${SAMPLE}" >> "${FAILURE_LOG}"
+            rm -f "${BAM}" "${BAM}.bai"
+            FAILED=$((FAILED + 1))
+            continue
+        fi
+        ALIGNED=$((ALIGNED + 1))
+    fi
+
+    # --- per-sample statistics ---------------------------------------------------
+    samtools flagstat "${BAM}" > "${MAPPING_DIR}/${SAMPLE}.flagstat.txt"
+    samtools idxstats "${BAM}" > "${MAPPING_DIR}/${SAMPLE}.idxstats.txt"
+
+    # Depth is restricted to the amplicon intervals. Using -a across the whole
+    # 23 Mb genome would write mostly zeros, at a few hundred MB per sample.
+    samtools depth -a -b "${AMPLICON_BED}" "${BAM}" \
+        > "${DEPTH_DIR}/${SAMPLE}.depth.txt"
+
+    # --- mean depth per amplicon -------------------------------------------------
+    # One bedtools call covers every amplicon. The original script called
+    # bedtools once per gene, re-reading the whole BAM each time.
+    COVERAGE_ROW="$(bedtools coverage -a "${AMPLICON_BED}" -b "${BAM}" -mean \
+                    | awk '{printf "\t%s", $NF}')"
+    printf "%s%s\n" "${SAMPLE}" "${COVERAGE_ROW}" >> "${COVERAGE_MATRIX}"
+
+    # --- mapped read counts --------------------------------------------------------
+    awk -v s="${SAMPLE}" '
+        /in total/        { total  = $1 }
+        / mapped \(/      { if (mapped == "") mapped = $1 }
+        END {
+            pct = (total > 0) ? (100 * mapped / total) : 0
+            printf "%s\t%s\t%s\t%.2f\n", s, total, mapped, pct
+        }' "${MAPPING_DIR}/${SAMPLE}.flagstat.txt" >> "${MAPPING_SUMMARY}"
 
 done
 
-echo "Alignment completed."
+# --- summary ---------------------------------------------------------------------------
+echo "============================================================"
+echo "Aligned : ${ALIGNED}"
+echo "Skipped : ${SKIPPED} (already had a BAM)"
+echo "Failed  : ${FAILED}"
+[ "${FAILED}" -gt 0 ] && echo "          see ${FAILURE_LOG}"
+echo ""
+echo "Coverage matrix : ${COVERAGE_MATRIX}"
+echo "Mapping summary : ${MAPPING_SUMMARY}"
+echo "Next            : bash scripts/03_variant_calling/run_clair3.sh"
+echo "============================================================"
