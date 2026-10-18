@@ -1,0 +1,46 @@
+========================================================================
+METADATA PREPARATION REPORT
+========================================================================
+Input:     /Volumes/MTD_drive/Manuscript_review_analysis_04-08-2026/metadata_05-08-2026.tsv
+Generated: 2026-10-18 16:03:52 CEST
+
+Rows read: 1176
+Unique sample identifiers: 1176
+
+Samples per period:
+  Baseline-Kigali      257
+  Resurgence           919
+
+Samples per region:
+  Hotspot              226
+  Kigali               950
+
+Age banding:
+  <5         64
+  5-14       167
+  15-24      268
+  25-34      252
+  35-49      141
+  50+        106
+  missing    178
+
+------------------------------------------------------------------------
+OUTPUT
+------------------------------------------------------------------------
+
+Public file (committed to git, published with the repository):
+  samples_metadata.tsv
+  columns: SAMPLE, period, region, district, year, age_band, sex, k13_status
+
+Internal file (gitignored, stays on this machine):
+  samples_metadata_internal.tsv
+  columns: SAMPLE, period, period_original, region, district, health_centre, year, age, age_band, sex, k13_status
+
+Removed from the public file:
+  age            exact value, replaced by age_band
+  health_centre  identifying in combination with date and age
+  period_original  working label, superseded by period
+
+========================================================================
+Files written.
+========================================================================

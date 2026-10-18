@@ -53,3 +53,6 @@ results/logs/*
 # Logs and scratch
 *.log
 tmp/
+
+# Metadata with exact age and health centre - never commit
+data/metadata/samples_metadata_internal.tsv
