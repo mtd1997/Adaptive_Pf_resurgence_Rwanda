@@ -45,3 +45,8 @@ mkdir -p "${PROCESSED_DIR}" "${FIGURE_DIR}" "${TABLE_DIR}"
 MERGED_DIR="${DATA_ROOT}/fastq_merged"
 QC_DIR="${RESULTS_DIR}/qc"
 LOG_DIR="${RESULTS_DIR}/logs"
+
+# --- Clair3 model: rerio models, downloaded separately ---
+# git clone https://github.com/nanoporetech/rerio
+# python3 rerio/download_model.py --clair3
+CLAIR3_MODEL_DIR="${HOME}/rerio/clair3_models"
