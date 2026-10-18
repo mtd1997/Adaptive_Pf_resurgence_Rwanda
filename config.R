@@ -27,3 +27,7 @@ FIG_WIDTH <- 10; FIG_HEIGHT <- 7; FIG_DPI <- 300
 
 # --- stage 01: merged per-sample FASTQ files ---
 MERGED_DIR <- file.path(PROJECT_DIR, "data", "fastq_merged")
+
+# Selection-scan inputs (Figure 5)
+SELECTION_VCF <- "/Volumes/MTD_drive/Manuscript_review_analysis_04-08-2026/final.vcf.gz"
+SELECTION_ANNOTATION <- "/Volumes/MTD_drive/Manuscript_review_analysis_04-08-2026/snpeff_annotation_extraction/final_annotation/annotated_variants_snpeff_final.tsv"
