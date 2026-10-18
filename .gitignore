@@ -59,3 +59,6 @@ data/metadata/samples_metadata_internal.tsv
 
 # Stray device output from Rscript
 Rplots.pdf
+
+# Any internal metadata file, whatever the roster is called
+data/metadata/*_internal.tsv

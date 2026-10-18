@@ -37,3 +37,6 @@ GADM_DIR <- "~/Downloads"
 
 # Supplementary Figure S1b: monthly malaria case counts
 MALARIA_CASES_FILE <- "/Volumes/MTD_drive/Manuscript_review_analysis_04-08-2026/Malaria cases Kigali 2023vs2024.xlsx"
+
+# Figure 4: population VCF for the distance matrix
+POPGEN_VCF <- "/Volumes/MTD_drive/manuscript_data_09-11-2025/final_analysis_19-12-2025/popgen_R_analysis/all_1179_withDhpsDhfr.vcf.gz"

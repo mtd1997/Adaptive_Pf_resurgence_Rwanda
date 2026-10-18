@@ -119,12 +119,43 @@ INPUT_FILE <- get_argument("--input")
 
 DRY_RUN <- "--dry-run" %in% arguments
 
+# ------------------------------------------------------------------------------
+# --output-name lets a second roster be prepared alongside the main one.
+#
+# This exists for Figure 4. The published Figure 4 was built from an earlier
+# sample roster that still contained RW_SN94, a Kigali baseline sample later
+# excluded from the 1,176-sample analysis set. Keeping that roster in the
+# repository, de-identified the same way as the main one, is what lets the
+# Figure 4 scripts reproduce the published numbers exactly rather than coming
+# out one sample short.
+#
+#   --output-name samples_metadata            the default, the main roster
+#   --output-name samples_metadata_figure04   the Figure 4 roster
+#
+# Whatever name is given, the internal file is always "<name>_internal.tsv",
+# which .gitignore excludes by pattern.
+# ------------------------------------------------------------------------------
+
+OUTPUT_NAME <- get_argument("--output-name", "samples_metadata")
+
+if (grepl("[/\\\\]", OUTPUT_NAME)) {
+  stop(
+    "--output-name is a file name, not a path: ", OUTPUT_NAME,
+    "\nThe files are always written into data/metadata/.",
+    call. = FALSE
+  )
+}
+
 if (is.null(INPUT_FILE)) {
   stop(
     "No input file given.\n\n",
     "Usage:\n",
     "  Rscript scripts/00_metadata/prepare_metadata.R \\\n",
-    "      --input /path/to/metadata_05-08-2026.tsv [--dry-run]\n",
+    "      --input /path/to/metadata_05-08-2026.tsv [--dry-run]\n\n",
+    "To prepare a second roster under a different name:\n",
+    "  Rscript scripts/00_metadata/prepare_metadata.R \\\n",
+    "      --input /path/to/older_metadata.tsv \\\n",
+    "      --output-name samples_metadata_figure04\n",
     call. = FALSE
   )
 }
@@ -137,9 +168,11 @@ OUTPUT_DIR <- file.path(PROJECT_ROOT, "data", "metadata")
 
 dir.create(OUTPUT_DIR, recursive = TRUE, showWarnings = FALSE)
 
-PUBLIC_FILE   <- file.path(OUTPUT_DIR, "samples_metadata.tsv")
-INTERNAL_FILE <- file.path(OUTPUT_DIR, "samples_metadata_internal.tsv")
-REPORT_FILE   <- file.path(OUTPUT_DIR, "metadata_preparation_report.txt")
+PUBLIC_FILE   <- file.path(OUTPUT_DIR, paste0(OUTPUT_NAME, ".tsv"))
+INTERNAL_FILE <- file.path(OUTPUT_DIR, paste0(OUTPUT_NAME, "_internal.tsv"))
+REPORT_FILE   <- file.path(
+  OUTPUT_DIR, paste0(OUTPUT_NAME, "_preparation_report.txt")
+)
 
 
 # ==============================================================================

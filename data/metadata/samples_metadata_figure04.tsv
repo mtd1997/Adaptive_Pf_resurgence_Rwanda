@@ -1,0 +1,1179 @@
+SAMPLE	period	region	district	year	age_band	sex	k13_status
+3D7	Resurgence	Kigali	Gasabo	2025			WT
+BNH001	Resurgence	Hotspot	Bugesera	2025	35-49	Female	Other_K13
+BNH002	Resurgence	Hotspot	Bugesera	2025	35-49	Female	WT
+BNH003	Resurgence	Hotspot	Bugesera	2025	5-14	Male	WT
+BNH005	Resurgence	Hotspot	Bugesera	2025	35-49	Female	K189T_only
+BNH006	Resurgence	Hotspot	Bugesera	2025	50+	Female	Other_K13
+BNH008	Resurgence	Hotspot	Bugesera	2025	35-49	Female	K189T_only
+BNH009	Resurgence	Hotspot	Bugesera	2025	5-14	Male	WT
+BNH010	Resurgence	Hotspot	Bugesera	2025	<5	Male	Other_K13
+BNH013	Resurgence	Hotspot	Bugesera	2025	5-14	Male	WT
+BNH015	Resurgence	Hotspot	Bugesera	2025	5-14	Male	Other_K13
+BNH016	Resurgence	Hotspot	Bugesera	2025	15-24	Male	Other_K13
+BNH017	Resurgence	Hotspot	Bugesera	2025	15-24	Female	K189T_only
+BNH020	Resurgence	Hotspot	Bugesera	2025	15-24	Male	WT
+BNH021	Resurgence	Hotspot	Bugesera	2025	5-14	Male	K189T_only
+BNH022	Resurgence	Hotspot	Bugesera	2025	5-14	Male	Other_K13
+BNH023	Resurgence	Hotspot	Bugesera	2025	25-34	Female	Other_K13
+BNH024	Resurgence	Hotspot	Bugesera	2025	5-14	Female	Other_K13
+BNH025	Resurgence	Hotspot	Bugesera	2025	35-49	Female	WT
+BNH026	Resurgence	Hotspot	Bugesera	2025	50+	Male	K189T_only
+BNH027	Resurgence	Hotspot	Bugesera	2025	15-24	Male	K189T_only
+BNH029	Resurgence	Hotspot	Bugesera	2025	35-49	Male	WT
+BNH030	Resurgence	Hotspot	Bugesera	2025	15-24	Female	WT
+BNH031	Resurgence	Hotspot	Bugesera	2025	5-14	Female	K189T_only
+BNH032	Resurgence	Hotspot	Bugesera	2025	15-24	Female	WT
+BNH033	Resurgence	Hotspot	Bugesera	2025	<5	Female	Other_K13
+BNH037	Resurgence	Hotspot	Bugesera	2025	25-34	Female	K189T_only
+BNH038	Resurgence	Hotspot	Bugesera	2025	5-14	Female	Other_K13
+BNH039	Resurgence	Hotspot	Bugesera	2025	5-14	Male	WT
+BNH040	Resurgence	Hotspot	Bugesera	2025	5-14	Male	WT
+BNH041	Resurgence	Hotspot	Bugesera	2025	5-14	Female	Other_K13
+BNH042	Resurgence	Hotspot	Bugesera	2025	15-24	Female	WT
+BNH043	Resurgence	Hotspot	Bugesera	2025	5-14	Female	Other_K13
+BNH044	Resurgence	Hotspot	Bugesera	2025	5-14	Male	WT
+BNH045	Resurgence	Hotspot	Bugesera	2025	25-34	Male	Other_K13
+BNH046	Resurgence	Hotspot	Bugesera	2025			WT
+BNH050	Resurgence	Hotspot	Bugesera	2025	35-49	Female	WT
+BNH051	Resurgence	Hotspot	Bugesera	2025	50+	Male	WT
+BNH052	Resurgence	Hotspot	Bugesera	2025	35-49	Female	WT
+BNH053	Resurgence	Hotspot	Bugesera	2025	15-24	Male	R561H+K189T
+BNH054	Resurgence	Hotspot	Bugesera	2025	15-24	Female	R561H_only
+BNH055	Resurgence	Hotspot	Bugesera	2025	25-34	Female	Other_K13
+BNH056	Resurgence	Hotspot	Bugesera	2025	50+	Female	Other_K13
+BNH057	Resurgence	Hotspot	Bugesera	2025	5-14	Male	WT
+BNH058	Resurgence	Hotspot	Bugesera	2025	15-24	Male	WT
+BNH060	Resurgence	Hotspot	Bugesera	2025	5-14	Male	K189T_only
+BNH063	Resurgence	Hotspot	Bugesera	2025	5-14	Female	K189T_only
+BNH064	Resurgence	Hotspot	Bugesera	2025	25-34	Female	R561H+K189T
+BNH065	Resurgence	Hotspot	Bugesera	2025	50+	Female	WT
+BNH066	Resurgence	Hotspot	Bugesera	2025	15-24	Male	WT
+BNH067	Resurgence	Hotspot	Bugesera	2025	<5	Female	R561H+K189T
+BNH069	Resurgence	Hotspot	Bugesera	2025	5-14	Female	K189T_only
+BNH072	Resurgence	Hotspot	Bugesera	2025	5-14	Male	R561H+K189T
+BNH073	Resurgence	Hotspot	Bugesera	2025	15-24	Male	K189T_only
+CEO	Resurgence	Kigali	Gasabo	2025			R561H+K189T
+COR001	Resurgence	Kigali	Nyarugenge	2025	25-34	Female	R561H+K189T
+COR002	Resurgence	Kigali	Nyarugenge	2025			R561H+K189T
+COR004	Resurgence	Kigali	Nyarugenge	2025	25-34	Male	R561H+K189T
+COR005	Resurgence	Kigali	Nyarugenge	2025			R561H+K189T
+COR006	Resurgence	Kigali	Nyarugenge	2025	5-14	Male	R561H+K189T
+COR007	Resurgence	Kigali	Nyarugenge	2025	15-24	Male	WT
+COR008	Resurgence	Kigali	Nyarugenge	2025	25-34	Female	R561H+K189T
+COR009	Resurgence	Kigali	Nyarugenge	2025	5-14	Female	WT
+COR010	Resurgence	Kigali	Nyarugenge	2025	15-24	Female	WT
+COR011	Resurgence	Kigali	Nyarugenge	2025	25-34	Female	R561H+K189T
+COR012	Resurgence	Kigali	Nyarugenge	2025	15-24	Female	WT
+COR013	Resurgence	Kigali	Nyarugenge	2025	35-49	Male	WT
+COR014	Resurgence	Kigali	Nyarugenge	2025	25-34	Male	WT
+COR015	Resurgence	Kigali	Nyarugenge	2025	25-34	Female	WT
+COR016	Resurgence	Kigali	Nyarugenge	2025	35-49	Male	WT
+COR017	Resurgence	Kigali	Nyarugenge	2025	15-24	Male	WT
+COR018	Resurgence	Kigali	Nyarugenge	2025	15-24	Female	R561H+K189T
+COR019	Resurgence	Kigali	Nyarugenge	2025	15-24	Male	R561H+K189T
+COR020	Resurgence	Kigali	Nyarugenge	2025	5-14	Female	Other_K13
+COR023	Resurgence	Kigali	Nyarugenge	2025	15-24	Female	WT
+COR024	Resurgence	Kigali	Nyarugenge	2025	15-24	Male	Other_K13
+COR025	Resurgence	Kigali	Nyarugenge	2025	15-24	Female	R561H+K189T
+COR026	Resurgence	Kigali	Nyarugenge	2025	25-34	Male	R561H+K189T
+COR027	Resurgence	Kigali	Nyarugenge	2025	15-24	Female	WT
+COR028	Resurgence	Kigali	Nyarugenge	2025	25-34	Female	R561H+K189T
+COR029	Resurgence	Kigali	Nyarugenge	2025	15-24	Male	WT
+COR030	Resurgence	Kigali	Nyarugenge	2025	25-34	Female	R561H+K189T
+COR031	Resurgence	Kigali	Nyarugenge	2025	15-24	Female	R561H+K189T
+COR032	Resurgence	Kigali	Nyarugenge	2025	5-14	Male	R561H+K189T
+COR037	Resurgence	Kigali	Nyarugenge	2025	15-24	Female	R561H+K189T
+COR038	Resurgence	Kigali	Nyarugenge	2025	50+	Male	WT
+COR040	Resurgence	Kigali	Nyarugenge	2025	25-34	Male	R561H+K189T
+COR041	Resurgence	Kigali	Nyarugenge	2025	15-24	Female	WT
+COR042	Resurgence	Kigali	Nyarugenge	2025	15-24	Male	Other_K13
+COR043	Resurgence	Kigali	Nyarugenge	2025	25-34	Male	WT
+COR044	Resurgence	Kigali	Nyarugenge	2025	25-34	Female	WT
+COR045	Resurgence	Kigali	Nyarugenge	2025	15-24	Male	WT
+COR046	Resurgence	Kigali	Nyarugenge	2025	50+	Female	WT
+COR047	Resurgence	Kigali	Nyarugenge	2025	35-49	Female	R561H+K189T
+COR049	Resurgence	Kigali	Nyarugenge	2025	35-49	Female	R561H_only
+COR050	Resurgence	Kigali	Nyarugenge	2025	25-34	Female	WT
+COR051	Resurgence	Kigali	Nyarugenge	2025	25-34	Male	R561H+K189T
+COR052	Resurgence	Kigali	Nyarugenge	2025	25-34	Female	R561H+K189T
+COR053	Resurgence	Kigali	Nyarugenge	2025		Female	R561H+K189T
+COR054	Resurgence	Kigali	Nyarugenge	2025	25-34	Female	WT
+COR055	Resurgence	Kigali	Nyarugenge	2025	5-14	Female	R561H+K189T
+COR056	Resurgence	Kigali	Nyarugenge	2025	25-34	Female	R561H+K189T
+COR057	Resurgence	Kigali	Nyarugenge	2025	15-24	Female	WT
+COR058	Resurgence	Kigali	Nyarugenge	2025	25-34	Female	WT
+COR059	Resurgence	Kigali	Nyarugenge	2025	25-34	Female	R561H+K189T
+COR060	Resurgence	Kigali	Nyarugenge	2025	15-24	Male	R561H+K189T
+COR061	Resurgence	Kigali	Nyarugenge	2025	15-24	Female	WT
+COR062	Resurgence	Kigali	Nyarugenge	2025	15-24	Female	R561H+K189T
+COR064	Resurgence	Kigali	Nyarugenge	2025	15-24	Female	WT
+COR065	Resurgence	Kigali	Nyarugenge	2025	25-34	Male	R561H+K189T
+COR066	Resurgence	Kigali	Nyarugenge	2025	15-24	Male	WT
+COR067	Resurgence	Kigali	Nyarugenge	2025	5-14	Male	R561H+K189T
+COR069	Resurgence	Kigali	Nyarugenge	2025	5-14	Female	R561H+K189T
+COR070	Resurgence	Kigali	Nyarugenge	2025	25-34	Male	WT
+COR072	Resurgence	Kigali	Nyarugenge	2025	35-49	Female	WT
+COR073	Resurgence	Kigali	Nyarugenge	2025	5-14	Male	WT
+COR074	Resurgence	Kigali	Nyarugenge	2025	50+	Male	R561H_only
+COR075	Resurgence	Kigali	Nyarugenge	2025	15-24	Female	R561H+K189T
+COR076	Resurgence	Kigali	Nyarugenge	2025	15-24	Female	WT
+COR078	Resurgence	Kigali	Nyarugenge	2025	15-24	Male	WT
+COR079	Resurgence	Kigali	Nyarugenge	2025	5-14	Female	WT
+COR080	Resurgence	Kigali	Nyarugenge	2025	15-24	Male	WT
+COR082	Resurgence	Kigali	Nyarugenge	2025	35-49	Female	R561H+K189T
+COR083	Resurgence	Kigali	Nyarugenge	2025	15-24	Male	WT
+COR084	Resurgence	Kigali	Nyarugenge	2025	15-24	Male	WT
+COR085	Resurgence	Kigali	Nyarugenge	2025	25-34	Female	WT
+COR088	Resurgence	Kigali	Nyarugenge	2025	35-49	Female	R561H+K189T
+COR089	Resurgence	Kigali	Nyarugenge	2025	25-34	Male	WT
+COR091	Resurgence	Kigali	Nyarugenge	2025	15-24	Male	WT
+COR092	Resurgence	Kigali	Nyarugenge	2025	25-34	Female	R561H+K189T
+COR093	Resurgence	Kigali	Nyarugenge	2025	50+	Male	WT
+COR094	Resurgence	Kigali	Nyarugenge	2025	15-24	Female	R561H+K189T
+COR095	Resurgence	Kigali	Nyarugenge	2025	25-34	Female	WT
+COR096	Resurgence	Kigali	Nyarugenge	2025	35-49	Female	Other_K13
+COR097	Resurgence	Kigali	Nyarugenge	2025	25-34	Female	R561H+K189T
+COR098	Resurgence	Kigali	Nyarugenge	2025	15-24	Male	R561H+K189T
+COR101	Resurgence	Kigali	Nyarugenge	2025	15-24	Male	R561H+K189T
+COR102	Resurgence	Kigali	Nyarugenge	2025	15-24	Female	R561H+K189T
+COR106	Resurgence	Kigali	Nyarugenge	2025	25-34	Male	WT
+COR107	Resurgence	Kigali	Nyarugenge	2025	25-34	Female	WT
+COR116	Resurgence	Kigali	Nyarugenge	2025	50+	Female	R561H+K189T
+COR119	Resurgence	Kigali	Nyarugenge	2025	15-24	Female	R561H+K189T
+COR122	Resurgence	Kigali	Nyarugenge	2025	25-34	Female	WT
+COR123	Resurgence	Kigali	Nyarugenge	2025	50+	Male	WT
+COR124	Resurgence	Kigali	Nyarugenge	2025	25-34	Male	R561H+K189T
+COR125	Resurgence	Kigali	Nyarugenge	2025	50+	Male	WT
+COR128	Resurgence	Kigali	Nyarugenge	2025	35-49	Female	R561H+K189T
+COR129	Resurgence	Kigali	Nyarugenge	2025	25-34	Female	WT
+COR130	Resurgence	Kigali	Nyarugenge	2025	5-14	Male	R561H+K189T
+COR131	Resurgence	Kigali	Nyarugenge	2025	5-14	Male	WT
+COR132	Resurgence	Kigali	Nyarugenge	2025	50+	Female	R561H+K189T
+COR134	Resurgence	Kigali	Nyarugenge	2025	15-24	Female	Other_K13
+COR136	Resurgence	Kigali	Nyarugenge	2025	25-34	Female	WT
+COR137	Resurgence	Kigali	Nyarugenge	2025	25-34	Male	R561H+K189T
+COR138	Resurgence	Kigali	Nyarugenge	2025	25-34	Male	R561H+K189T
+COR139	Resurgence	Kigali	Nyarugenge	2025	15-24	Female	R561H+K189T
+COR140	Resurgence	Kigali	Nyarugenge	2025	15-24	Female	R561H+K189T
+COR142	Resurgence	Kigali	Nyarugenge	2025	50+	Male	R561H+K189T
+COR144	Resurgence	Kigali	Nyarugenge	2025	15-24	Male	Other_K13
+COR145	Resurgence	Kigali	Nyarugenge	2025	50+	Female	WT
+COR146	Resurgence	Kigali	Nyarugenge	2025	25-34	Male	R561H+K189T
+COR147	Resurgence	Kigali	Nyarugenge	2025	35-49	Male	R561H+K189T
+COR148	Resurgence	Kigali	Nyarugenge	2025	25-34	Female	R561H+K189T
+COR149	Resurgence	Kigali	Nyarugenge	2025	15-24	Female	R561H+K189T
+COR150	Resurgence	Kigali	Nyarugenge	2025	35-49	Male	R561H+K189T
+COR151	Resurgence	Kigali	Nyarugenge	2025	35-49	Male	R561H+K189T
+COR152	Resurgence	Kigali	Nyarugenge	2025	35-49	Female	Other_K13
+COR153	Resurgence	Kigali	Nyarugenge	2025	15-24	Female	Other_K13
+COR154	Resurgence	Kigali	Nyarugenge	2025	5-14	Male	Other_K13
+COR155	Resurgence	Kigali	Nyarugenge	2025	25-34	Male	K189T_only
+COR156	Resurgence	Kigali	Nyarugenge	2025	15-24	Male	WT
+COR157	Resurgence	Kigali	Nyarugenge	2025	25-34	Male	WT
+COR158	Resurgence	Kigali	Nyarugenge	2025	25-34	Female	WT
+COR159	Resurgence	Kigali	Nyarugenge	2025	15-24	Male	R561H+K189T
+COR160	Resurgence	Kigali	Nyarugenge	2025	15-24	Female	WT
+COR162	Resurgence	Kigali	Nyarugenge	2025	50+	Male	R561H+K189T
+COR163	Resurgence	Kigali	Nyarugenge	2025	15-24	Male	R561H+K189T
+COR164	Resurgence	Kigali	Nyarugenge	2025	15-24	Female	R561H_only
+COR165	Resurgence	Kigali	Nyarugenge	2025	25-34	Male	WT
+COR166	Resurgence	Kigali	Nyarugenge	2025	25-34	Male	R561H+K189T
+COR167	Resurgence	Kigali	Nyarugenge	2025	50+	Male	Other_K13
+COR169	Resurgence	Kigali	Nyarugenge	2025	50+	Female	R561H+K189T
+COR170	Resurgence	Kigali	Nyarugenge	2025	15-24	Female	WT
+COR171	Resurgence	Kigali	Nyarugenge	2025	15-24	Male	R561H+K189T
+COR172	Resurgence	Kigali	Nyarugenge	2025	35-49	Female	WT
+COR173	Resurgence	Kigali	Nyarugenge	2025	5-14	Female	R561H+K189T
+COR174	Resurgence	Kigali	Nyarugenge	2025	15-24	Male	WT
+COR175	Resurgence	Kigali	Nyarugenge	2025	15-24	Female	R561H+K189T
+COR176	Resurgence	Kigali	Nyarugenge	2025	15-24	Male	R561H+K189T
+COR181	Resurgence	Kigali	Nyarugenge	2025	25-34	Male	WT
+COR182	Resurgence	Kigali	Nyarugenge	2025	25-34	Female	WT
+COR185	Resurgence	Kigali	Nyarugenge	2025	25-34	Female	R561H+K189T
+COR186	Resurgence	Kigali	Nyarugenge	2025	15-24	Female	R561H+K189T
+COR188	Resurgence	Kigali	Nyarugenge	2025	25-34	Female	R561H+K189T
+COR189	Resurgence	Kigali	Nyarugenge	2025	15-24	Male	WT
+COR191	Resurgence	Kigali	Nyarugenge	2025			WT
+COR192	Resurgence	Kigali	Nyarugenge	2025	15-24	Male	R561H+K189T
+COR193	Resurgence	Kigali	Nyarugenge	2025	50+	Male	R561H+K189T
+COR194	Resurgence	Kigali	Nyarugenge	2025	25-34	Female	R561H+K189T
+COR195	Resurgence	Kigali	Nyarugenge	2025	15-24	Male	R561H+K189T
+COR196	Resurgence	Kigali	Nyarugenge	2025	15-24	Male	R561H+K189T
+COR197	Resurgence	Kigali	Nyarugenge	2025	35-49	Female	R561H+K189T
+COR199	Resurgence	Kigali	Nyarugenge	2025	15-24	Female	R561H+K189T
+COR200	Resurgence	Kigali	Nyarugenge	2025	25-34	Male	R561H+K189T
+COR201	Resurgence	Kigali	Nyarugenge	2025	25-34	Female	WT
+COR202	Resurgence	Kigali	Nyarugenge	2025	35-49	Female	R561H+K189T
+COR203	Resurgence	Kigali	Nyarugenge	2025	50+	Female	WT
+COR205	Resurgence	Kigali	Nyarugenge	2025	35-49	Female	WT
+COR206	Resurgence	Kigali	Nyarugenge	2025	15-24	Female	WT
+COR207	Resurgence	Kigali	Nyarugenge	2025	25-34	Male	R561H+K189T
+COR209	Resurgence	Kigali	Nyarugenge	2025	25-34	Female	WT
+COR211	Resurgence	Kigali	Nyarugenge	2025	15-24	Male	WT
+COR212	Resurgence	Kigali	Nyarugenge	2025	25-34	Female	WT
+COR220	Resurgence	Kigali	Nyarugenge	2025	25-34	Male	WT
+COR221	Resurgence	Kigali	Nyarugenge	2025	15-24	Male	WT
+COR222	Resurgence	Kigali	Nyarugenge	2025	25-34	Female	R561H+K189T
+COR223	Resurgence	Kigali	Nyarugenge	2025	15-24	Male	R561H+K189T
+COR225	Resurgence	Kigali	Nyarugenge	2025	35-49	Female	R561H+K189T
+COR226	Resurgence	Kigali	Nyarugenge	2025	35-49	Female	WT
+COR227	Resurgence	Kigali	Nyarugenge	2025	35-49	Male	R561H+K189T
+COR231	Resurgence	Kigali	Nyarugenge	2025	15-24	Male	R561H+K189T
+COR232	Resurgence	Kigali	Nyarugenge	2025	15-24	Female	WT
+COR234	Resurgence	Kigali	Nyarugenge	2025	50+	Female	R561H+K189T
+COR235	Resurgence	Kigali	Nyarugenge	2025	15-24	Male	R561H+K189T
+COR236	Resurgence	Kigali	Nyarugenge	2025	25-34	Male	Other_K13
+COR238	Resurgence	Kigali	Nyarugenge	2025	50+	Female	WT
+COR240	Resurgence	Kigali	Nyarugenge	2025	35-49	Male	K189T_only
+COR243	Resurgence	Kigali	Nyarugenge	2025	25-34	Male	R561H_only
+COR244	Resurgence	Kigali	Nyarugenge	2025	50+	Female	R561H+K189T
+COR245	Resurgence	Kigali	Nyarugenge	2025	25-34	Male	R561H+K189T
+COR247	Resurgence	Kigali	Nyarugenge	2025	25-34	Male	R561H+K189T
+COR248	Resurgence	Kigali	Nyarugenge	2025			R561H+K189T
+GIK002	Resurgence	Kigali	Kicukiro	2025	35-49	Male	Other_K13
+GIK004	Resurgence	Kigali	Kicukiro	2025	15-24	Male	R561H+K189T
+GIK005	Resurgence	Kigali	Kicukiro	2025	15-24	Female	R561H+K189T
+GIK006	Resurgence	Kigali	Kicukiro	2025	25-34	Female	R561H+K189T
+GIK007	Resurgence	Kigali	Kicukiro	2025	5-14	Female	WT
+GIK008	Resurgence	Kigali	Kicukiro	2025	35-49	Female	K189T_only
+GIK009	Resurgence	Kigali	Kicukiro	2025	35-49	Female	WT
+GIK010	Resurgence	Kigali	Kicukiro	2025	15-24	Female	R561H+K189T
+GIK011	Resurgence	Kigali	Kicukiro	2025	15-24	Female	WT
+GIK012	Resurgence	Kigali	Kicukiro	2025	25-34	Male	Other_K13
+GIK013	Resurgence	Kigali	Kicukiro	2025	15-24	Female	Other_K13
+GIK014	Resurgence	Kigali	Kicukiro	2025	50+	Female	WT
+GIK015	Resurgence	Kigali	Kicukiro	2025	25-34	Male	R561H+K189T
+GIK017	Resurgence	Kigali	Kicukiro	2025	15-24	Male	Other_K13
+GIK019	Resurgence	Kigali	Kicukiro	2025	25-34	Male	Other_K13
+GIK021	Resurgence	Kigali	Kicukiro	2025	15-24	Female	WT
+GIK022	Resurgence	Kigali	Kicukiro	2025	15-24	Male	R561H+K189T
+GIK023	Resurgence	Kigali	Kicukiro	2025	15-24	Male	R561H+K189T
+GIK024	Resurgence	Kigali	Kicukiro	2025	35-49	Male	R561H+K189T
+GIK025	Resurgence	Kigali	Kicukiro	2025	25-34	Female	R561H+K189T
+GIK026	Resurgence	Kigali	Kicukiro	2025	15-24	Female	WT
+GIK032	Resurgence	Kigali	Kicukiro	2025	25-34	Female	R561H+K189T
+GIK037	Resurgence	Kigali	Kicukiro	2025	25-34	Male	R561H+K189T
+GIK040	Resurgence	Kigali	Kicukiro	2025	25-34	Female	R561H+K189T
+GIK041	Resurgence	Kigali	Kicukiro	2025	15-24	Female	Other_K13
+GIK043	Resurgence	Kigali	Kicukiro	2025	5-14	Male	R561H+K189T
+GIK044	Resurgence	Kigali	Kicukiro	2025	15-24	Male	WT
+GIK046	Resurgence	Kigali	Kicukiro	2025	35-49	Male	Other_K13
+GIK047	Resurgence	Kigali	Kicukiro	2025	15-24	Male	R561H+K189T
+GIK048	Resurgence	Kigali	Kicukiro	2025	25-34	Male	R561H+K189T
+GIK050	Resurgence	Kigali	Kicukiro	2025	15-24	Male	R561H+K189T
+GIK054	Resurgence	Kigali	Kicukiro	2025	15-24	Male	R561H+K189T
+GIK062	Resurgence	Kigali	Kicukiro	2025	25-34	Male	WT
+GIK068	Resurgence	Kigali	Kicukiro	2025	15-24	Female	WT
+GIK069	Resurgence	Kigali	Kicukiro	2025	15-24	Male	R561H+K189T
+GIK072	Resurgence	Kigali	Kicukiro	2025	5-14	Male	Other_K13
+GIK073	Resurgence	Kigali	Kicukiro	2025	25-34	Male	Other_K13
+GIK075	Resurgence	Kigali	Kicukiro	2025	15-24	Female	R561H+K189T
+GIK076	Resurgence	Kigali	Kicukiro	2025	25-34	Female	R561H+K189T
+GIK078	Resurgence	Kigali	Kicukiro	2025	25-34	Male	WT
+GIK080	Resurgence	Kigali	Kicukiro	2025	25-34	Female	R561H+K189T
+GIK083	Resurgence	Kigali	Kicukiro	2025	25-34	Male	R561H+K189T
+GIK086	Resurgence	Kigali	Kicukiro	2025	25-34	Female	R561H+K189T
+GIK088	Resurgence	Kigali	Kicukiro	2025	25-34	Female	R561H+K189T
+GIK089	Resurgence	Kigali	Kicukiro	2025	15-24	Male	WT
+GIK090	Resurgence	Kigali	Kicukiro	2025	15-24	Female	WT
+GIK091	Resurgence	Kigali	Kicukiro	2025	15-24	Female	R561H+K189T
+GIK105	Resurgence	Kigali	Kicukiro	2025	15-24	Female	R561H+K189T
+GISK001	Resurgence	Hotspot	Gisagara	2025	15-24	Female	Other_K13
+GISK002	Resurgence	Hotspot	Gisagara	2025	5-14	Female	WT
+GISK004	Resurgence	Hotspot	Gisagara	2025	35-49	Male	WT
+GISK005	Resurgence	Hotspot	Gisagara	2025	<5	Female	K189T_only
+GISK006	Resurgence	Hotspot	Gisagara	2025	15-24	Male	WT
+GISK008	Resurgence	Hotspot	Gisagara	2025	<5	Male	WT
+GISK009	Resurgence	Hotspot	Gisagara	2025	15-24	Male	Other_K13
+GISK011	Resurgence	Hotspot	Gisagara	2025	5-14	Male	WT
+GISK012	Resurgence	Hotspot	Gisagara	2025	5-14	Male	WT
+GISK013	Resurgence	Hotspot	Gisagara	2025	5-14	Male	WT
+GISK014	Resurgence	Hotspot	Gisagara	2025	5-14	Female	K189T_only
+GISK018	Resurgence	Hotspot	Gisagara	2025	5-14	Male	K189T_only
+GISK021	Resurgence	Hotspot	Gisagara	2025	15-24	Female	WT
+GISK022	Resurgence	Hotspot	Gisagara	2025	<5	Male	WT
+GISK024	Resurgence	Hotspot	Gisagara	2025	15-24	Male	WT
+GISK025	Resurgence	Hotspot	Gisagara	2025	<5	Male	WT
+GISK026	Resurgence	Hotspot	Gisagara	2025	15-24	Female	WT
+GISK030	Resurgence	Hotspot	Gisagara	2025	50+	Female	WT
+GISM001	Resurgence	Hotspot	Gisagara	2025	5-14	Male	WT
+GISM004	Resurgence	Hotspot	Gisagara	2025	5-14	Female	K189T_only
+GISM008	Resurgence	Hotspot	Gisagara	2025	50+	Male	WT
+GISM009	Resurgence	Hotspot	Gisagara	2025	5-14	Male	Other_K13
+GISM010	Resurgence	Hotspot	Gisagara	2025	50+	Female	WT
+GISM012	Resurgence	Hotspot	Gisagara	2025	25-34	Female	K189T_only
+GISM013	Resurgence	Hotspot	Gisagara	2025	15-24	Male	WT
+GISM014	Resurgence	Hotspot	Gisagara	2025	35-49	Male	K189T_only
+GISM016	Resurgence	Hotspot	Gisagara	2025	25-34	Female	WT
+KAR001	Resurgence	Kigali	Kicukiro	2025	15-24	Male	R561H+K189T
+KAR002	Resurgence	Kigali	Kicukiro	2025	15-24	Female	WT
+KAR003	Resurgence	Kigali	Kicukiro	2025	5-14	Male	WT
+KAR004	Resurgence	Kigali	Kicukiro	2025	5-14	Female	WT
+KAR005	Resurgence	Kigali	Kicukiro	2025	15-24	Male	R561H+K189T
+KAR006	Resurgence	Kigali	Kicukiro	2025	35-49	Male	R561H+K189T
+KAR007	Resurgence	Kigali	Kicukiro	2025	15-24	Female	Other_K13
+KAR008	Resurgence	Kigali	Kicukiro	2025	35-49	Male	Other_K13
+KAR009	Resurgence	Kigali	Kicukiro	2025	5-14	Male	R561H+K189T
+KAR010	Resurgence	Kigali	Kicukiro	2025	15-24	Male	K189T_only
+KAR012	Resurgence	Kigali	Kicukiro	2025	15-24	Female	K189T_only
+KAR019	Resurgence	Kigali	Kicukiro	2025	35-49	Male	R561H+K189T
+KAR024	Resurgence	Kigali	Kicukiro	2025	25-34	Female	Other_K13
+KAR025	Resurgence	Kigali	Kicukiro	2025	35-49	Female	K189T_only
+KAR031	Resurgence	Kigali	Kicukiro	2025	25-34	Female	R561H+K189T
+KAR036	Resurgence	Kigali	Kicukiro	2025	15-24	Male	R561H+K189T
+KAR037	Resurgence	Kigali	Kicukiro	2025	25-34	Male	WT
+KAR041	Resurgence	Kigali	Kicukiro	2025	15-24	Female	R561H+K189T
+KAR061	Resurgence	Kigali	Kicukiro	2025	25-34	Male	Other_K13
+KDH002	Resurgence	Hotspot	Kirehe	2025	5-14	Female	R561H+K189T
+KDH003	Resurgence	Hotspot	Kirehe	2025	5-14	Female	R561H+K189T
+KDH004	Resurgence	Hotspot	Kirehe	2025	5-14	Male	K189T_only
+KDH005	Resurgence	Hotspot	Kirehe	2025	<5	Male	R561H+K189T
+KDH006	Resurgence	Hotspot	Kirehe	2025	15-24	Female	K189T_only
+KDH007	Resurgence	Hotspot	Kirehe	2025	15-24	Female	K189T_only
+KDH008	Resurgence	Hotspot	Kirehe	2025	5-14	Male	R561H+K189T
+KDH009	Resurgence	Hotspot	Kirehe	2025	5-14	Male	R561H+K189T
+KDH010	Resurgence	Hotspot	Kirehe	2025	5-14	Female	Other_K13
+KDH011	Resurgence	Hotspot	Kirehe	2025	5-14	Female	R561H+K189T
+KDH012	Resurgence	Hotspot	Kirehe	2025	25-34	Male	R561H+K189T
+KDH013	Resurgence	Hotspot	Kirehe	2025	5-14	Male	R561H+K189T
+KDH014	Resurgence	Hotspot	Kirehe	2025	5-14	Male	WT
+KDH015	Resurgence	Hotspot	Kirehe	2025	5-14	Female	WT
+KDH016	Resurgence	Hotspot	Kirehe	2025	15-24	Male	WT
+KDH017	Resurgence	Hotspot	Kirehe	2025	5-14	Female	R561H+K189T
+KDH018	Resurgence	Hotspot	Kirehe	2025	35-49	Male	R561H+K189T
+KDH019	Resurgence	Hotspot	Kirehe	2025	25-34	Male	WT
+KDH020	Resurgence	Hotspot	Kirehe	2025	50+	Male	R561H+K189T
+KDH021	Resurgence	Hotspot	Kirehe	2025	5-14	Female	WT
+KDH022	Resurgence	Hotspot	Kirehe	2025	<5	Female	K189T_only
+KDH023	Resurgence	Hotspot	Kirehe	2025	15-24	Female	WT
+KDH024	Resurgence	Hotspot	Kirehe	2025	5-14	Female	Other_K13
+KDH025	Resurgence	Hotspot	Kirehe	2025	15-24	Male	Other_K13
+KDH026	Resurgence	Hotspot	Kirehe	2025	5-14	Male	Other_K13
+KDH027	Resurgence	Hotspot	Kirehe	2025	25-34	Female	K189T_only
+KDH028	Resurgence	Hotspot	Kirehe	2025	15-24	Male	Other_K13
+KDH029	Resurgence	Hotspot	Kirehe	2025	5-14	Male	WT
+KDH030	Resurgence	Hotspot	Kirehe	2025	15-24	Male	Other_K13
+KDH031	Resurgence	Hotspot	Kirehe	2025	15-24	Male	Other_K13
+KDH032	Resurgence	Hotspot	Kirehe	2025	50+	Female	WT
+KDH033	Resurgence	Hotspot	Kirehe	2025	35-49	Male	R561H+K189T
+KDH034	Resurgence	Hotspot	Kirehe	2025	15-24	Male	WT
+KDH035	Resurgence	Hotspot	Kirehe	2025	5-14	Male	Other_K13
+KDH037	Resurgence	Hotspot	Kirehe	2025	5-14	Female	Other_K13
+KDH038	Resurgence	Hotspot	Kirehe	2025	15-24	Male	Other_K13
+KDH039	Resurgence	Hotspot	Kirehe	2025	15-24	Female	Other_K13
+KDH040	Resurgence	Hotspot	Kirehe	2025	25-34	Female	WT
+KDH042	Resurgence	Hotspot	Kirehe	2025	15-24	Male	R561H+K189T
+KDH043	Resurgence	Hotspot	Kirehe	2025	15-24	Male	Other_K13
+KDH044	Resurgence	Hotspot	Kirehe	2025	50+	Male	R561H+K189T
+KDH045	Resurgence	Hotspot	Kirehe	2025	15-24	Male	R561H+K189T
+KDH046	Resurgence	Hotspot	Kirehe	2025	5-14	Female	Other_K13
+KDH047	Resurgence	Hotspot	Kirehe	2025	15-24	Female	R561H+K189T
+KDH048	Resurgence	Hotspot	Kirehe	2025	5-14	Male	R561H+K189T
+KDH049	Resurgence	Hotspot	Kirehe	2025	5-14	Male	R561H+K189T
+KDH050	Resurgence	Hotspot	Kirehe	2025	5-14	Female	R561H+K189T
+KDH051	Resurgence	Hotspot	Kirehe	2025	<5	Female	Other_K13
+KDH053	Resurgence	Hotspot	Kirehe	2025	50+	Male	WT
+KDH054	Resurgence	Hotspot	Kirehe	2025	5-14	Male	R561H+K189T
+KDH055	Resurgence	Hotspot	Kirehe	2025	25-34	Female	Other_K13
+KDH056	Resurgence	Hotspot	Kirehe	2025	25-34	Male	Other_K13
+KDH057	Resurgence	Hotspot	Kirehe	2025	5-14	Male	WT
+KDH058	Resurgence	Hotspot	Kirehe	2025	15-24	Male	WT
+KDH059	Resurgence	Hotspot	Kirehe	2025	5-14	Female	WT
+KDH060	Resurgence	Hotspot	Kirehe	2025	5-14	Male	Other_K13
+KDH061	Resurgence	Hotspot	Kirehe	2025	25-34	Male	R561H_only
+KDH062	Resurgence	Hotspot	Kirehe	2025	25-34	Female	WT
+KDH063	Resurgence	Hotspot	Kirehe	2025	5-14	Female	Other_K13
+KDH064	Resurgence	Hotspot	Kirehe	2025	50+	Female	Other_K13
+KDH066	Resurgence	Hotspot	Kirehe	2025	50+	Female	K189T_only
+KDH068	Resurgence	Hotspot	Kirehe	2025	5-14	Male	R561H_only
+KDH069	Resurgence	Hotspot	Kirehe	2025	5-14	Male	WT
+KDH071	Resurgence	Hotspot	Kirehe	2025	15-24	Female	Other_K13
+KF001	Resurgence	Kigali	Gasabo	2024	5-14	Male	R561H+K189T
+KF002	Resurgence	Kigali	Gasabo	2024	5-14	Male	R561H+K189T
+KF003	Resurgence	Kigali	Gasabo	2024	50+	Male	R561H+K189T
+KF004	Resurgence	Kigali	Gasabo	2024	15-24	Male	R561H+K189T
+KF005	Resurgence	Kigali	Gasabo	2024	25-34	Male	WT
+KF006	Resurgence	Kigali	Gasabo	2024	25-34	Male	WT
+KF008	Resurgence	Kigali	Gasabo	2024	5-14	Male	R561H+K189T
+KF010	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF013	Resurgence	Kigali	Gasabo	2024			WT
+KF014	Resurgence	Kigali	Gasabo	2024			Other_K13
+KF015	Resurgence	Kigali	Gasabo	2024	25-34	Male	R561H+K189T
+KF016	Resurgence	Kigali	Gasabo	2024	35-49	Male	WT
+KF017	Resurgence	Kigali	Gasabo	2024			Other_K13
+KF018	Resurgence	Kigali	Gasabo	2024	50+	Male	R561H+K189T
+KF021	Resurgence	Kigali	Gasabo	2024	25-34	Male	Other_K13
+KF022	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF023	Resurgence	Kigali	Gasabo	2024			WT
+KF024	Resurgence	Kigali	Gasabo	2024	25-34	Male	WT
+KF025	Resurgence	Kigali	Gasabo	2024	35-49	Male	Other_K13
+KF026	Resurgence	Kigali	Gasabo	2024	5-14	Male	WT
+KF027	Resurgence	Kigali	Gasabo	2024	25-34	Male	Other_K13
+KF029	Resurgence	Kigali	Gasabo	2024	35-49	Male	WT
+KF030	Resurgence	Kigali	Gasabo	2024	25-34	Male	WT
+KF031	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF032	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF033	Resurgence	Kigali	Gasabo	2024	15-24	Male	R561H+K189T
+KF034	Resurgence	Kigali	Gasabo	2024	<5	Male	K189T_only
+KF035	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF036	Resurgence	Kigali	Gasabo	2024			K189T_only
+KF037	Resurgence	Kigali	Gasabo	2024	50+	Male	WT
+KF038	Resurgence	Kigali	Gasabo	2024	15-24	Male	R561H+K189T
+KF039	Resurgence	Kigali	Gasabo	2024	<5	Male	R561H+K189T
+KF040	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF041	Resurgence	Kigali	Gasabo	2024	50+	Male	WT
+KF042	Resurgence	Kigali	Gasabo	2024	5-14	Male	R561H+K189T
+KF044	Resurgence	Kigali	Gasabo	2024	35-49	Male	WT
+KF045	Resurgence	Kigali	Gasabo	2024	50+	Male	K189T_only
+KF046	Resurgence	Kigali	Gasabo	2024	25-34	Male	WT
+KF047	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF049	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF050	Resurgence	Kigali	Gasabo	2024			WT
+KF051	Resurgence	Kigali	Gasabo	2024	25-34	Male	R561H+K189T
+KF052	Resurgence	Kigali	Gasabo	2024	5-14	Male	Other_K13
+KF053	Resurgence	Kigali	Gasabo	2024			Other_K13
+KF054	Resurgence	Kigali	Gasabo	2024			WT
+KF055	Resurgence	Kigali	Gasabo	2024	35-49	Male	WT
+KF056	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF057	Resurgence	Kigali	Gasabo	2024	25-34	Male	WT
+KF058	Resurgence	Kigali	Gasabo	2024	<5	Male	R561H+K189T
+KF059	Resurgence	Kigali	Gasabo	2024	<5	Male	R561H+K189T
+KF061	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF062	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF063	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF064	Resurgence	Kigali	Gasabo	2024	5-14	Male	K189T_only
+KF065	Resurgence	Kigali	Gasabo	2024	5-14	Male	Other_K13
+KF066	Resurgence	Kigali	Gasabo	2024	15-24	Male	Other_K13
+KF067	Resurgence	Kigali	Gasabo	2024	50+	Male	R561H+K189T
+KF068	Resurgence	Kigali	Gasabo	2024			WT
+KF069	Resurgence	Kigali	Gasabo	2024	25-34	Male	R561H+K189T
+KF071	Resurgence	Kigali	Gasabo	2024			K189T_only
+KF072	Resurgence	Kigali	Gasabo	2024	15-24	Male	Other_K13
+KF073	Resurgence	Kigali	Gasabo	2024			WT
+KF074	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF075	Resurgence	Kigali	Gasabo	2024	25-34	Male	WT
+KF076	Resurgence	Kigali	Gasabo	2024	25-34	Male	WT
+KF077	Resurgence	Kigali	Gasabo	2024	35-49	Male	R561H+K189T
+KF078	Resurgence	Kigali	Gasabo	2024	15-24	Male	R561H+K189T
+KF079	Resurgence	Kigali	Gasabo	2024	25-34	Male	R561H+K189T
+KF080	Resurgence	Kigali	Gasabo	2024			WT
+KF081	Resurgence	Kigali	Gasabo	2024	25-34	Male	Other_K13
+KF082	Resurgence	Kigali	Gasabo	2024			Other_K13
+KF083	Resurgence	Kigali	Gasabo	2024			Other_K13
+KF084	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF085	Resurgence	Kigali	Gasabo	2024	35-49	Male	R561H+K189T
+KF086	Resurgence	Kigali	Gasabo	2024	5-14	Male	Other_K13
+KF087	Resurgence	Kigali	Gasabo	2024			WT
+KF088	Resurgence	Kigali	Gasabo	2024	5-14	Male	R561H+K189T
+KF091	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF092	Resurgence	Kigali	Gasabo	2024	50+	Male	K189T_only
+KF093	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF094	Resurgence	Kigali	Gasabo	2024	50+	Male	WT
+KF095	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF096	Resurgence	Kigali	Gasabo	2024			Other_K13
+KF097	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF098	Resurgence	Kigali	Gasabo	2024			Other_K13
+KF099	Resurgence	Kigali	Gasabo	2024			WT
+KF100	Resurgence	Kigali	Gasabo	2024	35-49	Male	K189T_only
+KF101	Resurgence	Kigali	Gasabo	2024	5-14	Male	R561H+K189T
+KF102	Resurgence	Kigali	Gasabo	2024	50+	Male	R561H+K189T
+KF103	Resurgence	Kigali	Gasabo	2024	50+	Male	Other_K13
+KF104	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF105	Resurgence	Kigali	Gasabo	2024	25-34	Male	WT
+KF106	Resurgence	Kigali	Gasabo	2024			K189T_only
+KF108	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF109	Resurgence	Kigali	Gasabo	2024			WT
+KF110	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF111	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF113	Resurgence	Kigali	Gasabo	2024	15-24	Male	R561H+K189T
+KF114	Resurgence	Kigali	Gasabo	2024			WT
+KF115	Resurgence	Kigali	Gasabo	2024	15-24	Male	R561H+K189T
+KF116	Resurgence	Kigali	Gasabo	2024	15-24	Male	Other_K13
+KF117	Resurgence	Kigali	Gasabo	2024	35-49	Male	WT
+KF121	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF122	Resurgence	Kigali	Gasabo	2024			Other_K13
+KF123	Resurgence	Kigali	Gasabo	2024			Other_K13
+KF124	Resurgence	Kigali	Gasabo	2024			Other_K13
+KF126	Resurgence	Kigali	Gasabo	2024			Other_K13
+KF127	Resurgence	Kigali	Gasabo	2024	35-49	Male	R561H+K189T
+KF129	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF130	Resurgence	Kigali	Gasabo	2024			Other_K13
+KF132	Resurgence	Kigali	Gasabo	2024			WT
+KF133	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF134	Resurgence	Kigali	Gasabo	2024			K189T_only
+KF135	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF136	Resurgence	Kigali	Gasabo	2024			Other_K13
+KF137	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF138	Resurgence	Kigali	Gasabo	2024			WT
+KF139	Resurgence	Kigali	Gasabo	2024			WT
+KF140	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF141	Resurgence	Kigali	Gasabo	2024			Other_K13
+KF142	Resurgence	Kigali	Gasabo	2024			WT
+KF144	Resurgence	Kigali	Gasabo	2024			WT
+KF145	Resurgence	Kigali	Gasabo	2024			WT
+KF146	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF147	Resurgence	Kigali	Gasabo	2024			WT
+KF149	Resurgence	Kigali	Gasabo	2024	25-34	Male	R561H+K189T
+KF150	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF153	Resurgence	Kigali	Gasabo	2024			WT
+KF154	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF155	Resurgence	Kigali	Gasabo	2024			WT
+KF156	Resurgence	Kigali	Gasabo	2024			WT
+KF157	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF158	Resurgence	Kigali	Gasabo	2024			WT
+KF159	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF160	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF161	Resurgence	Kigali	Gasabo	2024			WT
+KF163	Resurgence	Kigali	Gasabo	2024			WT
+KF168	Resurgence	Kigali	Gasabo	2024			K189T_only
+KF169	Resurgence	Kigali	Gasabo	2024	15-24	Male	R561H+K189T
+KF170	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF171	Resurgence	Kigali	Gasabo	2024	25-34	Male	R561H+K189T
+KF172	Resurgence	Kigali	Gasabo	2024	35-49	Male	Other_K13
+KF173	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF174	Resurgence	Kigali	Gasabo	2024			Other_K13
+KF175	Resurgence	Kigali	Gasabo	2024	50+	Male	R561H+K189T
+KF176	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF177	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF178	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF179	Resurgence	Kigali	Gasabo	2024	15-24	Male	WT
+KF180	Resurgence	Kigali	Gasabo	2024	50+	Male	R561H+K189T
+KF182	Resurgence	Kigali	Gasabo	2024			Other_K13
+KF184	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF189	Resurgence	Kigali	Gasabo	2024			Other_K13
+KF190	Resurgence	Kigali	Gasabo	2024			Other_K13
+KF191	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF192	Resurgence	Kigali	Gasabo	2024			K189T_only
+KF193	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF194	Resurgence	Kigali	Gasabo	2024			WT
+KF195	Resurgence	Kigali	Gasabo	2024			WT
+KF196	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF197	Resurgence	Kigali	Gasabo	2024			Other_K13
+KF198	Resurgence	Kigali	Gasabo	2024			WT
+KF200	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF201	Resurgence	Kigali	Gasabo	2024			Other_K13
+KF202	Resurgence	Kigali	Gasabo	2024			Other_K13
+KF203	Resurgence	Kigali	Gasabo	2024			WT
+KF204	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF207	Resurgence	Kigali	Gasabo	2024			WT
+KF209	Resurgence	Kigali	Gasabo	2024			K189T_only
+KF210	Resurgence	Kigali	Gasabo	2024	25-34	Male	Other_K13
+KF211	Resurgence	Kigali	Gasabo	2024			Other_K13
+KF213	Resurgence	Kigali	Gasabo	2024			Other_K13
+KF214	Resurgence	Kigali	Gasabo	2024	5-14	Male	R561H+K189T
+KF215	Resurgence	Kigali	Gasabo	2024	<5	Male	Other_K13
+KF223	Resurgence	Kigali	Gasabo	2024			Other_K13
+KF224	Resurgence	Kigali	Gasabo	2024			WT
+KF225	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF227	Resurgence	Kigali	Gasabo	2024			WT
+KF230	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF231	Resurgence	Kigali	Gasabo	2024			K189T_only
+KF232	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF233	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF235	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF236	Resurgence	Kigali	Gasabo	2024			Other_K13
+KF238	Resurgence	Kigali	Gasabo	2024	35-49	Male	WT
+KF239	Resurgence	Kigali	Gasabo	2024	25-34	Male	Other_K13
+KF241	Resurgence	Kigali	Gasabo	2024	25-34	Male	R561H+K189T
+KF242	Resurgence	Kigali	Gasabo	2024			WT
+KF243	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF244	Resurgence	Kigali	Gasabo	2024			Other_K13
+KF245	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+KF248	Resurgence	Kigali	Gasabo	2024			Other_K13
+KFD001	Resurgence	Kigali	Gasabo	2025	35-49	Female	R561H+K189T
+KFD002	Resurgence	Kigali	Gasabo	2025	50+	Female	R561H+K189T
+KFD003	Resurgence	Kigali	Gasabo	2025	50+	Female	WT
+KFD005	Resurgence	Kigali	Gasabo	2025	5-14	Male	WT
+KFD006	Resurgence	Kigali	Gasabo	2025	35-49	Female	R561H_only
+KFD008	Resurgence	Kigali	Gasabo	2025	35-49	Male	R561H+K189T
+KFD009	Resurgence	Kigali	Gasabo	2025	50+	Male	WT
+KFD010	Resurgence	Kigali	Gasabo	2025	35-49	Male	R561H+K189T
+KFD011	Resurgence	Kigali	Gasabo	2025	5-14	Male	R561H+K189T
+KFD012	Resurgence	Kigali	Gasabo	2025	50+	Female	R561H_only
+KFD013	Resurgence	Kigali	Gasabo	2025	<5	Male	R561H+K189T
+KFD014	Resurgence	Kigali	Gasabo	2025	25-34	Female	R561H+K189T
+KFD015	Resurgence	Kigali	Gasabo	2025	15-24	Male	Other_K13
+KFD021	Resurgence	Kigali	Gasabo	2025	<5	Male	R561H+K189T
+KFD022	Resurgence	Kigali	Gasabo	2025	35-49	Male	WT
+KFD023	Resurgence	Kigali	Gasabo	2025	35-49	Male	WT
+KFD025	Resurgence	Kigali	Gasabo	2025	50+	Female	R561H_only
+KFD031	Resurgence	Kigali	Gasabo	2025	5-14	Female	R561H+K189T
+KFD033	Resurgence	Kigali	Gasabo	2025	25-34	Male	WT
+KFD034	Resurgence	Kigali	Gasabo	2025	35-49	Male	R561H+K189T
+KFD035	Resurgence	Kigali	Gasabo	2025	15-24	Male	R561H+K189T
+KFD036	Resurgence	Kigali	Gasabo	2025	15-24	Male	R561H+K189T
+KFD038	Resurgence	Kigali	Gasabo	2025	50+	Female	R561H+K189T
+KFD043	Resurgence	Kigali	Gasabo	2025	15-24	Male	WT
+KFD044	Resurgence	Kigali	Gasabo	2025	50+	Female	R561H+K189T
+KFD048	Resurgence	Kigali	Gasabo	2025	25-34	Female	R561H+K189T
+KFD050	Resurgence	Kigali	Gasabo	2025	25-34	Female	R561H+K189T
+KFD054	Resurgence	Kigali	Gasabo	2025	35-49	Male	R561H+K189T
+KFD058	Resurgence	Kigali	Gasabo	2025	5-14	Female	WT
+KFD060	Resurgence	Kigali	Gasabo	2025	35-49	Male	WT
+KFD063	Resurgence	Kigali	Gasabo	2025	35-49	Female	K189T_only
+KFD066	Resurgence	Kigali	Gasabo	2025	50+	Male	Other_K13
+KFD070	Resurgence	Kigali	Gasabo	2025	35-49	Male	R561H+K189T
+KFD072	Resurgence	Kigali	Gasabo	2025	35-49	Female	WT
+KFD075	Resurgence	Kigali	Gasabo	2025	25-34	Male	R561H+K189T
+KFD080	Resurgence	Kigali	Gasabo	2025	25-34	Male	Other_K13
+KFD083	Resurgence	Kigali	Gasabo	2025	35-49	Male	WT
+KFD086	Resurgence	Kigali	Gasabo	2025	50+	Male	WT
+KFD088	Resurgence	Kigali	Gasabo	2025	35-49	Male	R561H+K189T
+KFD092	Resurgence	Kigali	Gasabo	2025	25-34	Male	WT
+KFD093	Resurgence	Kigali	Gasabo	2025	35-49	Female	WT
+KFD094	Resurgence	Kigali	Gasabo	2025	25-34	Female	R561H+K189T
+KFD097	Resurgence	Kigali	Gasabo	2025	5-14	Male	R561H+K189T
+KFD161	Resurgence	Kigali	Gasabo	2025	50+	Male	R561H+K189T
+KFD166	Resurgence	Kigali	Gasabo	2025	5-14	Male	WT
+KFD167	Resurgence	Kigali	Gasabo	2025	25-34	Male	R561H+K189T
+KFD168	Resurgence	Kigali	Gasabo	2025	25-34	Male	R561H+K189T
+KFD169	Resurgence	Kigali	Gasabo	2025	<5	Male	R561H+K189T
+KFD171	Resurgence	Kigali	Gasabo	2025	50+	Female	R561H+K189T
+KFD172	Resurgence	Kigali	Gasabo	2025	50+	Male	R561H+K189T
+KFD175	Resurgence	Kigali	Gasabo	2025	50+	Male	WT
+KFD176	Resurgence	Kigali	Gasabo	2025	25-34	Female	WT
+KFD178	Resurgence	Kigali	Gasabo	2025	<5	Female	Other_K13
+KFD179	Resurgence	Kigali	Gasabo	2025	25-34	Male	Other_K13
+KFD180	Resurgence	Kigali	Gasabo	2025	15-24	Female	R561H+K189T
+KFH_Trials	Resurgence	Kigali	Gasabo	2025			WT
+KHP001	Resurgence	Kigali	Kicukiro	2024			R561H+K189T
+KHP003	Resurgence	Kigali	Kicukiro	2024			WT
+KHP004	Resurgence	Kigali	Kicukiro	2024			R561H+K189T
+KIB001	Resurgence	Hotspot	Karongi	2025	25-34	Female	WT
+KIB002	Resurgence	Hotspot	Karongi	2025	5-14	Female	R561H+K189T
+KIB003	Resurgence	Hotspot	Karongi	2025	15-24	Male	K189T_only
+KIB004	Resurgence	Hotspot	Karongi	2025	15-24	Female	K189T_only
+KMZ001	Resurgence	Hotspot	Karongi	2025	15-24	Female	Other_K13
+KMZ002	Resurgence	Hotspot	Karongi	2025	15-24	Male	Other_K13
+KMZ006	Resurgence	Hotspot	Karongi	2025	15-24	Female	WT
+KMZ010	Resurgence	Hotspot	Karongi	2025	25-34	Female	Other_K13
+KMZ011	Resurgence	Hotspot	Karongi	2025	15-24	Female	WT
+KMZ019	Resurgence	Hotspot	Karongi	2025	50+	Male	Other_K13
+KMZ020	Resurgence	Hotspot	Karongi	2025	5-14	Female	WT
+KMZ021	Resurgence	Hotspot	Karongi	2025	25-34	Female	WT
+KRNHC003	Resurgence	Hotspot	Nyagatare	2025	15-24	Male	R561H+K189T
+KRNHC005	Resurgence	Hotspot	Nyagatare	2025	5-14	Female	WT
+KRNHC008	Resurgence	Hotspot	Nyagatare	2025	5-14	Female	WT
+KRNHC019	Resurgence	Hotspot	Nyagatare	2025	5-14	Male	Other_K13
+KRNHC021	Resurgence	Hotspot	Nyagatare	2025	25-34	Female	R561H+K189T
+KRNHC023	Resurgence	Hotspot	Nyagatare	2025	25-34	Female	Other_K13
+KRNHC025	Resurgence	Hotspot	Nyagatare	2025	35-49	Female	R561H+K189T
+KRNHC031	Resurgence	Hotspot	Nyagatare	2025	35-49	Female	R561H_only
+KRNHC032	Resurgence	Hotspot	Nyagatare	2025	25-34	Female	R561H_only
+KRNHC033	Resurgence	Hotspot	Nyagatare	2025	35-49	Female	WT
+NDHC006	Resurgence	Hotspot	Nyagatare	2025	5-14	Male	Other_K13
+NDHC008	Resurgence	Hotspot	Nyagatare	2025	15-24	Male	WT
+NDHC009	Resurgence	Hotspot	Nyagatare	2025	15-24	Male	Other_K13
+NDHC017	Resurgence	Hotspot	Nyagatare	2025	50+	Female	R561H+K189T
+NDHC023	Resurgence	Hotspot	Nyagatare	2025	25-34	Male	Other_K13
+NYHC002	Resurgence	Hotspot	Musanze	2025	15-24	Male	Other_K13
+NYHC004	Resurgence	Hotspot	Musanze	2025	35-49	Female	Other_K13
+NYHC006	Resurgence	Hotspot	Musanze	2025	15-24	Male	WT
+NYHC009	Resurgence	Hotspot	Musanze	2025	<5	Male	R561H+K189T
+NYHC011	Resurgence	Hotspot	Musanze	2025	5-14	Male	K189T_only
+NYHC012	Resurgence	Hotspot	Musanze	2025	15-24	Female	K189T_only
+NYHC013	Resurgence	Hotspot	Musanze	2025	25-34	Male	R561H+K189T
+NYHC014	Resurgence	Hotspot	Musanze	2025	15-24	Male	WT
+NYHC017	Resurgence	Hotspot	Musanze	2025	5-14	Female	K189T_only
+PI_NK	Resurgence	Kigali	Gasabo	2025			R561H+K189T
+RHC002	Resurgence	Hotspot	Musanze	2025	15-24	Male	WT
+RHC003	Resurgence	Hotspot	Musanze	2025	15-24	Male	WT
+RHC004	Resurgence	Hotspot	Musanze	2025	35-49	Male	Other_K13
+RM001	Resurgence	Kigali	Gasabo	2025	15-24	Male	WT
+RM004	Resurgence	Kigali	Gasabo	2025	15-24	Female	WT
+RM005	Resurgence	Kigali	Gasabo	2025	25-34	Male	Other_K13
+RM006	Resurgence	Kigali	Gasabo	2025	25-34	Female	WT
+RM008	Resurgence	Kigali	Gasabo	2025	25-34	Male	WT
+RM010	Resurgence	Kigali	Gasabo	2025	25-34	Female	Other_K13
+RM013	Resurgence	Kigali	Gasabo	2025	25-34	Male	WT
+RM015	Resurgence	Kigali	Gasabo	2025	25-34	Male	R561H+K189T
+RM019	Resurgence	Kigali	Gasabo	2025	<5	Female	WT
+RM020	Resurgence	Kigali	Gasabo	2025	25-34	Male	R561H+K189T
+RM021	Resurgence	Kigali	Gasabo	2025	15-24	Female	Other_K13
+RM022	Resurgence	Kigali	Gasabo	2025	5-14	Female	Other_K13
+RM023	Resurgence	Kigali	Gasabo	2025	50+	Male	WT
+RM025	Resurgence	Kigali	Gasabo	2025	15-24	Male	WT
+RM035	Resurgence	Kigali	Gasabo	2025	25-34	Male	R561H+K189T
+RM038	Resurgence	Kigali	Gasabo	2025	15-24	Female	R561H+K189T
+RM039	Resurgence	Kigali	Gasabo	2025	25-34	Female	R561H+K189T
+RM040	Resurgence	Kigali	Gasabo	2025	25-34	Male	R561H+K189T
+RM042	Resurgence	Kigali	Gasabo	2025	<5	Female	WT
+RM043	Resurgence	Kigali	Gasabo	2025	25-34	Male	WT
+RM044	Resurgence	Kigali	Gasabo	2025	25-34	Male	WT
+RM045	Resurgence	Kigali	Gasabo	2025	50+	Male	R561H+K189T
+RM046	Resurgence	Kigali	Gasabo	2025	15-24	Female	R561H+K189T
+RM049	Resurgence	Kigali	Gasabo	2025	25-34	Male	R561H+K189T
+RM050	Resurgence	Kigali	Gasabo	2025	5-14	Female	WT
+RM051	Resurgence	Kigali	Gasabo	2025	15-24	Female	Other_K13
+RM052	Resurgence	Kigali	Gasabo	2025	35-49	Male	R561H+K189T
+RM053	Resurgence	Kigali	Gasabo	2025	15-24	Male	WT
+RM054	Resurgence	Kigali	Gasabo	2025	15-24	Female	R561H+K189T
+RM055	Resurgence	Kigali	Gasabo	2025	50+	Male	R561H+K189T
+RM057	Resurgence	Kigali	Gasabo	2025	<5	Female	Other_K13
+RM059	Resurgence	Kigali	Gasabo	2025	25-34	Male	WT
+RM060	Resurgence	Kigali	Gasabo	2025	25-34	Male	R561H_only
+RM062	Resurgence	Kigali	Gasabo	2025	15-24	Female	R561H+K189T
+RM064	Resurgence	Kigali	Gasabo	2025	25-34	Female	R561H+K189T
+RM070	Resurgence	Kigali	Gasabo	2025	35-49	Female	WT
+RM071	Resurgence	Kigali	Gasabo	2025	15-24	Male	R561H+K189T
+RM074	Resurgence	Kigali	Gasabo	2025	25-34	Male	R561H+K189T
+RM075	Resurgence	Kigali	Gasabo	2025	15-24	Female	WT
+RM076	Resurgence	Kigali	Gasabo	2025	15-24	Male	R561H+K189T
+RM077	Resurgence	Kigali	Gasabo	2025	35-49	Female	R561H+K189T
+RM079	Resurgence	Kigali	Gasabo	2025	15-24	Male	K189T_only
+RM080	Resurgence	Kigali	Gasabo	2025	5-14	Female	R561H+K189T
+RM082	Resurgence	Kigali	Gasabo	2025	15-24	Male	WT
+RM086	Resurgence	Kigali	Gasabo	2025	15-24	Male	R561H+K189T
+RM087	Resurgence	Kigali	Gasabo	2025	15-24	Female	Other_K13
+RM088	Resurgence	Kigali	Gasabo	2025	15-24	Male	WT
+RM089	Resurgence	Kigali	Gasabo	2025	15-24	Female	WT
+RM090	Resurgence	Kigali	Gasabo	2025	<5	Male	WT
+RM093	Resurgence	Kigali	Gasabo	2025	35-49	Male	R561H+K189T
+RM095	Resurgence	Kigali	Gasabo	2025	15-24	Female	WT
+RM097	Resurgence	Kigali	Gasabo	2025	15-24	Male	R561H+K189T
+RM099	Resurgence	Kigali	Gasabo	2025	15-24	Male	WT
+RM100	Resurgence	Kigali	Gasabo	2025	15-24	Male	R561H+K189T
+RM194	Resurgence	Kigali	Gasabo	2025	50+	Female	R561H+K189T
+RM195	Resurgence	Kigali	Gasabo	2025	15-24	Female	WT
+RM196	Resurgence	Kigali	Gasabo	2025	15-24	Female	R561H+K189T
+RM197	Resurgence	Kigali	Gasabo	2025	15-24	Female	R561H+K189T
+RM199	Resurgence	Kigali	Gasabo	2025	35-49	Male	WT
+RM201	Resurgence	Kigali	Gasabo	2025	15-24	Male	WT
+RM205	Resurgence	Kigali	Gasabo	2025	15-24	Male	WT
+RM206	Resurgence	Kigali	Gasabo	2025	25-34	Female	Other_K13
+RM209	Resurgence	Kigali	Gasabo	2025	25-34	Female	WT
+RM212	Resurgence	Kigali	Gasabo	2025	15-24	Female	R561H+K189T
+RM213	Resurgence	Kigali	Gasabo	2025	25-34	Male	WT
+RM215	Resurgence	Kigali	Gasabo	2025	15-24	Male	R561H+K189T
+RM217	Resurgence	Kigali	Gasabo	2025	25-34	Female	Other_K13
+RM218	Resurgence	Kigali	Gasabo	2025	15-24	Female	K189T_only
+RM273	Resurgence	Kigali	Gasabo	2025	25-34	Male	Other_K13
+RM275	Resurgence	Kigali	Gasabo	2025	15-24	Male	WT
+RM280	Resurgence	Kigali	Gasabo	2025	25-34	Female	R561H+K189T
+RM282	Resurgence	Kigali	Gasabo	2025	15-24	Male	WT
+RM287	Resurgence	Kigali	Gasabo	2025	25-34	Male	R561H+K189T
+RM291	Resurgence	Kigali	Gasabo	2025	25-34	Male	R561H+K189T
+RM292	Resurgence	Kigali	Gasabo	2025	15-24	Female	R561H+K189T
+RM294	Resurgence	Kigali	Gasabo	2025	25-34	Male	R561H+K189T
+RM295	Resurgence	Kigali	Gasabo	2025	15-24	Female	WT
+RM300	Resurgence	Kigali	Gasabo	2025	15-24	Female	Other_K13
+RM317	Resurgence	Kigali	Gasabo	2025	25-34	Male	WT
+RM318	Resurgence	Kigali	Gasabo	2025	50+	Female	R561H+K189T
+RM319	Resurgence	Kigali	Gasabo	2025	50+	Female	R561H+K189T
+RM320	Resurgence	Kigali	Gasabo	2025	15-24	Female	R561H+K189T
+RM321	Resurgence	Kigali	Gasabo	2025	25-34	Male	R561H+K189T
+RM325	Resurgence	Kigali	Gasabo	2025	50+	Male	R561H+K189T
+RM326	Resurgence	Kigali	Gasabo	2025	15-24	Male	R561H+K189T
+RM347	Resurgence	Kigali	Gasabo	2025	25-34	Male	WT
+RM348	Resurgence	Kigali	Gasabo	2025	15-24	Male	Other_K13
+RM350	Resurgence	Kigali	Gasabo	2025	50+	Female	R561H+K189T
+RM351	Resurgence	Kigali	Gasabo	2025	15-24	Male	R561H+K189T
+RM353	Resurgence	Kigali	Gasabo	2025	15-24	Male	R561H+K189T
+RM355	Resurgence	Kigali	Gasabo	2025	15-24	Male	WT
+RM356	Resurgence	Kigali	Gasabo	2025	25-34	Female	WT
+RM358	Resurgence	Kigali	Gasabo	2025	50+	Male	Other_K13
+RM359	Resurgence	Kigali	Gasabo	2025	15-24	Female	WT
+RM360	Resurgence	Kigali	Gasabo	2025	25-34	Male	R561H+K189T
+RM361	Resurgence	Kigali	Gasabo	2025	25-34	Female	K189T_only
+RM366	Resurgence	Kigali	Gasabo	2025	35-49	Male	WT
+RM368	Resurgence	Kigali	Gasabo	2025	15-24	Female	R561H+K189T
+RM369	Resurgence	Kigali	Gasabo	2025	25-34	Female	WT
+RM370	Resurgence	Kigali	Gasabo	2025	15-24	Male	WT
+RM372	Resurgence	Kigali	Gasabo	2025	5-14	Female	R561H+K189T
+RM377	Resurgence	Kigali	Gasabo	2025	25-34	Male	WT
+RM378	Resurgence	Kigali	Gasabo	2025	15-24	Male	R561H+K189T
+RM380	Resurgence	Kigali	Gasabo	2025	<5	Male	R561H+K189T
+RM381	Resurgence	Kigali	Gasabo	2025	25-34	Female	WT
+RM382	Resurgence	Kigali	Gasabo	2025	25-34	Female	R561H+K189T
+RM383	Resurgence	Kigali	Gasabo	2025	15-24	Male	R561H+K189T
+RM384	Resurgence	Kigali	Gasabo	2025	15-24	Male	R561H+K189T
+RM385	Resurgence	Kigali	Gasabo	2025	35-49	Male	R561H+K189T
+RM386	Resurgence	Kigali	Gasabo	2025	15-24	Female	Other_K13
+RM389	Resurgence	Kigali	Gasabo	2025	15-24	Male	R561H+K189T
+RM392	Resurgence	Kigali	Gasabo	2025	15-24	Male	R561H+K189T
+RM394	Resurgence	Kigali	Gasabo	2025	25-34	Female	R561H+K189T
+RM395	Resurgence	Kigali	Gasabo	2025	35-49	Male	Other_K13
+RM396	Resurgence	Kigali	Gasabo	2025	15-24	Male	Other_K13
+RM397	Resurgence	Kigali	Gasabo	2025	35-49	Male	Other_K13
+RM398	Resurgence	Kigali	Gasabo	2025	15-24	Female	R561H+K189T
+RM399	Resurgence	Kigali	Gasabo	2025	5-14	Female	R561H+K189T
+RM400	Resurgence	Kigali	Gasabo	2025	5-14	Female	R561H+K189T
+RM401	Resurgence	Kigali	Gasabo	2025	15-24	Female	WT
+RM402	Resurgence	Kigali	Gasabo	2025	5-14	Male	R561H+K189T
+RM403	Resurgence	Kigali	Gasabo	2025	15-24	Male	R561H+K189T
+RM404	Resurgence	Kigali	Gasabo	2025	35-49	Male	R561H+K189T
+RM405	Resurgence	Kigali	Gasabo	2025	25-34	Female	R561H+K189T
+RM406	Resurgence	Kigali	Gasabo	2025	15-24	Female	R561H+K189T
+RM407	Resurgence	Kigali	Gasabo	2025	25-34	Male	R561H+K189T
+RM408	Resurgence	Kigali	Gasabo	2025	15-24	Male	R561H+K189T
+RM409	Resurgence	Kigali	Gasabo	2025	15-24	Male	R561H+K189T
+RM410	Resurgence	Kigali	Gasabo	2025	50+	Female	R561H+K189T
+RM411	Resurgence	Kigali	Gasabo	2025	15-24	Male	R561H+K189T
+RM412	Resurgence	Kigali	Gasabo	2025	35-49	Female	R561H+K189T
+RM413	Resurgence	Kigali	Gasabo	2025	15-24	Male	R561H+K189T
+RM414	Resurgence	Kigali	Gasabo	2025	25-34	Female	WT
+RM416	Resurgence	Kigali	Gasabo	2025	5-14	Female	Other_K13
+RM417	Resurgence	Kigali	Gasabo	2025	15-24	Male	R561H+K189T
+RM419	Resurgence	Kigali	Gasabo	2025	15-24	Male	R561H+K189T
+RM420	Resurgence	Kigali	Gasabo	2025	35-49	Male	R561H+K189T
+RM426	Resurgence	Kigali	Gasabo	2025	15-24	Male	Other_K13
+RM427	Resurgence	Kigali	Gasabo	2025	<5	Male	R561H+K189T
+RM428	Resurgence	Kigali	Gasabo	2025	15-24	Female	R561H+K189T
+RM432	Resurgence	Kigali	Gasabo	2025	15-24	Male	R561H+K189T
+RM433	Resurgence	Kigali	Gasabo	2025	15-24	Male	R561H+K189T
+RM437	Resurgence	Kigali	Gasabo	2025	25-34	Female	WT
+RM438	Resurgence	Kigali	Gasabo	2025	15-24	Female	R561H+K189T
+RM441	Resurgence	Kigali	Gasabo	2025	15-24	Male	R561H+K189T
+RM443	Resurgence	Kigali	Gasabo	2025	25-34	Female	R561H+K189T
+RM447	Resurgence	Kigali	Gasabo	2025	15-24	Male	WT
+RM448	Resurgence	Kigali	Gasabo	2025	15-24	Male	R561H+K189T
+RM449	Resurgence	Kigali	Gasabo	2025	15-24	Male	R561H+K189T
+RM450	Resurgence	Kigali	Gasabo	2025	5-14	Female	Other_K13
+RM451	Resurgence	Kigali	Gasabo	2025	15-24	Male	WT
+RM452	Resurgence	Kigali	Gasabo	2025	15-24	Male	WT
+RM453	Resurgence	Kigali	Gasabo	2025	25-34	Male	R561H+K189T
+RM454	Resurgence	Kigali	Gasabo	2025	5-14	Male	R561H+K189T
+RM455	Resurgence	Kigali	Gasabo	2025	15-24	Female	R561H+K189T
+RM459	Resurgence	Kigali	Gasabo	2025	25-34	Female	R561H+K189T
+RM460	Resurgence	Kigali	Gasabo	2025	50+	Male	R561H+K189T
+RM461	Resurgence	Kigali	Gasabo	2025	15-24	Female	R561H+K189T
+RM463	Resurgence	Kigali	Gasabo	2025	35-49	Male	R561H+K189T
+RM465	Resurgence	Kigali	Gasabo	2025	15-24	Male	R561H+K189T
+RM466	Resurgence	Kigali	Gasabo	2025	35-49	Female	R561H+K189T
+RM467	Resurgence	Kigali	Gasabo	2025	25-34	Female	R561H+K189T
+RUMU001	Resurgence	Hotspot	Rutsiro	2025	35-49	Female	WT
+RUMU003	Resurgence	Hotspot	Rutsiro	2025	5-14	Male	WT
+RUMU004	Resurgence	Hotspot	Rutsiro	2025	50+	Female	WT
+RUMU005	Resurgence	Hotspot	Rutsiro	2025	15-24	Male	Other_K13
+RUMU006	Resurgence	Hotspot	Rutsiro	2025	5-14	Female	WT
+RUMU007	Resurgence	Hotspot	Rutsiro	2025	25-34	Female	WT
+RUMU008	Resurgence	Hotspot	Rutsiro	2025	25-34	Female	WT
+RUMU009	Resurgence	Hotspot	Rutsiro	2025	50+	Male	WT
+RUMU010	Resurgence	Hotspot	Rutsiro	2025	5-14	Female	WT
+RUMU011	Resurgence	Hotspot	Rutsiro	2025	50+	Male	WT
+RUMU012	Resurgence	Hotspot	Rutsiro	2025	5-14	Female	R561H+K189T
+RUMU013	Resurgence	Hotspot	Rutsiro	2025	15-24	Male	WT
+RUMU014	Resurgence	Hotspot	Rutsiro	2025	5-14	Female	Other_K13
+RUMU015	Resurgence	Hotspot	Rutsiro	2025	35-49	Male	Other_K13
+RUMU016	Resurgence	Hotspot	Rutsiro	2025	<5	Female	WT
+RUMU017	Resurgence	Hotspot	Rutsiro	2025	15-24	Female	WT
+RUMU018	Resurgence	Hotspot	Rutsiro	2025	35-49	Female	WT
+RUMU019	Resurgence	Hotspot	Rutsiro	2025	5-14	Male	WT
+RUMU020	Resurgence	Hotspot	Rutsiro	2025	35-49	Male	WT
+RUMU021	Resurgence	Hotspot	Rutsiro	2025	5-14	Female	Other_K13
+RUMU022	Resurgence	Hotspot	Rutsiro	2025	5-14	Female	Other_K13
+RUMU024	Resurgence	Hotspot	Rutsiro	2025	50+	Female	Other_K13
+RUMU025	Resurgence	Hotspot	Rutsiro	2025	5-14	Female	Other_K13
+RUMU027	Resurgence	Hotspot	Rutsiro	2025	5-14	Female	WT
+RUMU028	Resurgence	Hotspot	Rutsiro	2025	5-14	Female	WT
+RUMU029	Resurgence	Hotspot	Rutsiro	2025	50+	Female	Other_K13
+RUMU030	Resurgence	Hotspot	Rutsiro	2025	5-14	Female	Other_K13
+RUMU031	Resurgence	Hotspot	Rutsiro	2025	25-34	Male	WT
+RUMU032	Resurgence	Hotspot	Rutsiro	2025	<5	Female	WT
+RUMU033	Resurgence	Hotspot	Rutsiro	2025	5-14	Female	WT
+RUMU036	Resurgence	Hotspot	Rutsiro	2025	5-14	Male	WT
+RUMU038	Resurgence	Hotspot	Rutsiro	2025	35-49	Male	WT
+RUMU039	Resurgence	Hotspot	Rutsiro	2025	35-49	Male	Other_K13
+RUMU041	Resurgence	Hotspot	Rutsiro	2025	5-14	Female	Other_K13
+RUMU042	Resurgence	Hotspot	Rutsiro	2025	50+	Male	Other_K13
+RUMU043	Resurgence	Hotspot	Rutsiro	2025	25-34	Female	Other_K13
+RW_E1	Baseline-Kigali	Kigali	Kicukiro	2021	15-24	Male	WT
+RW_E2	Baseline-Kigali	Kigali	Kicukiro	2021	15-24	Female	Other_K13
+RW_E3	Baseline-Kigali	Kigali	Kicukiro	2021	5-14	Female	R561H+K189T
+RW_E4	Baseline-Kigali	Kigali	Kicukiro	2021	<5	Male	WT
+RW_E6	Baseline-Kigali	Kigali	Kicukiro	2021	15-24	Male	Other_K13
+RW_E7	Baseline-Kigali	Kigali	Kicukiro	2021	<5	Female	WT
+RW_E8	Baseline-Kigali	Kigali	Kicukiro	2021	25-34	Female	WT
+RW_E9	Baseline-Kigali	Kigali	Kicukiro	2021	<5	Male	R561H+K189T
+RW_F2	Baseline-Kigali	Kigali	Nyarugenge	2021	35-49	Female	R561H+K189T
+RW_F3	Baseline-Kigali	Kigali	Nyarugenge	2021	25-34	Female	R561H+K189T
+RW_F4	Baseline-Kigali	Kigali	Gasabo	2021	35-49	Male	WT
+RW_F6	Baseline-Kigali	Kigali	Gasabo	2021	35-49	Male	K189T_only
+RW_F9	Baseline-Kigali	Kigali	Kicukiro	2021	<5	Female	R561H+K189T
+RW_J10	Baseline-Kigali	Kigali	Kicukiro	2023	<5	Male	WT
+RW_J11	Baseline-Kigali	Kigali	Kicukiro	2023	<5	Male	WT
+RW_J12	Baseline-Kigali	Kigali	Nyarugenge	2023	25-34	Female	R561H+K189T
+RW_J13	Baseline-Kigali	Kigali	Nyarugenge	2023	5-14	Female	R561H+K189T
+RW_J15	Baseline-Kigali	Kigali	Kicukiro	2023	35-49	Male	WT
+RW_J16	Baseline-Kigali	Kigali	Kicukiro	2023	<5	Male	WT
+RW_J17	Baseline-Kigali	Kigali	Nyarugenge	2023	25-34	Male	R561H+K189T
+RW_J18	Baseline-Kigali	Kigali	Gasabo	2023	15-24	Female	WT
+RW_J19	Baseline-Kigali	Kigali	Gasabo	2023	25-34	Male	WT
+RW_J20	Baseline-Kigali	Kigali	Gasabo	2023	35-49	Male	WT
+RW_J21	Baseline-Kigali	Kigali	Nyarugenge	2023	35-49	Male	K189T_only
+RW_J22	Baseline-Kigali	Kigali	Nyarugenge	2023	50+	Male	R561H+K189T
+RW_J23	Baseline-Kigali	Kigali	Gasabo	2023	50+	Male	WT
+RW_J24	Baseline-Kigali	Kigali	Nyarugenge	2023	50+	Male	R561H+K189T
+RW_J26	Baseline-Kigali	Kigali	Nyarugenge	2023	25-34	Male	R561H+K189T
+RW_J28	Baseline-Kigali	Kigali	Gasabo	2023	50+	Male	WT
+RW_J29	Baseline-Kigali	Kigali	Nyarugenge	2023	25-34	Male	WT
+RW_J2	Baseline-Kigali	Kigali	Gasabo	2023	5-14	Male	WT
+RW_J32	Baseline-Kigali	Kigali	Nyarugenge	2023	25-34	Male	WT
+RW_J34	Baseline-Kigali	Kigali	Nyarugenge	2023	15-24	Male	WT
+RW_J36	Baseline-Kigali	Kigali	Nyarugenge	2023	25-34	Female	R561H+K189T
+RW_J37	Baseline-Kigali	Kigali	Nyarugenge	2023	<5	Male	K189T_only
+RW_J38	Baseline-Kigali	Kigali	Nyarugenge	2023	<5	Male	R561H+K189T
+RW_J3	Baseline-Kigali	Kigali	Nyarugenge	2023	<5	Male	WT
+RW_J46	Baseline-Kigali	Kigali	Gasabo	2023			Other_K13
+RW_J47	Baseline-Kigali	Kigali	Gasabo	2023			Other_K13
+RW_J48	Baseline-Kigali	Kigali	Gasabo	2023			Other_K13
+RW_J4	Baseline-Kigali	Kigali	Nyarugenge	2023	50+	Female	WT
+RW_J5	Baseline-Kigali	Kigali	Nyarugenge	2023	25-34	Male	WT
+RW_J7	Baseline-Kigali	Kigali	Nyarugenge	2023	25-34	Male	Other_K13
+RW_J9	Baseline-Kigali	Kigali	Nyarugenge	2023	50+	Male	Other_K13
+RW_K1	Baseline-Kigali	Kigali	Kicukiro	2021	35-49	Male	Other_K13
+RW_K2	Baseline-Kigali	Kigali	Kicukiro	2021	5-14	Male	R561H+K189T
+RW_K4	Baseline-Kigali	Kigali	Kicukiro	2021	<5	Male	WT
+RW_K5	Baseline-Kigali	Kigali	Kicukiro	2021	5-14	Female	WT
+RW_S10	Baseline-Kigali	Kigali	Nyarugenge	2022	25-34	Female	R561H+K189T
+RW_S11	Baseline-Kigali	Kigali	Nyarugenge	2022	35-49	Male	R561H+K189T
+RW_S12	Baseline-Kigali	Kigali	Gasabo	2022	15-24	Male	WT
+RW_S13	Baseline-Kigali	Kigali	Nyarugenge	2022	15-24	Male	WT
+RW_S14	Baseline-Kigali	Kigali	Gasabo	2022	35-49	Male	R561H+K189T
+RW_S15	Baseline-Kigali	Kigali	Kicukiro	2022	<5	Female	WT
+RW_S17	Baseline-Kigali	Kigali	Nyarugenge	2022	50+	Male	K189T_only
+RW_S19	Baseline-Kigali	Kigali	Gasabo	2022	50+	Female	WT
+RW_S1	Baseline-Kigali	Kigali	Kicukiro	2022	5-14	Female	WT
+RW_S20	Baseline-Kigali	Hotspot	Rutsiro	2022	25-34	Male	WT
+RW_S21	Baseline-Kigali	Kigali	Gasabo	2022	35-49	Male	R561H+K189T
+RW_S3	Baseline-Kigali	Kigali	Kicukiro	2022	25-34	Male	R561H+K189T
+RW_S4	Baseline-Kigali	Kigali	Nyarugenge	2022	15-24	Male	WT
+RW_S5	Baseline-Kigali	Kigali	Gasabo	2022	25-34	Female	R561H+K189T
+RW_S7	Baseline-Kigali	Kigali	Nyarugenge	2022	25-34	Female	R561H+K189T
+RW_S8	Baseline-Kigali	Kigali	Gasabo	2022	25-34	Female	K189T_only
+RW_SM102	Baseline-Kigali	Kigali	Nyarugenge	2022	<5	Female	WT
+RW_SM12	Baseline-Kigali	Kigali	Nyarugenge	2022	50+	Male	Other_K13
+RW_SM17	Baseline-Kigali	Kigali	Nyarugenge	2022	50+	Female	R561H+K189T
+RW_SM18	Baseline-Kigali	Kigali	Nyarugenge	2022	25-34	Female	R561H+K189T
+RW_SM19	Baseline-Kigali	Kigali	Gasabo	2022	25-34	Female	Other_K13
+RW_SM25	Baseline-Kigali	Kigali	Nyarugenge	2022	25-34	Female	Other_K13
+RW_SM26	Baseline-Kigali	Kigali	Nyarugenge	2022	<5	Female	WT
+RW_SM27	Baseline-Kigali	Hotspot	Nyagatare	2022	35-49	Male	Other_K13
+RW_SM29	Baseline-Kigali	Kigali	Kicukiro	2022	<5	Male	WT
+RW_SM30	Baseline-Kigali	Kigali	Nyarugenge	2022	25-34	Male	K189T_only
+RW_SM32	Baseline-Kigali	Kigali	Gasabo	2022	25-34	Male	WT
+RW_SM33	Baseline-Kigali	Kigali	Nyarugenge	2022	5-14	Female	WT
+RW_SM34	Baseline-Kigali	Kigali	Gasabo	2022	5-14	Male	R561H+K189T
+RW_SM35	Baseline-Kigali	Kigali	Nyarugenge	2022	15-24	Female	R561H+K189T
+RW_SM36	Baseline-Kigali	Kigali	Nyarugenge	2022	5-14	Male	WT
+RW_SM37	Baseline-Kigali	Kigali	Nyarugenge	2022	25-34	Female	WT
+RW_SM38	Baseline-Kigali	Kigali	Kicukiro	2022	15-24	Male	R561H+K189T
+RW_SM39	Baseline-Kigali	Kigali	Nyarugenge	2022	35-49	Male	WT
+RW_SM40	Baseline-Kigali	Kigali	Nyarugenge	2022	25-34	Female	Other_K13
+RW_SM41	Baseline-Kigali	Kigali	Kicukiro	2022	25-34	Female	WT
+RW_SM42	Baseline-Kigali	Kigali	Gasabo	2022	5-14	Female	Other_K13
+RW_SM43	Baseline-Kigali	Kigali	Kicukiro	2022	<5	Male	WT
+RW_SM47	Baseline-Kigali	Kigali	Gasabo	2022	25-34	Female	K189T_only
+RW_SM51	Baseline-Kigali	Kigali	Nyarugenge	2022	25-34	Male	R561H+K189T
+RW_SM52	Baseline-Kigali	Kigali	Nyarugenge	2022	35-49	Male	R561H+K189T
+RW_SM53	Baseline-Kigali	Kigali	Gasabo	2022	15-24	Male	WT
+RW_SM54	Baseline-Kigali	Hotspot	Nyagatare	2022	25-34	Male	R561H+K189T
+RW_SM56	Baseline-Kigali	Kigali	Gasabo	2022	15-24	Male	R561H+K189T
+RW_SM57	Baseline-Kigali	Kigali	Nyarugenge	2022	25-34	Female	R561H+K189T
+RW_SM58	Baseline-Kigali	Kigali	Kicukiro	2022	35-49	Female	WT
+RW_SM59	Baseline-Kigali	Kigali	Nyarugenge	2022	15-24	Male	R561H+K189T
+RW_SM5	Baseline-Kigali	Kigali	Kicukiro	2022	15-24	Female	R561H+K189T
+RW_SM60	Baseline-Kigali	Kigali	Kicukiro	2022	25-34	Male	WT
+RW_SM61	Baseline-Kigali	Kigali	Nyarugenge	2022	35-49	Female	R561H+K189T
+RW_SM62	Baseline-Kigali	Kigali	Nyarugenge	2022	15-24	Male	Other_K13
+RW_SM63	Baseline-Kigali	Kigali	Nyarugenge	2022	25-34	Female	Other_K13
+RW_SM64	Baseline-Kigali	Kigali	Nyarugenge	2022	25-34	Female	R561H+K189T
+RW_SM67	Baseline-Kigali	Kigali	Nyarugenge	2022	<5	Female	Other_K13
+RW_SM68	Baseline-Kigali	Kigali	Gasabo	2022			WT
+RW_SM71	Baseline-Kigali	Kigali	Nyarugenge	2022	15-24	Male	Other_K13
+RW_SM73	Baseline-Kigali	Kigali	Gasabo	2022	5-14	Male	WT
+RW_SM76	Baseline-Kigali	Kigali	Gasabo	2022	5-14	Male	R561H+K189T
+RW_SM77	Baseline-Kigali	Kigali	Gasabo	2022	35-49	Female	WT
+RW_SM78	Baseline-Kigali	Kigali	Gasabo	2022	50+	Male	R561H+K189T
+RW_SM79	Baseline-Kigali	Kigali	Nyarugenge	2022	50+	Male	Other_K13
+RW_SM80	Baseline-Kigali	Kigali	Kicukiro	2022	5-14	Male	R561H+K189T
+RW_SM81	Baseline-Kigali	Kigali	Gasabo	2022	5-14	Male	K189T_only
+RW_SM82	Baseline-Kigali	Kigali	Nyarugenge	2022	35-49	Female	K189T_only
+RW_SM84	Baseline-Kigali	Kigali	Gasabo	2022	50+	Female	R561H+K189T
+RW_SM85	Baseline-Kigali	Kigali	Gasabo	2022	25-34	Male	WT
+RW_SM86	Baseline-Kigali	Kigali	Gasabo	2022	15-24	Female	Other_K13
+RW_SM87	Baseline-Kigali	Kigali	Kicukiro	2022	15-24	Male	K189T_only
+RW_SM89	Baseline-Kigali	Kigali	Nyarugenge	2022	5-14	Female	Other_K13
+RW_SM90	Baseline-Kigali	Kigali	Nyarugenge	2022	5-14	Female	Other_K13
+RW_SM91	Baseline-Kigali	Kigali	Nyarugenge	2022	5-14	Female	Other_K13
+RW_SM92	Baseline-Kigali	Kigali	Nyarugenge	2022	5-14	Female	Other_K13
+RW_SM93	Baseline-Kigali	Kigali	Nyarugenge	2022	5-14	Male	WT
+RW_SM94	Baseline-Kigali	Kigali	Gasabo	2022	5-14	Female	WT
+RW_SM95	Baseline-Kigali	Kigali	Kicukiro	2022	50+	Male	WT
+RW_SM98	Baseline-Kigali	Kigali	Gasabo	2022	25-34	Female	WT
+RW_SM99	Baseline-Kigali	Kigali	Kicukiro	2022	35-49	Female	Other_K13
+RW_SM9	Baseline-Kigali	Kigali	Gasabo	2022	35-49	Female	R561H+K189T
+RW_SN100	Baseline-Kigali	Kigali	Kicukiro	2022	5-14	Female	R561H+K189T
+RW_SN101	Baseline-Kigali	Kigali	Nyarugenge	2022	<5	Male	WT
+RW_SN102	Baseline-Kigali	Kigali	Gasabo	2022	15-24	Female	R561H+K189T
+RW_SN104	Baseline-Kigali	Kigali	Nyarugenge	2022	50+	Male	Other_K13
+RW_SN105	Baseline-Kigali	Kigali	Gasabo	2022	25-34	Male	Other_K13
+RW_SN106	Baseline-Kigali	Kigali	Kicukiro	2022	5-14	Female	WT
+RW_SN107	Baseline-Kigali	Kigali	Gasabo	2022	50+	Male	WT
+RW_SN108	Baseline-Kigali	Kigali	Gasabo	2022	25-34	Female	R561H+K189T
+RW_SN109	Baseline-Kigali	Kigali	Gasabo	2022			R561H_only
+RW_SN10	Baseline-Kigali	Kigali	Kicukiro	2022	<5	Male	R561H+K189T
+RW_SN110	Baseline-Kigali	Kigali	Nyarugenge	2022	5-14	Male	R561H+K189T
+RW_SN112	Baseline-Kigali	Kigali	Gasabo	2022	25-34	Female	Other_K13
+RW_SN113	Baseline-Kigali	Kigali	Kicukiro	2022	<5	Female	WT
+RW_SN115	Baseline-Kigali	Kigali	Kicukiro	2022	25-34	Female	R561H+K189T
+RW_SN119	Baseline-Kigali	Kigali	Gasabo	2022	50+	Male	WT
+RW_SN11	Baseline-Kigali	Kigali	Gasabo	2022	25-34	Male	WT
+RW_SN121	Baseline-Kigali	Kigali	Nyarugenge	2022	35-49	Male	WT
+RW_SN13	Baseline-Kigali	Kigali	Nyarugenge	2022	35-49	Female	WT
+RW_SN14	Baseline-Kigali	Kigali	Gasabo	2022	5-14	Male	WT
+RW_SN15	Baseline-Kigali	Kigali	Nyarugenge	2022	50+	Female	WT
+RW_SN16	Baseline-Kigali	Kigali	Nyarugenge	2022	25-34	Male	R561H+K189T
+RW_SN18	Baseline-Kigali	Kigali	Gasabo	2022	5-14	Female	R561H+K189T
+RW_SN19	Baseline-Kigali	Kigali	Gasabo	2022	25-34	Male	R561H+K189T
+RW_SN1	Baseline-Kigali	Kigali	Nyarugenge	2022	5-14	Male	Other_K13
+RW_SN20	Baseline-Kigali	Kigali	Kicukiro	2022	15-24	Male	WT
+RW_SN21	Baseline-Kigali	Kigali	Kicukiro	2022	5-14	Female	WT
+RW_SN22	Baseline-Kigali	Kigali	Kicukiro	2022	<5	Male	WT
+RW_SN23	Baseline-Kigali	Kigali	Nyarugenge	2022	35-49	Male	WT
+RW_SN24	Baseline-Kigali	Kigali	Gasabo	2022	35-49	Male	R561H+K189T
+RW_SN25	Baseline-Kigali	Kigali	Gasabo	2022	25-34	Female	R561H+K189T
+RW_SN26	Baseline-Kigali	Kigali	Kicukiro	2022	25-34	Female	R561H+K189T
+RW_SN27	Baseline-Kigali	Kigali	Gasabo	2022	<5	Female	WT
+RW_SN28	Baseline-Kigali	Kigali	Gasabo	2022	<5	Male	WT
+RW_SN29	Baseline-Kigali	Kigali	Kicukiro	2022	35-49	Male	R561H+K189T
+RW_SN30	Baseline-Kigali	Kigali	Gasabo	2022	25-34	Male	WT
+RW_SN31	Baseline-Kigali	Kigali	Gasabo	2022	25-34	Female	WT
+RW_SN32	Baseline-Kigali	Kigali	Nyarugenge	2022	50+	Male	WT
+RW_SN36	Baseline-Kigali	Kigali	Gasabo	2022	<5	Female	Other_K13
+RW_SN37	Baseline-Kigali	Kigali	Nyarugenge	2022	35-49	Male	WT
+RW_SN38	Baseline-Kigali	Kigali	Nyarugenge	2022	35-49	Male	R561H+K189T
+RW_SN3	Baseline-Kigali	Kigali	Gasabo	2022	15-24	Male	WT
+RW_SN41	Baseline-Kigali	Kigali	Nyarugenge	2022	50+	Male	Other_K13
+RW_SN42	Baseline-Kigali	Kigali	Kicukiro	2022	25-34	Male	WT
+RW_SN43	Baseline-Kigali	Kigali	Gasabo	2022	35-49	Male	Other_K13
+RW_SN44	Baseline-Kigali	Kigali	Kicukiro	2022	<5	Female	R561H+K189T
+RW_SN45	Baseline-Kigali	Kigali	Nyarugenge	2022	35-49	Female	WT
+RW_SN47	Baseline-Kigali	Kigali	Nyarugenge	2022	15-24	Female	WT
+RW_SN48	Baseline-Kigali	Hotspot	Bugesera	2022	5-14	Male	R561H+K189T
+RW_SN50	Baseline-Kigali	Kigali	Gasabo	2022	<5	Male	Other_K13
+RW_SN51	Baseline-Kigali	Kigali	Gasabo	2022	5-14	Female	R561H+K189T
+RW_SN53	Baseline-Kigali	Kigali	Gasabo	2022	25-34		Other_K13
+RW_SN54	Baseline-Kigali	Kigali	Kicukiro	2022	25-34	Male	R561H+K189T
+RW_SN56	Baseline-Kigali	Kigali	Gasabo	2022	25-34	Male	K189T_only
+RW_SN57	Baseline-Kigali	Hotspot	Musanze	2022	35-49	Male	R561H+K189T
+RW_SN58	Baseline-Kigali	Kigali	Kicukiro	2022	<5	Male	R561H+K189T
+RW_SN59	Baseline-Kigali	Kigali	Gasabo	2022	5-14	Female	R561H+K189T
+RW_SN60	Baseline-Kigali	Kigali	Kicukiro	2022	25-34	Male	R561H+K189T
+RW_SN61	Baseline-Kigali	Kigali	Gasabo	2022	5-14	Female	WT
+RW_SN62	Baseline-Kigali	Kigali	Gasabo	2022	<5	Male	R561H+K189T
+RW_SN63	Baseline-Kigali	Kigali	Gasabo	2022	5-14	Male	WT
+RW_SN64	Baseline-Kigali	Kigali	Gasabo	2022	<5	Male	WT
+RW_SN65	Baseline-Kigali	Kigali	Nyarugenge	2022	15-24	Male	WT
+RW_SN66	Baseline-Kigali	Kigali	Nyarugenge	2022	35-49	Male	Other_K13
+RW_SN67	Baseline-Kigali	Kigali	Nyarugenge	2022	35-49	Female	R561H+K189T
+RW_SN68	Baseline-Kigali	Kigali	Kicukiro	2022	<5	Female	WT
+RW_SN69	Baseline-Kigali	Kigali	Nyarugenge	2022	25-34	Male	K189T_only
+RW_SN6	Baseline-Kigali	Kigali	Gasabo	2022	5-14	Female	WT
+RW_SN70	Baseline-Kigali	Kigali	Kicukiro	2022	15-24	Male	Other_K13
+RW_SN71	Baseline-Kigali	Kigali	Kicukiro	2022	5-14	Male	WT
+RW_SN72	Baseline-Kigali	Kigali	Gasabo	2022	5-14	Female	R561H+K189T
+RW_SN73	Baseline-Kigali	Kigali	Gasabo	2022	25-34	Male	K189T_only
+RW_SN74	Baseline-Kigali	Kigali	Gasabo	2022	35-49	Male	Other_K13
+RW_SN75	Baseline-Kigali	Kigali	Gasabo	2022	<5	Male	Other_K13
+RW_SN76	Baseline-Kigali	Kigali	Gasabo	2022	<5	Male	Other_K13
+RW_SN77	Baseline-Kigali	Kigali	Kicukiro	2022	5-14	Male	Other_K13
+RW_SN78	Baseline-Kigali	Kigali	Kicukiro	2022	15-24	Female	Other_K13
+RW_SN79	Baseline-Kigali	Kigali	Kicukiro	2022	35-49	Male	Other_K13
+RW_SN7	Baseline-Kigali	Kigali	Gasabo	2022	5-14	Male	R561H+K189T
+RW_SN80	Baseline-Kigali	Kigali	Gasabo	2022	25-34	Male	R561H+K189T
+RW_SN81	Baseline-Kigali	Hotspot	Nyagatare	2022	15-24	Female	Other_K13
+RW_SN82	Baseline-Kigali	Kigali	Kicukiro	2022	<5	Female	WT
+RW_SN83	Baseline-Kigali	Kigali	Nyarugenge	2022	25-34	Male	WT
+RW_SN84	Baseline-Kigali	Kigali	Kicukiro	2022	35-49	Male	R561H+K189T
+RW_SN86	Baseline-Kigali	Kigali	Nyarugenge	2022	25-34	Male	Other_K13
+RW_SN87	Baseline-Kigali	Kigali	Kicukiro	2022	<5	Female	Other_K13
+RW_SN88	Baseline-Kigali	Kigali	Gasabo	2022	25-34	Male	R561H+K189T
+RW_SN89	Baseline-Kigali	Kigali	Gasabo	2022	35-49	Male	Other_K13
+RW_SN8	Baseline-Kigali	Kigali	Nyarugenge	2022	25-34	Female	R561H+K189T
+RW_SN90	Baseline-Kigali	Kigali	Kicukiro	2022	35-49	Female	WT
+RW_SN92	Baseline-Kigali	Kigali	Gasabo	2022	25-34	Female	R561H+K189T
+RW_SN93	Baseline-Kigali	Kigali	Gasabo	2022	35-49	Female	K189T_only
+RW_SN94	Baseline-Kigali	Kigali	Gasabo	2022			WT
+RW_SN95	Baseline-Kigali	Kigali	Nyarugenge	2022	15-24		WT
+RW_SN96	Baseline-Kigali	Kigali	Gasabo	2022	5-14	Female	R561H+K189T
+RW_SN98	Baseline-Kigali	Kigali	Kicukiro	2022	<5	Female	WT
+RW_SN99	Baseline-Kigali	Kigali	Nyarugenge	2022	35-49	Female	Other_K13
+RW_SN9	Baseline-Kigali	Kigali	Gasabo	2022	25-34	Male	WT
+RW_ST10	Baseline-Kigali	Kigali	Kicukiro	2022	25-34	Female	WT
+RW_ST11	Baseline-Kigali	Kigali	Nyarugenge	2022	50+	Male	R561H+K189T
+RW_ST12	Baseline-Kigali	Kigali	Nyarugenge	2022	50+	Male	WT
+RW_ST13	Baseline-Kigali	Kigali	Kicukiro	2022	35-49	Male	WT
+RW_ST14	Baseline-Kigali	Kigali	Gasabo	2022	25-34	Female	K189T_only
+RW_ST15	Baseline-Kigali	Kigali	Gasabo	2022	25-34	Female	WT
+RW_ST16	Baseline-Kigali	Kigali	Gasabo	2022	35-49	Male	WT
+RW_ST17	Baseline-Kigali	Kigali	Gasabo	2022	25-34	Male	R561H+K189T
+RW_ST19	Baseline-Kigali	Kigali	Gasabo	2022	50+	Male	WT
+RW_ST1	Baseline-Kigali	Kigali	Gasabo	2022	25-34	Female	K189T_only
+RW_ST20	Baseline-Kigali	Kigali	Kicukiro	2022	5-14	Female	WT
+RW_ST21	Baseline-Kigali	Kigali	Kicukiro	2022	35-49	Male	K189T_only
+RW_ST23	Baseline-Kigali	Kigali	Nyarugenge	2021	50+	Female	WT
+RW_ST24	Baseline-Kigali	Kigali	Gasabo	2022	5-14	Male	R561H+K189T
+RW_ST25	Baseline-Kigali	Kigali	Gasabo	2022	50+	Female	WT
+RW_ST27	Baseline-Kigali	Kigali	Gasabo	2022			K189T_only
+RW_ST28	Baseline-Kigali	Kigali	Gasabo	2022			Other_K13
+RW_ST29	Baseline-Kigali	Kigali	Gasabo	2022			WT
+RW_ST2	Baseline-Kigali	Kigali	Nyarugenge	2022	5-14	Male	R561H_only
+RW_ST30	Baseline-Kigali	Kigali	Gasabo	2022	25-34	Male	WT
+RW_ST32	Baseline-Kigali	Kigali	Kicukiro	2022	35-49	Male	K189T_only
+RW_ST33	Baseline-Kigali	Kigali	Gasabo	2021	35-49	Male	K189T_only
+RW_ST4	Baseline-Kigali	Kigali	Gasabo	2022	35-49	Male	R561H+K189T
+RW_ST9	Baseline-Kigali	Kigali	Gasabo	2022	35-49	Female	WT
+RW_WB10	Baseline-Kigali	Kigali	Nyarugenge	2021	35-49	Female	WT
+RW_WB12	Baseline-Kigali	Kigali	Kicukiro	2021	50+	Female	WT
+RW_WB13	Baseline-Kigali	Kigali	Kicukiro	2021	25-34	Male	WT
+RW_WB14	Baseline-Kigali	Hotspot	Karongi	2021	50+	Male	K189T_only
+RW_WB15	Baseline-Kigali	Kigali	Nyarugenge	2021	15-24	Male	Other_K13
+RW_WB1	Baseline-Kigali	Kigali	Nyarugenge	2021	35-49	Male	WT
+RW_WB2	Baseline-Kigali	Kigali	Nyarugenge	2021	50+	Female	WT
+RW_WB3	Baseline-Kigali	Kigali	Nyarugenge	2021	15-24	Male	WT
+RW_WB5	Baseline-Kigali	Kigali	Gasabo	2021	25-34	Female	R561H+K189T
+RW_WB6	Baseline-Kigali	Kigali	Kicukiro	2021	25-34	Female	R561H+K189T
+RW_WB7	Baseline-Kigali	Kigali	Gasabo	2021	50+	Male	WT
+RW_WB8	Resurgence	Kigali	Kicukiro	2025	<5	Female	WT
+RW_WB9	Resurgence	Kigali	Gasabo	2025	25-34	Male	WT
+sample11	Resurgence	Kigali	Gasabo	2024			Other_K13
+sample12	Resurgence	Kigali	Gasabo	2024			WT
+sample13	Resurgence	Kigali	Gasabo	2024			WT
+sample15	Resurgence	Kigali	Gasabo	2024			WT
+sample17	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+sample18	Resurgence	Kigali	Gasabo	2024			Other_K13
+sample1	Resurgence	Kigali	Gasabo	2024			Other_K13
+sample20	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+sample21	Resurgence	Kigali	Gasabo	2024			WT
+sample23	Resurgence	Kigali	Gasabo	2024			WT
+sample24	Resurgence	Kigali	Gasabo	2024			WT
+sample27	Resurgence	Kigali	Gasabo	2024			WT
+sample28	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+sample2	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+sample30	Resurgence	Kigali	Gasabo	2024			WT
+sample31	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+sample32	Resurgence	Kigali	Gasabo	2024			Other_K13
+sample34	Resurgence	Kigali	Gasabo	2024			Other_K13
+sample35	Resurgence	Kigali	Gasabo	2024			K189T_only
+sample36	Resurgence	Kigali	Gasabo	2024			WT
+sample39	Resurgence	Kigali	Gasabo	2024			WT
+sample3	Resurgence	Kigali	Gasabo	2024			Other_K13
+sample40	Resurgence	Kigali	Gasabo	2024			WT
+sample41	Resurgence	Kigali	Gasabo	2024			WT
+sample46	Resurgence	Kigali	Gasabo	2024			WT
+sample47	Resurgence	Kigali	Gasabo	2024			K189T_only
+sample48	Resurgence	Kigali	Gasabo	2024			WT
+sample49	Resurgence	Kigali	Gasabo	2024			Other_K13
+sample4	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+sample50	Resurgence	Kigali	Gasabo	2024			Other_K13
+sample51	Resurgence	Kigali	Gasabo	2024			Other_K13
+sample52	Resurgence	Kigali	Gasabo	2024			WT
+sample53	Resurgence	Kigali	Gasabo	2024			WT
+sample54	Resurgence	Kigali	Gasabo	2024			WT
+sample55	Resurgence	Kigali	Gasabo	2024			Other_K13
+sample6	Resurgence	Kigali	Gasabo	2024			R561H+K189T
+sample7	Resurgence	Kigali	Gasabo	2024			WT
+sample8	Resurgence	Kigali	Gasabo	2024			WT
+sample9	Resurgence	Kigali	Gasabo	2024			R561H+K189T

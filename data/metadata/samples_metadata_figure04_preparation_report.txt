@@ -1,0 +1,48 @@
+========================================================================
+METADATA PREPARATION REPORT
+========================================================================
+Input:     /Volumes/MTD_drive/manuscript_data_09-11-2025/final_analysis_19-12-2025/popgen_R_analysis/samples_metadata_final_07-04-2026.tsv
+Generated: 2026-10-18 23:27:12 CEST
+
+Rows read: 1178
+Unique sample identifiers: 1178
+
+Samples per period:
+  Baseline-Kigali      258
+  Resurgence           920
+  (1178 rows relabelled to the published wording; the original value is 
+   kept in the period_original column)
+
+Samples per region:
+  Hotspot              226
+  Kigali               952
+
+Age banding:
+  <5         64
+  5-14       167
+  15-24      268
+  25-34      252
+  35-49      141
+  50+        106
+  missing    180
+
+------------------------------------------------------------------------
+OUTPUT
+------------------------------------------------------------------------
+
+Public file (committed to git, published with the repository):
+  samples_metadata_figure04.tsv
+  columns: SAMPLE, period, region, district, year, age_band, sex, k13_status
+
+Internal file (gitignored, stays on this machine):
+  samples_metadata_figure04_internal.tsv
+  columns: SAMPLE, period, period_original, region, district, year, age, age_band, sex, k13_status
+
+Removed from the public file:
+  age            exact value, replaced by age_band
+  health_centre  identifying in combination with date and age
+  period_original  working label, superseded by period
+
+========================================================================
+Files written.
+========================================================================
