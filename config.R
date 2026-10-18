@@ -31,3 +31,9 @@ MERGED_DIR <- file.path(PROJECT_DIR, "data", "fastq_merged")
 # Selection-scan inputs (Figure 5)
 SELECTION_VCF <- "/Volumes/MTD_drive/Manuscript_review_analysis_04-08-2026/final.vcf.gz"
 SELECTION_ANNOTATION <- "/Volumes/MTD_drive/Manuscript_review_analysis_04-08-2026/snpeff_annotation_extraction/final_annotation/annotated_variants_snpeff_final.tsv"
+
+# Figure 1: GADM shapefiles (Rwanda plus DR Congo, Uganda, Tanzania, Burundi)
+GADM_DIR <- "~/Downloads"
+
+# Supplementary Figure S1b: monthly malaria case counts
+MALARIA_CASES_FILE <- "/Volumes/MTD_drive/Manuscript_review_analysis_04-08-2026/Malaria cases Kigali 2023vs2024.xlsx"
