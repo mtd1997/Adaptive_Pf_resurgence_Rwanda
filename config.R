@@ -40,3 +40,7 @@ MALARIA_CASES_FILE <- "/Volumes/MTD_drive/Manuscript_review_analysis_04-08-2026/
 
 # Figure 4: population VCF for the distance matrix
 POPGEN_VCF <- "/Volumes/MTD_drive/manuscript_data_09-11-2025/final_analysis_19-12-2025/popgen_R_analysis/all_1179_withDhpsDhfr.vcf.gz"
+
+# Manuscript-wide mutation table: one row per sample and mutation.
+# Input for Figures 2b, 2c and 3a/3b/3d.
+MANUSCRIPT_DATA <- "/Volumes/MTD_drive/Manuscript_review_analysis_04-08-2026/Manuscript_data_29-07-2026.tsv"
