@@ -1,61 +1,16 @@
 #!/usr/bin/env bash
-# =============================================================================
-# prepare_drug_resistance_vcfs.sh — filter and annotate VCFs for the
-#                                   drug-resistance marker analysis
+# prepare_drug_resistance_vcfs.sh — filter and annotate VCFs for the drug-resistance marker analysis
 #
-# WHAT IT DOES
-#   For each sample, takes the per-sample VCF from Clair3 and prepares it for
-#   drug-resistance genotyping, in four steps:
+# Inputs:  ${VCF_DIR}/<SampleID>_clair3/merge_output.vcf.gz   from stage 03
+#          ${REGIONS_FILE}                                     drug-resistance regions
+#          SnpEff database Pf3D7 (see scripts/04_filtering/README.md)
+# Outputs: ${DATA_ROOT}/drug_track/01_collected/<SampleID>.vcf.gz
+#          ${DATA_ROOT}/drug_track/02_filtered/<SampleID>_snps.vcf.gz
+#          ${DATA_ROOT}/drug_track/03_regions/<SampleID>_DRG.vcf.gz
+#          ${ANNOTATED_DIR}/<SampleID>.ann.vcf      input to stage 05
+#          ${LOG_DIR}/drug_vcf_failures.txt
 #
-#     1. collect   copy the Clair3 VCF out to a working folder
-#     2. filter    keep high-quality SNPs (QUAL > 15, depth > 10)
-#     3. subset    restrict to the drug-resistance regions
-#     4. annotate  add functional consequences with SnpEff
-#
-#   This is the drug-resistance track. The population-genetics track starts
-#   from the gVCFs instead; see combine_and_genotype_gvcfs.sh.
-#
-# INPUTS
-#   ${VCF_DIR}/<SampleID>_clair3/merge_output.vcf.gz   from stage 03
-#   ${REGIONS_FILE}                                     drug-resistance regions
-#   SnpEff database Pf3D7 (see scripts/04_filtering/README.md)
-#
-# OUTPUTS
-#   ${DATA_ROOT}/drug_track/01_collected/<SampleID>.vcf.gz
-#   ${DATA_ROOT}/drug_track/02_filtered/<SampleID>_snps.vcf.gz
-#   ${DATA_ROOT}/drug_track/03_regions/<SampleID>_DRG.vcf.gz
-#   ${ANNOTATED_DIR}/<SampleID>.ann.vcf      input to stage 05
-#   ${LOG_DIR}/drug_vcf_failures.txt
-#
-# REQUIRES
-#   bcftools 1.23, SnpEff 5.2f, Java
-#
-# USAGE
-#   bash scripts/04_filtering/prepare_drug_resistance_vcfs.sh
-#
-#   Samples already annotated are skipped, so the script can be re-run safely.
-#
-# -----------------------------------------------------------------------------
-# A NOTE ON REFERENCE CALLS                           <<< CHECK THIS SETTING
-#
-#   Estimating wild-type frequency requires distinguishing two situations that
-#   look identical in an ordinary VCF: a position confidently called as
-#   reference, and a position with no data at all. Clair3's output records
-#   confident reference calls, but `bcftools view --types snps` discards them,
-#   because a reference call is not a SNP.
-#
-#   KEEP_REF_CALLS=1  keeps reference calls alongside SNPs. This matches the
-#                     Methods, which state that reference genotype calls were
-#                     preserved to allow estimation of wild-type frequencies.
-#   KEEP_REF_CALLS=0  keeps SNPs only, as in the original script.
-#
-#   The two give different denominators for every wild-type frequency in the
-#   paper, so this must be set to whichever was actually used.
-# -----------------------------------------------------------------------------
-#
-# Part of: Diallo et al., Nature Communications (2026)
-#          https://github.com/mtd1997/Adaptive_Pf_resurgence_Rwanda
-# =============================================================================
+# Usage:   bash scripts/04_filtering/prepare_drug_resistance_vcfs.sh
 
 set -euo pipefail
 
@@ -148,9 +103,6 @@ for CLAIR3_SUBDIR in "${CLAIR3_DIRS[@]}"; do
         bcftools index --force --tbi "${COLLECTED}"
 
         # 2. Filter on quality and depth.
-        #    QUAL > 15 and FMT/DP > 10, as stated in the Methods. Note the
-        #    original used 'FMT/DP < 10' as the exclusion, which keeps DP = 10;
-        #    'FMT/DP <= 10' is what "depth > 10" means.
         bcftools view -e 'QUAL <= 15 || FMT/DP <= 10' "${COLLECTED}" -Ou \
         | bcftools view ${TYPE_FILTER} -Oz -o "${FILTERED}"
         bcftools index --force --tbi "${FILTERED}"

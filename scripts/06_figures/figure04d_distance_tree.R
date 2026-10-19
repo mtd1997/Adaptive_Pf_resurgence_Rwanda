@@ -1,23 +1,5 @@
 # Figure 4d — neighbour-joining tree of the Kigali samples
 #
-# Inputs:  POPGEN_VCF (config.R); the metadata roster in data/metadata/
-#          --reference  the saved Newick the published panel was drawn from
-#
-# Outputs: results/figures/figure04/figure04d_kigali_tree.nwk
-#          results/tables/figure04/figure04d_tip_metadata.tsv
-#          results/tables/figure04/figure04d_itol_{period,k13,district}.txt
-#
-# Usage:   Rscript scripts/06_figures/figure04d_distance_tree.R \
-#            --reference /path/to/..._Kigali_tree.nwk
-#
-# The published panel was rendered in iTOL from the Newick file and the
-# annotation files below; no script draws it. Two scripts in the original
-# analysis built a Kigali tree with the same genotype matrix but different
-# distances, so both are built here and the saved tree decides which was
-# used.
-
-
-# ---- setup ------------------------------------------------------------------
 
 options(error = NULL)
 
@@ -264,7 +246,6 @@ if (!all(is.na(metadata$region_name))) {
 
 
 # ---- build both candidates --------------------------------------------------
-#
 # NA.method = "mean" fills a missing genotype with its column mean. The
 # Figure 4 PCoA panels instead set missing genotypes to zero, so the two
 # matrices are not interchangeable.

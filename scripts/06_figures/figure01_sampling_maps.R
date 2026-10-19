@@ -1,76 +1,17 @@
-################################################################################
-# FIGURE 1 — SAMPLING MAPS
-################################################################################
+# Figure 1 — sampling maps
 #
-# WHAT IT DOES
-#   Draws two maps of where the sequenced samples came from:
+# Inputs:  data/metadata/samples_metadata.tsv   sample metadata (district, year,
+#          period, region)
+#          a Rwanda district shapefile          GADM level 2
+#          four neighbouring-country files      GADM level 0: COD, UGA, TZA, BDI
+# Outputs: results/figures/figure01/figure01_resurgence_map.svg / .pdf / .png
+#          results/figures/figureS1/figureS1a_baseline_map.svg
+#          results/figures/panels/figureS1a_baseline_map.rds
+#          results/tables/figure01/figure01_samples_by_district.tsv
+#          results/tables/figure01/figureS1a_samples_by_district.tsv
+#          results/tables/figure01/who_malaria_rank_2025.tsv
 #
-#     Resurgence 2024-2025, with neighbouring countries and their WHO
-#     malaria case rankings          -> Figure 1
-#
-#     Baseline-Kigali 2021-2023      -> Supplementary Figure S1, panel A
-#
-#   Both come from the same sample metadata and the same shapefile, which is
-#   why they live in one script.
-#
-# IT ALSO SAVES THE BASELINE PANEL FOR LATER USE
-#   Supplementary Figure S1 combines the baseline map with the monthly
-#   malaria-case plot. In the original code those panels were passed between
-#   scripts through the R session: figureS1 expected objects called
-#   `map_baseline`, `baseline_breaks` and `p` to already exist, and stopped
-#   with an error if they did not. That meant three scripts had to be run in
-#   one session, in the right order, and the figure could not be rebuilt on
-#   its own.
-#
-#   This script therefore writes the finished panel to
-#
-#     results/figures/panels/figureS1a_baseline_map.rds
-#
-#   so the assembly script reads a file instead of depending on session
-#   state. Nothing about the figure changes; it just becomes rebuildable.
-#
-# INPUTS
-#   data/metadata/samples_metadata.tsv   sample metadata (district, year,
-#                                        period, region)
-#   a Rwanda district shapefile          GADM level 2
-#   four neighbouring-country files      GADM level 0: COD, UGA, TZA, BDI
-#
-#   The shapefiles are not in this repository. They come from GADM:
-#     https://gadm.org/download_country.html
-#   Download the shapefile archives for Rwanda, DR Congo, Uganda, Tanzania
-#   and Burundi, unzip them into one directory, and point GADM_DIR in
-#   config.R at it.
-#
-# OUTPUTS
-#   results/figures/figure01/figure01_resurgence_map.svg / .pdf / .png
-#   results/figures/figureS1/figureS1a_baseline_map.svg
-#   results/figures/panels/figureS1a_baseline_map.rds
-#   results/tables/figure01/figure01_samples_by_district.tsv
-#   results/tables/figure01/figureS1a_samples_by_district.tsv
-#   results/tables/figure01/who_malaria_rank_2025.tsv
-#   results/tables/figure01/figure01_sample_level.tsv
-#
-# WHO RANKINGS
-#   Global rank by estimated malaria cases in 2024, from the WHO World
-#   malaria report 2025, Annex 4H:
-#
-#     DR Congo 2nd    Uganda 3rd    Tanzania 7th    Burundi 19th
-#
-#   These are typed in below rather than read from a file, so they are
-#   written out to who_malaria_rank_2025.tsv as a record of what the figure
-#   asserts. If the ranking is updated, change it in one place: WHO_RANKS.
-#
-# HOW TO RUN
-#   From the top of the repository:
-#
-#     Rscript scripts/06_figures/figure01_sampling_maps.R
-#
-################################################################################
-
-
-# ==============================================================================
-# 1. SETUP
-# ==============================================================================
+# Usage:   From the top of the repository:
 
 options(error = NULL)
 
@@ -151,9 +92,7 @@ for (directory in c(FIGURE01_DIR, FIGURES1_DIR, PANEL_DIR, TABLE_DIR)) {
 }
 
 
-# ==============================================================================
-# 2. CONSTANTS
-# ==============================================================================
+# ---- constants ---------------------------------------------------------
 
 KIGALI_DISTRICTS <- c("Gasabo", "Kicukiro", "Nyarugenge")
 
@@ -186,9 +125,7 @@ WHO_RANKS <- tibble::tribble(
 )
 
 
-# ==============================================================================
-# 3. READ THE SAMPLE METADATA
-# ==============================================================================
+# ---- read the sample metadata ------------------------------------------
 
 if (!file.exists(METADATA_FILE)) {
   stop(
@@ -206,10 +143,8 @@ metadata <- readr::read_tsv(
 )
 
 
-# ------------------------------------------------------------------------------
 # Accept either capitalisation for the four columns used here. Metadata files
 # in this project have used both over time.
-# ------------------------------------------------------------------------------
 
 resolve_column <- function(data, candidates, description) {
 
@@ -260,13 +195,7 @@ message("Samples per period and region:")
 print(table(sample_metadata$period, sample_metadata$region, useNA = "ifany"))
 
 
-# ==============================================================================
-# 4. READ THE SHAPEFILES
-# ==============================================================================
-#
-# GADM files are named gadm41_<ISO3>_<level>.shp. The search is recursive
-# because the archives unzip into their own subdirectories.
-# ==============================================================================
+# ---- read the shapefiles -----------------------------------------------
 
 find_gadm_shapefile <- function(country_code, level) {
 
@@ -319,11 +248,9 @@ rwanda_districts <- rwanda_districts %>%
   )
 
 
-# ------------------------------------------------------------------------------
 # Check the district names in the metadata match the shapefile, because a
 # mismatch silently drops a district's samples from the map rather than
 # failing.
-# ------------------------------------------------------------------------------
 
 shapefile_districts <- sort(unique(rwanda_districts$district))
 metadata_districts  <- sort(unique(stats::na.omit(sample_metadata$district)))
@@ -341,12 +268,7 @@ if (length(unmatched_districts) > 0) {
 }
 
 
-# ------------------------------------------------------------------------------
 # A point inside each district, for placing the sample circles and labels.
-#
-# st_point_on_surface is used rather than st_centroid because a centroid can
-# fall outside an irregular polygon.
-# ------------------------------------------------------------------------------
 
 district_points <- sf::st_point_on_surface(rwanda_districts)
 
@@ -361,9 +283,7 @@ district_points <- district_points %>%
   dplyr::select(district, longitude, latitude)
 
 
-# ==============================================================================
-# 5. COUNT SAMPLES PER DISTRICT
-# ==============================================================================
+# ---- count samples per district ----------------------------------------
 
 count_by_district <- function(samples) {
 
@@ -429,9 +349,7 @@ if (nrow(missing_coordinates) > 0) {
 }
 
 
-# ==============================================================================
-# 6. BASELINE MAP  (Supplementary Figure S1, panel A)
-# ==============================================================================
+# ---- baseline map  (supplementary figure s1, panel a) ------------------
 
 baseline_map <- ggplot2::ggplot() +
 
@@ -481,9 +399,7 @@ baseline_map <- ggplot2::ggplot() +
   )
 
 
-# ==============================================================================
-# 7. NEIGHBOURING COUNTRIES
-# ==============================================================================
+# ---- neighbouring countries --------------------------------------------
 
 neighbour_shapes <- lapply(
   seq_len(nrow(WHO_RANKS)),
@@ -510,10 +426,8 @@ neighbour_shapes <- lapply(
 neighbours <- dplyr::bind_rows(neighbour_shapes)
 
 
-# ------------------------------------------------------------------------------
 # Map window: Rwanda's bounding box with a margin, so the neighbours show as
 # context rather than in full.
-# ------------------------------------------------------------------------------
 
 rwanda_bbox <- sf::st_bbox(rwanda_districts)
 
@@ -534,13 +448,7 @@ neighbours_cropped <- suppressWarnings(
 )
 
 
-# ------------------------------------------------------------------------------
 # Label positions for the neighbours.
-#
-# Uganda and Burundi are nudged vertically: their visible slivers are narrow,
-# and the automatic point lands where the name and the rank overlap the
-# border. The nudges are cosmetic and affect nothing else.
-# ------------------------------------------------------------------------------
 
 country_label_points <- sf::st_point_on_surface(neighbours_cropped)
 
@@ -567,9 +475,7 @@ key_x <- map_xmax - 0.08
 key_y <- map_ymin + 0.12
 
 
-# ==============================================================================
-# 8. RESURGENCE MAP  (Figure 1)
-# ==============================================================================
+# ---- resurgence map  (figure 1) ----------------------------------------
 
 resurgence_map <- ggplot2::ggplot() +
 
@@ -681,14 +587,7 @@ resurgence_map <- ggplot2::ggplot() +
   )
 
 
-# ==============================================================================
-# 9. SAVE
-# ==============================================================================
-#
-# The figures are not printed to the graphics device. A large sf plot can
-# fail when the RStudio plot pane is small, and printing also leaves a stray
-# Rplots.pdf behind when the script is run with Rscript.
-# ==============================================================================
+# ---- save --------------------------------------------------------------
 
 for (extension in c("svg", "pdf", "png")) {
 
@@ -710,13 +609,7 @@ ggplot2::ggsave(
 )
 
 
-# ------------------------------------------------------------------------------
 # Hand the baseline panel on to the Supplementary Figure S1 assembly.
-#
-# The size breaks travel with the panel because the assembly script restates
-# the size scale, and recomputing the breaks there would risk them drifting
-# away from the ones used here.
-# ------------------------------------------------------------------------------
 
 saveRDS(
   list(
@@ -728,9 +621,7 @@ saveRDS(
 )
 
 
-# ==============================================================================
-# 10. SOURCE DATA
-# ==============================================================================
+# ---- source data -------------------------------------------------------
 
 readr::write_tsv(
   dplyr::arrange(resurgence_counts, dplyr::desc(sample_count)),
@@ -767,9 +658,7 @@ capture.output(
 )
 
 
-# ==============================================================================
-# 11. SUMMARY
-# ==============================================================================
+# ---- summary -----------------------------------------------------------
 
 message("\n", strrep("=", 72))
 message("SAMPLING MAPS WRITTEN")

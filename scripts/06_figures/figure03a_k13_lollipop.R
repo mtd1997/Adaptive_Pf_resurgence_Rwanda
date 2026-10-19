@@ -1,102 +1,13 @@
-################################################################################
-# FIGURE 3A — K13 MUTATION SPECTRUM ALONG THE PROTEIN
-################################################################################
+# Figure 3a — K13 mutation spectrum along the protein
 #
-# WHAT IT DOES
-#   Counts how many samples carry each K13 amino-acid change, places each
-#   change at its codon position, and draws the spectrum as a lollipop plot
-#   above a track showing the four K13 protein domains.
+# Inputs:  Manuscript_data_29-07-2026.tsv  (MANUSCRIPT_DATA in config.R)
+# Outputs: results/figures/figure03/figure03a_k13_lollipop.svg / .png
+#          results/tables/figure03/figure03a_mutation_frequencies.tsv   <- Source Data
+#          results/tables/figure03/figure03a_domains.tsv
+#          results/tables/figure03/figure03a_excluded_singletons.tsv
+#          results/tables/figure03/figure03a_report.txt
 #
-# INPUT
-#   Manuscript_data_29-07-2026.tsv  (MANUSCRIPT_DATA in config.R)
-#
-# OUTPUTS
-#   results/figures/figure03/figure03a_k13_lollipop.svg / .png
-#   results/tables/figure03/figure03a_mutation_frequencies.tsv   <- Source Data
-#   results/tables/figure03/figure03a_domains.tsv
-#   results/tables/figure03/figure03a_excluded_singletons.tsv
-#   results/tables/figure03/figure03a_report.txt
-#
-# -----------------------------------------------------------------------------
-# THE DENOMINATOR IS NOT THE ANALYSIS SET
-# -----------------------------------------------------------------------------
-#   Frequency here is the percentage of K13-MUTATED samples carrying each
-#   change, not the percentage of all sequenced samples. A mutation found in
-#   half of the K13-mutant samples is therefore shown at 50%, even though it
-#   is present in a much smaller share of the cohort.
-#
-#   This is the original definition and it is kept. It is flagged because
-#   the published axis is titled only "Mutation Frequency (%)", so the
-#   denominator is not visible to a reader of the figure. Both numbers are
-#   printed below and both are written to the Source Data table, so the
-#   figure legend can state which one it means.
-# -----------------------------------------------------------------------------
-#
-# -----------------------------------------------------------------------------
-# SINGLETONS ARE EXCLUDED
-# -----------------------------------------------------------------------------
-#   Changes seen in exactly one sample are dropped, as in the original. They
-#   are written to figure03a_excluded_singletons.tsv rather than discarded,
-#   so the figure's omissions are recoverable.
-#
-#   The original did this with `Mutated_Sample_Count != "1"` -- a count
-#   compared against a string. R coerces the number to text, so it happens
-#   to give the right answer, but it would also drop a count of 1 written
-#   any other way and is fragile. The comparison here is numeric.
-# -----------------------------------------------------------------------------
-#
-# -----------------------------------------------------------------------------
-# HOW THE LABELS ARE PLACED
-# -----------------------------------------------------------------------------
-#   Nearly every change sits below 10%, so the labels, not the lollipops,
-#   are what has to be laid out. Three things follow from the labels being
-#   rotated upright:
-#
-#     - A rotated label is tall and narrow. Two labels collide when they are
-#       close in CODON position, not when they are close in height. So
-#       crowding is resolved by sliding labels apart along the protein and
-#       drawing a short leader back to the true position -- not by stacking
-#       them higher, which does nothing for two labels at the same codon.
-#       K189T and K189N are both at codon 189 and would otherwise be drawn
-#       on top of each other.
-#
-#     - Labels sit low, just above the backbone, because that is where the
-#       data is. Pushing them high leaves a band of empty plot between the
-#       labels and the two tall lollipops.
-#
-#     - Heights still step up slightly within a cluster of nearby changes,
-#       which is what gives the published panel its staircase look.
-#
-#   The placement is computed, not repelled: ggrepel is seeded, so the
-#   figure would shift between runs of the same script, and it cannot be
-#   told to keep a label off the K189T or R561H stem.
-# -----------------------------------------------------------------------------
-#
-# -----------------------------------------------------------------------------
-# WHAT IS NOT REPRODUCED
-# -----------------------------------------------------------------------------
-#   Published Figure 3a has a thin box drawn around the P574L label. Nothing
-#   in the analysis distinguishes P574L from its neighbours, so the box
-#   appears to be a hand annotation added when the figure was assembled and
-#   it is not drawn here.
-#
-#   The per-mutation colours ARE reproduced, from MUTATION_COLOURS below.
-#   The rule behind them is not recorded in any script, so they are listed
-#   explicitly rather than derived.
-# -----------------------------------------------------------------------------
-#
-# HOW TO RUN
-#     Rscript scripts/06_figures/figure03a_k13_lollipop.R
-#
-#   Optional:
-#     --min-samples N   keep changes seen in at least N samples (default 2)
-#
-################################################################################
-
-
-# ==============================================================================
-# 1. SETUP
-# ==============================================================================
+# Usage:   Rscript scripts/06_figures/figure03a_k13_lollipop.R
 
 options(error = NULL)
 
@@ -193,13 +104,8 @@ dir.create(FIGURE_DIR, recursive = TRUE, showWarnings = FALSE)
 dir.create(TABLE_DIR,  recursive = TRUE, showWarnings = FALSE)
 
 
-# ------------------------------------------------------------------------------
 # K13 protein domains. Boundaries are the ones used in the original; the
 # colours and the text colours are those of the published track.
-#
-# The gaps between domains (342-349 and 438-442) are deliberate and are in
-# the original definition: they are linker regions belonging to no domain.
-# ------------------------------------------------------------------------------
 
 DOMAINS <- tibble::tribble(
   ~domain,       ~start, ~end,  ~fill,      ~text_colour,
@@ -250,9 +156,7 @@ add_to_report <- function(...) {
 }
 
 
-# ==============================================================================
-# 2. READ
-# ==============================================================================
+# ---- read --------------------------------------------------------------
 
 add_to_report(strrep("=", 72))
 add_to_report("FIGURE 3A — K13 MUTATION SPECTRUM")
@@ -307,9 +211,7 @@ add_to_report("")
 add_to_report("Frequencies below are over the K13-mutated samples.")
 
 
-# ==============================================================================
-# 3. COUNT AND POSITION
-# ==============================================================================
+# ---- count and position ------------------------------------------------
 
 frequencies <- k13 %>%
   dplyr::count(HGVS_PROTEIN, name = "n_samples") %>%
@@ -355,9 +257,7 @@ if (nrow(out_of_range) > 0) {
 }
 
 
-# ==============================================================================
-# 4. DROP SINGLETONS
-# ==============================================================================
+# ---- drop singletons ---------------------------------------------------
 
 excluded <- frequencies %>%
   dplyr::filter(n_samples < MINIMUM_SAMPLES)
@@ -382,9 +282,7 @@ if (nrow(drawn) == 0) {
 }
 
 
-# ==============================================================================
-# 5. DOMAINS AND COLOURS
-# ==============================================================================
+# ---- domains and colours -----------------------------------------------
 
 assign_domain <- function(position) {
 
@@ -422,9 +320,7 @@ if (nrow(in_linker) > 0) {
 }
 
 
-# ==============================================================================
-# 6. REPORT THE SPECTRUM
-# ==============================================================================
+# ---- report the spectrum -----------------------------------------------
 
 add_to_report("")
 add_to_report(strrep("-", 72))
@@ -470,19 +366,7 @@ if (identical(sort(top_two), sort(c("K189T", "R561H")))) {
 }
 
 
-# ==============================================================================
-# 7. LABEL LAYOUT
-# ==============================================================================
-#
-# Tall changes carry their label at the top of their own stem. Everything
-# else goes into the label band: slid apart along the protein until no two
-# labels are closer than LABEL_MIN_SPACING, then stepped up a rung for each
-# further member of a cluster.
-#
-# Sliding only ever pushes a label to the right of a neighbour that is
-# already placed, so the order of labels along the protein is preserved and
-# a leader line never crosses another.
-# ==============================================================================
+# ---- label layout ------------------------------------------------------
 
 drawn <- drawn %>% dplyr::arrange(position)
 
@@ -552,9 +436,7 @@ if (nrow(band) > 1) {
 }
 
 
-# ==============================================================================
-# 8. THE FIGURE
-# ==============================================================================
+# ---- the figure --------------------------------------------------------
 
 longest_label <- max(nchar(drawn$HGVS_PROTEIN))
 
@@ -647,11 +529,9 @@ lollipop_panel <- ggplot2::ggplot(drawn) +
   )
 
 
-# ------------------------------------------------------------------------------
 # The domain track. Each domain is a block with a pointed right-hand end,
 # built as a five-sided polygon so the shape travels with the data rather
 # than being drawn by hand.
-# ------------------------------------------------------------------------------
 
 ARROW_TIP <- 16   # codons taken up by the pointed end
 
@@ -740,9 +620,7 @@ for (extension in c("svg", "png")) {
 }
 
 
-# ==============================================================================
-# 9. TABLES
-# ==============================================================================
+# ---- tables ------------------------------------------------------------
 
 readr::write_tsv(
   drawn %>%

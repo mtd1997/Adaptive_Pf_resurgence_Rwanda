@@ -1,77 +1,12 @@
-################################################################################
-# FIGURE 4 AND SUPPLEMENTARY FIGURE S4 — PCoA AND PERMANOVA
-################################################################################
+# Figure 4 and Supplementary Figure S4 — PCoA and PERMANOVA
 #
-# WHAT IT DOES
-#   Takes the IBS distance matrix and produces three analyses:
+# Inputs:  data/processed/ibs_distance_matrix.rds   from figure04_ibs_distance.R
+#          data/metadata/samples_metadata.tsv
+# Outputs: results/figures/figure04/   the panels, named by published panel letter
+#          results/tables/figure04/    PERMANOVA results, PCoA coordinates,
+#          eigenvalues, sample counts
 #
-#     Kigali     Baseline-Kigali versus Resurgence   (temporal)
-#     Resurgence Kigali versus Hotspot               (spatial)
-#     Resurgence coloured by kelch13 genotype
-#
-#   For each it runs a principal coordinates analysis on four axes and a
-#   PERMANOVA, then writes:
-#
-#     one single panel  -> Figure 4a, 4b, 4c
-#     one 2x2 composite -> Supplementary Figure S4a, S4b, S4c
-#
-#   Figure 4d is a distance tree and is not produced here.
-#
-# INPUTS
-#   data/processed/ibs_distance_matrix.rds   from figure04_ibs_distance.R
-#   data/metadata/samples_metadata.tsv
-#
-# OUTPUTS
-#   results/figures/figure04/   the panels, named by published panel letter
-#   results/tables/figure04/    PERMANOVA results, PCoA coordinates,
-#                               eigenvalues, sample counts
-#
-# -----------------------------------------------------------------------------
-# TWO THINGS TO READ BEFORE TRUSTING THE LABELS
-# -----------------------------------------------------------------------------
-#
-# 1. ON THE kelch13 PANEL, THE PERMANOVA IS NOT ON kelch13
-#
-#    Panel 4c and S4c colour the samples by kelch13 genotype, but the
-#    PERMANOVA printed on them tests REGION, because that is what the
-#    original script passed to adonis2. The published figure shows R2 = 0.037
-#    on that panel, which is identical to the region panel's value -- visible
-#    proof that it is the region test.
-#
-#    This script reproduces the published figure faithfully, so the label on
-#    the kelch13 panels still shows the region test. It does NOT silently
-#    change a published figure.
-#
-#    It does, however, additionally compute the PERMANOVA on kelch13 genotype
-#    and write it to the results table, so the number exists if the legend is
-#    corrected. See permanova_results.tsv, where every test is listed with
-#    what it was actually run on.
-#
-# 2. "p < 0.001" IS NOT A CORRECT WAY TO REPORT THIS
-#
-#    adonis2 with 999 permutations estimates p as
-#        (number of permutations at least as extreme + 1) / (999 + 1)
-#    so the smallest value it can return is 1/1000 = 0.001. The result cannot
-#    be less than that, and writing "p < 0.001" claims more than the test can
-#    support.
-#
-#    The published single panels already say "p = 0.001", which is right. One
-#    of the original composite functions said "p < ", which is not. This
-#    script writes "p = " everywhere and states the permutation count in the
-#    report.
-# -----------------------------------------------------------------------------
-#
-# HOW TO RUN
-#   From the top of the repository:
-#
-#     Rscript scripts/06_figures/figure04_ibs_pcoa.R
-#
-################################################################################
-
-
-# ==============================================================================
-# 1. SETUP
-# ==============================================================================
+# Usage:   From the top of the repository:
 
 options(error = NULL)
 
@@ -120,24 +55,10 @@ DISTANCE_FILE <- file.path(
   PROJECT_ROOT, "data", "processed", "ibs_distance_matrix.rds"
 )
 
-# ------------------------------------------------------------------------------
-# WHICH METADATA, AND WHY IT MATTERS FOR THIS FIGURE
-#
 # The default is the repository's own metadata. For Figure 4 specifically that
 # gives one sample fewer than the published figure, because the published
 # figure was built from an earlier roster that still contained RW_SN94 -- a
 # Kigali baseline sample later excluded from the 1,176-sample analysis set.
-#
-# The effect is confined to the Kigali panel:
-#
-#   with RW_SN94     N = 805, R2 = 0.0535  -> prints as 0.054 (published)
-#   without RW_SN94  N = 804, R2 = 0.0527  -> prints as 0.053
-#
-# Pass --metadata with the older file to reproduce the published panel
-# exactly. Use the default to match the sample set the paper states. The
-# report records which was used either way, so the figure's N is never
-# ambiguous.
-# ------------------------------------------------------------------------------
 
 arguments_early <- commandArgs(trailingOnly = TRUE)
 
@@ -202,26 +123,7 @@ add_to_report <- function(...) {
 }
 
 
-# ==============================================================================
-# 2. WHAT EACH PANEL IS
-# ==============================================================================
-#
-# This table is the single place the published panel letters are recorded. If
-# a letter is wrong, change it here and every output file is renamed to match.
-#
-#   analysis       internal name for the subset and comparison
-#   subset         which samples
-#   permanova_on   the metadata column adonis2 is run on
-#   colour_by      the metadata column the points are coloured by
-#   shape_by       the metadata column the point shapes come from, or NA
-#   main_panel     the published Figure 4 panel letter
-#   main_axes      which two PCoA axes that single panel shows
-#   supp_panel     the published Supplementary Figure S4 panel letter
-#
-# The axis choices are not all the same: the Kigali panel shows axes 1 and 3,
-# the region panel axes 1 and 2, and the kelch13 panel axes 2 and 3. Those are
-# the pairs used in the published figure, read off the panel axis labels.
-# ==============================================================================
+# ---- what each panel is ------------------------------------------------
 
 PANEL_MAP <- tibble::tribble(
   ~analysis,            ~subset,       ~permanova_on, ~colour_by,    ~shape_by, ~main_panel, ~main_axis_x, ~main_axis_y, ~supp_panel,
@@ -231,10 +133,6 @@ PANEL_MAP <- tibble::tribble(
 )
 
 # The 2x2 composite always shows these four axis pairs, in this arrangement:
-#
-#     1 vs 2   |   1 vs 3
-#     1 vs 4   |   2 vs 3
-#
 COMPOSITE_AXES <- list(
   c(1, 2), c(1, 3), c(1, 4), c(2, 3)
 )
@@ -296,9 +194,7 @@ legend_title_for <- function(column) {
 }
 
 
-# ==============================================================================
-# 3. READ AND ALIGN
-# ==============================================================================
+# ---- read and align ----------------------------------------------------
 
 add_to_report(strrep("=", 72))
 add_to_report("FIGURE 4 AND SUPPLEMENTARY FIGURE S4 — PCoA AND PERMANOVA")
@@ -327,9 +223,7 @@ metadata <- readr::read_tsv(
 )
 
 
-# ------------------------------------------------------------------------------
 # Accept either capitalisation.
-# ------------------------------------------------------------------------------
 
 resolve_column <- function(data, candidates, description) {
 
@@ -374,9 +268,6 @@ metadata <- metadata %>%
     # and "Post-Resurgence" for the same two groups. recode() leaves anything
     # it does not match untouched, so a file already using the published
     # wording passes through unchanged.
-    #
-    # This matters more than it looks: without it, a file using the older
-    # labels silently yields an empty Resurgence subset.
     period = dplyr::recode(
       period,
       "Pre-Resurgence"  = "Baseline-Kigali",
@@ -391,9 +282,7 @@ metadata <- metadata %>%
   dplyr::distinct(SAMPLE, .keep_all = TRUE)
 
 
-# ------------------------------------------------------------------------------
 # Keep only samples present in both, in the distance matrix's order.
-# ------------------------------------------------------------------------------
 
 shared_samples <- intersect(distance_samples, metadata$SAMPLE)
 
@@ -461,13 +350,7 @@ if (length(unexpected_genotypes) > 0) {
 }
 
 
-# ==============================================================================
-# 4. SUBSETS
-# ==============================================================================
-#
-# Kigali     every Kigali sample, both periods -- the temporal comparison
-# Resurgence every Resurgence sample, both regions -- the spatial comparison
-# ==============================================================================
+# ---- subsets -----------------------------------------------------------
 
 build_subset <- function(name) {
 
@@ -517,39 +400,16 @@ for (name in names(subsets)) {
 }
 
 
-# ==============================================================================
-# 5. PCoA AND PERMANOVA
-# ==============================================================================
-#
-# cmdscale is classical multidimensional scaling, which is principal
-# coordinates analysis. No correction is applied for negative eigenvalues --
-# that matches the original analysis, and the percentages below are computed
-# over the positive eigenvalues only.
-# ==============================================================================
+# ---- pcoa and permanova ------------------------------------------------
 
 run_pcoa <- function(distance_object, n_axes = N_AXES) {
 
   pcoa <- stats::cmdscale(distance_object, k = n_axes, eig = TRUE)
 
-  # ---------------------------------------------------------------------------
-  # THE DENOMINATOR HERE IS A DELIBERATE CHOICE, AND IT IS NOT THE OBVIOUS ONE
   #
   # The axis percentages are each eigenvalue over the sum of ALL eigenvalues,
   # which is what the original analysis did and therefore what the published
   # figure shows.
-  #
-  # This distance is not Euclidean, so cmdscale returns some negative
-  # eigenvalues. They make sum(pcoa$eig) smaller than the sum of the positive
-  # ones alone, which inflates every percentage -- by roughly a factor of two
-  # for this data. Dividing instead by the sum of the positive eigenvalues
-  # would be the more defensible statistic, and gives axis 1 of the Kigali
-  # analysis as 23.4% rather than the published 46.3%.
-  #
-  # The published value is kept. If the Methods describe these as "variance
-  # explained", it is worth saying they are percentages of the signed
-  # eigenvalue total, because a reader who recomputes them the other way will
-  # get half the number and think something is wrong.
-  # ---------------------------------------------------------------------------
 
   variance_percent <- 100 * pcoa$eig / sum(pcoa$eig)
 
@@ -627,9 +487,7 @@ format_permanova_label <- function(statistics) {
 }
 
 
-# ==============================================================================
-# 6. DRAWING
-# ==============================================================================
+# ---- drawing -----------------------------------------------------------
 
 axis_label <- function(pcoa, axis) {
   sprintf("PCoA%d (%.1f%%)", axis, pcoa$variance[axis])
@@ -774,9 +632,7 @@ save_figure <- function(plot_object, basename, width, height) {
 }
 
 
-# ==============================================================================
-# 7. RUN EVERY ANALYSIS
-# ==============================================================================
+# ---- run every analysis ------------------------------------------------
 
 permanova_rows   <- list()
 coordinate_rows  <- list()
@@ -879,9 +735,7 @@ for (index in seq_len(nrow(PANEL_MAP))) {
   statistics_label <- format_permanova_label(displayed)
 
 
-  # ----------------------------------------------------------------------------
   # The single main-text panel.
-  # ----------------------------------------------------------------------------
 
   main_panel <- make_panel(
     pcoa, subset_data$metadata,
@@ -908,9 +762,7 @@ for (index in seq_len(nrow(PANEL_MAP))) {
   ))
 
 
-  # ----------------------------------------------------------------------------
   # The 2x2 supplementary composite.
-  # ----------------------------------------------------------------------------
 
   composite_panels <- lapply(
     COMPOSITE_AXES,
@@ -944,9 +796,7 @@ for (index in seq_len(nrow(PANEL_MAP))) {
   ))
 
 
-  # ----------------------------------------------------------------------------
   # Source data.
-  # ----------------------------------------------------------------------------
 
   coordinate_rows[[length(coordinate_rows) + 1]] <-
     pcoa$coordinates %>%
@@ -967,9 +817,7 @@ for (index in seq_len(nrow(PANEL_MAP))) {
 }
 
 
-# ==============================================================================
-# 8. WRITE THE TABLES
-# ==============================================================================
+# ---- write the tables --------------------------------------------------
 
 permanova_results <- dplyr::bind_rows(permanova_rows)
 
@@ -994,9 +842,7 @@ readr::write_tsv(
 )
 
 
-# ==============================================================================
-# 9. SUMMARY
-# ==============================================================================
+# ---- summary -----------------------------------------------------------
 
 add_to_report("")
 add_to_report(strrep("=", 72))

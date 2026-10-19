@@ -1,45 +1,11 @@
 #!/usr/bin/env bash
-# =============================================================================
-# filter_for_selection_scan.sh — second, stricter filtering pass for the
-#                                allele-frequency and FST analyses
+# filter_for_selection_scan.sh — second, stricter filtering pass for the allele-frequency and FST analyses
 #
-# WHAT IT DOES
-#   Applies a second round of filtering to the population call set, producing
-#   the stricter set used for the temporal differentiation analyses in
-#   Figure 5: per-SNP FST, absolute allele-frequency change, and signed
-#   allele-frequency change.
+# Inputs:  ${PROCESSED_DIR}/population_filtered.vcf.gz   from filter_population_vcf.sh
+# Outputs: ${DATA_ROOT}/selection_track/step1..step4.vcf.gz   intermediates
+#          ${PROCESSED_DIR}/selection_scan_filtered.vcf.gz     final call set
 #
-# WHY A SECOND PASS
-#   Figure 4 asks whether samples group together, and tolerates some missing
-#   data: a PCoA or a distance tree degrades gracefully as coverage thins.
-#   Figure 5 instead compares allele frequencies between two time periods, and
-#   there missing data is not neutral — if a SNP is missing more often in one
-#   period than the other, the frequency difference partly measures coverage
-#   rather than biology. This pass therefore applies a stricter depth and
-#   quality floor and tighter missingness limits before frequencies are
-#   compared.
-#
-# INPUTS
-#   ${PROCESSED_DIR}/population_filtered.vcf.gz   from filter_population_vcf.sh
-#
-# OUTPUTS
-#   ${DATA_ROOT}/selection_track/step1..step4.vcf.gz   intermediates
-#   ${PROCESSED_DIR}/selection_scan_filtered.vcf.gz     final call set
-#
-# REQUIRES
-#   bcftools 1.23, vcftools 0.1.16
-#
-# USAGE
-#   bash scripts/04_filtering/filter_for_selection_scan.sh
-#
-# PROVENANCE
-#   This filtering was performed by a co-author on the output of
-#   filter_population_vcf.sh. The thresholds below are those used for the
-#   published Figure 5.
-#
-# Part of: Diallo et al., Nature Communications (2026)
-#          https://github.com/mtd1997/Adaptive_Pf_resurgence_Rwanda
-# =============================================================================
+# Usage:   bash scripts/04_filtering/filter_for_selection_scan.sh
 
 set -euo pipefail
 

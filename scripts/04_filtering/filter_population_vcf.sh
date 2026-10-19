@@ -1,63 +1,15 @@
 #!/usr/bin/env bash
-# =============================================================================
-# filter_population_vcf.sh — progressive missingness filtering of the
-#                            jointly genotyped VCF
+# filter_population_vcf.sh — progressive missingness filtering of the jointly genotyped VCF
 #
-# WHAT IT DOES
-#   Takes the jointly genotyped VCF across all seven targeted loci and filters
-#   it down to the call set used for the population-structure analyses:
-#   principal-coordinate analysis and the neighbour-joining tree (Figure 4).
+# Inputs:  ${PROCESSED_DIR}/joint_genotyped.vcf.gz    from combine_and_genotype_gvcfs.sh
+# Outputs: ${DATA_ROOT}/population_track/filtering/step1_quality.vcf.gz
+#          ${DATA_ROOT}/population_track/filtering/step2_biallelic.vcf.gz
+#          ${DATA_ROOT}/population_track/filtering/filtered_<threshold>.recode.vcf.gz
+#          ${DATA_ROOT}/population_track/filtering/summary_<threshold>.txt
+#          ${DATA_ROOT}/population_track/filtering/filtering_summary.tsv
+#          ${PROCESSED_DIR}/population_filtered.vcf.gz   the final round, copied out
 #
-#   Three steps:
-#     1. genotype-level quality and depth
-#     2. biallelic SNPs only
-#     3. progressive missingness filtering, in seven rounds
-#
-# WHY PROGRESSIVE RATHER THAN A SINGLE THRESHOLD
-#   Site missingness and sample missingness are entangled: a handful of badly
-#   covered samples makes every site look poor, and a handful of poor sites
-#   makes every sample look poor. Applying one strict threshold to either in
-#   isolation therefore discards data that is in fact usable.
-#
-#   This script instead tightens the threshold in stages, from 0.7 down to 0.1,
-#   and within each stage filters sites first, then samples. Early rounds strip
-#   out the worst offenders on both axes, which improves the statistics seen by
-#   the next round. By the final round at 0.1, the remaining sites and samples
-#   are genuinely well covered rather than merely surviving a single cut.
-#
-#   Each round writes its own output and a summary, so the trade-off between
-#   stringency and data retained is visible rather than assumed.
-#
-# INPUTS
-#   ${PROCESSED_DIR}/joint_genotyped.vcf.gz    from combine_and_genotype_gvcfs.sh
-#
-# OUTPUTS
-#   ${DATA_ROOT}/population_track/filtering/step1_quality.vcf.gz
-#   ${DATA_ROOT}/population_track/filtering/step2_biallelic.vcf.gz
-#   ${DATA_ROOT}/population_track/filtering/filtered_<threshold>.recode.vcf.gz
-#   ${DATA_ROOT}/population_track/filtering/summary_<threshold>.txt
-#   ${DATA_ROOT}/population_track/filtering/filtering_summary.tsv
-#   ${PROCESSED_DIR}/population_filtered.vcf.gz   the final round, copied out
-#
-# REQUIRES
-#   bcftools 1.23, vcftools 0.1.16, tabix/bgzip (htslib)
-#
-# USAGE
-#   bash scripts/04_filtering/filter_population_vcf.sh
-#
-# DOWNSTREAM
-#   This output feeds two different paths:
-#     - annotate_population_vcf.sh, then population_genomics.R   (Figure 4)
-#     - filter_for_selection_scan.sh, a second and stricter pass (Figure 5)
-#
-# NOTE ON SAMPLE COUNTS
-#   This script does not remove the three isolates later found to be of
-#   non-Rwandan origin. They are excluded at the R stage, when genotypes are
-#   joined to the sample metadata, taking the analysed set to 1,176.
-#
-# Part of: Diallo et al., Nature Communications (2026)
-#          https://github.com/mtd1997/Adaptive_Pf_resurgence_Rwanda
-# =============================================================================
+# Usage:   bash scripts/04_filtering/filter_population_vcf.sh
 
 set -euo pipefail
 

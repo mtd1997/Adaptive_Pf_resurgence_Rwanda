@@ -1,81 +1,12 @@
-################################################################################
-# FIGURE 4 — THE IBS DISTANCE MATRIX
-################################################################################
+# Figure 4 — the IBS distance matrix
 #
-# WHAT IT DOES
-#   Computes the pairwise genetic distance matrix that Figure 4 and
-#   Supplementary Figure S4 are built from, and saves it as an .rds file.
+# Inputs:  The population VCF used for the population-genetic analyses,
+#          all_1179_withDhpsDhfr.vcf.gz. Set POPGEN_VCF in config.R.
+# Outputs: data/processed/ibs_distance_matrix.rds       the dist object
+#          data/processed/ibs_distance_matrix.tsv.gz    the same, as a table
+#          results/tables/figure04/ibs_distance_report.txt
 #
-# WHAT THE DISTANCE IS
-#   For every pair of samples, the proportion of genotypes that differ,
-#   counted only over sites where BOTH samples were successfully called:
-#
-#       d(i,j) = 1 - (matching sites / sites called in both)
-#
-#   Missing data therefore reduces the denominator for that pair rather than
-#   counting as a mismatch. Each pair is compared over whatever sites it has
-#   in common, which is why the measure is described as pairwise-complete.
-#
-#   The original analysis called this "IBS distance", and the file name keeps
-#   that label. Worth knowing when writing the Methods: the original script
-#   also defined functions named `p_distance` and `hamming_dist`, and all
-#   three compute exactly this same quantity. For any pair, every comparable
-#   site either matches or does not, so
-#
-#       1 - matches/n   is identically   mismatches/n
-#
-#   The three names describe one measure. The Methods should describe the
-#   computation above rather than naming a package's IBS implementation,
-#   which is a different thing.
-#
-# WHY THIS SCRIPT EXISTS
-#   The matrix was originally produced by a block inside a long exploratory
-#   script, mixed in with PCA, trees and several abandoned distance measures.
-#   This isolates just the computation that fed the published figure.
-#
-# THE SPEED CHANGE, AND WHY IT IS SAFE
-#   The original used two nested R loops over every pair: for 1,178 samples
-#   that is about 693,000 iterations, which is why it was slow.
-#
-#   This version computes the same thing with matrix products, which is
-#   orders of magnitude faster. That is only worth doing if it gives the same
-#   answer, so the script PROVES it:
-#
-#     1. It recomputes a random subset with the original nested-loop code and
-#        compares. This always runs.
-#     2. If you point --verify-against at the original IBS_distance_matrix.rds,
-#        it compares every value against it.
-#
-#   Both checks report the largest absolute difference. Anything above
-#   1e-10 is treated as a failure and stops the script. Floating-point
-#   arithmetic means the difference will not be exactly zero; it should be
-#   around 1e-16.
-#
-# INPUT
-#   The population VCF used for the population-genetic analyses,
-#   all_1179_withDhpsDhfr.vcf.gz. Set POPGEN_VCF in config.R.
-#
-# OUTPUTS
-#   data/processed/ibs_distance_matrix.rds       the dist object
-#   data/processed/ibs_distance_matrix.tsv.gz    the same, as a table
-#   results/tables/figure04/ibs_distance_report.txt
-#
-# HOW TO RUN
-#   From the top of the repository:
-#
-#     Rscript scripts/06_figures/figure04_ibs_distance.R
-#
-#   Optionally, to check against the original:
-#
-#     Rscript scripts/06_figures/figure04_ibs_distance.R \
-#         --verify-against /path/to/IBS_distance_matrix.rds
-#
-################################################################################
-
-
-# ==============================================================================
-# 1. SETUP
-# ==============================================================================
+# Usage:   From the top of the repository:
 
 options(error = NULL)
 
@@ -146,6 +77,8 @@ VERIFY_AGAINST <- get_argument("--verify-against", NULL)
 # How many samples to recompute with the original loop, as a check.
 VERIFY_SUBSET_SIZE <- as.integer(get_argument("--verify-n", "60"))
 
+# The vectorised distances must agree with the original loop to this
+# tolerance or nothing is written.
 TOLERANCE <- 1e-10
 
 if (is.null(VCF_FILE)) {
@@ -182,21 +115,7 @@ add_to_report <- function(...) {
 }
 
 
-# ==============================================================================
-# 2. THE GENOTYPE MATRIX
-# ==============================================================================
-#
-# Reproduced from the original analysis exactly:
-#
-#   vcfR2genlight()                 VCF to a genlight object
-#   drop the sample named "3D7"     the laboratory reference control
-#   tab(..., NA.method = "asis")    allele counts, missing data kept as NA
-#
-# NA.method = "asis" matters. The alternative, "mean", would fill missing
-# genotypes with the site mean, which would make every pair comparable and
-# change the distances. Keeping NA is what makes the measure
-# pairwise-complete.
-# ==============================================================================
+# ---- the genotype matrix -----------------------------------------------
 
 add_to_report(strrep("=", 72))
 add_to_report("IBS DISTANCE MATRIX")
@@ -255,23 +174,7 @@ if (n_samples < 3) {
 }
 
 
-# ==============================================================================
-# 3. THE DISTANCE, COMPUTED WITH MATRIX PRODUCTS
-# ==============================================================================
-#
-# For each genotype code v, build an indicator matrix that is TRUE where a
-# sample has that code and was called. Then
-#
-#   tcrossprod(indicator_v)   counts, for every pair, the sites where BOTH
-#                             samples carry code v
-#
-# Summing over the codes gives the number of matching sites for every pair.
-# tcrossprod on the "was called" indicator gives the number of jointly called
-# sites. The distance follows directly.
-#
-# This is the same arithmetic as the original nested loops, rearranged so the
-# work happens inside a few matrix multiplications.
-# ==============================================================================
+# ---- the distance, computed with matrix products -----------------------
 
 compute_ibs_distance_fast <- function(genotype_matrix) {
 
@@ -317,10 +220,8 @@ compute_ibs_distance_fast <- function(genotype_matrix) {
 }
 
 
-# ------------------------------------------------------------------------------
 # The original implementation, kept verbatim so it can be used as the
 # reference for the check below. It is never used to produce the output.
-# ------------------------------------------------------------------------------
 
 compute_ibs_distance_original <- function(mat) {
 
@@ -372,9 +273,7 @@ add_to_report(sprintf(
 ))
 
 
-# ==============================================================================
-# 4. CHECK 1 — AGAINST THE ORIGINAL LOOP, ON A SUBSET
-# ==============================================================================
+# ---- check 1 — against the original loop, on a subset ------------------
 
 add_to_report("")
 add_to_report(strrep("-", 72))
@@ -427,9 +326,7 @@ if (is.na(largest_difference) || largest_difference > TOLERANCE) {
 add_to_report("  PASS — the two implementations agree to floating-point precision.")
 
 
-# ==============================================================================
-# 5. CHECK 2 — AGAINST THE ORIGINAL SAVED MATRIX
-# ==============================================================================
+# ---- check 2 — against the original saved matrix -----------------------
 
 add_to_report("")
 add_to_report(strrep("-", 72))
@@ -536,9 +433,7 @@ if (is.null(VERIFY_AGAINST)) {
 }
 
 
-# ==============================================================================
-# 6. SAVE
-# ==============================================================================
+# ---- save --------------------------------------------------------------
 
 distance_object <- stats::as.dist(distance_matrix)
 

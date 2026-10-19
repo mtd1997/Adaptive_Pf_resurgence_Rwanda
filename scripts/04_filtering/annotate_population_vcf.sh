@@ -1,50 +1,13 @@
 #!/usr/bin/env bash
-# =============================================================================
 # annotate_population_vcf.sh — add functional annotations to the population VCF
 #
-# WHAT IT DOES
-#   Runs SnpEff over the filtered population call set, adding an ANN field to
-#   each variant that records the gene, the transcript, the coding change and
-#   the predicted protein consequence.
+# Inputs:  ${PROCESSED_DIR}/population_filtered.vcf.gz   from filter_population_vcf.sh
+#          A SnpEff database for P. falciparum 3D7, named by SNPEFF_DB in config.sh
+# Outputs: ${PROCESSED_DIR}/final_population.ann.vcf       annotated call set
+#          ${RESULTS_DIR}/qc/final_population_snpeff.html  SnpEff summary report
+#          ${RESULTS_DIR}/qc/final_population_snpeff.genes.txt
 #
-#   The annotated VCF is the input to both population-genetics scripts:
-#     population_genomics.R  PCoA and neighbour-joining tree   (Figure 4)
-#     selection_scan.R       FST and allele-frequency change   (Figure 5)
-#
-#   The drug-resistance track is annotated separately, per sample, in
-#   prepare_drug_resistance_vcfs.sh.
-#
-# INPUTS
-#   ${PROCESSED_DIR}/population_filtered.vcf.gz   from filter_population_vcf.sh
-#   A SnpEff database for P. falciparum 3D7, named by SNPEFF_DB in config.sh
-#
-# OUTPUTS
-#   ${PROCESSED_DIR}/final_population.ann.vcf       annotated call set
-#   ${RESULTS_DIR}/qc/final_population_snpeff.html  SnpEff summary report
-#   ${RESULTS_DIR}/qc/final_population_snpeff.genes.txt
-#
-# REQUIRES
-#   SnpEff 5.2f and Java. SNPEFF_JAR and SNPEFF_DB are set in config.sh.
-#
-# THE SNPEFF DATABASE
-#   The database was built locally from the same reference used for alignment
-#   (P. falciparum 3D7 version 3, PlasmoDB release 68), because SnpEff's
-#   bundled P. falciparum database is built against a different release and
-#   its coordinates would not match the calls.
-#
-#   Building it requires an entry in snpEff.config naming the genome, a
-#   genes.gff and a sequences.fa under data/<genome>/, then:
-#
-#       java -jar snpEff.jar build -gff3 -v <genome>
-#
-#   See scripts/04_filtering/README.md for the specific values used here.
-#
-# USAGE
-#   bash scripts/04_filtering/annotate_population_vcf.sh
-#
-# Part of: Diallo et al., Nature Communications (2026)
-#          https://github.com/mtd1997/Adaptive_Pf_resurgence_Rwanda
-# =============================================================================
+# Usage:   bash scripts/04_filtering/annotate_population_vcf.sh
 
 set -euo pipefail
 

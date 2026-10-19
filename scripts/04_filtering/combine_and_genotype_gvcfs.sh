@@ -1,39 +1,17 @@
 #!/usr/bin/env bash
-# =============================================================================
 # combine_and_genotype_gvcfs.sh — joint genotyping across all samples
 #
-# WHAT IT DOES
-#   Gathers every sample's gVCF from Clair3, imports them into a GenomicsDB
-#   workspace, and genotypes them together with GATK.
+# Inputs:  ${VCF_DIR}/<SampleID>_clair3/merge_output.gvcf.gz   from stage 03
+#          ${REF_GENOME} and its .fai and .dict
+#          ${AMPLICON_BED}  used to build the interval list, so genotyping is
+#          restricted to the seven targeted loci
+# Outputs: ${DATA_ROOT}/population_track/gvcf/<SampleID>.gvcf.gz   collected, indexed
+#          ${DATA_ROOT}/population_track/sample_map.txt
+#          ${DATA_ROOT}/population_track/intervals.list
+#          ${DATA_ROOT}/population_track/genomicsdb/                GenomicsDB workspace
+#          ${PROCESSED_DIR}/joint_genotyped.vcf.gz                  input to filtering
 #
-#   Joint genotyping is what makes the population analyses possible. Calling
-#   each sample alone leaves a position missing from a sample's VCF ambiguous:
-#   reference, or no coverage? The gVCF records confident reference blocks, so
-#   genotyping all samples together produces one matrix in which every sample
-#   has a defined state at every site, or an explicit no-call.
-#
-# INPUTS
-#   ${VCF_DIR}/<SampleID>_clair3/merge_output.gvcf.gz   from stage 03
-#   ${REF_GENOME} and its .fai and .dict
-#   ${AMPLICON_BED}  used to build the interval list, so genotyping is
-#                    restricted to the seven targeted loci
-#
-# OUTPUTS
-#   ${DATA_ROOT}/population_track/gvcf/<SampleID>.gvcf.gz   collected, indexed
-#   ${DATA_ROOT}/population_track/sample_map.txt
-#   ${DATA_ROOT}/population_track/intervals.list
-#   ${DATA_ROOT}/population_track/genomicsdb/                GenomicsDB workspace
-#   ${PROCESSED_DIR}/joint_genotyped.vcf.gz                  input to filtering
-#
-# REQUIRES
-#   GATK 4.6.1.0, bcftools 1.23, samtools 1.22.1, Java
-#
-# USAGE
-#   bash scripts/04_filtering/combine_and_genotype_gvcfs.sh
-#
-# Part of: Diallo et al., Nature Communications (2026)
-#          https://github.com/mtd1997/Adaptive_Pf_resurgence_Rwanda
-# =============================================================================
+# Usage:   bash scripts/04_filtering/combine_and_genotype_gvcfs.sh
 
 set -euo pipefail
 
@@ -106,9 +84,6 @@ echo "  collected ${COLLECTED} gVCFs (${MISSING} missing)"
 
 # --- 2. build the sample map -----------------------------------------------------------
 # Two tab-separated columns: sample name, then path to that sample's gVCF.
-# The sample name must be the bare ID. Deriving it from `ls` output without
-# stripping the directory produces names like "gvcf/A25DBL004", which will not
-# match the sample name recorded in the gVCF header, and GATK rejects the run.
 echo "--- building sample map ---"
 : > "${SAMPLE_MAP}"
 for GVCF in "${GVCF_COLLECTED}"/*.gvcf.gz; do
@@ -141,7 +116,6 @@ echo "  all names match"
 # Genotyping is restricted to the seven targeted loci. Deriving the intervals
 # from the same BED used for alignment keeps the two in step; a separate
 # hand-written intervals.list would be one more file to drift out of date.
-# BED is 0-based half-open, GATK intervals are 1-based inclusive, hence the +1.
 awk '{printf "%s:%d-%d\n", $1, $2 + 1, $3}' "${AMPLICON_BED}" > "${INTERVALS}"
 echo "--- intervals ---"
 sed 's/^/  /' "${INTERVALS}"

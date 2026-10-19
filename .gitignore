@@ -62,3 +62,6 @@ Rplots.pdf
 
 # Any internal metadata file, whatever the roster is called
 data/metadata/*_internal.tsv
+
+# Private working notes for the proofs — not part of the public archive
+NOTES_FOR_PROOFS.md

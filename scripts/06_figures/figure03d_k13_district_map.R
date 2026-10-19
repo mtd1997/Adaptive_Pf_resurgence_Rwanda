@@ -1,76 +1,13 @@
-################################################################################
-# FIGURE 3D — K13 GENOTYPES BY DISTRICT
-################################################################################
+# Figure 3d — K13 genotypes by district
 #
-# WHAT IT DOES
-#   Classifies every sample by K13 genotype, counts the genotypes per
-#   district, and draws a pie chart at each district centroid on the Rwanda
-#   district map.
+# Inputs:  Manuscript_data_29-07-2026.tsv        (MANUSCRIPT_DATA in config.R)
+#          gadm41_RWA_2.shp and companions       (GADM_DIR in config.R)
+# Outputs: results/figures/figure03/figure03d_k13_district_map.svg / .png
+#          results/tables/figure03/figure03d_district_genotypes.tsv   <- Source Data
+#          results/tables/figure03/figure03d_pie_coordinates.tsv
+#          results/tables/figure03/figure03d_report.txt
 #
-# INPUTS
-#   Manuscript_data_29-07-2026.tsv        (MANUSCRIPT_DATA in config.R)
-#   gadm41_RWA_2.shp and companions       (GADM_DIR in config.R)
-#
-# OUTPUTS
-#   results/figures/figure03/figure03d_k13_district_map.svg / .png
-#   results/tables/figure03/figure03d_district_genotypes.tsv   <- Source Data
-#   results/tables/figure03/figure03d_pie_coordinates.tsv
-#   results/tables/figure03/figure03d_report.txt
-#
-# -----------------------------------------------------------------------------
-# DISTRICT IS RESIDENCE, NOT COLLECTION SITE
-# -----------------------------------------------------------------------------
-#   The District column records where the patient lives, not where the
-#   sample was taken. A pie therefore sits over the district a patient came
-#   from, which for samples collected at a Kigali hospital is often not
-#   Kigali. This matters for how the panel is read and should be stated in
-#   the legend. It is the same caveat that applies to Supplementary Figure
-#   S1a.
-# -----------------------------------------------------------------------------
-#
-# -----------------------------------------------------------------------------
-# A DIFFERENT, SIMPLER CLASSIFICATION THAN FIGURE 3B
-# -----------------------------------------------------------------------------
-#   This panel uses five genotype classes, not the eleven of Figure 3b:
-#
-#       R561H + K189T   both present
-#       R561H only      R561H, no K189T       (other changes may be present)
-#       K189T only      K189T, no R561H       (other changes may be present)
-#       Other K13       some other K13 change, neither R561H nor K189T
-#       Wild type       no K13 change at all
-#
-#   Note the difference from Figure 3b: there, "R561H only" means R561H and
-#   nothing else, and a sample with R561H plus another change falls into
-#   "R561H + other". Here that same sample is "R561H only". The two panels
-#   therefore do not have to agree on the count of any class, and a reader
-#   comparing them will find they do not. This is the original definition
-#   for each panel, kept as it was. Both are written out in full, so either
-#   can be recounted.
-# -----------------------------------------------------------------------------
-#
-# -----------------------------------------------------------------------------
-# WHAT WAS DRAWN BY HAND
-# -----------------------------------------------------------------------------
-#   On published Figure 3d the pies are sized by the number of samples in
-#   the district, and a north arrow and scale bar were added. The original
-#   script drew every pie at one fixed size.
-#
-#   Sizing is reproduced here, with radius proportional to the square root
-#   of the sample count so that pie AREA, not radius, tracks the count --
-#   radius-proportional sizing exaggerates large districts by the square.
-#   The north arrow and scale bar are not drawn; they were added when the
-#   figure was assembled and carry no data.
-# -----------------------------------------------------------------------------
-#
-# HOW TO RUN
-#     Rscript scripts/06_figures/figure03d_k13_district_map.R
-#
-################################################################################
-
-
-# ==============================================================================
-# 1. SETUP
-# ==============================================================================
+# Usage:   Rscript scripts/06_figures/figure03d_k13_district_map.R
 
 options(error = NULL)
 
@@ -200,22 +137,7 @@ MAXIMUM_PIE_RADIUS <- 0.16
 MINIMUM_PIE_RADIUS <- 0.045
 
 
-# ------------------------------------------------------------------------------
 # Where a pie is drawn, when its centroid will not do.
-#
-# The three Kigali districts -- Gasabo, Nyarugenge and Kicukiro -- are small,
-# adjacent, and hold most of the samples, so their centroids sit within about
-# a tenth of a degree of each other while their pies are the largest on the
-# map. Drawn at the centroid they overlap almost completely and the two
-# smaller ones are lost underneath Gasabo.
-#
-# They are therefore displaced, as they are on the published panel, and a
-# thin line connects each displaced pie back to its true centroid so that a
-# pie drawn over a neighbouring district is not read as belonging to it.
-#
-# These offsets are presentation only. They move nothing but the drawing:
-# every count comes from the district the sample is recorded in.
-# ------------------------------------------------------------------------------
 
 DISTRICT_PIE_OFFSETS <- tibble::tribble(
   ~district,      ~offset_longitude, ~offset_latitude,
@@ -234,9 +156,7 @@ add_to_report <- function(...) {
 }
 
 
-# ==============================================================================
-# 2. READ THE SAMPLES
-# ==============================================================================
+# ---- read the samples --------------------------------------------------
 
 add_to_report(strrep("=", 72))
 add_to_report("FIGURE 3D — K13 GENOTYPES BY DISTRICT")
@@ -270,9 +190,7 @@ tidy <- raw %>%
   dplyr::filter(!is.na(SAMPLE), SAMPLE != "")
 
 
-# ==============================================================================
-# 3. CLASSIFY EACH SAMPLE
-# ==============================================================================
+# ---- classify each sample ----------------------------------------------
 
 k13_flags <- tidy %>%
   dplyr::filter(
@@ -337,9 +255,7 @@ for (index in seq_len(nrow(overall))) {
 }
 
 
-# ==============================================================================
-# 4. PER-DISTRICT COUNTS
-# ==============================================================================
+# ---- per-district counts -----------------------------------------------
 
 district_counts <- classified %>%
   dplyr::filter(!is.na(District), District != "") %>%
@@ -381,9 +297,7 @@ add_to_report(sprintf(
 ))
 
 
-# ==============================================================================
-# 5. READ THE DISTRICT BOUNDARIES
-# ==============================================================================
+# ---- read the district boundaries --------------------------------------
 
 districts <- sf::st_read(SHAPEFILE, quiet = TRUE)
 
@@ -396,11 +310,9 @@ if (!"NAME_2" %in% names(districts)) {
 }
 
 
-# ------------------------------------------------------------------------------
 # Names have to agree between the sample table and the shapefile. A silent
 # mismatch would simply drop a district's pie, which is why this is checked
 # rather than left to the join.
-# ------------------------------------------------------------------------------
 
 shapefile_names <- sort(unique(as.character(districts$NAME_2)))
 sample_names    <- sort(unique(district_counts$District))
@@ -431,9 +343,7 @@ if (length(unmatched) == 0) {
 }
 
 
-# ==============================================================================
-# 6. CENTROIDS AND PIE SIZES
-# ==============================================================================
+# ---- centroids and pie sizes -------------------------------------------
 
 map_data <- districts %>%
   dplyr::left_join(
@@ -482,11 +392,9 @@ if (nrow(pie_data) == 0) {
 }
 
 
-# ------------------------------------------------------------------------------
 # An offset that is too small leaves the pies overlapping anyway, and one
 # that is too large pushes a pie across the map. Neither is visible from the
 # table above, so check the drawn geometry directly.
-# ------------------------------------------------------------------------------
 
 overlapping_pairs <- character(0)
 
@@ -547,9 +455,7 @@ add_to_report(sprintf(
 ))
 
 
-# ==============================================================================
-# 7. THE FIGURE
-# ==============================================================================
+# ---- the figure --------------------------------------------------------
 
 figure <- ggplot2::ggplot() +
 
@@ -601,11 +507,9 @@ figure <- ggplot2::ggplot() +
   ggplot2::theme_void(base_size = 12)
 
 
-# ------------------------------------------------------------------------------
 # Placing the legend inside the panel changed syntax in ggplot2 3.5.0: the
 # old legend.position = c(x, y) is deprecated there and removed later. Both
 # spellings are kept so the script works on either side of that change.
-# ------------------------------------------------------------------------------
 
 legend_inside <- c(0.86, 0.16)
 
@@ -638,9 +542,7 @@ for (extension in c("svg", "png")) {
 }
 
 
-# ==============================================================================
-# 8. TABLES
-# ==============================================================================
+# ---- tables ------------------------------------------------------------
 
 readr::write_tsv(
   district_counts,

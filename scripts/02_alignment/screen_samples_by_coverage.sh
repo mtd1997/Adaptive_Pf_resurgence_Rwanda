@@ -1,51 +1,15 @@
 #!/usr/bin/env bash
-# =============================================================================
 # screen_samples_by_coverage.sh — sample eligibility screen on amplicon coverage
 #
-# WHAT IT DOES
-#   Counts the reads covering each targeted amplicon in each sample, and keeps
-#   only samples that reach the minimum in EVERY amplicon. This is the
-#   sequencing-quality criterion behind the analysed set: a sample missing one
-#   locus cannot contribute a complete multilocus genotype, so partial samples
-#   are excluded rather than carried forward with gaps.
+# Inputs:  ${BAM_DIR}       sorted, indexed BAMs from align_minimap2.sh
+#          ${AMPLICON_BED}  the seven targeted amplicons
+# Outputs: ${TABLE_DIR}/amplicon_read_counts.tsv   reads per sample per amplicon
+#          ${TABLE_DIR}/amplicon_mean_depth.tsv    mean depth per sample per amplicon
+#          ${TABLE_DIR}/samples_passing.txt        one sample ID per line
+#          ${TABLE_DIR}/samples_failing.tsv        excluded samples and which amplicons failed
 #
-#   The output sample list is the input to the variant-calling and
-#   population-genetic stages.
-#
-# -----------------------------------------------------------------------------
-# PROVENANCE                                             <<< PLEASE READ
-#
-#   The original commands used for this screen were not retained. This script
-#   is a reimplementation of the stated criterion: at least MIN_READS reads per
-#   amplicon per sample, applied before variant filtering.
-#
-#   It should be validated before being relied upon. Run it over the BAMs from
-#   the published analysis and compare the number of passing samples with the
-#   number carried into joint genotyping. Agreement confirms the criterion was
-#   captured correctly; disagreement means the original screen differed and
-#   this script, and the Methods, need adjusting.
-# -----------------------------------------------------------------------------
-#
-# INPUTS
-#   ${BAM_DIR}       sorted, indexed BAMs from align_minimap2.sh
-#   ${AMPLICON_BED}  the seven targeted amplicons
-#
-# OUTPUTS
-#   ${TABLE_DIR}/amplicon_read_counts.tsv   reads per sample per amplicon
-#   ${TABLE_DIR}/amplicon_mean_depth.tsv    mean depth per sample per amplicon
-#   ${TABLE_DIR}/samples_passing.txt        one sample ID per line
-#   ${TABLE_DIR}/samples_failing.tsv        excluded samples and which amplicons failed
-#
-# REQUIRES
-#   samtools 1.22.1, bedtools 2.31
-#
-# USAGE
-#   bash scripts/02_alignment/screen_samples_by_coverage.sh
-#   bash scripts/02_alignment/screen_samples_by_coverage.sh --min-reads 50
-#
-# Part of: Diallo et al., Nature Communications (2026)
-#          https://github.com/mtd1997/Adaptive_Pf_resurgence_Rwanda
-# =============================================================================
+# Usage:   bash scripts/02_alignment/screen_samples_by_coverage.sh
+#          bash scripts/02_alignment/screen_samples_by_coverage.sh --min-reads 50
 
 set -euo pipefail
 

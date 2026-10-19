@@ -1,94 +1,15 @@
-################################################################################
-# SUPPLEMENTARY FIGURE S3 — K13 CATEGORY COMPARISONS AND THEIR STATISTICS
-################################################################################
+# Supplementary Figure S3 — K13 category comparisons and their statistics
 #
-# WHAT IT DOES
-#   Classifies every sample into one K13 mutation category and compares the
-#   categories across four groups, in four panels:
+# Inputs:  Manuscript_data_29-07-2026.tsv  (MANUSCRIPT_DATA in config.R)
+#          The original used an .xlsx on a personal Desktop; --input accepts either.
+# Outputs: results/figures/figureS3/figureS3_k13_comparisons.svg / .pdf / .png
+#          results/figures/figureS3/figureS3_panel[A-D].svg
+#          results/tables/figureS3/figureS3_category_prevalence.tsv     <- Source Data
+#          results/tables/figureS3/figureS3_sample_level_categories.tsv
+#          results/tables/figureS3/figureS3_group_sizes.tsv
+#          results/tables/figureS3/figureS3_binomial_tests.tsv
 #
-#     A   K13 categories, 2021-2023 versus King Faisal Hospital 2024-2025
-#     B   K13 categories, Kigali versus Hotspot districts, 2024-2025
-#     C   Wild type and R561H + K189T, 2021-2023 versus 2024-2025
-#     D   Wild type and R561H + K189T, Kigali versus Hotspots, 2024-2025
-#
-#   and runs the tests reported with them: an exact binomial test of the
-#   wild-type / double-mutant split within each group, Fisher's exact tests
-#   between groups, and an intercept-only binomial model per group.
-#
-# INPUT
-#   Manuscript_data_29-07-2026.tsv  (MANUSCRIPT_DATA in config.R)
-#   The original used an .xlsx on a personal Desktop; --input accepts either.
-#
-# OUTPUTS
-#   results/figures/figureS3/figureS3_k13_comparisons.svg / .pdf / .png
-#   results/figures/figureS3/figureS3_panel[A-D].svg
-#   results/tables/figureS3/figureS3_category_prevalence.tsv     <- Source Data
-#   results/tables/figureS3/figureS3_sample_level_categories.tsv
-#   results/tables/figureS3/figureS3_group_sizes.tsv
-#   results/tables/figureS3/figureS3_binomial_tests.tsv
-#   results/tables/figureS3/figureS3_fisher_tests.tsv
-#   results/tables/figureS3/figureS3_logistic_models.tsv
-#   results/tables/figureS3/figureS3_report.txt
-#
-# -----------------------------------------------------------------------------
-# WHY THESE GROUPS MATCH FIGURE 3B'S DESPITE BEING DEFINED DIFFERENTLY
-# -----------------------------------------------------------------------------
-#   Figure 3b splits the 2024-2025 samples by the REGION column. This figure
-#   splits them by DISTRICT: Kigali means Gasabo, Kicukiro or Nyarugenge,
-#   and Hotspots means the seven districts in HOTSPOT_DISTRICTS.
-#
-#   Two different definitions, yet both give 700 and 219. That is worth
-#   understanding rather than taking on trust, because it is a coincidence
-#   of this dataset and not a guarantee.
-#
-#   Seven samples have a hotspot district but were collected at King Faisal
-#   Hospital during 2021-2023 -- the same seven that make Supplementary S1a
-#   show 250 of the 257 baseline samples. Because both definitions restrict
-#   this comparison to 2024-2025, those seven fall into the baseline group
-#   either way and never reach the split. The arithmetic:
-#
-#       Kigali districts, all years        950
-#       less baseline in Kigali districts  250   (257 baseline less the 7)
-#       Kigali 2024-2025                   700
-#
-#       Hotspot districts, all years       226
-#       less baseline in hotspot districts   7
-#       Hotspots 2024-2025                 219
-#
-#   The script compares the two definitions sample by sample and reports
-#   any sample they disagree on, so if the data changes and they stop
-#   coinciding, that is a printed number rather than a silent divergence.
-#
-#   Remember also that District is the patient's residence, not the
-#   collection site -- the same caveat as Figure 3d and Supplementary S1a.
-# -----------------------------------------------------------------------------
-#
-# -----------------------------------------------------------------------------
-# WHAT THE BINOMIAL TEST IS ASKING
-# -----------------------------------------------------------------------------
-#   binom.test here compares wild type against R561H + K189T within a group,
-#   against a null of 50:50. It therefore asks whether the double mutant has
-#   reached parity with wild type in that group. It does NOT test prevalence
-#   among all samples, and it ignores every other category: its denominator
-#   is wild type plus double mutant, not the group size.
-#
-#   The intercept-only binomial model in section 9 has the same null as that
-#   test -- it is a second route to the same p-value, reported for its odds
-#   ratio and confidence interval rather than as independent evidence.
-#
-#   The comparisons BETWEEN groups are the Fisher tests, and those do use
-#   the full group size as the denominator.
-# -----------------------------------------------------------------------------
-#
-# HOW TO RUN
-#     Rscript scripts/06_figures/figureS3_k13_comparisons.R
-#
-################################################################################
-
-
-# ==============================================================================
-# 1. SETUP
-# ==============================================================================
+# Usage:   Rscript scripts/06_figures/figureS3_k13_comparisons.R
 
 options(error = NULL)
 
@@ -186,9 +107,7 @@ add_to_report <- function(...) {
 }
 
 
-# ==============================================================================
-# 2. CATEGORIES, COLOURS AND GROUPS
-# ==============================================================================
+# ---- categories, colours and groups ------------------------------------
 
 CATEGORY_ORDER <- c(
   "Wild type",
@@ -233,15 +152,9 @@ COMPARED_CATEGORIES <- c("Wild type", "R561H + K189T")
 PAIR_COLOURS <- c("Wild type" = "#2ECC71", "R561H + K189T" = "#FF7F0E")
 
 
-# ------------------------------------------------------------------------------
 # The published panel, read off Supplementary Figure S3. Nothing is drawn
 # from these; they exist so the script can state whether it has reproduced
 # the figure or drifted from it.
-#
-# Every one of these p-values was checked to follow from the counts alone,
-# so a disagreement means the counts changed, not that a test was run
-# differently.
-# ------------------------------------------------------------------------------
 
 PUBLISHED_GROUPS <- tibble::tribble(
   ~group,                ~published_n, ~published_wild_percent, ~published_double_percent, ~published_binomial_p,
@@ -278,9 +191,7 @@ p_to_stars <- function(p) {
 }
 
 
-# ==============================================================================
-# 3. READ
-# ==============================================================================
+# ---- read --------------------------------------------------------------
 
 add_to_report(strrep("=", 72))
 add_to_report("SUPPLEMENTARY FIGURE S3 — K13 CATEGORY COMPARISONS")
@@ -334,12 +245,10 @@ add_to_report(sprintf("Rows read:        %d", nrow(raw)))
 add_to_report(sprintf("Distinct samples: %d", dplyr::n_distinct(tidy$SAMPLE)))
 
 
-# ------------------------------------------------------------------------------
 # A K13 row whose protein change is blank would otherwise be classified as
 # "Other (non-WHO)", because classify_k13 has no branch that returns wild
 # type. Such rows are dropped here and reported, so a blank cell cannot
 # quietly inflate the Other category.
-# ------------------------------------------------------------------------------
 
 blank_k13 <- tidy %>%
   dplyr::filter(
@@ -358,18 +267,14 @@ if (nrow(blank_k13) > 0) {
 }
 
 
-# ------------------------------------------------------------------------------
 # One row per sample for the grouping columns.
-# ------------------------------------------------------------------------------
 
 sample_metadata <- tidy %>%
   dplyr::distinct(SAMPLE, .keep_all = TRUE) %>%
   dplyr::select(SAMPLE, year, District, Health_Center)
 
 
-# ==============================================================================
-# 4. CLASSIFY
-# ==============================================================================
+# ---- classify ----------------------------------------------------------
 
 classify_k13 <- function(mutations) {
 
@@ -432,14 +337,7 @@ classified <- classified %>%
   dplyr::mutate(category = factor(category, levels = CATEGORY_ORDER))
 
 
-# ==============================================================================
-# 5. THE FOUR GROUPS
-# ==============================================================================
-#
-# The 2021-2023 group is every sample from those years, NOT a filter on
-# Health_Center. It is labelled KFH because the baseline was collected
-# there; that is asserted rather than assumed, just below.
-# ==============================================================================
+# ---- the four groups ---------------------------------------------------
 
 group_2123 <- classified %>%
   dplyr::filter(year %in% 2021:2023) %>%
@@ -473,9 +371,7 @@ PANEL_HEADINGS <- c(
 )
 
 
-# ------------------------------------------------------------------------------
 # Checks that the group definitions actually mean what their names say.
-# ------------------------------------------------------------------------------
 
 non_kfh_baseline <- group_2123 %>%
   dplyr::filter(Health_Center != KFH_NAME)
@@ -533,9 +429,7 @@ if (nrow(unassigned) > 0) {
 }
 
 
-# ==============================================================================
-# 6. COUNTS PER GROUP
-# ==============================================================================
+# ---- counts per group --------------------------------------------------
 
 all_groups <- dplyr::bind_rows(
   group_2123, group_2425_kfh, group_kigali, group_hotspot
@@ -585,9 +479,7 @@ for (this_group in GROUP_ORDER) {
   ))
 }
 
-# ------------------------------------------------------------------------------
 # Against the published panel.
-# ------------------------------------------------------------------------------
 
 published_group_check <- counts %>%
   dplyr::filter(category %in% COMPARED_CATEGORIES) %>%
@@ -659,10 +551,8 @@ if (nrow(sum_check) > 0) {
 }
 
 
-# ------------------------------------------------------------------------------
 # How the district-based Kigali group differs from Figure 3b's REGION-based
 # one, stated as a number rather than left for a reader to notice.
-# ------------------------------------------------------------------------------
 
 if ("REGION" %in% names(raw)) {
 
@@ -716,9 +606,7 @@ if ("REGION" %in% names(raw)) {
 }
 
 
-# ==============================================================================
-# 7. STATISTICS
-# ==============================================================================
+# ---- statistics --------------------------------------------------------
 
 get_count <- function(this_group, category_name) {
   value <- counts$n[counts$group == this_group & counts$category == category_name]
@@ -802,9 +690,7 @@ for (index in seq_len(nrow(binomial_rows))) {
 }
 
 
-# ------------------------------------------------------------------------------
 # Fisher's exact tests between groups. These use the full group size.
-# ------------------------------------------------------------------------------
 
 run_fisher <- function(category_name, group_one, group_two, comparison) {
 
@@ -888,9 +774,7 @@ for (index in seq_len(nrow(fisher_rows))) {
 }
 
 
-# ------------------------------------------------------------------------------
 # The single verdict.
-# ------------------------------------------------------------------------------
 
 everything_matches <- isTRUE(sizes_and_prevalences_match) &&
   all(binomial_rows$matches_paper, na.rm = TRUE) &&
@@ -917,10 +801,8 @@ if (everything_matches) {
 add_to_report(strrep("=", 72))
 
 
-# ------------------------------------------------------------------------------
 # Intercept-only binomial model per group. Same null as the binomial test
 # above; reported for the odds ratio and its interval.
-# ------------------------------------------------------------------------------
 
 logistic_rows <- purrr::map_dfr(GROUP_ORDER, function(this_group) {
 
@@ -958,17 +840,10 @@ logistic_rows <- purrr::map_dfr(GROUP_ORDER, function(this_group) {
 })
 
 
-# ==============================================================================
-# 8. THE PANELS
-# ==============================================================================
-#
-# Each facet in panels A and B shows only the categories present in that
-# group, so the x position of a bar depends on which categories that group
-# has. The significance bracket has to be placed from those positions rather
-# than from a fixed index, or it lands on the wrong bars whenever a category
-# is missing.
-# ==============================================================================
+# ---- the panels --------------------------------------------------------
 
+# Facets use free scales, so a bar's x position depends on which
+# categories that group has. Brackets are placed from those, not a fixed index.
 bracket_data <- function(plot_data) {
 
   plot_data %>%
@@ -1237,9 +1112,7 @@ panel_d <- pair_panel(
 )
 
 
-# ==============================================================================
-# 9. ASSEMBLE AND SAVE
-# ==============================================================================
+# ---- assemble and save -------------------------------------------------
 
 figure <- (panel_a / panel_b / (panel_c | panel_d)) +
   patchwork::plot_annotation(tag_levels = "A") +
@@ -1276,9 +1149,7 @@ for (entry in list(
 }
 
 
-# ==============================================================================
-# 10. TABLES
-# ==============================================================================
+# ---- tables ------------------------------------------------------------
 
 readr::write_tsv(
   counts %>%

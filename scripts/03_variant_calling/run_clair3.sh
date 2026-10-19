@@ -1,85 +1,13 @@
 #!/usr/bin/env bash
-# =============================================================================
 # run_clair3.sh — haploid variant calling with Clair3
 #
-# WHAT IT DOES
-#   Calls single-nucleotide variants in each sample's alignment using Clair3
-#   in haploid mode, producing both a VCF and a gVCF per sample.
+# Inputs:  ${BAM_DIR}      sorted, indexed BAMs from stage 02
+#          ${REF_GENOME}   P. falciparum 3D7 v3 reference, PlasmoDB release 68
+# Outputs: ${VCF_DIR}/<SampleID>_clair3/merge_output.vcf.gz
+#          ${VCF_DIR}/<SampleID>_clair3/merge_output.gvcf.gz
+#          ${LOG_DIR}/clair3_failures.txt   samples that failed, if any
 #
-#   The two outputs feed different parts of the study:
-#     VCF  -> drug-resistance marker analysis (stage 04, drug track)
-#     gVCF -> joint genotyping for population genetics (stage 04, population
-#             track). gVCFs record confident reference calls as well as
-#             variants, which is what makes joint genotyping across samples
-#             possible: a position absent from one sample's VCF could mean
-#             either reference or no data, and only the gVCF distinguishes them.
-#
-# INPUTS
-#   ${BAM_DIR}      sorted, indexed BAMs from stage 02
-#   ${REF_GENOME}   P. falciparum 3D7 v3 reference, PlasmoDB release 68
-#
-# OUTPUTS
-#   ${VCF_DIR}/<SampleID>_clair3/merge_output.vcf.gz
-#   ${VCF_DIR}/<SampleID>_clair3/merge_output.gvcf.gz
-#   ${LOG_DIR}/clair3_failures.txt   samples that failed, if any
-#
-# REQUIRES
-#   Docker, and the Clair3 image named in config.sh (CLAIR3_IMAGE).
-#
-# USAGE
-#   bash scripts/03_variant_calling/run_clair3.sh
-#
-#   Completed samples are skipped, so an interrupted run can be restarted.
-#
-# -----------------------------------------------------------------------------
-# CHOOSING THE MODEL  (the setting that most affects the calls)
-#
-#   Clair3 models are trained per flow-cell chemistry AND per basecalling
-#   model. The model must match how the reads were basecalled:
-#
-#     R10.4.1 + SUP basecalling  ->  r1041_e82_400bps_sup_*
-#     R10.4.1 + HAC basecalling  ->  r1041_e82_400bps_hac_*
-#
-#   This study re-basecalled all runs with the SUP model (see
-#   scripts/00_basecalling/README.md) and called variants with
-#   r1041_e82_400bps_sup_v500, matching that basecalling.
-#
-#   THIS MODEL IS NOT BUNDLED IN THE CLAIR3 IMAGE. The v500 models are
-#   distributed through ONT's rerio repository and must be downloaded before
-#   running this script:
-#
-#       git clone https://github.com/nanoporetech/rerio
-#       python3 rerio/download_model.py --clair3
-#
-#   That writes the models into rerio/clair3_models/. Set CLAIR3_MODEL_DIR in
-#   config.sh to that folder and CLAIR3_MODEL to the model name; the folder is
-#   mounted into the container automatically below.
-#
-# CALLING OPTIONS
-#   --haploid_sensitive   P. falciparum is haploid in the human host, but
-#                         natural infections are often polyclonal. The
-#                         "sensitive" mode retains positions where more than
-#                         one allele is supported, rather than forcing a single
-#                         call. That matters here: mixed infections and
-#                         within-host allele shifts are a subject of the study,
-#                         so collapsing them would discard the signal.
-#   --include_all_ctgs    call across all contigs, not only the main chromosomes
-#   --gvcf                emit a gVCF as well as a VCF
-#   --var_pct_full=1      run the full-alignment model on 100% of variant
-#   --ref_pct_full=1      candidates and reference candidates, rather than the
-#                         default subset. Slower, but affordable across 25 kb of
-#                         amplicon and more accurate at the drug-resistance
-#                         codons.
-#   --no_phasing_for_fa   skip phasing during the full-alignment stage
-#   --use_whatshap_for_final_output_phasing
-#                         phase the final output VCF with WhatsHap rather than
-#                         Clair3's internal phasing. Used as in the published
-#                         analysis; retained here so the call set can be
-#                         reproduced exactly.
-#
-# Part of: Diallo et al., Nature Communications (2026)
-#          https://github.com/mtd1997/Adaptive_Pf_resurgence_Rwanda
-# =============================================================================
+# Usage:   bash scripts/03_variant_calling/run_clair3.sh
 
 set -euo pipefail
 

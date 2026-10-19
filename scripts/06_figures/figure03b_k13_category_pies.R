@@ -1,68 +1,12 @@
-################################################################################
-# FIGURE 3B — K13 MUTATION CATEGORIES ACROSS FOUR SAMPLE GROUPS
-################################################################################
+# Figure 3b — K13 mutation categories across four sample groups
 #
-# WHAT IT DOES
-#   Classifies every sample into a single K13 mutation category, then shows
-#   the composition of four groups as pie charts:
+# Inputs:  Manuscript_data_29-07-2026.tsv  (MANUSCRIPT_DATA in config.R)
+# Outputs: results/figures/figure03/figure03b_k13_category_pies.svg / .png
+#          results/tables/figure03/figure03b_category_prevalence.tsv   <- Source Data
+#          results/tables/figure03/figure03b_sample_level_categories.tsv
+#          results/tables/figure03/figure03b_report.txt
 #
-#     Baseline-Kigali    (2021-2023)  King Faisal Hospital
-#     KFH Resurgence     (2024-2025)  King Faisal Hospital
-#     Kigali Resurgence  (2024-2025)  all Kigali
-#     Hotspot Resurgence (2024-2025)  hotspot districts
-#
-#   The second and third groups overlap on purpose: King Faisal Hospital is
-#   in Kigali, so KFH Resurgence is a subset of Kigali Resurgence. The panel
-#   shows them side by side to separate the single-hospital time series from
-#   the city-wide picture.
-#
-# INPUT
-#   Manuscript_data_29-07-2026.tsv  (MANUSCRIPT_DATA in config.R)
-#
-# OUTPUTS
-#   results/figures/figure03/figure03b_k13_category_pies.svg / .png
-#   results/tables/figure03/figure03b_category_prevalence.tsv   <- Source Data
-#   results/tables/figure03/figure03b_sample_level_categories.tsv
-#   results/tables/figure03/figure03b_report.txt
-#
-# -----------------------------------------------------------------------------
-# ONE CATEGORY PER SAMPLE, AND THE ORDER THE RULES ARE APPLIED IN
-# -----------------------------------------------------------------------------
-#   A sample can carry several K13 mutations, but each sample lands in
-#   exactly one category, so the slices of a pie sum to 100%.
-#
-#   The rules are applied in a fixed order, and the order matters. R561H and
-#   K189T are tested first, so a sample carrying R561H together with, say,
-#   C469Y is classified "R561H + other" and never "C469Y". The named
-#   single-mutation categories therefore only ever catch samples that carry
-#   neither R561H nor K189T. This is the original rule order, kept as it was;
-#   it is spelled out here because it is not obvious from the output, and a
-#   reader comparing category counts against raw mutation counts will
-#   otherwise find them inconsistent.
-# -----------------------------------------------------------------------------
-#
-# -----------------------------------------------------------------------------
-# WHAT WAS DRAWN BY HAND
-# -----------------------------------------------------------------------------
-#   The script that produced these numbers for the revision drew them as two
-#   bar panels. Published Figure 3b shows the same four groups as pies. The
-#   pies were produced when the figure was assembled, from the combined
-#   category table this script writes.
-#
-#   This script draws the pies directly, so the figure and the numbers come
-#   from one place. The published artwork differs in finish only: slice
-#   label placement and the legend layout were adjusted by hand.
-# -----------------------------------------------------------------------------
-#
-# HOW TO RUN
-#     Rscript scripts/06_figures/figure03b_k13_category_pies.R
-#
-################################################################################
-
-
-# ==============================================================================
-# 1. SETUP
-# ==============================================================================
+# Usage:   Rscript scripts/06_figures/figure03b_k13_category_pies.R
 
 options(error = NULL)
 
@@ -142,9 +86,7 @@ add_to_report <- function(...) {
 }
 
 
-# ==============================================================================
-# 2. CATEGORIES, COLOURS AND THE PUBLISHED NUMBERS
-# ==============================================================================
+# ---- categories, colours and the published numbers ---------------------
 
 CATEGORY_ORDER <- c(
   "Wild type",
@@ -198,9 +140,7 @@ GROUP_SUBTITLES <- c(
 )
 
 
-# ==============================================================================
-# 3. READ
-# ==============================================================================
+# ---- read --------------------------------------------------------------
 
 add_to_report(strrep("=", 72))
 add_to_report("FIGURE 3B — K13 CATEGORIES ACROSS FOUR GROUPS")
@@ -241,9 +181,7 @@ tidy <- raw %>%
 add_to_report(sprintf("Rows read: %d", nrow(raw)))
 
 
-# ------------------------------------------------------------------------------
 # One row per sample. Everything downstream counts samples, not mutation rows.
-# ------------------------------------------------------------------------------
 
 sample_metadata <- tidy %>%
   dplyr::distinct(SAMPLE, .keep_all = TRUE) %>%
@@ -254,11 +192,9 @@ sample_metadata <- tidy %>%
 add_to_report(sprintf("Distinct samples: %d", nrow(sample_metadata)))
 
 
-# ------------------------------------------------------------------------------
 # Guard against a health-centre name that has drifted. The groups below are
 # built by matching one exact string, and a silent mismatch would empty two
 # of the four pies rather than fail.
-# ------------------------------------------------------------------------------
 
 if (!KFH_NAME %in% sample_metadata$Health_Center) {
 
@@ -272,9 +208,7 @@ if (!KFH_NAME %in% sample_metadata$Health_Center) {
 }
 
 
-# ==============================================================================
-# 4. CLASSIFY EACH SAMPLE
-# ==============================================================================
+# ---- classify each sample ----------------------------------------------
 
 classify_k13 <- function(mutations) {
 
@@ -347,13 +281,7 @@ add_to_report(sprintf(
 ))
 
 
-# ==============================================================================
-# 5. THE FOUR GROUPS
-# ==============================================================================
-#
-# Each group is defined once, here, so the definitions can be read without
-# tracing through filters further down.
-# ==============================================================================
+# ---- the four groups ---------------------------------------------------
 
 group_membership <- dplyr::bind_rows(
 
@@ -430,11 +358,9 @@ if (nrow(size_mismatches) == 0) {
 }
 
 
-# ------------------------------------------------------------------------------
 # The arithmetic that ties the groups to the analysis set: the two
 # non-overlapping resurgence groups plus the baseline should be the whole
 # set, and KFH Resurgence should sit inside Kigali Resurgence.
-# ------------------------------------------------------------------------------
 
 n_baseline  <- size_check$n_total[size_check$group == "Baseline-Kigali"]
 n_kigali    <- size_check$n_total[size_check$group == "Kigali Resurgence"]
@@ -471,9 +397,7 @@ if (length(kfh_inside_kigali) == 0) {
 }
 
 
-# ==============================================================================
-# 6. COMPOSITION OF EACH GROUP
-# ==============================================================================
+# ---- composition of each group -----------------------------------------
 
 prevalence <- group_membership %>%
   dplyr::count(group, category, name = "n", .drop = FALSE) %>%
@@ -536,9 +460,7 @@ for (this_group in GROUP_ORDER) {
 }
 
 
-# ------------------------------------------------------------------------------
 # Check the two percentages printed on the published panel.
-# ------------------------------------------------------------------------------
 
 published_check <- PUBLISHED_GROUPS %>%
   dplyr::left_join(
@@ -602,9 +524,7 @@ if (all_match) {
 }
 
 
-# ==============================================================================
-# 7. THE FIGURE
-# ==============================================================================
+# ---- the figure --------------------------------------------------------
 
 panel_labels <- drawn %>%
   dplyr::distinct(group, n_total) %>%
@@ -630,15 +550,6 @@ plot_data <- drawn %>%
 
 # Slice labels: only the two categories the published panel annotates, and
 # only where the slice is big enough for the text to sit inside it.
-#
-# The midpoint has to be accumulated over EVERY slice, in drawing order,
-# before the labelled ones are picked out. Filtering first and accumulating
-# afterwards puts each label at the midpoint of a pie made only of the
-# labelled slices, which is not where the slice actually is.
-#
-# "Drawing order" here means category order, which holds only because
-# geom_col above was given position_stack(reverse = TRUE). If that is ever
-# removed, these midpoints silently stop matching the slices.
 slice_positions <- plot_data %>%
   dplyr::group_by(facet_label) %>%
   dplyr::arrange(category, .by_group = TRUE) %>%
@@ -660,12 +571,8 @@ figure <- ggplot2::ggplot(
 ) +
 
   # reverse = TRUE is what makes the slice order match the category order.
-  #
-  # By default geom_col stacks the FIRST factor level at the END of the
-  # axis, so Wild type would occupy the last stretch of the circle rather
-  # than the first. The slices would still be drawn correctly, but every
-  # label computed from a plain cumulative sum would be placed on the wrong
-  # one -- which is precisely what happened before this was set.
+  # reverse = TRUE makes the slice order follow the category order. The
+  # label midpoints computed below assume it.
   ggplot2::geom_col(
     width = 1, colour = "white", linewidth = 0.3,
     position = ggplot2::position_stack(reverse = TRUE)
@@ -730,9 +637,7 @@ for (extension in c("svg", "png")) {
 }
 
 
-# ==============================================================================
-# 8. TABLES
-# ==============================================================================
+# ---- tables ------------------------------------------------------------
 
 readr::write_tsv(
   prevalence %>%

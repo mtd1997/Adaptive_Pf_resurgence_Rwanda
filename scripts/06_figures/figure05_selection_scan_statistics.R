@@ -1,65 +1,10 @@
-################################################################################
-# FIGURE 5 — SELECTION-SCAN STATISTICS
-################################################################################
+# Figure 5 — selection-scan statistics
 #
-# WHAT IT DOES
-#   Compares allele frequencies between the two sampling periods and writes
-#   one row per variant with:
+# Inputs:  1. The filtered, annotated selection-scan VCF
+#          2. The sample metadata table
+#          3. The annotation table from build_selection_scan_annotation.py
 #
-#     - the alternate-allele frequency in each period
-#     - the signed and absolute change between them
-#     - a per-SNP F_ST
-#     - empirical 95th-percentile thresholds and the resulting outlier flags
-#
-#   This is the only script in the repository that computes selection
-#   statistics. The figure script that follows it does no arithmetic at all:
-#   it reads this script's output table and draws it.
-#
-# WHAT IT DOES NOT DO
-#   It does not change the statistical method. The genotype encoding and the
-#   F_ST formula are carried over from the original analysis unchanged, so
-#   the numbers reproduce the published figure. Comments explain the choices;
-#   they do not alter them.
-#
-# INPUTS
-#   1. The filtered, annotated selection-scan VCF
-#   2. The sample metadata table
-#   3. The annotation table from build_selection_scan_annotation.py
-#
-# OUTPUTS  (all under results/tables/figure05/)
-#   selection_statistics_all_variants.tsv   one row per variant — the main
-#                                           table, and the Source Data for
-#                                           Figure 5
-#   empirical_thresholds.tsv                the two 95th-percentile cutoffs
-#   fst_outliers.tsv                        top 5% by F_ST
-#   delta_af_outliers.tsv                   top 5% by |ΔAF|
-#   double_outliers.tsv                     outliers on both statistics
-#   resistance_marker_frequencies.tsv       frequency change per known marker
-#   summary_by_gene.tsv                     per-gene counts
-#   sample_counts.tsv                       samples per period
-#   vcf_annotation_matching.tsv             variants in one input but not the
-#                                           other — should be empty
-#   sessionInfo.txt                         package versions
-#
-# PERIOD LABELS
-#   The manuscript uses "Baseline-Kigali" and "Resurgence". Older metadata
-#   files use "Pre-Resurgence" and "Post-Resurgence". Both are accepted; the
-#   published labels are applied in memory and the original value is kept in
-#   a `period_original` column so nothing is silently rewritten.
-#
-# HOW TO RUN
-#   From the top of the repository:
-#
-#     Rscript scripts/06_figures/figure05_selection_scan_statistics.R
-#
-#   Paths come from config.R. Nothing is hard-coded to one machine.
-#
-################################################################################
-
-
-# ==============================================================================
-# 1. SETUP
-# ==============================================================================
+# Usage:   From the top of the repository:
 
 options(error = NULL)
 
@@ -73,13 +18,7 @@ suppressPackageStartupMessages({
 })
 
 
-# ------------------------------------------------------------------------------
 # Locate the repository root and read the shared paths.
-#
-# This looks for config.R in the current directory and then in the parent
-# directories above it, so the script works whether it is run from the top of
-# the repository or from inside scripts/06_figures/.
-# ------------------------------------------------------------------------------
 
 find_project_root <- function() {
 
@@ -113,12 +52,10 @@ PROJECT_ROOT <- find_project_root()
 source(file.path(PROJECT_ROOT, "config.R"))
 
 
-# ------------------------------------------------------------------------------
 # Inputs and outputs
 #
 # Each of these falls back to a path inside the repository if config.R does
 # not define it, so the script is runnable immediately after a clean clone.
-# ------------------------------------------------------------------------------
 
 path_or_default <- function(variable_name, default_relative_path) {
 
@@ -154,9 +91,7 @@ OUTPUT_DIR <- file.path(PROJECT_ROOT, "results", "tables", "figure05")
 dir.create(OUTPUT_DIR, recursive = TRUE, showWarnings = FALSE)
 
 
-# ------------------------------------------------------------------------------
 # Check the inputs before doing any work, and say exactly which is missing.
-# ------------------------------------------------------------------------------
 
 input_files <- c(
   VCF        = VCF_FILE,
@@ -182,9 +117,7 @@ for (name in names(input_files)) {
 }
 
 
-# ==============================================================================
-# 2. READ THE VCF
-# ==============================================================================
+# ---- read the vcf ------------------------------------------------------
 
 vcf <- vcfR::read.vcfR(VCF_FILE, verbose = FALSE)
 
@@ -195,9 +128,7 @@ message(sprintf(
 ))
 
 
-# ==============================================================================
-# 3. READ AND TIDY THE METADATA
-# ==============================================================================
+# ---- read and tidy the metadata ----------------------------------------
 
 metadata <- readr::read_tsv(METADATA_FILE, show_col_types = FALSE)
 
@@ -237,9 +168,7 @@ metadata <- metadata %>%
   dplyr::distinct(SAMPLE, .keep_all = TRUE)
 
 
-# ------------------------------------------------------------------------------
 # Apply the published period labels, keeping the original values.
-# ------------------------------------------------------------------------------
 
 BASELINE_GROUP   <- "Baseline-Kigali"
 RESURGENCE_GROUP <- "Resurgence"
@@ -275,9 +204,7 @@ message("\nSamples per period in the metadata:")
 print(table(metadata$period, useNA = "ifany"))
 
 
-# ==============================================================================
-# 4. READ THE ANNOTATION
-# ==============================================================================
+# ---- read the annotation -----------------------------------------------
 
 annotation <- readr::read_tsv(ANNOTATION_FILE, show_col_types = FALSE)
 
@@ -349,9 +276,7 @@ if (nrow(duplicated_annotation_ids) > 0) {
 }
 
 
-# ==============================================================================
-# 5. EXTRACT GENOTYPES AND ALIGN SAMPLES
-# ==============================================================================
+# ---- extract genotypes and align samples -------------------------------
 
 genotype_characters <- vcfR::extract.gt(vcf, element = "GT", as.numeric = FALSE)
 
@@ -369,11 +294,9 @@ if (is.null(depth_matrix)) {
 }
 
 
-# ------------------------------------------------------------------------------
 # Keep only samples present in both the VCF and the metadata, in the VCF's
 # order. This is the step that drops the three samples found not to be of
 # Rwandan origin during the metadata check.
-# ------------------------------------------------------------------------------
 
 vcf_samples      <- colnames(genotype_characters)
 metadata_samples <- metadata$SAMPLE
@@ -418,19 +341,7 @@ message("\nSamples per period after reconciliation:")
 print(table(metadata$group, useNA = "ifany"))
 
 
-# ==============================================================================
-# 6. ENCODE GENOTYPES
-# ==============================================================================
-#
-# P. falciparum is haploid at these loci, so each genotype is a single
-# allele index rather than a diploid pair.
-#
-#   "."  or missing  ->  NA
-#   "0"              ->  0   reference allele
-#   any other number ->  1   alternate allele
-#
-# Carried over from the original analysis unchanged.
-# ==============================================================================
+# ---- encode genotypes --------------------------------------------------
 
 encode_genotypes <- function(genotype_matrix) {
 
@@ -456,9 +367,7 @@ encode_genotypes <- function(genotype_matrix) {
 genotypes <- encode_genotypes(genotype_characters)
 
 
-# ------------------------------------------------------------------------------
 # Variant identifiers, taken from the VCF itself.
-# ------------------------------------------------------------------------------
 
 vcf_chrom <- as.character(vcf@fix[, "CHROM"])
 vcf_pos   <- as.integer(vcf@fix[, "POS"])
@@ -501,9 +410,7 @@ message(sprintf(
 ))
 
 
-# ==============================================================================
-# 7. PER-VARIANT QUALITY SUMMARIES
-# ==============================================================================
+# ---- per-variant quality summaries -------------------------------------
 
 variant_table <- tibble::tibble(
   snp_id     = snp_ids,
@@ -539,9 +446,7 @@ variant_quality <- variant_table %>%
   )
 
 
-# ==============================================================================
-# 8. CHECK THE VCF AND ANNOTATION DESCRIBE THE SAME VARIANTS
-# ==============================================================================
+# ---- check the vcf and annotation describe the same variants -----------
 
 matching_report <- variant_table %>%
   dplyr::select(variant_id, vcf_chrom = chrom, vcf_pos = pos) %>%
@@ -576,9 +481,7 @@ if (n_vcf_only > 0 || n_annotation_only > 0) {
 }
 
 
-# ==============================================================================
-# 9. ALLELE FREQUENCIES PER PERIOD
-# ==============================================================================
+# ---- allele frequencies per period -------------------------------------
 
 group_counts <- table(metadata$group, useNA = "ifany")
 
@@ -629,26 +532,7 @@ delta_af     <- af_resurgence - af_baseline
 abs_delta_af <- abs(delta_af)
 
 
-# ==============================================================================
-# 10. PER-SNP F_ST
-# ==============================================================================
-#
-# A Weir and Cockerham style estimator for two groups of haploid samples.
-# Reproduced from the original analysis without modification.
-#
-#   p1, p2   alternate-allele frequency in each group
-#   n1, n2   number of successfully called samples in each group
-#   nc       variance-corrected sample size
-#   MST      among-group component
-#   MSG      within-group component
-#
-# Notes on the edge cases, which are deliberate:
-#   - fewer than three called samples in either group -> NA
-#   - the variant is fixed the same way in both groups -> 0
-#   - a non-positive denominator -> NA
-#   - results are clamped to [0, 1]
-#
-# ==============================================================================
+# ---- per-snp f_st ------------------------------------------------------
 
 compute_per_snp_fst <- function(
   genotype_matrix,
@@ -714,9 +598,7 @@ fst_results <- compute_per_snp_fst(
 )
 
 
-# ==============================================================================
-# 11. ASSEMBLE THE STATISTICS TABLE
-# ==============================================================================
+# ---- assemble the statistics table -------------------------------------
 
 frequency_table <- tibble::tibble(
   snp_id                   = colnames(genotypes_by_sample),
@@ -777,15 +659,7 @@ selection_statistics <- variant_table %>%
   dplyr::left_join(annotation_for_join, by = "variant_id")
 
 
-# ==============================================================================
-# 12. EMPIRICAL 95TH-PERCENTILE THRESHOLDS
-# ==============================================================================
-#
-# There is no null model here. A variant is called an outlier if it sits in
-# the top 5% of the observed distribution of that statistic across the
-# variants analysed. This is an empirical ranking, not a significance test,
-# and the figure legend should describe it that way.
-# ==============================================================================
+# ---- empirical 95th-percentile thresholds ------------------------------
 
 fst_threshold <- as.numeric(stats::quantile(
   selection_statistics$fst,
@@ -855,9 +729,7 @@ selection_statistics <- selection_statistics %>%
   dplyr::arrange(chrom, pos, ref, alt)
 
 
-# ==============================================================================
-# 13. WRITE THE OUTPUT TABLES
-# ==============================================================================
+# ---- write the output tables -------------------------------------------
 
 write_table <- function(data, filename) {
   readr::write_tsv(data, file.path(OUTPUT_DIR, filename))
@@ -959,9 +831,7 @@ write_table(
 )
 
 
-# ==============================================================================
-# 14. SUMMARY TO THE CONSOLE
-# ==============================================================================
+# ---- summary to the console --------------------------------------------
 
 message("\n", strrep("=", 72))
 message("SELECTION-SCAN STATISTICS")
@@ -1009,9 +879,7 @@ if (nrow(double_outliers) > 0) {
 }
 
 
-# ==============================================================================
-# 15. FINAL CHECKS
-# ==============================================================================
+# ---- final checks ------------------------------------------------------
 
 if (nrow(selection_statistics) != nrow(vcf@fix)) {
   warning(
@@ -1029,13 +897,7 @@ if (dplyr::n_distinct(selection_statistics$variant_id) !=
 }
 
 
-# ==============================================================================
-# 16. SAVE INTERMEDIATES AND SESSION INFORMATION
-# ==============================================================================
-#
-# The genotype matrix and metadata are saved so the PCoA and other analyses
-# can reuse them without re-reading the VCF.
-# ==============================================================================
+# ---- save intermediates and session information ------------------------
 
 saveRDS(
   genotypes_by_sample,

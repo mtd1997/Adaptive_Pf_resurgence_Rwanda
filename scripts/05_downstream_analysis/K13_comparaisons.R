@@ -1,15 +1,5 @@
-
 # Statistical analyses for K13 mutations in Rwanda
-
-# This script summarizes the statistical analysis used to compare K13 mutation profiles.
-# The main focus is the comparison between wild type parasites and the R561H + K189T double mutant.
-# The script calculates proportions, runs exact binomial tests, compares groups with Fisher tests,
-# adds 95% confidence intervals, and uses a simple logistic regression to confirm the same trends.
-# The plots are generated to make the differences between periods and locations easier to visualize.
-
-
-# 1. Packages and paths
-
+#
 
 packages <- c(
   "tidyverse",

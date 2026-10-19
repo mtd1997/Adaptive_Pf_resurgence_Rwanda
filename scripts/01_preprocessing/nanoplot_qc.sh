@@ -1,40 +1,12 @@
 #!/usr/bin/env bash
-# =============================================================================
 # nanoplot_qc.sh — read-level quality control with NanoPlot
 #
-# WHAT IT DOES
-#   Runs NanoPlot on the renamed per-sample FASTQ files to summarise read
-#   length, read quality and yield, so that poor-quality samples are visible
-#   before any time is spent on alignment and variant calling.
+# Inputs:  ${MERGED_DIR}  per-sample FASTQ files, named <SampleID>.fastq.gz
+# Outputs: ${QC_DIR}/per_sample/<SampleID>/   one NanoPlot report per sample
+#          ${QC_DIR}/combined/                one report across all samples
+#          ${QC_DIR}/nanoplot_summary.tsv     one row per sample: reads, bases, N50, mean Q
 #
-#   Two kinds of report are produced:
-#     1. one report per sample, for spotting individual failures
-#     2. one combined report across all samples, for the run as a whole
-#
-#   pycoQC was run alongside NanoPlot on the sequencing summary files; it is
-#   not scripted here because it reads MinKNOW's own summary output rather
-#   than the FASTQ files.
-#
-# INPUTS
-#   ${MERGED_DIR}  per-sample FASTQ files, named <SampleID>.fastq.gz
-#
-# OUTPUTS
-#   ${QC_DIR}/per_sample/<SampleID>/   one NanoPlot report per sample
-#   ${QC_DIR}/combined/                one report across all samples
-#   ${QC_DIR}/nanoplot_summary.tsv     one row per sample: reads, bases, N50, mean Q
-#
-# REQUIRES
-#   NanoPlot 1.46.2
-#
-# USAGE
-#   bash scripts/01_preprocessing/nanoplot_qc.sh
-#
-#   Per-sample reports only (faster):
-#     bash scripts/01_preprocessing/nanoplot_qc.sh --no-combined
-#
-# Part of: Diallo et al., Nature Communications (2026)
-#          https://github.com/mtd1997/Adaptive_Pf_resurgence_Rwanda
-# =============================================================================
+# Usage:   bash scripts/01_preprocessing/nanoplot_qc.sh
 
 set -euo pipefail
 

@@ -1,44 +1,14 @@
-# =============================================================================
 # rename_fastq.R — rename merged FASTQ files from barcode names to sample IDs
 #
-# WHAT IT DOES
-#   After concatenate_fastq.sh, files are named by barcode and run, e.g.
-#   barcode01_run1.fastq.gz. This renames them to the study sample ID, e.g.
-#   A25DBL004.fastq.gz, using the barcode-to-sample mapping table.
+# Inputs:  BARCODE_MAP   CSV with two columns:
+#          SampleID  study sample identifier, e.g. A25DBL004
+#          barcode   merged file name, e.g. barcode01_run1.fastq.gz
+#          One row per sample, covering every sequencing run.
+# Outputs: The same folder, with files renamed to <SampleID>.fastq.gz
 #
-#   From here on every file is named by sample, so sample identity travels
-#   with the data through alignment, variant calling and analysis.
-#
-# INPUTS
-#   BARCODE_MAP   CSV with two columns:
-#                   SampleID  study sample identifier, e.g. A25DBL004
-#                   barcode   merged file name, e.g. barcode01_run1.fastq.gz
-#                 One row per sample, covering every sequencing run.
-#   MERGED_DIR    folder holding the merged files from concatenate_fastq.sh
-#
-# OUTPUTS
-#   The same folder, with files renamed to <SampleID>.fastq.gz
-#
-# REQUIRES
-#   R (>= 4.0). Base R only, no packages needed.
-#
-# USAGE
-#   From the repository root:
-#     Rscript scripts/01_preprocessing/rename_fastq.R
-#
-#   To preview without renaming anything (recommended first):
-#     Rscript scripts/01_preprocessing/rename_fastq.R --dry-run
-#
-# WHY THE CHECKS BELOW MATTER
-#   Renaming is destructive and hard to undo across hundreds of files. The
-#   script therefore validates the whole mapping table before touching a single
-#   file, and stops if anything is wrong rather than renaming half the dataset.
-#
-# Part of: Diallo et al., Nature Communications (2026)
-#          https://github.com/mtd1997/Adaptive_Pf_resurgence_Rwanda
-# =============================================================================
+# Usage:   From the repository root:
+#          Rscript scripts/01_preprocessing/rename_fastq.R
 
-# --- load shared paths --------------------------------------------------------
 if (!file.exists("config.R")) {
   stop("config.R not found. Run this script from the repository root:\n",
        "  Rscript scripts/01_preprocessing/rename_fastq.R", call. = FALSE)

@@ -1,87 +1,8 @@
-################################################################################
-# FIGURE 2A — SEQUENCING COVERAGE ACROSS AMPLICON TARGETS
-################################################################################
+# Figure 2a — sequencing coverage across amplicon targets
 #
-# WHAT IT DOES
-#   Draws the distribution of mean sequencing depth for each of the seven
-#   amplicons: a boxplot per gene with the individual samples shown as points.
+# Inputs:  A long-format coverage table with three columns:
 #
-# INPUT
-#   A long-format coverage table with three columns:
-#
-#     sample    sample name, with a ".targets" suffix
-#     gene      amplicon name
-#     coverage  mean depth, with a COMMA as the decimal separator
-#
-#   This is the output of the per-amplicon coverage step in stage 02.
-#
-# OUTPUTS  (under results/)
-#   figures/figure02/figure02a_coverage.svg / .pdf / .png
-#   tables/figure02/figure02a_source_data.tsv       every point plotted
-#   tables/figure02/figure02a_summary_by_gene.tsv   medians, ranges, counts
-#   tables/figure02/figure02a_excluded_samples.tsv  what was left out, and why
-#
-# -----------------------------------------------------------------------------
-# THREE THINGS THIS SCRIPT FIXES, AND WHY THEY MATTERED
-# -----------------------------------------------------------------------------
-#
-# 1. IT REPORTS EXACTLY WHICH SAMPLES THE FIGURE COVERS
-#
-#    The coverage table holds every sample that was sequenced and aligned,
-#    which is more than reach the published analyses: a few yield no variants
-#    after VCF filtering, and a few more are excluded at the metadata check.
-#
-#    Both sets are legitimate. Coverage is a property of the sequencing,
-#    measured before any downstream filtering, so a sequencing-quality figure
-#    should show every sequenced sample — and that is the default here.
-#
-#    What the original script did not do was say how many samples it drew, or
-#    how that number related to the analysed cohort. This one reconciles the
-#    two and reports both, so the figure's sample count is a known number
-#    rather than an assumed one, and the legend can state it correctly.
-#
-#    Pass --analysis-samples-only to restrict the figure to the analysed set.
-#
-#    Note what this script deliberately does NOT do: guess from sample names.
-#    An earlier version dropped anything that looked like a control or a
-#    placeholder, and that guess removed dozens of real samples whose names
-#    were merely plain. The metadata is the only sound definition of which
-#    samples were analysed.
-#
-# 2. IT SETS A SEED FOR THE POINT JITTER
-#
-#    geom_quasirandom() spreads overlapping points using random numbers. With
-#    no seed, every run produces a visually different figure. The seed below
-#    makes the figure reproducible.
-#
-# 3. IT REPORTS ZERO-COVERAGE POINTS INSTEAD OF LOSING THEM
-#
-#    The y axis is log scaled, and log10(0) is undefined, so any amplicon
-#    with exactly 0x coverage is silently dropped by ggplot with a warning
-#    that is easy to overlook. An amplicon that produced no reads is a real
-#    result. This script counts those points, reports them, and lists them in
-#    the excluded-samples table so they are accounted for rather than absent.
-#
-# -----------------------------------------------------------------------------
-#
-# HOW TO RUN
-#   From the top of the repository:
-#
-#     Rscript scripts/06_figures/figure02a_coverage.R \
-#         --coverage /path/to/coverage_all_samples.tsv
-#
-#   Options:
-#     --metadata <file>          sample metadata; defaults to the repository
-#                                copy. Used for the reconciliation report.
-#     --analysis-samples-only    restrict the figure to the analysed samples
-#                                instead of every sequenced one.
-#
-################################################################################
-
-
-# ==============================================================================
-# 1. SETUP
-# ==============================================================================
+# Usage:   From the top of the repository:
 
 options(error = NULL)
 
@@ -127,9 +48,7 @@ PROJECT_ROOT <- find_project_root()
 source(file.path(PROJECT_ROOT, "config.R"))
 
 
-# ------------------------------------------------------------------------------
 # Arguments
-# ------------------------------------------------------------------------------
 
 arguments <- commandArgs(trailingOnly = TRUE)
 
@@ -148,7 +67,12 @@ get_argument <- function(flag, default = NULL) {
   arguments[[position + 1]]
 }
 
-COVERAGE_FILE <- get_argument("--coverage")
+COVERAGE_FILE <- get_argument(
+  "--coverage",
+  if (exists("COVERAGE_TABLE", inherits = TRUE)) {
+    get("COVERAGE_TABLE", inherits = TRUE)
+  } else NULL
+)
 
 METADATA_FILE <- get_argument(
   "--metadata",
@@ -158,9 +82,6 @@ METADATA_FILE <- get_argument(
 # By default every sample in the coverage table is plotted. Coverage is a
 # property of the sequencing, measured before any downstream filtering, so a
 # sequencing-quality figure should show everything that was sequenced.
-#
-# --analysis-samples-only restricts the figure to the samples that survived
-# into the analysis, for the cases where that is what is wanted.
 RESTRICT_TO_ANALYSIS <- "--analysis-samples-only" %in% arguments
 
 if (is.null(COVERAGE_FILE)) {
@@ -184,39 +105,14 @@ dir.create(FIGURE_DIR, recursive = TRUE, showWarnings = FALSE)
 dir.create(TABLE_DIR,  recursive = TRUE, showWarnings = FALSE)
 
 
-# ==============================================================================
-# 2. GENE ORDER AND COLOURS
-# ==============================================================================
-#
-# This order is the one used in the published figure. It is not the order used
-# in the selection-scan figure, which follows chromosome position — the two
-# figures deliberately differ, and changing either to match the other would
-# alter a published figure.
-# ==============================================================================
+# ---- gene order and colours --------------------------------------------
 
 GENE_ORDER <- c("CRT", "DHFR", "DHPS", "MDR1", "K13", "CSP", "MSP2")
 
 # There is deliberately no list of sample names to exclude here.
-#
-# An earlier version of this script guessed at which names looked like
-# controls or placeholders and dropped them. That guess was wrong: names such
-# as "sample12" are real study samples that happen to be plainly named, and
-# removing them would have quietly deleted dozens of genuine measurements
-# from the figure.
-#
-# The sample metadata is the only defensible definition of which samples were
-# analysed, so it does the filtering when filtering is wanted. A name pattern
-# is not evidence of anything.
 
 
-# ==============================================================================
-# 3. READ THE COVERAGE TABLE
-# ==============================================================================
-#
-# Read as text. The coverage values use a comma as the decimal separator, so
-# letting readr parse them as numbers would either fail or, worse, read
-# "1250,18" as something unintended.
-# ==============================================================================
+# ---- read the coverage table -------------------------------------------
 
 raw_coverage <- readr::read_tsv(
   COVERAGE_FILE,
@@ -240,9 +136,7 @@ if (length(missing_columns) > 0) {
 message(sprintf("Read %d rows from:\n  %s\n", nrow(raw_coverage), COVERAGE_FILE))
 
 
-# ==============================================================================
-# 4. CLEAN
-# ==============================================================================
+# ---- clean -------------------------------------------------------------
 
 report_lines <- character(0)
 
@@ -261,13 +155,7 @@ add_to_report("")
 add_to_report("Rows read: ", nrow(raw_coverage))
 
 
-# ------------------------------------------------------------------------------
 # Drop the placeholder rows.
-#
-# The coverage table contains one row per sample with gene = "0" and no
-# coverage value. These are an artefact of whatever produced the file — most
-# likely a trailing blank line in the BED input — and are not a real amplicon.
-# ------------------------------------------------------------------------------
 
 artefact_rows <- raw_coverage %>%
   dplyr::filter(gene == "0" | is.na(coverage) | stringr::str_trim(coverage) == "")
@@ -285,9 +173,7 @@ add_to_report(sprintf(
 ))
 
 
-# ------------------------------------------------------------------------------
 # Parse the coverage values and tidy the sample names.
-# ------------------------------------------------------------------------------
 
 coverage_data <- coverage_data %>%
   dplyr::mutate(
@@ -319,9 +205,7 @@ if (nrow(unparseable) > 0) {
 coverage_data <- dplyr::select(coverage_data, -coverage_text)
 
 
-# ------------------------------------------------------------------------------
 # Check the genes are the expected seven.
-# ------------------------------------------------------------------------------
 
 genes_found <- sort(unique(coverage_data$gene))
 
@@ -347,24 +231,7 @@ if (length(genes_absent) > 0) {
 add_to_report("")
 add_to_report("Samples in the coverage file: ", dplyr::n_distinct(coverage_data$sample))
 
-# ==============================================================================
-# 5. RECONCILE AGAINST THE SAMPLE METADATA
-# ==============================================================================
-#
-# The coverage table holds every sample that was sequenced and aligned. Fewer
-# samples than that reach the published analyses, because some are dropped
-# downstream: a few yield no variants after VCF filtering, and a few more are
-# excluded once the metadata is checked.
-#
-# Both sets are legitimate, and they answer different questions:
-#
-#   every sequenced sample     how well did the sequencing work
-#   the analysed samples only  what did the analysed cohort look like
-#
-# Figure 2a is a sequencing-quality figure, so the default is every sequenced
-# sample. The reconciliation is reported either way, so the figure's sample
-# count is always a known number rather than an assumed one.
-# ==============================================================================
+# ---- reconcile against the sample metadata -----------------------------
 
 all_samples <- sort(unique(coverage_data$sample))
 
@@ -481,9 +348,7 @@ if (file.exists(METADATA_FILE)) {
 }
 
 
-# ------------------------------------------------------------------------------
 # Decide what to plot.
-# ------------------------------------------------------------------------------
 
 exclusions <- tibble::tibble(
   sample = character(0),
@@ -534,14 +399,7 @@ if (nrow(plot_data) == 0) {
 }
 
 
-# ==============================================================================
-# 6. ZERO-COVERAGE POINTS
-# ==============================================================================
-#
-# The y axis is log scaled, so points at exactly 0x cannot be drawn. Rather
-# than let ggplot drop them with a warning, they are identified here, counted,
-# and recorded in the excluded-samples table.
-# ==============================================================================
+# ---- zero-coverage points ----------------------------------------------
 
 zero_coverage <- dplyr::filter(plot_data, coverage <= 0)
 
@@ -588,9 +446,7 @@ if (nrow(zero_coverage) > 0) {
 plot_data_drawn <- dplyr::filter(plot_data, coverage > 0)
 
 
-# ==============================================================================
-# 7. SUMMARY BY GENE
-# ==============================================================================
+# ---- summary by gene ---------------------------------------------------
 
 summary_by_gene <- plot_data %>%
   dplyr::group_by(gene) %>%
@@ -631,14 +487,7 @@ for (index in seq_len(nrow(summary_by_gene))) {
 }
 
 
-# ==============================================================================
-# 8. DRAW
-# ==============================================================================
-#
-# The styling is carried over from the published figure unchanged. The one
-# addition is the seed on geom_quasirandom, which makes the point positions
-# reproducible.
-# ==============================================================================
+# ---- draw --------------------------------------------------------------
 
 JITTER_SEED <- 12345
 
@@ -696,9 +545,7 @@ figure02a <- ggplot2::ggplot(
   )
 
 
-# ------------------------------------------------------------------------------
 # Save. Dimensions are those used for the published figure.
-# ------------------------------------------------------------------------------
 
 FIGURE_WIDTH  <- 11
 FIGURE_HEIGHT <- 7
@@ -718,9 +565,7 @@ for (extension in c("svg", "pdf", "png")) {
 }
 
 
-# ==============================================================================
-# 9. SOURCE DATA AND REPORT
-# ==============================================================================
+# ---- source data and report --------------------------------------------
 
 readr::write_tsv(
   plot_data %>%

@@ -1,53 +1,18 @@
 #!/usr/bin/env bash
-# =============================================================================
 # align_minimap2.sh — align reads to the 3D7 reference and summarise coverage
 #
-# WHAT IT DOES
-#   For each sample, aligns the Nanopore reads to the P. falciparum 3D7
-#   reference with minimap2, keeps only mapped reads, sorts and indexes the
-#   result, and collects per-sample mapping statistics and per-amplicon depth.
+# Inputs:  ${MERGED_DIR}   per-sample FASTQ files named <SampleID>.fastq.gz (stage 01)
+#          ${REF_GENOME}   P. falciparum 3D7 v3 reference, PlasmoDB release 68
+#          ${AMPLICON_BED} BED file of the targeted amplicons. Column 4 must hold the
+#          gene name; the coverage table takes its columns from this
+# Outputs: ${BAM_DIR}/<SampleID>.bam(.bai)        sorted, indexed alignments
+#          ${QC_DIR}/depth/<SampleID>.depth.txt   per-base depth within the amplicons
+#          ${QC_DIR}/mapping/<SampleID>.flagstat.txt
+#          ${QC_DIR}/mapping/<SampleID>.idxstats.txt
+#          ${TABLE_DIR}/coverage_matrix.tsv       mean depth per sample per amplicon
+#          ${TABLE_DIR}/mapping_summary.tsv       reads, mapped reads, mapped % per sample
 #
-#   The per-amplicon mean depths are written to one table, coverage_matrix.tsv,
-#   which is the input for the sequencing-depth panel of Figure 2 and for the
-#   coverage threshold applied later at the population-filtering stage.
-#
-# INPUTS
-#   ${MERGED_DIR}   per-sample FASTQ files named <SampleID>.fastq.gz (stage 01)
-#   ${REF_GENOME}   P. falciparum 3D7 v3 reference, PlasmoDB release 68
-#   ${AMPLICON_BED} BED file of the targeted amplicons. Column 4 must hold the
-#                   gene name; the coverage table takes its columns from this
-#                   file, in this order, so adding or removing a locus needs no
-#                   change to this script.
-#
-# OUTPUTS
-#   ${BAM_DIR}/<SampleID>.bam(.bai)        sorted, indexed alignments
-#   ${QC_DIR}/depth/<SampleID>.depth.txt   per-base depth within the amplicons
-#   ${QC_DIR}/mapping/<SampleID>.flagstat.txt
-#   ${QC_DIR}/mapping/<SampleID>.idxstats.txt
-#   ${TABLE_DIR}/coverage_matrix.tsv       mean depth per sample per amplicon
-#   ${TABLE_DIR}/mapping_summary.tsv       reads, mapped reads, mapped % per sample
-#   ${LOG_DIR}/align_failures.txt          samples that failed, if any
-#
-# REQUIRES
-#   minimap2 2.30-r1287, samtools 1.22.1, bedtools 2.31
-#
-# USAGE
-#   bash scripts/02_alignment/align_minimap2.sh
-#
-#   Samples with an existing BAM are skipped, so an interrupted run can simply
-#   be restarted. To force a sample to be redone, delete its BAM first.
-#
-# ALIGNMENT SETTINGS
-#   -ax map-ont      Nanopore long-read preset
-#   --secondary=no   report only the primary alignment for each read, so that
-#                    depth is not inflated by multi-mapping within the
-#                    amplicons
-#   -p 0.9           only keep secondary chains scoring within 90% of the best
-#   -F 4 (samtools)  drop unmapped reads
-#
-# Part of: Diallo et al., Nature Communications (2026)
-#          https://github.com/mtd1997/Adaptive_Pf_resurgence_Rwanda
-# =============================================================================
+# Usage:   bash scripts/02_alignment/align_minimap2.sh
 
 set -euo pipefail
 

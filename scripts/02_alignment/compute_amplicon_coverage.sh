@@ -1,59 +1,13 @@
 #!/usr/bin/env bash
-################################################################################
-# PER-AMPLICON COVERAGE FROM THE ALIGNMENTS
-################################################################################
+# compute_amplicon_coverage.sh — per-amplicon coverage from the alignments
 #
-# WHAT IT DOES
-#   Measures mean sequencing depth over each of the seven amplicons, for every
-#   BAM file, and writes one long-format table:
 #
-#       sample    gene    coverage
-#       RM197     MSP2    1250.18
-#       RM197     CSP     515.07
-#       ...
-#
-#   This is the input to scripts/06_figures/figure02a_coverage.R.
-#
-# WHY REGENERATE IT
-#   The coverage table used for the original Figure 2a was produced early in
-#   the project and its sample roster no longer matches the analysed set: it
-#   held a laboratory control, some non-study identifiers and a batch of
-#   placeholder-named samples, and was at the same time missing samples that
-#   are in the final analysis. The difference could not be reconstructed.
-#
-#   Measuring coverage again from the current alignments gives a table whose
-#   every row can be accounted for. It does not re-align anything, so it is a
-#   single pass over the BAMs rather than a reprocessing.
-#
-# DECIMAL SEPARATOR
-#   This script writes a period, e.g. 1250.18. The original table used a
-#   comma, because it was generated under a locale that formats numbers that
-#   way. The figure script accepts either, so both old and new tables work.
-#
-# RESUMING
-#   Samples already present in the output are skipped, so the script can be
-#   interrupted and restarted. Pass --force to measure everything again.
-#
-# HOW TO RUN
-#   From the top of the repository:
-#
-#     bash scripts/02_alignment/compute_amplicon_coverage.sh
-#
-#   Options:
-#     --bam-dir <dir>   where the BAM files are; defaults to BAM_DIR in
-#                       config.sh
-#     --out <file>      output table; defaults to
-#                       data/processed/coverage_all_samples.tsv
-#     --force           recompute every sample, ignoring existing output
-#
-################################################################################
+# Usage:   From the top of the repository:
 
 set -euo pipefail
 
 
-# ------------------------------------------------------------------------------
 # Load the shared paths.
-# ------------------------------------------------------------------------------
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "${SCRIPT_DIR}/../.." && pwd)"
@@ -67,9 +21,7 @@ fi
 source "${PROJECT_ROOT}/config.sh"
 
 
-# ------------------------------------------------------------------------------
 # Arguments
-# ------------------------------------------------------------------------------
 
 BAM_DIRECTORY="${BAM_DIR:-}"
 OUTPUT_FILE="${PROJECT_ROOT}/data/processed/coverage_all_samples.tsv"
@@ -98,9 +50,7 @@ while [[ $# -gt 0 ]]; do
 done
 
 
-# ------------------------------------------------------------------------------
 # Check everything before starting, and say exactly what is wrong.
-# ------------------------------------------------------------------------------
 
 if [[ -z "${BAM_DIRECTORY}" ]]; then
     echo "ERROR: no BAM directory. Either set BAM_DIR in config.sh or pass" >&2
@@ -126,11 +76,9 @@ if ! command -v bedtools >/dev/null 2>&1; then
 fi
 
 
-# ------------------------------------------------------------------------------
 # The BED file must be tab-separated with the gene name in column 4. Spaces
 # instead of tabs would silently put the coordinates in the wrong columns, so
 # this is checked rather than assumed.
-# ------------------------------------------------------------------------------
 
 BED_COLUMNS="$(awk -F'\t' 'NF > 0 {print NF; exit}' "${AMPLICON_BED}")"
 
@@ -146,9 +94,7 @@ fi
 AMPLICON_COUNT="$(awk -F'\t' 'NF >= 4' "${AMPLICON_BED}" | wc -l | tr -d ' ')"
 
 
-# ------------------------------------------------------------------------------
 # Find the BAM files.
-# ------------------------------------------------------------------------------
 
 BAM_LIST="$(mktemp)"
 trap 'rm -f "${BAM_LIST}"' EXIT
@@ -173,9 +119,7 @@ echo "Output:         ${OUTPUT_FILE}"
 echo
 
 
-# ------------------------------------------------------------------------------
 # Work out which samples are already done, so an interrupted run resumes.
-# ------------------------------------------------------------------------------
 
 DONE_LIST="$(mktemp)"
 trap 'rm -f "${BAM_LIST}" "${DONE_LIST}"' EXIT
@@ -238,13 +182,7 @@ else
 fi
 
 
-# ------------------------------------------------------------------------------
 # Measure.
-#
-# bedtools coverage -mean reports the mean depth over each BED interval, one
-# line per interval, in the BED's order. Column 4 is the gene name and the
-# last column is the mean.
-# ------------------------------------------------------------------------------
 
 PROCESSED=0
 SKIPPED=0
@@ -305,9 +243,7 @@ done < "${BAM_LIST}"
 printf '\r%-60s\r' ''
 
 
-# ------------------------------------------------------------------------------
 # Report.
-# ------------------------------------------------------------------------------
 
 TOTAL_ROWS="$(($(wc -l < "${OUTPUT_FILE}" | tr -d ' ') - 1))"
 

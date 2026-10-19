@@ -1,29 +1,6 @@
-
 # Comparison of survival (%) at 700 nM DHA between KF strains
-# The script follows the same calculation strategy as the previous plot:
-# first the fluorescence values are corrected with the blank,
-# then they are normalized using the No drug condition as the 100% reference.
 #
-# The main goal is to compare the survival of the sensitive strains
-# (KFHS49 and KFHS50) with the other KF strains after treatment with 700 nM DHA.
 
-
-
-# Short description of the analysis
- 
-# This script analyses fluorescence data obtained for different KF strains.
-# The fluorescence signal is first corrected by subtracting the mean blank value.
-# Then, survival is expressed as a percentage of the No drug condition, which is
-# used as the untreated control.
-#
-# The final objective is to visualize and compare the survival percentages
-# between: 1) No drug, 2) 700 nM DHA for the sensitive strains KFHS49/KFHS50,
-# and 3) 700 nM DHA for the other strains considered as partial resistant strains.
-# The script also performs t-tests and adds the corresponding significance
-# stars directly on the figure.
-
-# List of packages required for reading Excel files, manipulating data,
-# performing reshaping steps, and creating the final plot.
 packages <- c("readxl", "dplyr", "ggplot2", "purrr", "stringr", "tidyr")
 
 # This loop loads each package. If a package is missing, it is installed first.
@@ -161,7 +138,6 @@ df_survival_all <- df_survival_all %>%
       dha_group == "700 nM DHA\nPartial resistants" ~ 2.30
     )
   )
-
 
 
 # Define one color for each strain

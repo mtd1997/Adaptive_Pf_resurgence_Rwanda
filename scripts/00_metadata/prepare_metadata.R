@@ -1,57 +1,7 @@
-################################################################################
-# PREPARE THE SAMPLE METADATA
-################################################################################
+# Prepare the sample metadata
 #
-# WHAT IT DOES
-#   Takes the working metadata spreadsheet and produces the two metadata
-#   files the rest of the pipeline uses:
 #
-#     data/metadata/samples_metadata.tsv
-#         De-identified. Committed to git and published with the repository.
-#         Every downstream script reads this one.
-#
-#     data/metadata/samples_metadata_internal.tsv
-#         Everything, including exact age and health centre. Stays on your
-#         machine. Listed in .gitignore so it cannot be committed by accident.
-#
-#   It also writes a validation report so you can see exactly what changed.
-#
-# WHY TWO FILES
-#   Exact age, district, sampling year and sex together can single out one
-#   patient in a small district, even with the name removed. That is a
-#   quasi-identifier, and publishing it is a disclosure risk rather than a
-#   theoretical one.
-#
-#   Age is therefore banded in the public file and the exact value removed.
-#   Health centre is removed as well: health centre plus sampling date plus
-#   age narrows a patient down even further than district does.
-#
-#   Nothing in the manuscript needs either at full resolution. The age bands
-#   reproduce the demographic table, and the published analyses stratify by
-#   district and period, not by health centre.
-#
-#   If a reviewer asks for the unbanded data, it is available on request
-#   under a data-sharing agreement. That is the standard arrangement and is
-#   what the Data Availability statement should say.
-#
-# WHAT IT DOES NOT DO
-#   It does not drop samples, change a period or region label, or alter any
-#   value other than those listed above. Sample filtering happened upstream
-#   and is not revisited here.
-#
-# HOW TO RUN
-#   From the top of the repository:
-#
-#     Rscript scripts/00_metadata/prepare_metadata.R --input <your file.tsv>
-#
-#   Add --dry-run to see the report without writing anything. Do that first.
-#
-################################################################################
-
-
-# ==============================================================================
-# 1. SETUP
-# ==============================================================================
+# Usage:   From the top of the repository:
 
 options(error = NULL)
 
@@ -94,9 +44,7 @@ PROJECT_ROOT <- find_project_root()
 source(file.path(PROJECT_ROOT, "config.R"))
 
 
-# ------------------------------------------------------------------------------
 # Command-line arguments
-# ------------------------------------------------------------------------------
 
 arguments <- commandArgs(trailingOnly = TRUE)
 
@@ -119,22 +67,7 @@ INPUT_FILE <- get_argument("--input")
 
 DRY_RUN <- "--dry-run" %in% arguments
 
-# ------------------------------------------------------------------------------
 # --output-name lets a second roster be prepared alongside the main one.
-#
-# This exists for Figure 4. The published Figure 4 was built from an earlier
-# sample roster that still contained RW_SN94, a Kigali baseline sample later
-# excluded from the 1,176-sample analysis set. Keeping that roster in the
-# repository, de-identified the same way as the main one, is what lets the
-# Figure 4 scripts reproduce the published numbers exactly rather than coming
-# out one sample short.
-#
-#   --output-name samples_metadata            the default, the main roster
-#   --output-name samples_metadata_figure04   the Figure 4 roster
-#
-# Whatever name is given, the internal file is always "<name>_internal.tsv",
-# which .gitignore excludes by pattern.
-# ------------------------------------------------------------------------------
 
 OUTPUT_NAME <- get_argument("--output-name", "samples_metadata")
 
@@ -175,14 +108,7 @@ REPORT_FILE   <- file.path(
 )
 
 
-# ==============================================================================
-# 2. READ THE INPUT
-# ==============================================================================
-#
-# Read everything as text first. Letting readr guess column types has caused
-# trouble before: a sample ID like 0012 loses its leading zero if it is read
-# as a number, and that silently breaks every join against the VCF.
-# ==============================================================================
+# ---- read the input ----------------------------------------------------
 
 raw_metadata <- readr::read_tsv(
   INPUT_FILE,
@@ -199,19 +125,7 @@ message("Columns found:")
 message(paste0("  ", paste(names(raw_metadata), collapse = ", ")), "\n")
 
 
-# ==============================================================================
-# 3. MAP THE COLUMNS
-# ==============================================================================
-#
-# Metadata files in this project have used different capitalisation and
-# spellings over time. Rather than hard-code one spelling, each piece of
-# information is looked up by a list of names it has gone by.
-#
-# Matching ignores case, spaces, hyphens and underscores, so "Health_Center",
-# "health center" and "HealthCentre" all resolve to the same column.
-#
-# If a column in your file is not found, add its name to the relevant list.
-# ==============================================================================
+# ---- map the columns ---------------------------------------------------
 
 COLUMN_ALIASES <- list(
   sample        = c("SAMPLE", "sample_id", "sampleid", "ID", "Sample_Name"),
@@ -263,11 +177,9 @@ for (field in names(resolved_columns)) {
 message("")
 
 
-# ------------------------------------------------------------------------------
 # Only the sample identifier is strictly required. Everything else is
 # reported as missing and simply left out, so the script still runs on a
 # reduced file rather than refusing.
-# ------------------------------------------------------------------------------
 
 if (is.na(resolved_columns[["sample"]])) {
   stop(
@@ -288,9 +200,7 @@ if (length(missing_fields) > 0) {
 }
 
 
-# ------------------------------------------------------------------------------
 # Rename to the canonical names used from here on.
-# ------------------------------------------------------------------------------
 
 present_columns <- resolved_columns[!is.na(resolved_columns)]
 
@@ -300,13 +210,7 @@ metadata <- raw_metadata %>%
 names(metadata) <- names(present_columns)
 
 
-# ==============================================================================
-# 4. TIDY WHITESPACE AND BLANKS
-# ==============================================================================
-#
-# Trailing spaces in a sample ID are invisible on screen and break joins, so
-# every text field is trimmed, and blank strings become proper NA values.
-# ==============================================================================
+# ---- tidy whitespace and blanks ----------------------------------------
 
 metadata <- metadata %>%
   dplyr::mutate(
@@ -317,9 +221,7 @@ metadata <- metadata %>%
   )
 
 
-# ==============================================================================
-# 5. CHECK THE SAMPLE IDENTIFIERS
-# ==============================================================================
+# ---- check the sample identifiers --------------------------------------
 
 report_lines <- character(0)
 
@@ -376,14 +278,7 @@ if (nrow(duplicate_samples) > 0) {
 add_to_report("Unique sample identifiers: ", dplyr::n_distinct(metadata$sample))
 
 
-# ==============================================================================
-# 6. STANDARDISE THE PERIOD AND REGION LABELS
-# ==============================================================================
-#
-# The manuscript uses "Baseline-Kigali" and "Resurgence". Older files use
-# "Pre-Resurgence" and "Post-Resurgence". Both are accepted. The original
-# value is kept in period_original so nothing is rewritten silently.
-# ==============================================================================
+# ---- standardise the period and region labels --------------------------
 
 if ("period" %in% names(metadata)) {
 
@@ -441,18 +336,7 @@ if ("region" %in% names(metadata)) {
 }
 
 
-# ==============================================================================
-# 7. BAND THE AGE
-# ==============================================================================
-#
-# Bands follow the groups used in malaria epidemiology and reproduce the
-# demographic table in the supplement:
-#
-#   <5    5-14    15-24    25-34    35-49    50+
-#
-# Ages that are not numbers, or are outside 0-120, become NA and are counted
-# in the report rather than quietly bundled into a band.
-# ==============================================================================
+# ---- band the age ------------------------------------------------------
 
 AGE_BREAKS <- c(0, 5, 15, 25, 35, 50, Inf)
 AGE_LABELS <- c("<5", "5-14", "15-24", "25-34", "35-49", "50+")
@@ -518,17 +402,7 @@ if ("age" %in% names(metadata)) {
 }
 
 
-# ==============================================================================
-# 8. BUILD THE TWO OUTPUT TABLES
-# ==============================================================================
-#
-# The internal table is everything. The public table is the internal one with
-# the two identifying columns removed.
-#
-# Columns are listed explicitly rather than excluded by name, so a new column
-# added to the source spreadsheet later cannot leak into the public file
-# without someone deciding to add it here.
-# ==============================================================================
+# ---- build the two output tables ---------------------------------------
 
 INTERNAL_COLUMNS <- c(
   "sample", "period", "period_original", "region", "district",
@@ -547,20 +421,16 @@ public_metadata <- metadata %>%
   dplyr::select(dplyr::any_of(PUBLIC_COLUMNS))
 
 
-# ------------------------------------------------------------------------------
 # Rename `sample` to SAMPLE on output, because every downstream script and
 # the VCF headers use that spelling.
-# ------------------------------------------------------------------------------
 
 names(internal_metadata)[names(internal_metadata) == "sample"] <- "SAMPLE"
 names(public_metadata)[names(public_metadata) == "sample"]     <- "SAMPLE"
 
 
-# ------------------------------------------------------------------------------
 # A direct check that nothing identifying survived into the public table.
 # This is the safety net: if someone edits PUBLIC_COLUMNS carelessly later,
 # the script stops rather than writing the file.
-# ------------------------------------------------------------------------------
 
 FORBIDDEN_IN_PUBLIC <- c("age", "health_centre", "period_original")
 
@@ -594,9 +464,7 @@ add_to_report("  health_centre  identifying in combination with date and age")
 add_to_report("  period_original  working label, superseded by period")
 
 
-# ==============================================================================
-# 9. WRITE, OR REPORT ONLY
-# ==============================================================================
+# ---- write, or report only ---------------------------------------------
 
 add_to_report("")
 add_to_report(strrep("=", 72))

@@ -1,83 +1,14 @@
-################################################################################
-# SUPPLEMENTARY FIGURE S1, PANEL B — MONTHLY MALARIA CASES, 2023 VS 2024
-################################################################################
+# Supplementary Figure S1b — monthly malaria cases, 2023 vs 2024
 #
-# WHAT IT DOES
-#   Reads the reported monthly malaria case counts for four Kigali health
-#   facilities, tidies them, and draws the 2023 versus 2024 comparison.
+# Inputs:  An Excel workbook of monthly counts, laid out as:
+# Outputs: results/figures/figureS1/figureS1b_malaria_cases.svg
+#          results/figures/panels/figureS1b_malaria_cases.rds   for the assembly
+#          results/tables/figureS1/figureS1b_monthly_cases_long.tsv
+#          results/tables/figureS1/figureS1b_monthly_change.tsv
+#          results/tables/figureS1/figureS1b_matched_month_totals.tsv
+#          results/tables/figureS1/figureS1b_data_accounting.tsv
 #
-#   It also writes the comparison tables: monthly change, and matched-month
-#   annual totals.
-#
-# -----------------------------------------------------------------------------
-# THE BUG THIS FIXES
-# -----------------------------------------------------------------------------
-#   The original script was in two halves that disagreed about facility names.
-#
-#   The first half wrote them short:
-#       "KFH", "COR-UNUM HC", "Gikondo HC", "Remera"
-#
-#   The second half then set the factor levels to the long forms:
-#       "King Faisal Hospital", "COR-UNUM Health Center", ...
-#
-#   Setting factor levels that do not match the data turns every value into
-#   NA. facet_wrap() would then draw a single panel labelled NA instead of
-#   four facilities, and no error would be raised.
-#
-#   The published figure has four facets, so the file on disk had been written
-#   by an earlier version that used the long names. But running the script end
-#   to end would have broken it.
-#
-#   The fix here is not to correct one half to match the other. It is to
-#   define the names ONCE, in FACILITY_NAMES below, and use that single
-#   definition for both the tidying and the plotting. They cannot drift apart
-#   again.
-# -----------------------------------------------------------------------------
-#
-# INPUT
-#   An Excel workbook of monthly counts, laid out as:
-#
-#     column A  month
-#     columns B,C   King Faisal Hospital     2024, 2023
-#     columns D,E   COR-UNUM Health Center   2024, 2023
-#     columns F,G   Gikondo Health Center    2024, 2023
-#     columns H,I   Remera Health Center     2024, 2023
-#
-#   with the twelve monthly rows starting at row 4. That layout is asserted
-#   and checked below rather than assumed, because a shifted row would
-#   otherwise be read as data.
-#
-#   Set MALARIA_CASES_FILE in config.R, or pass --input.
-#
-# OUTPUTS
-#   results/figures/figureS1/figureS1b_malaria_cases.svg
-#   results/figures/panels/figureS1b_malaria_cases.rds   for the assembly
-#   results/tables/figureS1/figureS1b_monthly_cases_long.tsv
-#   results/tables/figureS1/figureS1b_monthly_change.tsv
-#   results/tables/figureS1/figureS1b_matched_month_totals.tsv
-#   results/tables/figureS1/figureS1b_data_accounting.tsv
-#
-# A MISSING MONTH
-#   COR-UNUM Health Center has no December 2024 figure in the source
-#   workbook. It is kept as NA and never converted to zero, because zero
-#   would mean "no cases" rather than "not reported".
-#
-#   The annual comparison therefore uses only months present in BOTH years
-#   for each facility, so a facility with eleven months is not compared
-#   against another facility's twelve. The number of months compared is
-#   reported per facility.
-#
-# HOW TO RUN
-#   From the top of the repository:
-#
-#     Rscript scripts/06_figures/figureS1b_malaria_cases.R
-#
-################################################################################
-
-
-# ==============================================================================
-# 1. SETUP
-# ==============================================================================
+# Usage:   From the top of the repository:
 
 options(error = NULL)
 
@@ -173,16 +104,7 @@ for (directory in c(FIGURES1_DIR, PANEL_DIR, TABLE_DIR)) {
 }
 
 
-# ==============================================================================
-# 2. THE SINGLE DEFINITION OF THE FACILITIES
-# ==============================================================================
-#
-# This is the one place facility names are written down. The workbook column
-# positions, the tidy table, the facet order and the factor levels all come
-# from here, so they cannot disagree.
-#
-# `column_2024` and `column_2023` are 1-based column positions in the sheet.
-# ==============================================================================
+# ---- the single definition of the facilities ---------------------------
 
 FACILITY_NAMES <- tibble::tribble(
   ~facility,                  ~column_2024, ~column_2023,
@@ -202,9 +124,7 @@ YEAR_COLOURS <- c(
 )
 
 
-# ==============================================================================
-# 3. READ THE WORKBOOK
-# ==============================================================================
+# ---- read the workbook -------------------------------------------------
 
 raw <- readxl::read_excel(
   INPUT_FILE,
@@ -243,10 +163,8 @@ if (nrow(raw) < last_data_row) {
 monthly_rows <- raw[FIRST_DATA_ROW:last_data_row, ]
 
 
-# ------------------------------------------------------------------------------
 # Verify the month column really holds month names before trusting the row
 # offset. A shifted sheet would otherwise be read silently as data.
-# ------------------------------------------------------------------------------
 
 month_values <- stringr::str_trim(as.character(monthly_rows[[MONTH_COLUMN]]))
 
@@ -267,9 +185,7 @@ if (length(unrecognised_months) > 0) {
 }
 
 
-# ==============================================================================
-# 4. TIDY
-# ==============================================================================
+# ---- tidy --------------------------------------------------------------
 
 read_facility <- function(index) {
 
@@ -303,11 +219,9 @@ malaria_long <- dplyr::bind_rows(
   dplyr::arrange(facility, year, month)
 
 
-# ------------------------------------------------------------------------------
 # The factor levels come from FACILITY_NAMES, so by construction nothing can
 # fail to match. Assert it anyway, because this is the exact failure the
 # original script had and a silent recurrence would be hard to spot.
-# ------------------------------------------------------------------------------
 
 if (any(is.na(malaria_long$facility))) {
   stop(
@@ -325,9 +239,7 @@ message("Facilities read:")
 print(table(malaria_long$facility, malaria_long$year))
 
 
-# ------------------------------------------------------------------------------
 # Report the missing observations rather than filling them.
-# ------------------------------------------------------------------------------
 
 missing_observations <- dplyr::filter(malaria_long, is.na(cases))
 
@@ -352,9 +264,7 @@ if (nrow(missing_observations) > 0) {
 }
 
 
-# ==============================================================================
-# 5. THE FIGURE
-# ==============================================================================
+# ---- the figure --------------------------------------------------------
 
 malaria_cases_panel <- ggplot2::ggplot(
   malaria_long,
@@ -400,9 +310,7 @@ saveRDS(
 )
 
 
-# ==============================================================================
-# 6. COMPARISON TABLES
-# ==============================================================================
+# ---- comparison tables -------------------------------------------------
 
 wide_by_year <- malaria_long %>%
   dplyr::mutate(year = as.character(year)) %>%
@@ -421,9 +329,7 @@ monthly_change <- wide_by_year %>%
   dplyr::arrange(facility, month)
 
 
-# ------------------------------------------------------------------------------
 # Matched months only, for the annual totals.
-# ------------------------------------------------------------------------------
 
 matched_months <- dplyr::filter(
   wide_by_year,
@@ -477,9 +383,7 @@ capture.output(
 )
 
 
-# ==============================================================================
-# 7. SUMMARY
-# ==============================================================================
+# ---- summary -----------------------------------------------------------
 
 message("\n", strrep("=", 72))
 message("SUPPLEMENTARY FIGURE S1, PANEL B WRITTEN")

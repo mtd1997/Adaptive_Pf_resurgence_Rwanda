@@ -1,42 +1,14 @@
 #!/usr/bin/env bash
-# =============================================================================
 # concatenate_fastq.sh — merge per-barcode FASTQ files from one sequencing run
 #
-# WHAT IT DOES
-#   MinKNOW writes many small FASTQ files per barcode (one every few minutes
-#   during the run). This merges each barcode's files into a single FASTQ,
-#   tagged with the run identifier.
+# Inputs:  $1  RUN_ID   short identifier for the run, e.g. run1
+#          $2  RUN_DIR  folder holding the demultiplexed barcode folders from stage 00,
+#          i.e. the folder that contains barcode01/, barcode02/, ...
+# Outputs: ${MERGED_DIR}/<barcode>_<RUN_ID>.fastq.gz   one file per barcode
+#          These names must match the `barcode` column of the sample mapping table
+#          used by rename_fastq.R in the next step.
 #
-#   The run tag matters: barcode numbers restart at 01 on every run, so
-#   barcode01 from run 1 and barcode01 from run 2 are different samples. Merging
-#   without a run tag would silently overwrite one with the other.
-#
-# INPUTS
-#   $1  RUN_ID   short identifier for the run, e.g. run1
-#   $2  RUN_DIR  folder holding the demultiplexed barcode folders from stage 00,
-#                i.e. the folder that contains barcode01/, barcode02/, ...
-#
-# OUTPUTS
-#   ${MERGED_DIR}/<barcode>_<RUN_ID>.fastq.gz   one file per barcode
-#   These names must match the `barcode` column of the sample mapping table
-#   used by rename_fastq.R in the next step.
-#
-# REQUIRES
-#   bash, gzip (both standard)
-#
-# USAGE
-#   bash scripts/01_preprocessing/concatenate_fastq.sh run1 /path/to/run1/fastq_pass
-#
-#   Run once per sequencing run, changing RUN_ID each time.
-#
-# NOTE ON `cat` WITH .gz FILES
-#   Concatenating gzip files with `cat` is valid: the gzip format allows
-#   streams to be joined end to end, and decompressors read the result as one
-#   continuous file. No decompression or recompression is needed.
-#
-# Part of: Diallo et al., Nature Communications (2026)
-#          https://github.com/mtd1997/Adaptive_Pf_resurgence_Rwanda
-# =============================================================================
+# Usage:   bash scripts/01_preprocessing/concatenate_fastq.sh run1 /path/to/run1/fastq_pass
 
 set -euo pipefail
 

@@ -1,82 +1,13 @@
-################################################################################
-# FIGURE 2B — PER-GENE MUTATION PREVALENCE BY YEAR
-################################################################################
+# Figure 2b — per-gene mutation prevalence by year
 #
-# WHAT IT DOES
-#   For each resistance gene and each sampling year, counts the samples
-#   carrying at least one non-synonymous mutation in that gene, and plots
-#   that count as a percentage of the samples sequenced in that year.
+# Inputs:  Manuscript_data_29-07-2026.tsv
+#          MANUSCRIPT_DATA in config.R.
+# Outputs: results/figures/figure02/figure02b_gene_mutation_trends.svg / .png
+#          results/tables/figure02/figure02b_gene_prevalence_by_year.tsv
+#          results/tables/figure02/figure02b_samples_per_year.tsv
+#          results/tables/figure02/figure02b_report.txt
 #
-#   The unit is the sample, not the mutation: a sample carrying three DHFR
-#   mutations counts once towards DHFR. This is a prevalence of mutated
-#   samples, not a mutation frequency.
-#
-# INPUT
-#   Manuscript_data_29-07-2026.tsv -- one row per sample and mutation. Set
-#   MANUSCRIPT_DATA in config.R.
-#
-# OUTPUTS
-#   results/figures/figure02/figure02b_gene_mutation_trends.svg / .png
-#   results/tables/figure02/figure02b_gene_prevalence_by_year.tsv
-#   results/tables/figure02/figure02b_samples_per_year.tsv
-#   results/tables/figure02/figure02b_report.txt
-#
-#   The prevalence table is the Source Data for this panel.
-#
-# -----------------------------------------------------------------------------
-# WHAT THE PUBLISHED PANEL SHOWS, AND WHAT THIS REPRODUCES
-# -----------------------------------------------------------------------------
-#   Published Figure 2b carries the per-year denominators under the axis:
-#
-#       2021 N =  30      2024 N = 234
-#       2022 N = 196      2025 N = 685
-#       2023 N =  31
-#
-#   which total 1,176 -- the full analysis set. The script checks its own
-#   totals against those numbers and says plainly whether they match, so a
-#   drift in the input shows up as a message rather than as a quietly
-#   different figure.
-#
-#   One difference from the published panel is cosmetic and cannot be made
-#   in ggplot without hand-placing text: in the published version the gene
-#   names sit at the right-hand end of each line rather than in a legend
-#   box. That was done when the figure was assembled. The legend here
-#   carries the same information.
-# -----------------------------------------------------------------------------
-#
-# -----------------------------------------------------------------------------
-# TWO THINGS WORTH KNOWING BEFORE READING THE NUMBERS
-# -----------------------------------------------------------------------------
-#   1. The period label comes from the year, not from the metadata column.
-#      The original code overrode whatever PERIOD the input carried:
-#      2021-2023 became Baseline-Kigali and 2024-2025 became Resurgence.
-#      That is kept here, because it matches the sampling design -- the
-#      2021-2023 samples were all collected at King Faisal Hospital and were
-#      treated as the Kigali baseline. The script reports any sample whose
-#      metadata period disagrees with its year, so a mismatch is visible
-#      rather than silently rewritten.
-#
-#   2. A gene-year combination with no mutated sample must show zero, not
-#      vanish. Counting alone drops those combinations, which would make a
-#      gene's line skip a year and join across the gap -- reading as though
-#      prevalence had been interpolated rather than observed as zero. The
-#      full gene-by-year grid is therefore built first and the counts joined
-#      onto it.
-# -----------------------------------------------------------------------------
-#
-# HOW TO RUN
-#     Rscript scripts/06_figures/figure02b_gene_mutation_trends.R
-#
-#   Optional:
-#     --input PATH    use a different input file
-#     --genes LIST    comma-separated gene list, default DHFR,DHPS,K13,MDR1,CRT
-#
-################################################################################
-
-
-# ==============================================================================
-# 1. SETUP
-# ==============================================================================
+# Usage:   Rscript scripts/06_figures/figure02b_gene_mutation_trends.R
 
 options(error = NULL)
 
@@ -159,10 +90,8 @@ dir.create(FIGURE_DIR, recursive = TRUE, showWarnings = FALSE)
 dir.create(TABLE_DIR,  recursive = TRUE, showWarnings = FALSE)
 
 
-# ------------------------------------------------------------------------------
 # Published styling. These are the values the published panel was drawn with,
 # kept as named constants so the figure cannot drift when the data changes.
-# ------------------------------------------------------------------------------
 
 GENE_COLOURS <- c(
   DHFR = "#6690FF",
@@ -230,9 +159,7 @@ add_to_report <- function(...) {
 }
 
 
-# ==============================================================================
-# 2. READ
-# ==============================================================================
+# ---- read --------------------------------------------------------------
 
 add_to_report(strrep("=", 72))
 add_to_report("FIGURE 2B — PER-GENE MUTATION PREVALENCE BY YEAR")
@@ -281,9 +208,7 @@ if (dropped > 0) {
 add_to_report(sprintf("Rows used: %d", nrow(clean)))
 
 
-# ==============================================================================
-# 3. PERIOD FROM YEAR
-# ==============================================================================
+# ---- period from year --------------------------------------------------
 
 unknown_years <- setdiff(unique(clean$year), PERIOD_FROM_YEAR$year)
 
@@ -353,9 +278,7 @@ if (has_period_column) {
 }
 
 
-# ==============================================================================
-# 4. DENOMINATOR: SAMPLES PER YEAR
-# ==============================================================================
+# ---- denominator: samples per year -------------------------------------
 
 year_totals <- clean %>%
   dplyr::distinct(SAMPLE, year, period) %>%
@@ -436,9 +359,7 @@ readr::write_tsv(
 )
 
 
-# ==============================================================================
-# 5. NUMERATOR: MUTATED SAMPLES PER GENE PER YEAR
-# ==============================================================================
+# ---- numerator: mutated samples per gene per year ----------------------
 
 genes_absent <- setdiff(TARGET_GENES, unique(clean$GENE_NAME))
 
@@ -514,9 +435,7 @@ for (gene in TARGET_GENES) {
 }
 
 
-# ==============================================================================
-# 6. THE FIGURE
-# ==============================================================================
+# ---- the figure --------------------------------------------------------
 
 year_axis <- year_totals %>%
   dplyr::mutate(label = sprintf("%d\n(N = %d)", year, n_total))
@@ -637,9 +556,7 @@ for (extension in c("svg", "png")) {
 }
 
 
-# ==============================================================================
-# 7. TABLES
-# ==============================================================================
+# ---- tables ------------------------------------------------------------
 
 readr::write_tsv(
   prevalence %>%

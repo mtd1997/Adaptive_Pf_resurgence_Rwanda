@@ -1,56 +1,11 @@
-################################################################################
-# SUPPLEMENTARY FIGURE S1 — ASSEMBLY
-################################################################################
+# Supplementary Figure S1 — assembly
 #
-# WHAT IT DOES
-#   Combines two panels that were drawn by other scripts:
+# Inputs:  results/figures/panels/figureS1a_baseline_map.rds
+#          results/figures/panels/figureS1b_malaria_cases.rds
+# Outputs: results/figures/figureS1/figureS1_horizontal.svg / .pdf / .png
+#          results/figures/figureS1/figureS1_vertical.svg / .pdf / .png
 #
-#     A   Baseline-Kigali sampling map, 2021-2023
-#         from figure01_sampling_maps.R
-#
-#     B   Monthly reported malaria cases in four Kigali facilities,
-#         2023 versus 2024
-#         from figureS1b_malaria_cases.R
-#
-#   It produces both a horizontal layout (A beside B) and a vertical one
-#   (A above B), because which fits better depends on the journal's column
-#   width.
-#
-# WHY IT READS FILES INSTEAD OF USING THE SESSION
-#   The original version expected three objects -- `map_baseline`,
-#   `baseline_breaks` and `p` -- to already exist in the R session, and
-#   stopped with an error if they did not. That required three scripts to be
-#   run in one session in the right order, and meant the figure could not be
-#   rebuilt on its own later.
-#
-#   The two upstream scripts now save their panels to
-#   results/figures/panels/, and this one reads them. Same figure, but each
-#   script can be run independently and in any order.
-#
-# INPUTS
-#   results/figures/panels/figureS1a_baseline_map.rds
-#   results/figures/panels/figureS1b_malaria_cases.rds
-#
-# OUTPUTS
-#   results/figures/figureS1/figureS1_horizontal.svg / .pdf / .png
-#   results/figures/figureS1/figureS1_vertical.svg / .pdf / .png
-#
-#   The individual panels are written by their own scripts, so they are not
-#   duplicated here.
-#
-# HOW TO RUN
-#   From the top of the repository, after the two upstream scripts:
-#
-#     Rscript scripts/06_figures/figure01_sampling_maps.R
-#     Rscript scripts/06_figures/figureS1b_malaria_cases.R
-#     Rscript scripts/06_figures/figureS1_assemble.R
-#
-################################################################################
-
-
-# ==============================================================================
-# 1. SETUP
-# ==============================================================================
+# Usage:   From the top of the repository, after the two upstream scripts:
 
 options(error = NULL)
 
@@ -96,9 +51,7 @@ FIGURES1_DIR <- file.path(PROJECT_ROOT, "results", "figures", "figureS1")
 dir.create(FIGURES1_DIR, recursive = TRUE, showWarnings = FALSE)
 
 
-# ==============================================================================
-# 2. READ THE PANELS
-# ==============================================================================
+# ---- read the panels ---------------------------------------------------
 
 read_panel <- function(filename, produced_by) {
 
@@ -132,15 +85,7 @@ message(sprintf(
 message("  B  monthly malaria cases")
 
 
-# ==============================================================================
-# 3. PANEL A
-# ==============================================================================
-#
-# The size scale is restated so the legend can sit inside the map, in the
-# lower right, where there is empty space. The breaks travel with the panel
-# from the upstream script rather than being recomputed, so they cannot
-# differ from the ones used when the map was drawn.
-# ==============================================================================
+# ---- panel a -----------------------------------------------------------
 
 panel_a <- panel_a_data$panel +
 
@@ -179,9 +124,7 @@ panel_a <- panel_a_data$panel +
   )
 
 
-# ==============================================================================
-# 4. PANEL B
-# ==============================================================================
+# ---- panel b -----------------------------------------------------------
 
 panel_b <- panel_b_data$panel +
 
@@ -207,13 +150,7 @@ panel_b <- panel_b_data$panel +
   )
 
 
-# ==============================================================================
-# 5. THE TWO LAYOUTS
-# ==============================================================================
-#
-# Panel B is given the greater share in both layouts because it carries four
-# facets while panel A is a single map.
-# ==============================================================================
+# ---- the two layouts ---------------------------------------------------
 
 figure_horizontal <- (panel_a | panel_b) +
   patchwork::plot_layout(widths = c(1.15, 1.55)) &
@@ -224,14 +161,7 @@ figure_vertical <- (panel_a / panel_b) +
   ggplot2::theme(plot.margin = ggplot2::margin(8, 10, 8, 10))
 
 
-# ==============================================================================
-# 6. SAVE
-# ==============================================================================
-#
-# Nothing is printed to the graphics device: a large sf panel can fail when
-# the plot pane is small, and printing under Rscript leaves a stray
-# Rplots.pdf behind.
-# ==============================================================================
+# ---- save --------------------------------------------------------------
 
 save_layout <- function(plot_object, basename, width, height) {
 
@@ -261,9 +191,7 @@ capture.output(
 )
 
 
-# ==============================================================================
-# 7. VERIFY AND SUMMARISE
-# ==============================================================================
+# ---- verify and summarise ----------------------------------------------
 
 expected_files <- c(
   outer(

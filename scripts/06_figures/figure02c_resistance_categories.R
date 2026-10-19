@@ -1,54 +1,15 @@
-################################################################################
-# FIGURE 2C — COMPOSITE ANTIMALARIAL RESISTANCE BACKGROUNDS
-################################################################################
+# Figure 2c — composite antimalarial resistance backgrounds
 #
-# WHAT IT DOES
-#   Builds a sample-by-mutation presence/absence matrix, combines the
-#   mutations into the composite resistance categories the manuscript
-#   reports, and draws their prevalence.
+# Inputs:  Manuscript_data_29-07-2026.tsv
+#          sample appears once for each mutation it carries. Set MANUSCRIPT_DATA in
+#          config.R.
+# Outputs: results/figures/figure02/figure02c_resistance_categories.svg / .png
+#          results/tables/figure02/figure02c_category_prevalence.tsv
+#          results/tables/figure02/figure02c_sample_level_categories.tsv
+#          results/tables/figure02/figure02c_denominator_check.tsv
+#          results/tables/figure02/figure02c_report.txt
 #
-# INPUT
-#   Manuscript_data_29-07-2026.tsv -- one row per sample and mutation, so a
-#   sample appears once for each mutation it carries. Set MANUSCRIPT_DATA in
-#   config.R.
-#
-# OUTPUTS
-#   results/figures/figure02/figure02c_resistance_categories.svg / .png
-#   results/tables/figure02/figure02c_category_prevalence.tsv
-#   results/tables/figure02/figure02c_sample_level_categories.tsv
-#   results/tables/figure02/figure02c_denominator_check.tsv
-#   results/tables/figure02/figure02c_report.txt
-#
-# -----------------------------------------------------------------------------
-# THE DENOMINATOR
-# -----------------------------------------------------------------------------
-#   Prevalence is a count over a denominator, and this input makes the
-#   denominator easy to get wrong.
-#
-#   The matrix is built by pivoting the mutation rows wider. A sample that
-#   carries no mutation at all has no mutation rows, so it never enters the
-#   matrix -- and the original code took the denominator from the number of
-#   rows in that matrix. Had any sample carried no mutation, the denominator
-#   would have been the number of mutated samples rather than the number
-#   sequenced, and every prevalence would be overstated.
-#
-#   In this dataset that does not happen. Published Figure 2c prints
-#   N = 1176, which is the full analysis set, so every sample carries at
-#   least one mutation and the two possible denominators coincide. The
-#   script still computes both and writes them to
-#   figure02c_denominator_check.tsv, so that if the input is ever replaced
-#   by one where they differ, it is reported rather than absorbed silently.
-# -----------------------------------------------------------------------------
-#
-# HOW TO RUN
-#     Rscript scripts/06_figures/figure02c_resistance_categories.R
-#
-################################################################################
-
-
-# ==============================================================================
-# 1. SETUP
-# ==============================================================================
+# Usage:   Rscript scripts/06_figures/figure02c_resistance_categories.R
 
 options(error = NULL)
 
@@ -133,13 +94,7 @@ add_to_report <- function(...) {
 }
 
 
-# ==============================================================================
-# 2. THE MARKERS AND THE CATEGORIES
-# ==============================================================================
-#
-# kelch13 markers are grouped as WHO validated and WHO candidate. Both count
-# towards artemisinin partial resistance, which is what ART_R below means.
-# ==============================================================================
+# ---- the markers and the categories ------------------------------------
 
 K13_VALIDATED <- c(
   "F446I", "N458Y", "C469Y", "M476I", "Y493H", "R539T", "I543T",
@@ -164,14 +119,6 @@ REQUIRED_MUTATIONS <- c(
 
 # Each category, the label on the axis, what it means, the published fill,
 # and the count printed on the published panel.
-#
-# The fills were read off published Figure 2c. The original script left fill
-# to ggplot's default hue palette, which is not what was published, so the
-# colours are pinned here instead of being left to the default.
-#
-# published_n is used only as a check -- nothing is drawn from it. If the
-# computed counts differ, the script says so loudly rather than quietly
-# producing a figure that no longer matches the paper.
 CATEGORY_DEFINITIONS <- tibble::tribble(
   ~category,              ~short_label,     ~definition,                                                   ~fill,      ~published_n,
   "SP_triple_mutant",     "SP triple",      "DHFR N51I + C59R + S108N",                                    "#D9D9D9",  1129L,
@@ -188,9 +135,7 @@ CATEGORY_DEFINITIONS <- tibble::tribble(
 PUBLISHED_N_TOTAL <- 1176L
 
 
-# ==============================================================================
-# 3. READ
-# ==============================================================================
+# ---- read --------------------------------------------------------------
 
 add_to_report(strrep("=", 72))
 add_to_report("FIGURE 2C — COMPOSITE RESISTANCE BACKGROUNDS")
@@ -228,9 +173,7 @@ all_samples <- raw %>%
 add_to_report(sprintf("Distinct samples in the file: %d", length(all_samples)))
 
 
-# ==============================================================================
-# 4. THE SAMPLE-BY-MUTATION MATRIX
-# ==============================================================================
+# ---- the sample-by-mutation matrix -------------------------------------
 
 mutation_rows <- raw %>%
   dplyr::mutate(
@@ -260,11 +203,9 @@ variants_wide <- mutation_rows %>%
   )
 
 
-# ------------------------------------------------------------------------------
 # A mutation absent from every sample produces no column, so add it as zero.
 # Without this, referring to it below would fail rather than evaluate as
 # "nobody has it".
-# ------------------------------------------------------------------------------
 
 absent_mutations <- setdiff(REQUIRED_MUTATIONS, names(variants_wide))
 
@@ -284,9 +225,7 @@ if (length(absent_mutations) > 0) {
 }
 
 
-# ==============================================================================
-# 5. THE DENOMINATOR
-# ==============================================================================
+# ---- the denominator ---------------------------------------------------
 
 n_with_mutations <- nrow(variants_wide)
 n_all_samples    <- length(all_samples)
@@ -364,9 +303,7 @@ if (N_TOTAL == 0) {
 }
 
 
-# ==============================================================================
-# 6. THE COMPOSITE CATEGORIES
-# ==============================================================================
+# ---- the composite categories ------------------------------------------
 
 k13_columns <- paste0("K13:", K13_ALL)
 
@@ -418,12 +355,10 @@ if (length(missing_categories) > 0) {
 }
 
 
-# ------------------------------------------------------------------------------
 # A consistency check the original did not do. Some categories are nested: a
 # quadruple mutant must also be a triple mutant, and anything multi-resistant
 # must be a quadruple mutant. If a count rises where it must fall, a
 # definition is wrong.
-# ------------------------------------------------------------------------------
 
 NESTED_PAIRS <- list(
   c("SP_quadruple_mutant", "SP_triple_mutant"),
@@ -473,9 +408,7 @@ if (length(nesting_problems) == 0) {
 }
 
 
-# ==============================================================================
-# 7. PREVALENCE
-# ==============================================================================
+# ---- prevalence --------------------------------------------------------
 
 prevalence <- categories %>%
   dplyr::select(dplyr::all_of(CATEGORY_DEFINITIONS$category)) %>%
@@ -516,9 +449,7 @@ for (index in seq_len(nrow(prevalence))) {
 }
 
 
-# ------------------------------------------------------------------------------
 # Check against the published panel.
-# ------------------------------------------------------------------------------
 
 count_mismatches <- prevalence %>%
   dplyr::filter(n != published_n)
@@ -551,9 +482,7 @@ if (nrow(count_mismatches) == 0 && N_TOTAL == PUBLISHED_N_TOTAL) {
 }
 
 
-# ==============================================================================
-# 8. THE FIGURE
-# ==============================================================================
+# ---- the figure --------------------------------------------------------
 
 figure <- ggplot2::ggplot(
   prevalence,
@@ -621,9 +550,7 @@ for (extension in c("svg", "png")) {
 }
 
 
-# ==============================================================================
-# 9. TABLES
-# ==============================================================================
+# ---- tables ------------------------------------------------------------
 
 # The Source Data for this panel. `fill` is styling and `label` is the text
 # drawn on the bar, so neither belongs in a data table; published_n is kept

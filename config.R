@@ -1,5 +1,5 @@
 # All file paths for the R analyses, in one place.
-# Run R from the repository root, then: source("config.R")
+#
 
 PROJECT_DIR <- normalizePath(".", mustWork = FALSE)
 
@@ -13,6 +13,7 @@ PROCESSED_DIR        <- file.path(PROJECT_DIR, "data", "processed")
 POPULATION_VCF       <- file.path(PROCESSED_DIR, "final_population.ann.vcf")
 POPULATION_VAR_TABLE <- file.path(PROCESSED_DIR, "population_variant_table.tsv")
 DRUG_MARKER_TABLE    <- file.path(PROCESSED_DIR, "drug_marker_table.tsv")
+COVERAGE_TABLE       <- file.path(PROCESSED_DIR, "coverage_all_samples.tsv")
 
 # --- Outputs ---
 RESULTS_DIR <- file.path(PROJECT_DIR, "results")
