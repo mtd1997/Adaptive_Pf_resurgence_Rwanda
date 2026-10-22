@@ -12,7 +12,7 @@ If you use this code, please cite both the article and the archived code:
 
 > Diallo, M. T. *et al.* Adaptive restructuring of *Plasmodium falciparum* populations associated with malaria resurgence in Rwanda. *Nat. Commun.* (2026).
 
-> Diallo, M. T. *et al.* Analysis code for "Adaptive restructuring of *Plasmodium falciparum* populations associated with malaria resurgence in Rwanda". *Zenodo* https://doi.org/10.5281/zenodo.XXXXXXXX (2026).
+> Diallo, M. T. *et al.* Analysis code for "Adaptive restructuring of *Plasmodium falciparum* populations associated with malaria resurgence in Rwanda". *Zenodo* https://doi.org/10.5281/zenodo.23573734 (2026).
 
 ## Data availability
 
