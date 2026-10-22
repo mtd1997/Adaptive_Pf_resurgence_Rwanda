@@ -1,0 +1,63 @@
+========================================================================
+FIGURE 3A — K13 MUTATION SPECTRUM
+========================================================================
+Input:     /Users/matdiallo/Adaptive_Pf_resurgence_Rwanda/data/processed/Manuscript_data_29-07-2026.tsv
+Generated: 2026-10-22 13:34:17 CEST
+
+Samples in the file:            1176
+Samples with a K13 mutation:    752
+Distinct K13 changes:           145
+
+Frequencies below are over the K13-mutated samples.
+
+Changes seen in fewer than 2 sample(s): 120 excluded, 25 drawn.
+
+2 change(s) fall in a linker between domains (this is expected):
+  T348I, P441L
+
+------------------------------------------------------------------------
+K13 CHANGES DRAWN, MOST COMMON FIRST
+------------------------------------------------------------------------
+  change          pos        n   % K13mut      % all  domain
+  K189T           189      524      69.7%      44.6%  N-terminal
+  R561H           561      464      61.7%      39.5%  Propeller
+  H384R           384       69       9.2%       5.9%  BTB/POZ
+  A675V           675       33       4.4%       2.8%  Propeller
+  P441L           441       28       3.7%       2.4%  (linker)
+  L258M           258       27       3.6%       2.3%  CCC
+  A569V           569       23       3.1%       2.0%  Propeller
+  F699C           699       19       2.5%       1.6%  Propeller
+  T207K           207       13       1.7%       1.1%  N-terminal
+  V555A           555       12       1.6%       1.0%  Propeller
+  T348I           348        9       1.2%       0.8%  (linker)
+  I205T           205        8       1.1%       0.7%  N-terminal
+  P667R           667        8       1.1%       0.7%  Propeller
+  P574L           574        7       0.9%       0.6%  Propeller
+  P419S           419        6       0.8%       0.5%  BTB/POZ
+  I352T           352        5       0.7%       0.4%  BTB/POZ
+  C469F           469        5       0.7%       0.4%  Propeller
+  A578S           578        4       0.5%       0.3%  Propeller
+  V721D           721        4       0.5%       0.3%  Propeller
+  N142D           142        2       0.3%       0.2%  N-terminal
+  L187F           187        2       0.3%       0.2%  N-terminal
+  K189N           189        2       0.3%       0.2%  N-terminal
+  N217H           217        2       0.3%       0.2%  CCC
+  R255K           255        2       0.3%       0.2%  CCC
+  N489S           489        2       0.3%       0.2%  Propeller
+
+  Top two changes are K189T and R561H, as in published Figure 3a.
+    K189T   69.7%    R561H   61.7%
+
+Label layout: 23 labels, all at least 11 codons apart.
+  Largest sideways shift: 14 codons (N217H).
+
+========================================================================
+WRITTEN
+========================================================================
+  figures/figure03/figure03a_k13_lollipop.svg / .png
+  tables/figure03/figure03a_mutation_frequencies.tsv
+  tables/figure03/figure03a_domains.tsv
+  tables/figure03/figure03a_excluded_singletons.tsv
+
+Denominator for the drawn percentages: 752 K13-mutated samples.
+The table also carries the percentage of all 1176 samples.

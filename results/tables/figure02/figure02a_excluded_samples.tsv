@@ -1,0 +1,19 @@
+sample	reason
+RM466	0x coverage at CRT; cannot be shown on a log axis
+COR020	0x coverage at CSP; cannot be shown on a log axis
+KDH001	0x coverage at CSP; cannot be shown on a log axis
+RM356	0x coverage at CSP; cannot be shown on a log axis
+RM358	0x coverage at CSP; cannot be shown on a log axis
+RM359	0x coverage at CSP; cannot be shown on a log axis
+RM361	0x coverage at CSP; cannot be shown on a log axis
+RM366	0x coverage at CSP; cannot be shown on a log axis
+RM377	0x coverage at CSP; cannot be shown on a log axis
+RM378	0x coverage at CSP; cannot be shown on a log axis
+RM414	0x coverage at CSP; cannot be shown on a log axis
+KDH001	0x coverage at DHPS; cannot be shown on a log axis
+KDH001	0x coverage at K13; cannot be shown on a log axis
+RM414	0x coverage at K13; cannot be shown on a log axis
+RUMU040	0x coverage at K13; cannot be shown on a log axis
+KDH001	0x coverage at MDR1; cannot be shown on a log axis
+RM356	0x coverage at MSP2; cannot be shown on a log axis
+RUMU040	0x coverage at MSP2; cannot be shown on a log axis

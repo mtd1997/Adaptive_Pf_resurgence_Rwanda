@@ -1,0 +1,74 @@
+========================================================================
+FIGURE 2A — COVERAGE
+========================================================================
+Coverage file: /Users/matdiallo/Adaptive_Pf_resurgence_Rwanda/data/processed/coverage_all_samples.tsv
+Generated:     2026-10-22 13:34:11 CEST
+
+Rows read: 8274
+  dropped 0 placeholder row(s) with gene = "0" or no coverage value
+
+Samples in the coverage file: 1182
+
+Metadata: /Users/matdiallo/Adaptive_Pf_resurgence_Rwanda/data/metadata/samples_metadata.tsv
+
+Reconciliation:
+  sequenced (in the coverage table):  1182
+  analysed  (in the metadata):        1176
+  in both:                            1176
+  sequenced but not analysed:         6
+  analysed but no coverage measured:  0
+
+Sequenced but not analysed. These are expected: samples that yielded 
+no variants after filtering, laboratory controls, and samples excluded 
+at the metadata check. Listed in full in the exclusions table.
+
+  3D7
+  KDH001
+  RUMU040
+  RW_SM100
+  RW_SM46
+  RW_SN94
+
+Plotting every sequenced sample. Pass --analysis-samples-only to 
+restrict the figure to the analysed set instead.
+
+Samples plotted:  1182
+Points plotted:   8274
+
+------------------------------------------------------------------------
+18 amplicon(s) across 12 sample(s) have 0x coverage.
+
+These cannot appear on a logarithmic axis and are therefore
+absent from the figure. They are real results — an amplicon
+that produced no reads — and are listed in
+figure02a_excluded_samples.tsv so they are accounted for.
+
+  CRT      1 sample(s) at 0x
+  DHPS     1 sample(s) at 0x
+  MDR1     1 sample(s) at 0x
+  K13      3 sample(s) at 0x
+  CSP      10 sample(s) at 0x
+  MSP2     2 sample(s) at 0x
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+COVERAGE BY GENE
+------------------------------------------------------------------------
+gene           n     median        min        max    <50x
+CRT         1182      360.3       0.00    22731.4     203
+DHFR        1182     2567.1       0.15   102516.5      26
+DHPS        1182      479.7       0.00    14873.5     123
+MDR1        1182      259.3       0.00    18733.5     152
+K13         1182      545.8       0.00    35226.4     134
+CSP         1182      327.0       0.00    15656.7     210
+MSP2        1182      570.9       0.00    73150.9     136
+
+========================================================================
+WRITTEN
+========================================================================
+  figures/figure02/figure02a_coverage.svg / .pdf / .png
+  tables/figure02/figure02a_source_data.tsv
+  tables/figure02/figure02a_summary_by_gene.tsv
+  tables/figure02/figure02a_excluded_samples.tsv
+
+Jitter seed: 12345 (change it and the points move)

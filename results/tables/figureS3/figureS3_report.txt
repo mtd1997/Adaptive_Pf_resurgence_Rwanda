@@ -1,0 +1,96 @@
+========================================================================
+SUPPLEMENTARY FIGURE S3 — K13 CATEGORY COMPARISONS
+========================================================================
+Input:     /Users/matdiallo/Adaptive_Pf_resurgence_Rwanda/data/processed/Manuscript_data_29-07-2026.tsv
+Generated: 2026-10-22 13:35:10 CEST
+
+Rows read:        7919
+Distinct samples: 1176
+
+------------------------------------------------------------------------
+GROUP DEFINITIONS
+------------------------------------------------------------------------
+  The 2021-2023 group is unfiltered by health centre, and
+  every one of its samples is from KFH,
+  so the KFH label is accurate.
+
+------------------------------------------------------------------------
+GROUP SIZES
+------------------------------------------------------------------------
+  group                         N    wild type    R561H+K189T
+  KFH 2021-2023               257          107             78
+  KFH 2024-2025               291           91            124
+  Kigali 2024-2025            700          227            339
+  Hotspots 2024-2025          219           90             32
+
+------------------------------------------------------------------------
+AGAINST PUBLISHED FIGURE S3 — SIZES AND PREVALENCES
+------------------------------------------------------------------------
+  group                               N        wild type %      R561H+K189T %
+  KFH 2021-2023             257 vs 257   ok     41.6 vs 41.6  ok     30.4 vs 30.4  ok 
+  KFH 2024-2025             291 vs 291   ok     31.3 vs 31.3  ok     42.6 vs 42.6  ok 
+  Kigali 2024-2025          700 vs 700   ok     32.4 vs 32.4  ok     48.4 vs 48.4  ok 
+  Hotspots 2024-2025        219 vs 219   ok     41.1 vs 41.1  ok     14.6 vs 14.6  ok 
+
+------------------------------------------------------------------------
+DISTRICT GROUPS VERSUS FIGURE 3B's REGION GROUPS
+------------------------------------------------------------------------
+  Kigali 2024-2025 by District (this figure): 700
+  Kigali 2024-2025 by REGION   (Figure 3b):   700
+  in District but not REGION: 0
+  in REGION but not District: 0
+
+  Both definitions are kept, each as its own figure used it.
+  The legends should not imply the two groups are the same.
+
+------------------------------------------------------------------------
+EXACT BINOMIAL TEST — wild type vs R561H + K189T, null 50:50
+------------------------------------------------------------------------
+  group                       WT  double  WT share            p
+  KFH 2021-2023              107      78     57.8%       0.0392  *
+  KFH 2024-2025               91     124     42.3%       0.0288  *
+  Kigali 2024-2025           227     339     40.1%     2.87e-06  ****
+  Hotspots 2024-2025          90      32     73.8%     1.45e-07  ****
+
+  The 95% intervals are for the wild-type share of those two
+  categories only, not for prevalence in the whole group.
+
+  against the published panel:
+    KFH 2021-2023          computed     0.0392   published     0.0392   ok
+    KFH 2024-2025          computed     0.0288   published     0.0288   ok
+    Kigali 2024-2025       computed   2.87e-06   published   2.87e-06   ok
+    Hotspots 2024-2025     computed   1.45e-07   published   1.45e-07   ok
+
+------------------------------------------------------------------------
+FISHER'S EXACT TEST — between groups, over the whole group
+------------------------------------------------------------------------
+  Period: 2021-2023 vs 2024-2025     Wild type         41.6% vs   31.3%  OR   1.57  p     0.0127  *
+  Period: 2021-2023 vs 2024-2025     R561H + K189T     30.4% vs   42.6%  OR   0.59  p     0.0034  **
+  Location: Kigali vs Hotspots       Wild type         32.4% vs   41.1%  OR   0.69  p     0.0224  *
+  Location: Kigali vs Hotspots       R561H + K189T     48.4% vs   14.6%  OR   5.48  p   1.71e-20  ****
+
+  against the published panel:
+    Period: 2021-2023 vs 2024-2025     Wild type       computed     0.0127   published     0.0127   ok
+    Period: 2021-2023 vs 2024-2025     R561H + K189T   computed     0.0034   published     0.0034   ok
+    Location: Kigali vs Hotspots       Wild type       computed     0.0224   published     0.0224   ok
+    Location: Kigali vs Hotspots       R561H + K189T   computed   1.71e-20   published   1.71e-20   ok
+
+========================================================================
+FIGURE S3 IS REPRODUCED
+========================================================================
+  All four group sizes, both prevalences in each group, all
+  four binomial p-values and all four Fisher p-values match
+  the published panel.
+========================================================================
+
+========================================================================
+WRITTEN
+========================================================================
+  figures/figureS3/figureS3_k13_comparisons.svg / .pdf / .png
+  figures/figureS3/figureS3_panelA-D.svg
+  tables/figureS3/figureS3_category_prevalence.tsv
+  tables/figureS3/figureS3_sample_level_categories.tsv
+  tables/figureS3/figureS3_group_sizes.tsv
+  tables/figureS3/figureS3_binomial_tests.tsv
+  tables/figureS3/figureS3_fisher_tests.tsv
+  tables/figureS3/figureS3_logistic_models.tsv

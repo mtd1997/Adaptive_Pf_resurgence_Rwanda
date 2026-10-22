@@ -1,0 +1,43 @@
+========================================================================
+IBS DISTANCE MATRIX
+========================================================================
+VCF:       /Volumes/MTD_drive/manuscript_data_09-11-2025/final_analysis_19-12-2025/popgen_R_analysis/all_1179_withDhpsDhfr.vcf.gz
+Generated: 2026-10-22 13:39:59 CEST
+
+VCF: 226 variants, 1015 samples
+Dropped the reference control: 3D7
+Genotype matrix: 1014 samples x 226 sites
+Missing genotypes: 7.21%
+Genotype codes present: 0, 1
+
+Computing distances with matrix products...
+  took 0.3 seconds
+  distance range: 0.000000 to 0.362162
+
+------------------------------------------------------------------------
+CHECK 1: the original nested-loop code, on a random subset
+------------------------------------------------------------------------
+  samples compared:        60
+  pairs compared:          1800
+  largest difference:      0.000e+00
+  NA pattern differences:  0
+  PASS — the two implementations agree to floating-point precision.
+
+------------------------------------------------------------------------
+CHECK 2: the matrix saved by the original analysis
+------------------------------------------------------------------------
+  Skipped. To run it, pass:
+    --verify-against /path/to/IBS_distance_matrix.rds
+
+  Worth doing once: it confirms this script reproduces the
+  exact matrix the published figure was built from.
+
+========================================================================
+WRITTEN
+========================================================================
+  /Users/matdiallo/Adaptive_Pf_resurgence_Rwanda/data/processed/ibs_distance_matrix.rds
+  /Users/matdiallo/Adaptive_Pf_resurgence_Rwanda/data/processed/ibs_distance_matrix.tsv.gz
+
+Next step:
+  Rscript scripts/06_figures/figure04_ibs_pcoa.R
+========================================================================

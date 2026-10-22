@@ -1,0 +1,1468 @@
+SAMPLE	group	year	Site_Group	District	PERIOD	REGION	k13_mutations	category
+RW_E1	Baseline-Kigali	2021	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_E2	Baseline-Kigali	2021	KFH	Kicukiro	Baseline-Kigali	Kigali	L258M	Other (non-WHO)
+RW_E3	Baseline-Kigali	2021	KFH	Kicukiro	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_E4	Baseline-Kigali	2021	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_E6	Baseline-Kigali	2021	KFH	Kicukiro	Baseline-Kigali	Kigali	P574L	P574L
+RW_E7	Baseline-Kigali	2021	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_E8	Baseline-Kigali	2021	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_E9	Baseline-Kigali	2021	KFH	Kicukiro	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_F2	Baseline-Kigali	2021	KFH	Nyarugenge	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_F3	Baseline-Kigali	2021	KFH	Nyarugenge	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_F4	Baseline-Kigali	2021	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_F6	Baseline-Kigali	2021	KFH	Gasabo	Baseline-Kigali	Kigali	K189T	K189T only
+RW_F9	Baseline-Kigali	2021	KFH	Kicukiro	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_J10	Baseline-Kigali	2023	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_J11	Baseline-Kigali	2023	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_J12	Baseline-Kigali	2023	KFH	Nyarugenge	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_J13	Baseline-Kigali	2023	KFH	Nyarugenge	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_J15	Baseline-Kigali	2023	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_J16	Baseline-Kigali	2023	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_J17	Baseline-Kigali	2023	KFH	Nyarugenge	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_J18	Baseline-Kigali	2023	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_J19	Baseline-Kigali	2023	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_J2	Baseline-Kigali	2023	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_J20	Baseline-Kigali	2023	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_J21	Baseline-Kigali	2023	KFH	Nyarugenge	Baseline-Kigali	Kigali	C469Y, K189T	K189T + other
+RW_J22	Baseline-Kigali	2023	KFH	Nyarugenge	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_J23	Baseline-Kigali	2023	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_J24	Baseline-Kigali	2023	KFH	Nyarugenge	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_J26	Baseline-Kigali	2023	KFH	Nyarugenge	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_J28	Baseline-Kigali	2023	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_J29	Baseline-Kigali	2023	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_J3	Baseline-Kigali	2023	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_J32	Baseline-Kigali	2023	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_J34	Baseline-Kigali	2023	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_J36	Baseline-Kigali	2023	KFH	Nyarugenge	Baseline-Kigali	Kigali	A675V, K189T, N217H, R561H	R561H + K189T
+RW_J37	Baseline-Kigali	2023	KFH	Nyarugenge	Baseline-Kigali	Kigali	A675V, K189T	K189T + other
+RW_J38	Baseline-Kigali	2023	KFH	Nyarugenge	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_J4	Baseline-Kigali	2023	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_J46	Baseline-Kigali	2023	KFH	Gasabo	Baseline-Kigali	Kigali	L258M, P419S	Other (non-WHO)
+RW_J47	Baseline-Kigali	2023	KFH	Gasabo	Baseline-Kigali	Kigali	L258M, P419S	Other (non-WHO)
+RW_J48	Baseline-Kigali	2023	KFH	Gasabo	Baseline-Kigali	Kigali	L258M, P419S	Other (non-WHO)
+RW_J5	Baseline-Kigali	2023	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_J7	Baseline-Kigali	2023	KFH	Nyarugenge	Baseline-Kigali	Kigali	H384R	H384R
+RW_J9	Baseline-Kigali	2023	KFH	Nyarugenge	Baseline-Kigali	Kigali	H384R	H384R
+RW_K1	Baseline-Kigali	2021	KFH	Kicukiro	Baseline-Kigali	Kigali	A578S, P441L	P441L
+RW_K2	Baseline-Kigali	2021	KFH	Kicukiro	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_K4	Baseline-Kigali	2021	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_K5	Baseline-Kigali	2021	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_S1	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_S10	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_S11	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_S12	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_S13	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_S14	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_S15	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_S17	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	K189T	K189T only
+RW_S19	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_S20	Baseline-Kigali	2022	KFH	Rutsiro	Baseline-Kigali	Hotspot		Wild type
+RW_S21	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_S3	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_S4	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_S5	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_S7	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_S8	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189T	K189T only
+RW_SM102	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_SM12	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	H384R	H384R
+RW_SM17	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SM18	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	H384R, K189T, P667R, R561H	R561H + K189T
+RW_SM19	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	P667R	Other (non-WHO)
+RW_SM25	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	P667R	Other (non-WHO)
+RW_SM26	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_SM27	Baseline-Kigali	2022	KFH	Nyagatare	Baseline-Kigali	Hotspot	A569V	Other (non-WHO)
+RW_SM29	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_SM30	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	H384R, K189T	K189T + other
+RW_SM32	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_SM33	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_SM34	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SM35	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SM36	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_SM37	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_SM38	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SM39	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_SM40	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	C469F	Other (non-WHO)
+RW_SM41	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_SM42	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	H384R	H384R
+RW_SM43	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_SM47	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189T	K189T only
+RW_SM5	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SM51	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SM52	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SM53	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_SM54	Baseline-Kigali	2022	KFH	Nyagatare	Baseline-Kigali	Hotspot	K189T, R561H	R561H + K189T
+RW_SM56	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SM57	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SM58	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_SM59	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SM60	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_SM61	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SM62	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	P667R	Other (non-WHO)
+RW_SM63	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	F699C	Other (non-WHO)
+RW_SM64	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SM67	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	A675V, L258M	A675V
+RW_SM68	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_SM71	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	A675V, L258M	A675V
+RW_SM73	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_SM76	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SM77	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_SM78	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SM79	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	H384R	H384R
+RW_SM80	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali	A569V, K189T, R561H	R561H + K189T
+RW_SM81	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	A569V, K189T	K189T + other
+RW_SM82	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	K189T	K189T only
+RW_SM84	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SM85	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_SM86	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	H384R	H384R
+RW_SM87	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali	K189T	K189T only
+RW_SM89	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	H384R	H384R
+RW_SM9	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SM90	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	H384R	H384R
+RW_SM91	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	H384R	H384R
+RW_SM92	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	T387S	Other (non-WHO)
+RW_SM93	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_SM94	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_SM95	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_SM98	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_SM99	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali	P574L	P574L
+RW_SN1	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	R255K	Other (non-WHO)
+RW_SN10	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SN100	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SN101	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_SN102	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SN104	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	H384R	H384R
+RW_SN105	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	P441L	P441L
+RW_SN106	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_SN107	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_SN108	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SN109	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	L663P, R515K, R561H	R561H + other
+RW_SN11	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_SN110	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	H384R, K189T, R561H, S374L, W229R	R561H + K189T
+RW_SN112	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	I227V	Other (non-WHO)
+RW_SN113	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_SN115	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali	F699C, H384R, K189T, R561H, T199I	R561H + K189T
+RW_SN119	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_SN121	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_SN13	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_SN14	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_SN15	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_SN16	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SN18	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SN19	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SN20	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_SN21	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_SN22	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_SN23	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_SN24	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SN25	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SN26	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SN27	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_SN28	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_SN29	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SN3	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_SN30	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_SN31	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_SN32	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_SN36	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	F699C	Other (non-WHO)
+RW_SN37	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_SN38	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SN41	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	H384R	H384R
+RW_SN42	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_SN43	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	A675V, L258M	A675V
+RW_SN44	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SN45	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_SN47	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_SN48	Baseline-Kigali	2022	KFH	Bugesera	Baseline-Kigali	Hotspot	K189T, R561H	R561H + K189T
+RW_SN50	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	H384R	H384R
+RW_SN51	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SN53	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	P441L	P441L
+RW_SN54	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali	H384R, K189T, R561H	R561H + K189T
+RW_SN56	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189N, K189T	K189T + other
+RW_SN57	Baseline-Kigali	2022	KFH	Musanze	Baseline-Kigali	Hotspot	F699C, H384R, K189T, R561H	R561H + K189T
+RW_SN58	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SN59	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SN6	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_SN60	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SN61	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_SN62	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SN63	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_SN64	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_SN65	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_SN66	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	T207K	Other (non-WHO)
+RW_SN67	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SN68	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_SN69	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	K189T, P441L	K189T + other
+RW_SN7	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SN70	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali	H384R	H384R
+RW_SN71	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_SN72	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	D464N, F226L, F699C, K189T, R561H	R561H + K189T
+RW_SN73	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189T	K189T only
+RW_SN74	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	F699C	Other (non-WHO)
+RW_SN75	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	F699C	Other (non-WHO)
+RW_SN76	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	F699C	Other (non-WHO)
+RW_SN77	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali	H384R	H384R
+RW_SN78	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali	F699C	Other (non-WHO)
+RW_SN79	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali	H384R	H384R
+RW_SN8	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SN80	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SN81	Baseline-Kigali	2022	KFH	Nyagatare	Baseline-Kigali	Hotspot	A675V, L258M	A675V
+RW_SN82	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_SN83	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_SN84	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SN86	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	A675V, L258M	A675V
+RW_SN87	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali	H384R	H384R
+RW_SN88	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SN89	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	H384R	H384R
+RW_SN9	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_SN90	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_SN92	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SN93	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189T	K189T only
+RW_SN95	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_SN96	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_SN98	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_SN99	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	P441L	P441L
+RW_ST1	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189T	K189T only
+RW_ST10	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_ST11	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_ST12	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_ST13	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_ST14	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189T	K189T only
+RW_ST15	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_ST16	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_ST17	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_ST19	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_ST2	Baseline-Kigali	2022	KFH	Nyarugenge	Baseline-Kigali	Kigali	R561H	R561H only
+RW_ST20	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_ST21	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali	K189T	K189T only
+RW_ST23	Baseline-Kigali	2021	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_ST24	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_ST25	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_ST27	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	I448V, K189T, R257Q	K189T + other
+RW_ST28	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	A626T	Other (non-WHO)
+RW_ST29	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_ST30	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_ST32	Baseline-Kigali	2022	KFH	Kicukiro	Baseline-Kigali	Kigali	K189T	K189T only
+RW_ST33	Baseline-Kigali	2021	KFH	Gasabo	Baseline-Kigali	Kigali	K189T	K189T only
+RW_ST4	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_ST9	Baseline-Kigali	2022	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+RW_WB1	Baseline-Kigali	2021	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_WB10	Baseline-Kigali	2021	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_WB12	Baseline-Kigali	2021	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_WB13	Baseline-Kigali	2021	KFH	Kicukiro	Baseline-Kigali	Kigali		Wild type
+RW_WB14	Baseline-Kigali	2021	KFH	Karongi	Baseline-Kigali	Hotspot	K189T	K189T only
+RW_WB15	Baseline-Kigali	2021	KFH	Nyarugenge	Baseline-Kigali	Kigali	A569V	Other (non-WHO)
+RW_WB2	Baseline-Kigali	2021	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_WB3	Baseline-Kigali	2021	KFH	Nyarugenge	Baseline-Kigali	Kigali		Wild type
+RW_WB5	Baseline-Kigali	2021	KFH	Gasabo	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_WB6	Baseline-Kigali	2021	KFH	Kicukiro	Baseline-Kigali	Kigali	K189T, R561H	R561H + K189T
+RW_WB7	Baseline-Kigali	2021	KFH	Gasabo	Baseline-Kigali	Kigali		Wild type
+BNH001	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot	T192A	Other (non-WHO)
+BNH002	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot		Wild type
+BNH003	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot		Wild type
+BNH005	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot	K189T	K189T only
+BNH006	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot	V555A	Other (non-WHO)
+BNH008	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot	K189T	K189T only
+BNH009	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot		Wild type
+BNH010	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot	V555A	Other (non-WHO)
+BNH013	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot		Wild type
+BNH015	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot	V555A, V721D	Other (non-WHO)
+BNH016	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot	V721D	Other (non-WHO)
+BNH017	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot	K189T	K189T only
+BNH020	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot		Wild type
+BNH021	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot	K114R, K189T, N142D, S37N, V83I	K189T + other
+BNH022	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot	S34G	Other (non-WHO)
+BNH023	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot	V555A	Other (non-WHO)
+BNH024	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot	V555A	Other (non-WHO)
+BNH025	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot		Wild type
+BNH026	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot	K189N, K189T	K189T + other
+BNH027	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot	K189T	K189T only
+BNH029	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot		Wild type
+BNH030	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot		Wild type
+BNH031	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot	F103C, K189T, N158S	K189T + other
+BNH032	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot		Wild type
+BNH033	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot	S107P	Other (non-WHO)
+BNH037	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot	K189T	K189T only
+BNH038	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot	L258M	Other (non-WHO)
+BNH039	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot		Wild type
+BNH040	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot		Wild type
+BNH041	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot	V555A	Other (non-WHO)
+BNH042	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot		Wild type
+BNH043	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot	V721D	Other (non-WHO)
+BNH044	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot		Wild type
+BNH045	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot	V555A	Other (non-WHO)
+BNH046	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot		Wild type
+BNH050	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot		Wild type
+BNH051	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot		Wild type
+BNH052	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot		Wild type
+BNH053	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot	K189T, R561H	R561H + K189T
+BNH054	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot	R561H	R561H only
+BNH055	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot	R255K	Other (non-WHO)
+BNH056	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot	V555A	Other (non-WHO)
+BNH057	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot		Wild type
+BNH058	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot		Wild type
+BNH060	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot	K189T, V721A	K189T + other
+BNH063	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot	K189T	K189T only
+BNH064	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot	K189T, R561H	R561H + K189T
+BNH065	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot		Wild type
+BNH066	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot		Wild type
+BNH067	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot	K189T, R561H	R561H + K189T
+BNH069	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot	K189T	K189T only
+BNH072	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot	K189T, R561H	R561H + K189T
+BNH073	Hotspot Resurgence	2025	Other	Bugesera	Resurgence	Hotspot	K189T	K189T only
+GISK001	Hotspot Resurgence	2025	Other	Gisagara	Resurgence	Hotspot	Y68H	Other (non-WHO)
+GISK002	Hotspot Resurgence	2025	Other	Gisagara	Resurgence	Hotspot		Wild type
+GISK004	Hotspot Resurgence	2025	Other	Gisagara	Resurgence	Hotspot		Wild type
+GISK005	Hotspot Resurgence	2025	Other	Gisagara	Resurgence	Hotspot	K189T	K189T only
+GISK006	Hotspot Resurgence	2025	Other	Gisagara	Resurgence	Hotspot		Wild type
+GISK008	Hotspot Resurgence	2025	Other	Gisagara	Resurgence	Hotspot		Wild type
+GISK009	Hotspot Resurgence	2025	Other	Gisagara	Resurgence	Hotspot	K123N	Other (non-WHO)
+GISK011	Hotspot Resurgence	2025	Other	Gisagara	Resurgence	Hotspot		Wild type
+GISK012	Hotspot Resurgence	2025	Other	Gisagara	Resurgence	Hotspot		Wild type
+GISK013	Hotspot Resurgence	2025	Other	Gisagara	Resurgence	Hotspot		Wild type
+GISK014	Hotspot Resurgence	2025	Other	Gisagara	Resurgence	Hotspot	K189T	K189T only
+GISK018	Hotspot Resurgence	2025	Other	Gisagara	Resurgence	Hotspot	K189T	K189T only
+GISK021	Hotspot Resurgence	2025	Other	Gisagara	Resurgence	Hotspot		Wild type
+GISK022	Hotspot Resurgence	2025	Other	Gisagara	Resurgence	Hotspot		Wild type
+GISK024	Hotspot Resurgence	2025	Other	Gisagara	Resurgence	Hotspot		Wild type
+GISK025	Hotspot Resurgence	2025	Other	Gisagara	Resurgence	Hotspot		Wild type
+GISK026	Hotspot Resurgence	2025	Other	Gisagara	Resurgence	Hotspot		Wild type
+GISK030	Hotspot Resurgence	2025	Other	Gisagara	Resurgence	Hotspot		Wild type
+GISM001	Hotspot Resurgence	2025	Other	Gisagara	Resurgence	Hotspot		Wild type
+GISM004	Hotspot Resurgence	2025	Other	Gisagara	Resurgence	Hotspot	K189T, N146D	K189T + other
+GISM008	Hotspot Resurgence	2025	Other	Gisagara	Resurgence	Hotspot		Wild type
+GISM009	Hotspot Resurgence	2025	Other	Gisagara	Resurgence	Hotspot	H136N	Other (non-WHO)
+GISM010	Hotspot Resurgence	2025	Other	Gisagara	Resurgence	Hotspot		Wild type
+GISM012	Hotspot Resurgence	2025	Other	Gisagara	Resurgence	Hotspot	K189T	K189T only
+GISM013	Hotspot Resurgence	2025	Other	Gisagara	Resurgence	Hotspot		Wild type
+GISM014	Hotspot Resurgence	2025	Other	Gisagara	Resurgence	Hotspot	K189T, N142D	K189T + other
+GISM016	Hotspot Resurgence	2025	Other	Gisagara	Resurgence	Hotspot		Wild type
+KDH002	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	K189T, R561H	R561H + K189T
+KDH003	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	K189T, R561H	R561H + K189T
+KDH004	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	K189T, L187F	K189T + other
+KDH005	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	K189T, R561H	R561H + K189T
+KDH006	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	K189T, L187F	K189T + other
+KDH007	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	K189T	K189T only
+KDH008	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	K189T, R561H	R561H + K189T
+KDH009	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	K189T, R561H	R561H + K189T
+KDH010	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	N117S	Other (non-WHO)
+KDH011	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	K189T, R561H	R561H + K189T
+KDH012	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	K189T, R561H	R561H + K189T
+KDH013	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	K189T, R561H	R561H + K189T
+KDH014	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot		Wild type
+KDH015	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot		Wild type
+KDH016	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot		Wild type
+KDH017	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	K189T, R561H	R561H + K189T
+KDH018	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	K189T, R561H	R561H + K189T
+KDH019	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot		Wild type
+KDH020	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	K189T, R561H	R561H + K189T
+KDH021	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot		Wild type
+KDH022	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	K123R, K189T	K189T + other
+KDH023	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot		Wild type
+KDH024	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	E77G	Other (non-WHO)
+KDH025	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	I205T	Other (non-WHO)
+KDH026	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	T207K	Other (non-WHO)
+KDH027	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	K189T, V71I	K189T + other
+KDH028	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	I352T	Other (non-WHO)
+KDH029	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot		Wild type
+KDH030	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	I205T	Other (non-WHO)
+KDH031	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	L258M	Other (non-WHO)
+KDH032	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot		Wild type
+KDH033	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	K189T, R561H	R561H + K189T
+KDH034	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot		Wild type
+KDH035	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	N113S, N147D, N154I, S50G	Other (non-WHO)
+KDH037	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	I205T	Other (non-WHO)
+KDH038	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	I352T	Other (non-WHO)
+KDH039	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	I205T	Other (non-WHO)
+KDH040	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot		Wild type
+KDH042	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	K189T, R561H	R561H + K189T
+KDH043	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	A675V, I352T	A675V
+KDH044	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	K189T, R561H	R561H + K189T
+KDH045	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	K189T, R561H	R561H + K189T
+KDH046	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	A675V	A675V
+KDH047	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	K189T, R561H	R561H + K189T
+KDH048	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	K189T, R561H	R561H + K189T
+KDH049	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	K189T, R561H	R561H + K189T
+KDH050	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	K189T, R561H	R561H + K189T
+KDH051	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	A675V	A675V
+KDH053	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot		Wild type
+KDH054	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	K189T, R561H	R561H + K189T
+KDH055	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	A675V	A675V
+KDH056	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	A675V	A675V
+KDH057	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot		Wild type
+KDH058	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot		Wild type
+KDH059	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot		Wild type
+KDH060	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	I352T	Other (non-WHO)
+KDH061	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	R561H	R561H only
+KDH062	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot		Wild type
+KDH063	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	F699C	Other (non-WHO)
+KDH064	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	A675V	A675V
+KDH066	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	K189T	K189T only
+KDH068	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	R561H	R561H only
+KDH069	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot		Wild type
+KDH071	Hotspot Resurgence	2025	Other	Kirehe	Resurgence	Hotspot	A675V	A675V
+KIB001	Hotspot Resurgence	2025	Other	Karongi	Resurgence	Hotspot		Wild type
+KIB002	Hotspot Resurgence	2025	Other	Karongi	Resurgence	Hotspot	K189T, R561H	R561H + K189T
+KIB003	Hotspot Resurgence	2025	Other	Karongi	Resurgence	Hotspot	K189T	K189T only
+KIB004	Hotspot Resurgence	2025	Other	Karongi	Resurgence	Hotspot	K189T, N121S, N47S	K189T + other
+KMZ001	Hotspot Resurgence	2025	Other	Karongi	Resurgence	Hotspot	C469F	Other (non-WHO)
+KMZ002	Hotspot Resurgence	2025	Other	Karongi	Resurgence	Hotspot	A569V	Other (non-WHO)
+KMZ006	Hotspot Resurgence	2025	Other	Karongi	Resurgence	Hotspot		Wild type
+KMZ010	Hotspot Resurgence	2025	Other	Karongi	Resurgence	Hotspot	C469F	Other (non-WHO)
+KMZ011	Hotspot Resurgence	2025	Other	Karongi	Resurgence	Hotspot		Wild type
+KMZ019	Hotspot Resurgence	2025	Other	Karongi	Resurgence	Hotspot	A569V	Other (non-WHO)
+KMZ020	Hotspot Resurgence	2025	Other	Karongi	Resurgence	Hotspot		Wild type
+KMZ021	Hotspot Resurgence	2025	Other	Karongi	Resurgence	Hotspot		Wild type
+KRNHC003	Hotspot Resurgence	2025	Other	Nyagatare	Resurgence	Hotspot	K189T, R561H	R561H + K189T
+KRNHC005	Hotspot Resurgence	2025	Other	Nyagatare	Resurgence	Hotspot		Wild type
+KRNHC008	Hotspot Resurgence	2025	Other	Nyagatare	Resurgence	Hotspot		Wild type
+KRNHC019	Hotspot Resurgence	2025	Other	Nyagatare	Resurgence	Hotspot	L693I	Other (non-WHO)
+KRNHC021	Hotspot Resurgence	2025	Other	Nyagatare	Resurgence	Hotspot	K189T, R561H	R561H + K189T
+KRNHC023	Hotspot Resurgence	2025	Other	Nyagatare	Resurgence	Hotspot	I205T	Other (non-WHO)
+KRNHC025	Hotspot Resurgence	2025	Other	Nyagatare	Resurgence	Hotspot	K189T, R561H	R561H + K189T
+KRNHC031	Hotspot Resurgence	2025	Other	Nyagatare	Resurgence	Hotspot	P441L, R561H	R561H + other
+KRNHC032	Hotspot Resurgence	2025	Other	Nyagatare	Resurgence	Hotspot	R561H, T348I	R561H + other
+KRNHC033	Hotspot Resurgence	2025	Other	Nyagatare	Resurgence	Hotspot		Wild type
+NDHC006	Hotspot Resurgence	2025	Other	Nyagatare	Resurgence	Hotspot	T348I	Other (non-WHO)
+NDHC008	Hotspot Resurgence	2025	Other	Nyagatare	Resurgence	Hotspot		Wild type
+NDHC009	Hotspot Resurgence	2025	Other	Nyagatare	Resurgence	Hotspot	T348I	Other (non-WHO)
+NDHC017	Hotspot Resurgence	2025	Other	Nyagatare	Resurgence	Hotspot	K189T, R561H	R561H + K189T
+NDHC023	Hotspot Resurgence	2025	Other	Nyagatare	Resurgence	Hotspot	P441L	P441L
+NYHC002	Hotspot Resurgence	2025	Other	Musanze	Resurgence	Hotspot	H384R	H384R
+NYHC004	Hotspot Resurgence	2025	Other	Musanze	Resurgence	Hotspot	H384R	H384R
+NYHC006	Hotspot Resurgence	2025	Other	Musanze	Resurgence	Hotspot		Wild type
+NYHC009	Hotspot Resurgence	2025	Other	Musanze	Resurgence	Hotspot	H384R, K189T, R561H	R561H + K189T
+NYHC011	Hotspot Resurgence	2025	Other	Musanze	Resurgence	Hotspot	K189T	K189T only
+NYHC012	Hotspot Resurgence	2025	Other	Musanze	Resurgence	Hotspot	K189T	K189T only
+NYHC013	Hotspot Resurgence	2025	Other	Musanze	Resurgence	Hotspot	K189T, R561H	R561H + K189T
+NYHC014	Hotspot Resurgence	2025	Other	Musanze	Resurgence	Hotspot		Wild type
+NYHC017	Hotspot Resurgence	2025	Other	Musanze	Resurgence	Hotspot	K189T	K189T only
+RHC002	Hotspot Resurgence	2025	Other	Musanze	Resurgence	Hotspot		Wild type
+RHC003	Hotspot Resurgence	2025	Other	Musanze	Resurgence	Hotspot		Wild type
+RHC004	Hotspot Resurgence	2025	Other	Musanze	Resurgence	Hotspot	T348I	Other (non-WHO)
+RUMU001	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot		Wild type
+RUMU003	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot		Wild type
+RUMU004	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot		Wild type
+RUMU005	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot	A675V, L258M	A675V
+RUMU006	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot		Wild type
+RUMU007	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot		Wild type
+RUMU008	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot		Wild type
+RUMU009	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot		Wild type
+RUMU010	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot		Wild type
+RUMU011	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot		Wild type
+RUMU012	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot	K189T, R561H	R561H + K189T
+RUMU013	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot		Wild type
+RUMU014	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot	A675V, L258M	A675V
+RUMU015	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot	A675V, L258M	A675V
+RUMU016	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot		Wild type
+RUMU017	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot		Wild type
+RUMU018	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot		Wild type
+RUMU019	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot		Wild type
+RUMU020	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot		Wild type
+RUMU021	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot	A675V, L258M	A675V
+RUMU022	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot	A675V, L258M	A675V
+RUMU024	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot	C469F	Other (non-WHO)
+RUMU025	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot	A675V, L258M	A675V
+RUMU027	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot		Wild type
+RUMU028	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot		Wild type
+RUMU029	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot	A675V, L258M	A675V
+RUMU030	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot	C469F	Other (non-WHO)
+RUMU031	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot		Wild type
+RUMU032	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot		Wild type
+RUMU033	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot		Wild type
+RUMU036	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot		Wild type
+RUMU038	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot		Wild type
+RUMU039	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot	A675V, L258M	A675V
+RUMU041	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot	A675V, F334L, I268T, K378E, V319A, Y604C, Y604H	A675V
+RUMU042	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot	A675V, L258M	A675V
+RUMU043	Hotspot Resurgence	2025	Other	Rutsiro	Resurgence	Hotspot	A675V, L258M	A675V
+CEO	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF001	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF002	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF003	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF004	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF005	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF006	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF008	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF010	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF013	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF014	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R	H384R
+KF015	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R, K189T, R561H	R561H + K189T
+KF016	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF017	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	P667R	Other (non-WHO)
+KF018	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF021	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R	H384R
+KF022	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF023	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF024	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF025	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	F699C, P441L	P441L
+KF026	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF027	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	F699C	Other (non-WHO)
+KF029	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF030	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF031	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF032	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF033	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF034	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T	K189T only
+KF035	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF036	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T	K189T only
+KF037	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF038	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF039	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF040	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF041	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF042	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF044	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF045	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T	K189T only
+KF046	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF047	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF049	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF050	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF051	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF052	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	P441L	P441L
+KF053	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	A569V	Other (non-WHO)
+KF054	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF055	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF056	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	A675V, K189T, L258M, R561H	R561H + K189T
+KF057	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF058	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF059	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF061	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF062	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF063	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF064	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T	K189T only
+KF065	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	I205T	Other (non-WHO)
+KF066	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	A569V	Other (non-WHO)
+KF067	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, P441L, R561H	R561H + K189T
+KF068	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF069	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF071	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T	K189T only
+KF072	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	I205T	Other (non-WHO)
+KF073	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF074	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF075	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF076	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF077	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF078	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF079	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF080	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF081	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	T535K	Other (non-WHO)
+KF082	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	P441L	P441L
+KF083	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	P441L	P441L
+KF084	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF085	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF086	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R	H384R
+KF087	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF088	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF091	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF092	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T	K189T only
+KF093	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF094	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF095	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF096	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	P441L	P441L
+KF097	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF098	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	P441L	P441L
+KF099	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF100	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T	K189T only
+KF101	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF102	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF103	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R	H384R
+KF104	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF105	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF106	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, N217H	K189T + other
+KF108	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF109	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF110	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	A569V, K189T, R561H	R561H + K189T
+KF111	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF113	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF114	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF115	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF116	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R	H384R
+KF117	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF121	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF122	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	T348I	Other (non-WHO)
+KF123	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	P441L	P441L
+KF124	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	T348I	Other (non-WHO)
+KF126	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R	H384R
+KF127	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF129	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF130	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R	H384R
+KF132	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF133	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF134	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T	K189T only
+KF135	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF136	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R	H384R
+KF137	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF138	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF139	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF140	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF141	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R	H384R
+KF142	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF144	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF145	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF146	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF147	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF149	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF150	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF153	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF154	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF155	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF156	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF157	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF158	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF159	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF160	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF161	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF163	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF168	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T	K189T only
+KF169	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF170	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF171	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF172	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	A569V	Other (non-WHO)
+KF173	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF174	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	A578S, P441L	P441L
+KF175	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF176	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF177	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF178	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF179	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF180	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF182	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	P441L	P441L
+KF184	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF189	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	P441L	P441L
+KF190	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	T207K	Other (non-WHO)
+KF191	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF192	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T	K189T only
+KF193	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF194	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF195	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF196	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R, K189T, R561H	R561H + K189T
+KF197	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	A675V, L258M	A675V
+KF198	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF200	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF201	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R, P441L	H384R
+KF202	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	T207K	Other (non-WHO)
+KF203	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF204	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF207	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF209	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T	K189T only
+KF210	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	P667R	Other (non-WHO)
+KF211	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	V555A	Other (non-WHO)
+KF213	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R	H384R
+KF214	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF215	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R	H384R
+KF223	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	F699C	Other (non-WHO)
+KF224	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF225	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF227	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF230	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, P441L, R561H	R561H + K189T
+KF231	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T	K189T only
+KF232	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF233	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF235	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF236	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R	H384R
+KF238	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF239	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R	H384R
+KF241	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF242	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF243	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF244	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	A569V	Other (non-WHO)
+KF245	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF248	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	T207K	Other (non-WHO)
+KFD001	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD002	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	A569V, K189T, R561H	R561H + K189T
+KFD003	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD005	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD006	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	R561H	R561H only
+KFD008	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD009	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD010	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD011	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD012	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	R561H	R561H only
+KFD013	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD014	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD015	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	A569V	Other (non-WHO)
+KFD021	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD022	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD023	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD025	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	P441L, R561H	R561H + other
+KFD031	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD033	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD034	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD035	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD036	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD038	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD043	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD044	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD048	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD050	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD054	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD058	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD060	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD063	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T	K189T only
+KFD066	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	H384R	H384R
+KFD070	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD072	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD075	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD080	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	T348I	Other (non-WHO)
+KFD083	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD086	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD088	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD092	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD093	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD094	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, P441L, R561H	R561H + K189T
+KFD097	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD161	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD166	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD167	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD168	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD169	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD171	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD172	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD175	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD176	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD178	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	H384R	H384R
+KFD179	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	P667R	Other (non-WHO)
+KFD180	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFH_Trials	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+PI_NK	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RW_WB8	KFH Resurgence	2025	KFH	Kicukiro	Resurgence	Kigali		Wild type
+RW_WB9	KFH Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample1	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	I448M	Other (non-WHO)
+sample11	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	I205T	Other (non-WHO)
+sample12	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample13	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample15	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample17	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+sample18	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R	H384R
+sample2	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+sample20	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+sample21	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample23	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample24	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample27	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample28	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+sample3	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	A569V	Other (non-WHO)
+sample30	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample31	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+sample32	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	A675V, F699C	A675V
+sample34	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	L258M, P419S	Other (non-WHO)
+sample35	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T	K189T only
+sample36	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample39	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample4	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+sample40	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample41	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample46	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample47	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T	K189T only
+sample48	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample49	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	L258M, P419S	Other (non-WHO)
+sample50	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	T348I	Other (non-WHO)
+sample51	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	T348I	Other (non-WHO)
+sample52	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample53	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample54	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample55	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	F699C	Other (non-WHO)
+sample6	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+sample7	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample8	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample9	KFH Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+CEO	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR001	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR002	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR004	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR005	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR006	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR007	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR008	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR009	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR010	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR011	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR012	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR013	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR014	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR015	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR016	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR017	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR018	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR019	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR020	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	L407F, N489S	Other (non-WHO)
+COR023	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR024	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	H384R	H384R
+COR025	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR026	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR027	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR028	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR029	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR030	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR031	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR032	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR037	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR038	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR040	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR041	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR042	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	A675V, V555A	A675V
+COR043	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR044	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR045	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR046	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR047	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR049	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	R561H	R561H only
+COR050	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR051	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR052	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR053	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR054	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR055	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR056	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR057	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR058	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR059	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, P574L, R561H	R561H + K189T
+COR060	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR061	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR062	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR064	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR065	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR066	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR067	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR069	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR070	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR072	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR073	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR074	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	R561H	R561H only
+COR075	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR076	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR078	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR079	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR080	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR082	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR083	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR084	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR085	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR088	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR089	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR091	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR092	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR093	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR094	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR095	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR096	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	A675V, V555A	A675V
+COR097	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR098	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR101	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR102	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR106	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR107	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR116	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR119	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR122	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR123	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR124	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR125	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR128	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR129	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR130	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR131	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR132	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR134	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	P574L	P574L
+COR136	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR137	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR138	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR139	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR140	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR142	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR144	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	H384R	H384R
+COR145	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR146	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR147	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR148	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR149	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR150	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR151	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR152	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	H384R	H384R
+COR153	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	F699C	Other (non-WHO)
+COR154	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	F699C	Other (non-WHO)
+COR155	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, Q290R	K189T + other
+COR156	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR157	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR158	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR159	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR160	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR162	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR163	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR164	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	R561H	R561H only
+COR165	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR166	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR167	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	P419S	Other (non-WHO)
+COR169	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR170	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR171	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR172	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR173	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR174	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR175	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR176	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR181	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR182	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR185	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR186	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR188	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR189	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR191	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR192	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR193	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR194	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR195	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR196	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR197	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR199	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR200	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR201	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR202	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR203	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR205	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR206	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR207	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR209	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR211	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR212	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR220	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR221	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR222	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR223	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR225	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR226	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR227	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR231	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR232	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR234	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR235	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR236	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	H384R	H384R
+COR238	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali		Wild type
+COR240	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	D464E, K189T, L463*, R393G	K189T + other
+COR243	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	F699C, R561H	R561H + other
+COR244	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR245	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR247	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+COR248	Kigali Resurgence	2025	Other	Nyarugenge	Resurgence	Kigali	K189T, R561H	R561H + K189T
+GIK002	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	H384R	H384R
+GIK004	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+GIK005	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+GIK006	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+GIK007	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali		Wild type
+GIK008	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T	K189T only
+GIK009	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali		Wild type
+GIK010	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+GIK011	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali		Wild type
+GIK012	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	H384R	H384R
+GIK013	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	H384R	H384R
+GIK014	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali		Wild type
+GIK015	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+GIK017	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	A569V	Other (non-WHO)
+GIK019	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	A569V	Other (non-WHO)
+GIK021	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali		Wild type
+GIK022	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+GIK023	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+GIK024	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+GIK025	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+GIK026	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali		Wild type
+GIK032	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+GIK037	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+GIK040	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+GIK041	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	T207K	Other (non-WHO)
+GIK043	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+GIK044	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali		Wild type
+GIK046	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	P441L	P441L
+GIK047	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+GIK048	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+GIK050	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+GIK054	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+GIK062	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali		Wild type
+GIK068	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali		Wild type
+GIK069	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+GIK072	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	H384R	H384R
+GIK073	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	H384R	H384R
+GIK075	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+GIK076	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+GIK078	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali		Wild type
+GIK080	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+GIK083	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+GIK086	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+GIK088	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+GIK089	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali		Wild type
+GIK090	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali		Wild type
+GIK091	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+GIK105	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KAR001	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KAR002	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali		Wild type
+KAR003	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali		Wild type
+KAR004	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali		Wild type
+KAR005	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KAR006	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KAR007	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	F699C	Other (non-WHO)
+KAR008	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	I352T	Other (non-WHO)
+KAR009	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KAR010	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	H384R, K189T	K189T + other
+KAR012	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T	K189T only
+KAR019	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KAR024	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	H384R	H384R
+KAR025	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	G449A, K189T	K189T + other
+KAR031	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KAR036	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	A675V, K189T, R561H	R561H + K189T
+KAR037	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali		Wild type
+KAR041	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KAR061	Kigali Resurgence	2025	Other	Kicukiro	Resurgence	Kigali	P667R	Other (non-WHO)
+KF001	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF002	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF003	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF004	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF005	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF006	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF008	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF010	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF013	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF014	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R	H384R
+KF015	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R, K189T, R561H	R561H + K189T
+KF016	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF017	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	P667R	Other (non-WHO)
+KF018	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF021	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R	H384R
+KF022	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF023	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF024	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF025	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	F699C, P441L	P441L
+KF026	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF027	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	F699C	Other (non-WHO)
+KF029	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF030	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF031	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF032	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF033	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF034	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T	K189T only
+KF035	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF036	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T	K189T only
+KF037	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF038	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF039	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF040	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF041	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF042	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF044	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF045	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T	K189T only
+KF046	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF047	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF049	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF050	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF051	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF052	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	P441L	P441L
+KF053	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	A569V	Other (non-WHO)
+KF054	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF055	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF056	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	A675V, K189T, L258M, R561H	R561H + K189T
+KF057	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF058	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF059	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF061	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF062	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF063	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF064	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T	K189T only
+KF065	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	I205T	Other (non-WHO)
+KF066	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	A569V	Other (non-WHO)
+KF067	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, P441L, R561H	R561H + K189T
+KF068	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF069	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF071	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T	K189T only
+KF072	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	I205T	Other (non-WHO)
+KF073	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF074	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF075	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF076	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF077	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF078	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF079	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF080	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF081	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	T535K	Other (non-WHO)
+KF082	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	P441L	P441L
+KF083	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	P441L	P441L
+KF084	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF085	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF086	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R	H384R
+KF087	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF088	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF091	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF092	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T	K189T only
+KF093	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF094	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF095	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF096	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	P441L	P441L
+KF097	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF098	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	P441L	P441L
+KF099	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF100	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T	K189T only
+KF101	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF102	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF103	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R	H384R
+KF104	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF105	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF106	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, N217H	K189T + other
+KF108	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF109	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF110	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	A569V, K189T, R561H	R561H + K189T
+KF111	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF113	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF114	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF115	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF116	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R	H384R
+KF117	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF121	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF122	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	T348I	Other (non-WHO)
+KF123	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	P441L	P441L
+KF124	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	T348I	Other (non-WHO)
+KF126	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R	H384R
+KF127	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF129	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF130	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R	H384R
+KF132	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF133	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF134	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T	K189T only
+KF135	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF136	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R	H384R
+KF137	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF138	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF139	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF140	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF141	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R	H384R
+KF142	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF144	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF145	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF146	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF147	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF149	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF150	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF153	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF154	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF155	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF156	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF157	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF158	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF159	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF160	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF161	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF163	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF168	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T	K189T only
+KF169	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF170	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF171	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF172	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	A569V	Other (non-WHO)
+KF173	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF174	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	A578S, P441L	P441L
+KF175	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF176	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF177	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF178	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF179	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF180	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF182	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	P441L	P441L
+KF184	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF189	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	P441L	P441L
+KF190	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	T207K	Other (non-WHO)
+KF191	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF192	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T	K189T only
+KF193	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF194	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF195	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF196	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R, K189T, R561H	R561H + K189T
+KF197	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	A675V, L258M	A675V
+KF198	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF200	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF201	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R, P441L	H384R
+KF202	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	T207K	Other (non-WHO)
+KF203	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF204	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF207	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF209	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T	K189T only
+KF210	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	P667R	Other (non-WHO)
+KF211	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	V555A	Other (non-WHO)
+KF213	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R	H384R
+KF214	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF215	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R	H384R
+KF223	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	F699C	Other (non-WHO)
+KF224	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF225	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF227	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF230	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, P441L, R561H	R561H + K189T
+KF231	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T	K189T only
+KF232	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF233	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF235	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF236	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R	H384R
+KF238	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF239	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R	H384R
+KF241	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF242	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+KF243	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF244	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	A569V	Other (non-WHO)
+KF245	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KF248	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	T207K	Other (non-WHO)
+KFD001	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD002	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	A569V, K189T, R561H	R561H + K189T
+KFD003	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD005	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD006	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	R561H	R561H only
+KFD008	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD009	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD010	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD011	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD012	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	R561H	R561H only
+KFD013	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD014	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD015	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	A569V	Other (non-WHO)
+KFD021	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD022	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD023	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD025	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	P441L, R561H	R561H + other
+KFD031	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD033	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD034	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD035	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD036	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD038	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD043	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD044	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD048	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD050	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD054	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD058	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD060	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD063	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T	K189T only
+KFD066	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	H384R	H384R
+KFD070	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD072	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD075	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD080	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	T348I	Other (non-WHO)
+KFD083	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD086	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD088	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD092	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD093	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD094	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, P441L, R561H	R561H + K189T
+KFD097	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD161	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD166	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD167	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD168	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD169	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD171	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD172	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFD175	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD176	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KFD178	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	H384R	H384R
+KFD179	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	P667R	Other (non-WHO)
+KFD180	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KFH_Trials	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+KHP001	Kigali Resurgence	2024	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+KHP003	Kigali Resurgence	2024	Other	Kicukiro	Resurgence	Kigali		Wild type
+KHP004	Kigali Resurgence	2024	Other	Kicukiro	Resurgence	Kigali	K189T, R561H	R561H + K189T
+PI_NK	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM001	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM004	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM005	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	P441L	P441L
+RM006	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM008	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM010	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	T207K	Other (non-WHO)
+RM013	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM015	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM019	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM020	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM021	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	P441L	P441L
+RM022	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	T207K	Other (non-WHO)
+RM023	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM025	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM035	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM038	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	A578S, K189T, P441L, R561H	R561H + K189T
+RM039	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM040	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM042	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM043	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM044	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM045	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM046	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM049	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM050	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM051	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	A569V	Other (non-WHO)
+RM052	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM053	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM054	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM055	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM057	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	A569V	Other (non-WHO)
+RM059	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM060	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	R561H	R561H only
+RM062	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM064	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM070	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM071	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM074	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM075	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM076	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM077	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM079	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T	K189T only
+RM080	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM082	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM086	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM087	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	A569V	Other (non-WHO)
+RM088	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM089	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM090	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM093	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM095	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM097	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM099	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM100	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM194	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H, T207K	R561H + K189T
+RM195	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM196	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM197	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM199	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM201	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM205	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM206	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	T207K	Other (non-WHO)
+RM209	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM212	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM213	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM215	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H, T207K	R561H + K189T
+RM217	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	H384R	H384R
+RM218	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T	K189T only
+RM273	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	A569V	Other (non-WHO)
+RM275	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM280	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM282	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM287	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	A578S, K189T, P441L, R561H	R561H + K189T
+RM291	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM292	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM294	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM295	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM300	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	P441L	P441L
+RM317	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM318	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	H384R, K189T, R561H, T207K	R561H + K189T
+RM319	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM320	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM321	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM325	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM326	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, L120I, R561H	R561H + K189T
+RM347	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM348	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	P574L	P574L
+RM350	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	H384R, K189T, R561H	R561H + K189T
+RM351	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM353	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	D389G, F451L, H366Y, I587T, K189T, K378R, Q371R, R561H, R659I, S576P, T508A, Y288C, Y456C	R561H + K189T
+RM355	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM356	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM358	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	F662L	Other (non-WHO)
+RM359	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM360	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	D31G, K189T, R561H	R561H + K189T
+RM361	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, N197S	K189T + other
+RM366	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM368	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM369	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM370	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM372	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM377	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM378	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	F395L, F628L, I587V, K189T, K203E, K324R, K480N, N537D, R561H, Y653C	R561H + K189T
+RM380	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM381	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM382	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	A569V, K189T, R561H, S711F, V555A	R561H + K189T
+RM383	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM384	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM385	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM386	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	H384R	H384R
+RM389	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	H384R, K189T, R561H	R561H + K189T
+RM392	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H, T207K	R561H + K189T
+RM394	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM395	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	A569V	Other (non-WHO)
+RM396	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	A675V, L258M, M163I	A675V
+RM397	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K326E, P574L, V636I, V714A	P574L
+RM398	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM399	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	H384R, K189T, R561H, V721D	R561H + K189T
+RM400	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM401	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM402	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM403	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM404	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	D242E, F361I, F409S, I268V, I291T, I341T, K189T, N537S, Q370R, R561H, V193A, V692A	R561H + K189T
+RM405	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM406	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM407	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	H384R, K189T, R561H	R561H + K189T
+RM408	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM409	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM410	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	H384R, K189T, R561H	R561H + K189T
+RM411	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM412	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	H384R, K189T, R561H	R561H + K189T
+RM413	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	H384R, K189T, R561H	R561H + K189T
+RM414	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM416	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	H384R	H384R
+RM417	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM419	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM420	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, K339E, N408S, R561H, S425G	R561H + K189T
+RM426	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	A675V, L258M, P574L	A675V
+RM427	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM428	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM432	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM433	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM437	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM438	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	H384R, K189T, R561H	R561H + K189T
+RM441	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM443	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM447	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM448	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM449	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	A569V, E263G, E433V, F215L, I282F, I640V, K189T, K658R, K670R, L368S, M671V, N355D, R561H, V256E	R561H + K189T
+RM450	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	H384R	H384R
+RM451	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM452	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali		Wild type
+RM453	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM454	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM455	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM459	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM460	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM461	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM463	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RM465	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H, S67G	R561H + K189T
+RM466	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	C447S, D283G, E312D, E509K, E596K, F237L, F245S, F446S, I238V, K189T, L713S, N267D, N489S, N523S, Q661*, R561H, S485G, V256A, V666A	R561H + K189T
+RM467	Kigali Resurgence	2025	Other	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+RW_WB8	Kigali Resurgence	2025	KFH	Kicukiro	Resurgence	Kigali		Wild type
+RW_WB9	Kigali Resurgence	2025	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample1	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	I448M	Other (non-WHO)
+sample11	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	I205T	Other (non-WHO)
+sample12	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample13	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample15	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample17	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+sample18	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	H384R	H384R
+sample2	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+sample20	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+sample21	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample23	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample24	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample27	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample28	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+sample3	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	A569V	Other (non-WHO)
+sample30	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample31	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+sample32	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	A675V, F699C	A675V
+sample34	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	L258M, P419S	Other (non-WHO)
+sample35	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T	K189T only
+sample36	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample39	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample4	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+sample40	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample41	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample46	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample47	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T	K189T only
+sample48	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample49	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	L258M, P419S	Other (non-WHO)
+sample50	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	T348I	Other (non-WHO)
+sample51	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	T348I	Other (non-WHO)
+sample52	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample53	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample54	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample55	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	F699C	Other (non-WHO)
+sample6	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T
+sample7	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample8	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali		Wild type
+sample9	Kigali Resurgence	2024	KFH	Gasabo	Resurgence	Kigali	K189T, R561H	R561H + K189T

@@ -67,7 +67,7 @@ INPUT_FILE <- get_argument("--input")
 
 DRY_RUN <- "--dry-run" %in% arguments
 
-# --output-name lets a second roster be prepared alongside the main one.
+# --output-name lets a second roster be prepared alongside the main one
 
 OUTPUT_NAME <- get_argument("--output-name", "samples_metadata")
 
@@ -177,9 +177,7 @@ for (field in names(resolved_columns)) {
 message("")
 
 
-# Only the sample identifier is strictly required. Everything else is
-# reported as missing and simply left out, so the script still runs on a
-# reduced file rather than refusing.
+# Only the sample identifier is strictly required
 
 if (is.na(resolved_columns[["sample"]])) {
   stop(
@@ -200,7 +198,7 @@ if (length(missing_fields) > 0) {
 }
 
 
-# Rename to the canonical names used from here on.
+# Rename to the canonical names used from here on
 
 present_columns <- resolved_columns[!is.na(resolved_columns)]
 
@@ -411,7 +409,7 @@ INTERNAL_COLUMNS <- c(
 
 PUBLIC_COLUMNS <- c(
   "sample", "period", "region", "district",
-  "year", "age_band", "sex", "k13_status"
+  "year", "k13_status"
 )
 
 internal_metadata <- metadata %>%
@@ -421,18 +419,14 @@ public_metadata <- metadata %>%
   dplyr::select(dplyr::any_of(PUBLIC_COLUMNS))
 
 
-# Rename `sample` to SAMPLE on output, because every downstream script and
-# the VCF headers use that spelling.
-
 names(internal_metadata)[names(internal_metadata) == "sample"] <- "SAMPLE"
 names(public_metadata)[names(public_metadata) == "sample"]     <- "SAMPLE"
 
 
-# A direct check that nothing identifying survived into the public table.
-# This is the safety net: if someone edits PUBLIC_COLUMNS carelessly later,
-# the script stops rather than writing the file.
+# A direct check that nothing identifying survived into the public table
 
-FORBIDDEN_IN_PUBLIC <- c("age", "health_centre", "period_original")
+FORBIDDEN_IN_PUBLIC <- c("age", "age_band", "sex", "health_centre",
+                          "period_original")
 
 leaked_columns <- intersect(FORBIDDEN_IN_PUBLIC, names(public_metadata))
 

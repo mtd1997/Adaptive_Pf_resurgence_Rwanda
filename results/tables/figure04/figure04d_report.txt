@@ -1,0 +1,37 @@
+========================================================================
+FIGURE 4D — KIGALI NEIGHBOUR-JOINING TREE
+========================================================================
+VCF:       /Volumes/MTD_drive/manuscript_data_09-11-2025/final_analysis_19-12-2025/popgen_R_analysis/all_1179_withDhpsDhfr.vcf.gz
+Metadata:  /Users/matdiallo/Adaptive_Pf_resurgence_Rwanda/data/metadata/samples_metadata_figure04.tsv
+Reference: /Volumes/MTD_drive/manuscript_data_09-11-2025/final_analysis_19-12-2025/popgen_R_analysis/all_1179_withDhpsDhfr.vcf_Kigali_tree.nwk
+Generated: 2026-10-22 13:35:01 CEST
+
+Metadata rows: 1178
+VCF samples after dropping the reference: 1014
+
+Kigali by district: 805
+Kigali by region:   805  (differs by 0 sample(s))
+Genotype matrix: 805 samples x 226 sites
+
+Saved tree: 804 tips
+This subset has 1 sample(s) the saved tree does not: RW_SN94
+Rebuilding on the saved tree's samples for comparison.
+Rebuilt on 804 samples (226 sites).
+
+  euclidean  largest difference 1.2e-09 (relative 1.017e-10)  correlation 1.000000  MATCH
+  manhattan  largest difference 95.87 (relative 8.126e+00)  correlation 0.952177  no
+
+Using the euclidean tree.
+
+========================================================================
+WRITTEN
+========================================================================
+  figures/figure04/figure04d_kigali_tree.nwk
+  tables/figure04/figure04d_tip_metadata.tsv
+  tables/figure04/figure04d_itol_period.txt
+  tables/figure04/figure04d_itol_k13.txt
+  tables/figure04/figure04d_itol_district.txt
+
+Upload the .nwk to iTOL, then drag on the annotation files.
+The published panel has Period as the inner ring and
+K13 genotype as the outer one.

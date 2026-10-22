@@ -3,8 +3,7 @@
 
 packages <- c("readxl", "dplyr", "ggplot2", "purrr", "stringr", "tidyr")
 
-# This loop loads each package. If a package is missing, it is installed first.
-# This makes the script easier to run on another computer.
+# This loop loads each package
 for (pkg in packages) {
   if (!require(pkg, character.only = TRUE)) {
     install.packages(pkg)
@@ -12,16 +11,16 @@ for (pkg in packages) {
   }
 }
 
-# Folder containing the Excel files exported from the fluorescence experiment.
-# This path must be changed if the files are stored in another folder.
-input_dir <- "/Users/diallo/Desktop/fluodata"
+# Folder containing the Excel files exported from the fluorescence experiment
+input_dir <- Sys.getenv(
+  "PF_FLUO_DIR",
+  unset = file.path("data", "fluorescence_assays")
+)
 
-# All Excel files in the folder are collected automatically.
-# full.names = TRUE keeps the complete file path, which is useful when reading the files.
+# All Excel files in the folder are collected automatically
 excel_files <- list.files(input_dir, pattern = "\\.xlsx$", full.names = TRUE)
 
-# The script stops here if no Excel file is found.
-# This avoids running the full analysis on an empty input folder.
+# The script stops here if no Excel file is found
 if (length(excel_files) == 0) {
   stop("No .xlsx file was found in the fluodata folder.")
 }
@@ -32,20 +31,16 @@ if (length(excel_files) == 0) {
 
 read_one_file <- function(file) {
   
-  # The Excel sheet is read without column names because the useful table
-  # starts lower in the file and does not contain standard headers.
   raw <- readxl::read_excel(file, sheet = "Results", col_names = FALSE)
   
-  # The strain name is taken from the file name, without the .xlsx extension.
+  # The strain name is taken from the file name, without the .xlsx extension
   strain_name <- tools::file_path_sans_ext(basename(file))
   
-  # Only the rows containing the values of interest are selected.
-  # Generic column names are added to make the next steps easier.
+  # Only the rows containing the values of interest are selected
   dat <- raw[11:17, ]
   colnames(dat) <- paste0("V", 1:ncol(dat))
   
-  # The useful columns are renamed with clear names.
-  # The fluorescence values are converted to numeric format to allow calculations.
+  # The useful columns are renamed with clear names
   df_wide <- dat %>%
     dplyr::transmute(
       replicate = as.character(V5),
@@ -64,20 +59,18 @@ read_one_file <- function(file) {
       control_label = as.character(V18)
     )
   
-  # I use the mean blank value from the extract wells as the background signal.
+  # I use the mean blank value from the extract wells as the background signal
   df_extracts <- df_wide %>%
     dplyr::filter(sample %in% c("Infusion A", "Lyoph.A Afra"))
   
   global_blank_mean <- mean(df_extracts$blank, na.rm = TRUE)
   
-  # The corrected No drug condition is used as the reference value, corresponding to 100% survival.
   mean_no_drug <- df_wide %>%
     dplyr::filter(!is.na(control_label), control_label == "No drug") %>%
     dplyr::mutate(control_net = control_value - global_blank_mean) %>%
     dplyr::summarise(mean_no_drug = mean(control_net, na.rm = TRUE)) %>%
     dplyr::pull(mean_no_drug)
   
-  # Only the two conditions needed for this comparison are kept: No drug and 700 nM DHA.
   df_conditions <- df_wide %>%
     dplyr::filter(control_label %in% c("No drug", "700 nM DHA")) %>%
     dplyr::transmute(
@@ -99,8 +92,7 @@ read_one_file <- function(file) {
 # Read all strain files and prepare the final dataset
 
 
-# The same cleaning function is applied to all Excel files.
-# map_df() combines the results into one single table.
+# The same cleaning function is applied to all Excel files
 df_survival_all <- purrr::map_df(excel_files, read_one_file) %>%
   dplyr::filter(
     !is.na(strain),
@@ -110,8 +102,6 @@ df_survival_all <- purrr::map_df(excel_files, read_one_file) %>%
     condition %in% c("No drug", "700 nM DHA")
   ) %>%
   dplyr::mutate(
-    # The samples are separated into three groups for the plot:
-    # No drug, sensitive strains under DHA, and partial resistant strains under DHA.
     dha_group = dplyr::case_when(
       condition == "No drug" ~ "No drug",
       condition == "700 nM DHA" & strain %in% c("KFHS49", "KFHS50") ~ "700 nM DHA\nSensitives",
@@ -159,19 +149,13 @@ vivid_palette <- c(
   "#F8766D"   # coral
 )
 
-# If there are more strains than colors in the base palette,
-# colorRampPalette() creates enough intermediate colors.
 custom_strain_colors <- setNames(
   colorRampPalette(vivid_palette)(length(strain_levels)),
   strain_levels
 )
 
 
-# Prepare strain-level means: one point corresponds to the mean of the triplicates for one strain
-
-
-# For the statistical analysis, the triplicates are summarized per strain.
-# This avoids treating technical replicates as fully independent biological observations.
+# For the statistical analysis, the triplicates are summarized per strain
 df_survival_strain_mean <- df_survival_all %>%
   dplyr::group_by(strain, condition, dha_group) %>%
   dplyr::summarise(
@@ -196,7 +180,7 @@ df_survival_strain_mean <- df_survival_strain_mean %>%
 # Helper function used to convert p-values into significance stars
 
 
-# This small function gives the usual star notation used on the figure.
+# This small function gives the usual star notation used on the figure
 p_to_star <- function(p) {
   if (is.na(p)) {
     "ns"
@@ -217,8 +201,6 @@ p_to_star <- function(p) {
 
 df_test_split <- df_survival_strain_mean %>%
   dplyr::mutate(
-    # The samples are separated into three groups for the plot:
-    # No drug, sensitive strains under DHA, and partial resistant strains under DHA.
     dha_group = dplyr::case_when(
       condition == "No drug" ~ "No drug",
       condition == "700 nM DHA" & strain %in% c("KFHS49", "KFHS50") ~ "700 nM DHA\nKFHS49 + KFHS50",
@@ -226,8 +208,6 @@ df_test_split <- df_survival_strain_mean %>%
     )
   )
 
-# The table is converted to wide format so that each strain has
-# one column for No drug and one column for 700 nM DHA.
 df_test_wide <- df_test_split %>%
   dplyr::select(strain, condition, mean_survival) %>%
   tidyr::pivot_wider(
@@ -242,28 +222,24 @@ df_test_wide <- df_test_split %>%
     )
   )
 
-# Test 1: paired comparison between No drug and 700 nM DHA for KFHS49 and KFHS50
 test_no_drug_vs_700_ref <- t.test(
   df_test_wide$`No drug`[df_test_wide$dha_category == "700 nM DHA\nKFHS49 + KFHS50"],
   df_test_wide$`700 nM DHA`[df_test_wide$dha_category == "700 nM DHA\nKFHS49 + KFHS50"],
   paired = TRUE
 )
 
-# Test 2: paired comparison between No drug and 700 nM DHA for the other strains
 test_no_drug_vs_700_other <- t.test(
   df_test_wide$`No drug`[df_test_wide$dha_category == "700 nM DHA\nOther strains"],
   df_test_wide$`700 nM DHA`[df_test_wide$dha_category == "700 nM DHA\nOther strains"],
   paired = TRUE
 )
 
-# Test 3: unpaired comparison between sensitive strains and other strains under 700 nM DHA
 test_700_ref_vs_700_other <- t.test(
   df_test_wide$`700 nM DHA`[df_test_wide$dha_category == "700 nM DHA\nKFHS49 + KFHS50"],
   df_test_wide$`700 nM DHA`[df_test_wide$dha_category == "700 nM DHA\nOther strains"],
   paired = FALSE
 )
 
-# The p-values are extracted from the test objects and then converted into stars.
 p1 <- test_no_drug_vs_700_ref$p.value
 p2 <- test_no_drug_vs_700_other$p.value
 p3 <- test_700_ref_vs_700_other$p.value
@@ -283,8 +259,7 @@ cat("700 nM DHA KFHS49+KFHS50 vs Other strains p =", p3, "\n")
 # Automatic y-axis limits and positions for the statistical annotations
 
 
-# The y-axis range is calculated from the data instead of being fixed manually.
-# This makes the plot more robust if new values are added later.
+# The y-axis range is calculated from the data instead of being fixed manually
 y_min_plot_A <- min(df_survival_all$survival_pct, na.rm = TRUE)
 y_max_plot_A <- max(df_survival_all$survival_pct, na.rm = TRUE)
 y_range_plot_A <- y_max_plot_A - y_min_plot_A
@@ -314,8 +289,6 @@ labels_replicates <- df_survival_all %>%
     )
   )
 
-# Final plot showing the individual replicate values, the boxplots,
-# the mean/SD labels, and the statistical comparisons.
 plot_points_replicates <- ggplot(
   df_survival_all,
   aes(x = x_pos, y = survival_pct, color = strain))+
@@ -333,8 +306,6 @@ plot_points_replicates <- ggplot(
     alpha = 0.85,
     shape = 16
   ) +
-  # Comparison 1: No drug vs 700 nM DHA KFHS49 + KFHS50
-  # Comparison 1: No drug vs 700 nM DHA Sensitives
   annotate(
     "segment",
     x = 1,
@@ -496,7 +467,7 @@ plot_points_replicates <- ggplot(
 
 print(plot_points_replicates)
 
-# The final figure is saved in the same folder as the input files.
+# The final figure is saved in the same folder as the input files
 ggsave(
   filename = "plot_survival_points_replicates_NoDrug_vs_700nMDHA.png",
   plot = plot_points_replicates,

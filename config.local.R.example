@@ -1,0 +1,18 @@
+# Copy this file to config.local.R and set the paths for your machine.
+# config.local.R is not tracked by git.
+
+# Filtered VCF and its SnpEff annotation table. Figure 5.
+SELECTION_VCF        <- "/path/to/final.vcf.gz"
+SELECTION_ANNOTATION <- "/path/to/annotated_variants_snpeff_final.tsv"
+
+# Population VCF used for the IBS distance matrix. Figure 4.
+POPGEN_VCF <- "/path/to/all_1179_withDhpsDhfr.vcf.gz"
+
+# Monthly malaria case counts. Supplementary Figure S1b.
+MALARIA_CASES_FILE <- "/path/to/Malaria cases Kigali 2023vs2024.xlsx"
+
+# Newick tree the Figure 4d script checks itself against. Optional.
+FIGURE04D_REFERENCE_TREE <- "/path/to/Kigali_tree.nwk"
+
+# Directory holding the unzipped GADM shapefiles. Figures 1, 3d and S1a.
+GADM_DIR <- "/path/to/gadm"

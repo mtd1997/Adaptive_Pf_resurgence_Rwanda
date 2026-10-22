@@ -1,0 +1,100 @@
+========================================================================
+FIGURE 3B — K13 CATEGORIES ACROSS FOUR GROUPS
+========================================================================
+Input:     /Users/matdiallo/Adaptive_Pf_resurgence_Rwanda/data/processed/Manuscript_data_29-07-2026.tsv
+Generated: 2026-10-22 13:34:19 CEST
+
+Rows read: 7919
+Distinct samples: 1176
+Samples carrying at least one K13 mutation: 752
+
+------------------------------------------------------------------------
+GROUP SIZES
+------------------------------------------------------------------------
+  group                         n    published
+  Baseline-Kigali             257          257
+  KFH Resurgence              291          291
+  Kigali Resurgence           700          700
+  Hotspot Resurgence          219          219
+
+  All four group sizes match published Figure 3b.
+
+Consistency:
+  baseline + Kigali + Hotspot = 257 + 700 + 219 = 1176  (analysis set is 1176)
+  all 291 KFH Resurgence samples are inside Kigali Resurgence
+
+5 category/categories have no samples in any group and are not drawn:
+  C469Y, G449A, C496F, N537D, R515K
+
+------------------------------------------------------------------------
+COMPOSITION
+------------------------------------------------------------------------
+
+  Baseline-Kigali  (N = 257)
+    Wild type             107    41.6%
+    R561H + K189T          78    30.4%
+    Other (non-WHO)        21     8.2%
+    H384R                  17     6.6%
+    K189T only             14     5.4%
+    K189T + other           7     2.7%
+    A675V                   5     1.9%
+    P441L                   4     1.6%
+    P574L                   2     0.8%
+    R561H only              1     0.4%
+    R561H + other           1     0.4%
+
+  KFH Resurgence  (N = 291)
+    R561H + K189T         124    42.6%
+    Wild type              91    31.3%
+    Other (non-WHO)        28     9.6%
+    H384R                  17     5.8%
+    K189T only             15     5.2%
+    P441L                  10     3.4%
+    A675V                   2     0.7%
+    R561H only              2     0.7%
+    R561H + other           1     0.3%
+    K189T + other           1     0.3%
+
+  Kigali Resurgence  (N = 700)
+    R561H + K189T         339    48.4%
+    Wild type             227    32.4%
+    Other (non-WHO)        47     6.7%
+    H384R                  31     4.4%
+    K189T only             19     2.7%
+    P441L                  14     2.0%
+    A675V                   6     0.9%
+    R561H only              6     0.9%
+    K189T + other           6     0.9%
+    P574L                   3     0.4%
+    R561H + other           2     0.3%
+
+  Hotspot Resurgence  (N = 219)
+    Wild type              90    41.1%
+    Other (non-WHO)        42    19.2%
+    R561H + K189T          32    14.6%
+    A675V                  18     8.2%
+    K189T only             18     8.2%
+    K189T + other          11     5.0%
+    R561H only              3     1.4%
+    H384R                   2     0.9%
+    R561H + other           2     0.9%
+    P441L                   1     0.5%
+
+------------------------------------------------------------------------
+AGAINST THE PUBLISHED PANEL
+------------------------------------------------------------------------
+  group                Wild type          R561H + K189T     
+  Baseline-Kigali        41.6 vs 41.6   ok      30.4 vs 30.4   ok 
+  KFH Resurgence         31.3 vs 31.3   ok      42.6 vs 42.6   ok 
+  Kigali Resurgence      32.4 vs 32.4   ok      48.4 vs 48.4   ok 
+  Hotspot Resurgence     41.1 vs 41.1   ok      14.6 vs 14.6   ok 
+
+  Figure 3b is reproduced: sizes and both labelled
+  percentages match the published panel in every group.
+
+========================================================================
+WRITTEN
+========================================================================
+  figures/figure03/figure03b_k13_category_pies.svg / .png
+  tables/figure03/figure03b_category_prevalence.tsv
+  tables/figure03/figure03b_sample_level_categories.tsv

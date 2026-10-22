@@ -1,0 +1,42 @@
+wrote Fig 1  (3 table(s))
+wrote Fig 2a  (2 table(s))
+wrote Fig 2b  (2 table(s))
+wrote Fig 2c  (2 table(s))
+wrote Fig 3a  (2 table(s))
+wrote Fig 3b  (2 table(s))
+wrote Fig 3d  (1 table(s))
+wrote Fig 4a-c  (2 table(s))
+wrote Fig 4 PERMANOVA  (1 table(s))
+wrote Fig 4d  (1 table(s))
+wrote Fig 5a-c  (3 table(s))
+wrote Supp Fig 1a  (1 table(s))
+wrote Supp Fig 1b  (3 table(s))
+wrote Supp Fig 3  (3 table(s))
+wrote Supp Fig 3 stats  (3 table(s))
+wrote Supp Fig 4  (2 table(s))
+
+------------------------------------------------------------------------
+Sheets written: 16
+Workbook: /Users/matdiallo/Adaptive_Pf_resurgence_Rwanda/results/Source_Data.xlsx
+
+Present under results/ but on no sheet:
+  figures/figure05/figure05_gene_accounting.tsv
+  figures/figure05/figure05_labelled_variants.tsv
+  tables/figure02/figure02a_excluded_samples.tsv
+  tables/figure02/figure02c_denominator_check.tsv
+  tables/figure03/figure03a_excluded_singletons.tsv
+  tables/figure03/figure03d_pie_coordinates.tsv
+  tables/figure04/figure04_sample_counts.tsv
+  tables/figure04/figure04d_samples_not_in_saved_tree.tsv
+  tables/figure05/delta_af_outliers.tsv
+  tables/figure05/double_outliers.tsv
+  tables/figure05/fst_outliers.tsv
+  tables/figure05/resistance_marker_frequencies.tsv
+  tables/figure05/sample_counts.tsv
+  tables/figure05/summary_by_gene.tsv
+  tables/figure05/variants_without_annotation.tsv
+  tables/figure05/vcf_annotation_matching.tsv
+  tables/figureS1/figureS1b_data_accounting.tsv
+  tables/figureS3/figureS3_district_vs_region_differences.tsv
+
+Check whether any of these underlies a published graph.

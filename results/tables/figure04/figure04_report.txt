@@ -1,0 +1,84 @@
+========================================================================
+FIGURE 4 AND SUPPLEMENTARY FIGURE S4 — PCoA AND PERMANOVA
+========================================================================
+Distance: /Users/matdiallo/Adaptive_Pf_resurgence_Rwanda/data/processed/ibs_distance_matrix.rds
+Metadata: /Users/matdiallo/Adaptive_Pf_resurgence_Rwanda/data/metadata/samples_metadata_figure04.tsv
+Generated: 2026-10-22 13:36:56 CEST
+
+Sample reconciliation:
+  in the distance matrix:  1014
+  in the metadata:         1178
+  in both:                 1014
+  distance matrix only:    0
+  metadata only:           164
+
+Samples per period and region:
+  Baseline-Kigali    Hotspot=7  Kigali=220
+  Resurgence         Hotspot=202  Kigali=585
+
+kelch13 genotypes:
+  R561H+K189T      387
+  WT               377
+  Other_K13        173
+  K189T_only       66
+  R561H_only       11
+
+Subsets:
+  kigali       805 samples
+  resurgence   787 samples
+
+------------------------------------------------------------------------
+4a / S4a  —  kigali_period
+------------------------------------------------------------------------
+  variance explained: axis1 46.3%  axis2 13.8%  axis3 12.6%  axis4 8.9%
+  PERMANOVA on period     N = 805   R2 = 0.0535   p = 0.001   (shown on the panel)
+  Figure 4a: axes 1 and 3  ->  figure4a_kigali_period_axis1_vs_axis3.svg
+  Figure S4a: four axis pairs  ->  figureS4a_kigali_period_four_panels.svg
+
+------------------------------------------------------------------------
+4b / S4b  —  resurgence_region
+------------------------------------------------------------------------
+  variance explained: axis1 52.8%  axis2 13.4%  axis3 9.5%  axis4 8.9%
+  PERMANOVA on region     N = 787   R2 = 0.0366   p = 0.001   (shown on the panel)
+  Figure 4b: axes 1 and 2  ->  figure4b_resurgence_region_axis1_vs_axis2.svg
+  Figure S4b: four axis pairs  ->  figureS4b_resurgence_region_four_panels.svg
+
+------------------------------------------------------------------------
+4c / S4c  —  resurgence_k13
+------------------------------------------------------------------------
+  variance explained: axis1 52.8%  axis2 13.4%  axis3 9.5%  axis4 8.9%
+  PERMANOVA on region     N = 787   R2 = 0.0366   p = 0.001   (shown on the panel)
+  PERMANOVA on k13_status N = 787   R2 = 0.1367   p = 0.001   (NOT shown; see below)
+  Figure 4c: axes 2 and 3  ->  figure4c_resurgence_k13_axis2_vs_axis3.svg
+  Figure S4c: four axis pairs  ->  figureS4c_resurgence_k13_four_panels.svg
+
+========================================================================
+PERMANOVA RESULTS
+========================================================================
+panel        tested on           N       R2        p  on the figure?
+4a / S4a     period            805   0.0535    0.001  yes
+4b / S4b     region            787   0.0366    0.001  yes
+4c / S4c     region            787   0.0366    0.001  yes
+4c / S4c     k13_status        787   0.1367    0.001  no
+
+p-values come from 999 permutations, so the smallest attainable value is
+0.001. Report it as "p = 0.001", not "p < 0.001".
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+A PANEL COLOURED BY kelch13 GENOTYPE SHOWS A DIFFERENT TEST
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Panel 4c / S4c
+  printed on the figure:  region,  R2 = 0.0366
+  kelch13 genotype test:  k13_status,  R2 = 0.1367,  p = 0.001
+
+This reproduces the published figure, which shows the first
+value. The kelch13 test is given here so the number exists if
+the legend is corrected. Check what the legend claims was
+tested before the proofs are returned.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Figures:  /Users/matdiallo/Adaptive_Pf_resurgence_Rwanda/results/figures/figure04
+Tables:   /Users/matdiallo/Adaptive_Pf_resurgence_Rwanda/results/tables/figure04
+
+Figure 4d is a distance tree and is not produced by this script.

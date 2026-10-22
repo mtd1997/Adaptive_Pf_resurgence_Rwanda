@@ -1,0 +1,51 @@
+========================================================================
+FIGURE 3D — K13 GENOTYPES BY DISTRICT
+========================================================================
+Samples:   /Users/matdiallo/Adaptive_Pf_resurgence_Rwanda/data/processed/Manuscript_data_29-07-2026.tsv
+Districts: /Users/matdiallo/Downloads/gadm41_RWA_shp/gadm41_RWA_2.shp
+Generated: 2026-10-22 13:34:21 CEST
+
+Samples classified: 1176
+
+Genotype totals across all districts:
+  Wild type           424   36.1%
+  K189T only           75    6.4%
+  R561H + K189T       449   38.2%
+  R561H only           15    1.3%
+  Other K13           213   18.1%
+
+------------------------------------------------------------------------
+SAMPLES BY DISTRICT
+------------------------------------------------------------------------
+  Gasabo               548
+  Nyarugenge           266
+  Kicukiro             136
+  Kirehe                64
+  Bugesera              54
+  Rutsiro               37
+  Gisagara              27
+  Nyagatare             18
+  Karongi               13
+  Musanze               13
+  total on map        1176
+
+District names: all 10 matched the shapefile.
+
+Pie placement: no two pies overlap.
+
+Displaced from their centroid, with a connecting line drawn:
+  Gasabo         +0.10 lon  +0.07 lat
+  Kicukiro       +0.24 lon  -0.12 lat
+  Nyarugenge     -0.20 lon  -0.11 lat
+
+Districts drawn: 10, covering 1176 sample(s).
+
+========================================================================
+WRITTEN
+========================================================================
+  figures/figure03/figure03d_k13_district_map.svg / .png
+  tables/figure03/figure03d_district_genotypes.tsv
+  tables/figure03/figure03d_pie_coordinates.tsv
+
+Reminder: District is the patient's residence, not the
+collection site. The figure legend should say so.

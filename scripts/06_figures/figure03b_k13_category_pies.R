@@ -74,7 +74,7 @@ TABLE_DIR  <- file.path(PROJECT_ROOT, "results", "tables",  "figure03")
 dir.create(FIGURE_DIR, recursive = TRUE, showWarnings = FALSE)
 dir.create(TABLE_DIR,  recursive = TRUE, showWarnings = FALSE)
 
-KFH_NAME <- "King Faisal Hospital"
+KFH_NAME <- "KFH"
 
 
 report_lines <- character(0)
@@ -97,7 +97,7 @@ CATEGORY_ORDER <- c(
   "Other (non-WHO)"
 )
 
-# Read off the published legend.
+# Read off the published legend
 CATEGORY_COLOURS <- c(
   "Wild type"      = "#2ECC71",
   "H384R"          = "#6690FF",
@@ -117,11 +117,9 @@ CATEGORY_COLOURS <- c(
   "Other (non-WHO)" = "#6A5ACD"
 )
 
-# Only these two carry a printed percentage on the published panel.
+# Only these two carry a printed percentage on the published panel
 LABELLED_CATEGORIES <- c("Wild type", "R561H + K189T")
 
-# The group sizes and the two labelled percentages, read off published
-# Figure 3b. Used only as a check; nothing is drawn from them.
 PUBLISHED_GROUPS <- tibble::tribble(
   ~group,                 ~published_n, ~published_wild_type, ~published_r561h_k189t,
   "Baseline-Kigali",       257L,         41.6,                 30.4,
@@ -156,7 +154,7 @@ raw <- readr::read_tsv(
 )
 
 required_columns <- c(
-  "SAMPLE", "YEAR", "Health_Center", "District",
+  "SAMPLE", "YEAR", "Site_Group", "District",
   "PERIOD", "REGION", "GENE_NAME", "HGVS_PROTEIN"
 )
 
@@ -170,7 +168,7 @@ if (length(missing_columns) > 0) {
 tidy <- raw %>%
   dplyr::mutate(
     dplyr::across(
-      dplyr::all_of(c("SAMPLE", "Health_Center", "District",
+      dplyr::all_of(c("SAMPLE", "Site_Group", "District",
                       "PERIOD", "REGION", "GENE_NAME", "HGVS_PROTEIN")),
       ~ stringr::str_trim(.x)
     ),
@@ -181,27 +179,25 @@ tidy <- raw %>%
 add_to_report(sprintf("Rows read: %d", nrow(raw)))
 
 
-# One row per sample. Everything downstream counts samples, not mutation rows.
+# One row per sample
 
 sample_metadata <- tidy %>%
   dplyr::distinct(SAMPLE, .keep_all = TRUE) %>%
   dplyr::select(
-    SAMPLE, year, Health_Center, District, PERIOD, REGION
+    SAMPLE, year, Site_Group, District, PERIOD, REGION
   )
 
 add_to_report(sprintf("Distinct samples: %d", nrow(sample_metadata)))
 
 
-# Guard against a health-centre name that has drifted. The groups below are
-# built by matching one exact string, and a silent mismatch would empty two
-# of the four pies rather than fail.
+# Guard against a health-centre name that has drifted
 
-if (!KFH_NAME %in% sample_metadata$Health_Center) {
+if (!KFH_NAME %in% sample_metadata$Site_Group) {
 
   stop(
-    "No sample has Health_Center == \"", KFH_NAME, "\".\n\n",
+    "No sample has Site_Group == \"", KFH_NAME, "\".\n\n",
     "The values present are:\n  ",
-    paste(sort(unique(sample_metadata$Health_Center)), collapse = "\n  "),
+    paste(sort(unique(sample_metadata$Site_Group)), collapse = "\n  "),
     "\n\nUpdate KFH_NAME near the top of this script to the exact spelling.",
     call. = FALSE
   )
@@ -221,8 +217,6 @@ classify_k13 <- function(mutations) {
 
   others <- setdiff(mutations, c("R561H", "K189T"))
 
-  # R561H and K189T are tested first, so these five branches take precedence
-  # over every named single-mutation category below.
   if (has_r561h && has_k189t)            return("R561H + K189T")
   if (has_r561h && length(others) == 0)  return("R561H only")
   if (has_k189t && length(others) == 0)  return("K189T only")
@@ -287,7 +281,7 @@ group_membership <- dplyr::bind_rows(
 
   classified %>%
     dplyr::filter(
-      Health_Center == KFH_NAME,
+      Site_Group == KFH_NAME,
       PERIOD == "Baseline-Kigali",
       year %in% 2021:2023
     ) %>%
@@ -295,7 +289,7 @@ group_membership <- dplyr::bind_rows(
 
   classified %>%
     dplyr::filter(
-      Health_Center == KFH_NAME,
+      Site_Group == KFH_NAME,
       PERIOD == "Resurgence",
       year %in% 2024:2025
     ) %>%
@@ -353,14 +347,10 @@ if (nrow(size_mismatches) == 0) {
 } else {
   add_to_report(strrep("!", 72))
   add_to_report("  Group sizes do NOT match published Figure 3b.")
-  add_to_report("  Check the Health_Center spelling, PERIOD and REGION values.")
+  add_to_report("  Check the Site_Group spelling, PERIOD and REGION values.")
   add_to_report(strrep("!", 72))
 }
 
-
-# The arithmetic that ties the groups to the analysis set: the two
-# non-overlapping resurgence groups plus the baseline should be the whole
-# set, and KFH Resurgence should sit inside Kigali Resurgence.
 
 n_baseline  <- size_check$n_total[size_check$group == "Baseline-Kigali"]
 n_kigali    <- size_check$n_total[size_check$group == "Kigali Resurgence"]
@@ -409,8 +399,6 @@ prevalence <- group_membership %>%
   dplyr::ungroup() %>%
   dplyr::filter(n_total > 0)
 
-# Categories nobody falls into are dropped from the drawing and the legend,
-# but reported so their absence is a stated fact rather than an omission.
 empty_categories <- prevalence %>%
   dplyr::group_by(category) %>%
   dplyr::summarise(total = sum(n), .groups = "drop") %>%
@@ -460,7 +448,7 @@ for (this_group in GROUP_ORDER) {
 }
 
 
-# Check the two percentages printed on the published panel.
+# Check the two percentages printed on the published panel
 
 published_check <- PUBLISHED_GROUPS %>%
   dplyr::left_join(
@@ -548,8 +536,6 @@ plot_data <- drawn %>%
     )
   )
 
-# Slice labels: only the two categories the published panel annotates, and
-# only where the slice is big enough for the text to sit inside it.
 slice_positions <- plot_data %>%
   dplyr::group_by(facet_label) %>%
   dplyr::arrange(category, .by_group = TRUE) %>%
@@ -570,17 +556,15 @@ figure <- ggplot2::ggplot(
   ggplot2::aes(x = "", y = prevalence, fill = category)
 ) +
 
-  # reverse = TRUE is what makes the slice order match the category order.
-  # reverse = TRUE makes the slice order follow the category order. The
-  # label midpoints computed below assume it.
+  # reverse = TRUE makes the slices follow the category order, which the
+  # label midpoints below assume.
   ggplot2::geom_col(
     width = 1, colour = "white", linewidth = 0.3,
     position = ggplot2::position_stack(reverse = TRUE)
   ) +
 
-  # direction = 1 sweeps clockwise from twelve o'clock, which is the
-  # orientation of the published panel: Wild type opens to the right and
-  # R561H + K189T sits to the lower left.
+  # direction = 1 sweeps clockwise from twelve o'clock, matching the
+  # published panel.
   ggplot2::coord_polar(theta = "y", direction = 1) +
 
   ggplot2::geom_text(
@@ -654,7 +638,7 @@ readr::write_tsv(
       group = as.character(group), category = as.character(category)
     ) %>%
     dplyr::select(
-      SAMPLE, group, year, Health_Center, District, PERIOD, REGION,
+      SAMPLE, group, year, Site_Group, District, PERIOD, REGION,
       k13_mutations, category
     ) %>%
     dplyr::arrange(group, SAMPLE),

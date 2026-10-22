@@ -1,0 +1,63 @@
+========================================================================
+FIGURE 2C — COMPOSITE RESISTANCE BACKGROUNDS
+========================================================================
+Input:     /Users/matdiallo/Adaptive_Pf_resurgence_Rwanda/data/processed/Manuscript_data_29-07-2026.tsv
+Generated: 2026-10-22 13:34:16 CEST
+
+Rows read: 7919
+Distinct samples in the file: 1176
+Sample-mutation pairs: 7919 across 223 distinct mutations
+
+14 required mutation(s) are absent from the data and were added as zero:
+  K13:F446I
+  K13:N458Y
+  K13:M476I
+  K13:Y493H
+  K13:R539T
+  K13:I543T
+  K13:P553L
+  K13:C580Y
+  K13:R622I
+  K13:A481V
+  K13:P527H
+  K13:N537I
+  K13:G538V
+  K13:V568G
+
+------------------------------------------------------------------------
+DENOMINATOR
+------------------------------------------------------------------------
+  samples in the file:            1176
+  samples with >= 1 mutation:     1176
+  samples with no mutation:       0
+  published panel says:           1176
+
+  Every sample carries at least one mutation, so the two
+  denominators are the same and the distinction does not
+  affect the figure.
+
+Nesting check (a narrower category must imply the broader one):
+  PASS — every nested relationship holds.
+
+------------------------------------------------------------------------
+PREVALENCE
+------------------------------------------------------------------------
+category                n  percent    published
+SP triple            1129    96.0%         1129
+SP quadruple         1101    93.6%         1101
+High-level SP         140    11.9%          140
+CQ-R                  128    10.9%          128
+Partner-drug          752    63.9%          752
+ART-R                 527    44.8%          527
+ACT                   386    32.8%          386
+Multi-drug             24     2.0%           24
+
+  Every count matches published Figure 2c exactly.
+
+========================================================================
+WRITTEN
+========================================================================
+  figures/figure02/figure02c_resistance_categories.svg / .png
+  tables/figure02/figure02c_category_prevalence.tsv
+  tables/figure02/figure02c_sample_level_categories.tsv
+  tables/figure02/figure02c_denominator_check.tsv

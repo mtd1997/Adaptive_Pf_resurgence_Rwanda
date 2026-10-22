@@ -1,0 +1,805 @@
+sample	period	district	k13
+COR001	Resurgence	Nyarugenge	R561H + K189T
+COR002	Resurgence	Nyarugenge	R561H + K189T
+COR004	Resurgence	Nyarugenge	R561H + K189T
+COR005	Resurgence	Nyarugenge	R561H + K189T
+COR006	Resurgence	Nyarugenge	R561H + K189T
+COR007	Resurgence	Nyarugenge	Wild Type
+COR008	Resurgence	Nyarugenge	R561H + K189T
+COR009	Resurgence	Nyarugenge	Wild Type
+COR010	Resurgence	Nyarugenge	Wild Type
+COR011	Resurgence	Nyarugenge	R561H + K189T
+COR012	Resurgence	Nyarugenge	Wild Type
+COR013	Resurgence	Nyarugenge	Wild Type
+COR014	Resurgence	Nyarugenge	Wild Type
+COR015	Resurgence	Nyarugenge	Wild Type
+COR016	Resurgence	Nyarugenge	Wild Type
+COR017	Resurgence	Nyarugenge	Wild Type
+COR018	Resurgence	Nyarugenge	R561H + K189T
+COR019	Resurgence	Nyarugenge	R561H + K189T
+COR023	Resurgence	Nyarugenge	Wild Type
+COR024	Resurgence	Nyarugenge	Other K13
+COR025	Resurgence	Nyarugenge	R561H + K189T
+COR026	Resurgence	Nyarugenge	R561H + K189T
+COR027	Resurgence	Nyarugenge	Wild Type
+COR028	Resurgence	Nyarugenge	R561H + K189T
+COR029	Resurgence	Nyarugenge	Wild Type
+COR030	Resurgence	Nyarugenge	R561H + K189T
+COR031	Resurgence	Nyarugenge	R561H + K189T
+COR032	Resurgence	Nyarugenge	R561H + K189T
+COR037	Resurgence	Nyarugenge	R561H + K189T
+COR038	Resurgence	Nyarugenge	Wild Type
+COR040	Resurgence	Nyarugenge	R561H + K189T
+COR041	Resurgence	Nyarugenge	Wild Type
+COR042	Resurgence	Nyarugenge	Other K13
+COR043	Resurgence	Nyarugenge	Wild Type
+COR044	Resurgence	Nyarugenge	Wild Type
+COR045	Resurgence	Nyarugenge	Wild Type
+COR046	Resurgence	Nyarugenge	Wild Type
+COR047	Resurgence	Nyarugenge	R561H + K189T
+COR049	Resurgence	Nyarugenge	R561H only
+COR050	Resurgence	Nyarugenge	Wild Type
+COR051	Resurgence	Nyarugenge	R561H + K189T
+COR052	Resurgence	Nyarugenge	R561H + K189T
+COR053	Resurgence	Nyarugenge	R561H + K189T
+COR054	Resurgence	Nyarugenge	Wild Type
+COR055	Resurgence	Nyarugenge	R561H + K189T
+COR056	Resurgence	Nyarugenge	R561H + K189T
+COR057	Resurgence	Nyarugenge	Wild Type
+COR058	Resurgence	Nyarugenge	Wild Type
+COR059	Resurgence	Nyarugenge	R561H + K189T
+COR060	Resurgence	Nyarugenge	R561H + K189T
+COR061	Resurgence	Nyarugenge	Wild Type
+COR062	Resurgence	Nyarugenge	R561H + K189T
+COR064	Resurgence	Nyarugenge	Wild Type
+COR065	Resurgence	Nyarugenge	R561H + K189T
+COR066	Resurgence	Nyarugenge	Wild Type
+COR067	Resurgence	Nyarugenge	R561H + K189T
+COR069	Resurgence	Nyarugenge	R561H + K189T
+COR070	Resurgence	Nyarugenge	Wild Type
+COR072	Resurgence	Nyarugenge	Wild Type
+COR073	Resurgence	Nyarugenge	Wild Type
+COR074	Resurgence	Nyarugenge	R561H only
+COR075	Resurgence	Nyarugenge	R561H + K189T
+COR076	Resurgence	Nyarugenge	Wild Type
+COR078	Resurgence	Nyarugenge	Wild Type
+COR079	Resurgence	Nyarugenge	Wild Type
+COR080	Resurgence	Nyarugenge	Wild Type
+COR082	Resurgence	Nyarugenge	R561H + K189T
+COR083	Resurgence	Nyarugenge	Wild Type
+COR084	Resurgence	Nyarugenge	Wild Type
+COR085	Resurgence	Nyarugenge	Wild Type
+COR088	Resurgence	Nyarugenge	R561H + K189T
+COR089	Resurgence	Nyarugenge	Wild Type
+COR091	Resurgence	Nyarugenge	Wild Type
+COR092	Resurgence	Nyarugenge	R561H + K189T
+COR093	Resurgence	Nyarugenge	Wild Type
+COR094	Resurgence	Nyarugenge	R561H + K189T
+COR095	Resurgence	Nyarugenge	Wild Type
+COR096	Resurgence	Nyarugenge	Other K13
+COR097	Resurgence	Nyarugenge	R561H + K189T
+COR098	Resurgence	Nyarugenge	R561H + K189T
+COR101	Resurgence	Nyarugenge	R561H + K189T
+COR102	Resurgence	Nyarugenge	R561H + K189T
+COR106	Resurgence	Nyarugenge	Wild Type
+COR107	Resurgence	Nyarugenge	Wild Type
+COR116	Resurgence	Nyarugenge	R561H + K189T
+COR119	Resurgence	Nyarugenge	R561H + K189T
+COR122	Resurgence	Nyarugenge	Wild Type
+COR123	Resurgence	Nyarugenge	Wild Type
+COR124	Resurgence	Nyarugenge	R561H + K189T
+COR125	Resurgence	Nyarugenge	Wild Type
+COR150	Resurgence	Nyarugenge	R561H + K189T
+COR151	Resurgence	Nyarugenge	R561H + K189T
+COR155	Resurgence	Nyarugenge	K189T only
+COR157	Resurgence	Nyarugenge	Wild Type
+COR158	Resurgence	Nyarugenge	Wild Type
+COR162	Resurgence	Nyarugenge	R561H + K189T
+COR167	Resurgence	Nyarugenge	Other K13
+COR169	Resurgence	Nyarugenge	R561H + K189T
+COR170	Resurgence	Nyarugenge	Wild Type
+COR171	Resurgence	Nyarugenge	R561H + K189T
+COR172	Resurgence	Nyarugenge	Wild Type
+COR173	Resurgence	Nyarugenge	R561H + K189T
+COR174	Resurgence	Nyarugenge	Wild Type
+COR175	Resurgence	Nyarugenge	R561H + K189T
+COR176	Resurgence	Nyarugenge	R561H + K189T
+COR181	Resurgence	Nyarugenge	Wild Type
+COR182	Resurgence	Nyarugenge	Wild Type
+COR185	Resurgence	Nyarugenge	R561H + K189T
+COR186	Resurgence	Nyarugenge	R561H + K189T
+COR188	Resurgence	Nyarugenge	R561H + K189T
+COR189	Resurgence	Nyarugenge	Wild Type
+COR191	Resurgence	Nyarugenge	Wild Type
+COR192	Resurgence	Nyarugenge	R561H + K189T
+COR193	Resurgence	Nyarugenge	R561H + K189T
+COR194	Resurgence	Nyarugenge	R561H + K189T
+COR195	Resurgence	Nyarugenge	R561H + K189T
+COR196	Resurgence	Nyarugenge	R561H + K189T
+COR197	Resurgence	Nyarugenge	R561H + K189T
+COR199	Resurgence	Nyarugenge	R561H + K189T
+COR200	Resurgence	Nyarugenge	R561H + K189T
+COR201	Resurgence	Nyarugenge	Wild Type
+COR202	Resurgence	Nyarugenge	R561H + K189T
+COR203	Resurgence	Nyarugenge	Wild Type
+COR205	Resurgence	Nyarugenge	Wild Type
+COR206	Resurgence	Nyarugenge	Wild Type
+COR207	Resurgence	Nyarugenge	R561H + K189T
+COR209	Resurgence	Nyarugenge	Wild Type
+COR211	Resurgence	Nyarugenge	Wild Type
+COR212	Resurgence	Nyarugenge	Wild Type
+COR220	Resurgence	Nyarugenge	Wild Type
+COR221	Resurgence	Nyarugenge	Wild Type
+COR222	Resurgence	Nyarugenge	R561H + K189T
+COR223	Resurgence	Nyarugenge	R561H + K189T
+COR225	Resurgence	Nyarugenge	R561H + K189T
+COR226	Resurgence	Nyarugenge	Wild Type
+COR227	Resurgence	Nyarugenge	R561H + K189T
+COR231	Resurgence	Nyarugenge	R561H + K189T
+COR232	Resurgence	Nyarugenge	Wild Type
+COR234	Resurgence	Nyarugenge	R561H + K189T
+COR235	Resurgence	Nyarugenge	R561H + K189T
+COR236	Resurgence	Nyarugenge	Other K13
+COR238	Resurgence	Nyarugenge	Wild Type
+COR240	Resurgence	Nyarugenge	K189T only
+COR243	Resurgence	Nyarugenge	R561H only
+COR244	Resurgence	Nyarugenge	R561H + K189T
+COR245	Resurgence	Nyarugenge	R561H + K189T
+COR247	Resurgence	Nyarugenge	R561H + K189T
+COR248	Resurgence	Nyarugenge	R561H + K189T
+GIK002	Resurgence	Kicukiro	Other K13
+GIK004	Resurgence	Kicukiro	R561H + K189T
+GIK005	Resurgence	Kicukiro	R561H + K189T
+GIK006	Resurgence	Kicukiro	R561H + K189T
+GIK007	Resurgence	Kicukiro	Wild Type
+GIK008	Resurgence	Kicukiro	K189T only
+GIK009	Resurgence	Kicukiro	Wild Type
+GIK010	Resurgence	Kicukiro	R561H + K189T
+GIK011	Resurgence	Kicukiro	Wild Type
+GIK012	Resurgence	Kicukiro	Other K13
+GIK013	Resurgence	Kicukiro	Other K13
+GIK014	Resurgence	Kicukiro	Wild Type
+GIK015	Resurgence	Kicukiro	R561H + K189T
+GIK017	Resurgence	Kicukiro	Other K13
+GIK019	Resurgence	Kicukiro	Other K13
+GIK021	Resurgence	Kicukiro	Wild Type
+GIK022	Resurgence	Kicukiro	R561H + K189T
+GIK023	Resurgence	Kicukiro	R561H + K189T
+GIK024	Resurgence	Kicukiro	R561H + K189T
+GIK025	Resurgence	Kicukiro	R561H + K189T
+GIK026	Resurgence	Kicukiro	Wild Type
+GIK032	Resurgence	Kicukiro	R561H + K189T
+GIK037	Resurgence	Kicukiro	R561H + K189T
+GIK040	Resurgence	Kicukiro	R561H + K189T
+GIK041	Resurgence	Kicukiro	Other K13
+GIK043	Resurgence	Kicukiro	R561H + K189T
+GIK044	Resurgence	Kicukiro	Wild Type
+GIK046	Resurgence	Kicukiro	Other K13
+GIK047	Resurgence	Kicukiro	R561H + K189T
+GIK048	Resurgence	Kicukiro	R561H + K189T
+GIK050	Resurgence	Kicukiro	R561H + K189T
+GIK054	Resurgence	Kicukiro	R561H + K189T
+GIK062	Resurgence	Kicukiro	Wild Type
+GIK068	Resurgence	Kicukiro	Wild Type
+GIK069	Resurgence	Kicukiro	R561H + K189T
+GIK072	Resurgence	Kicukiro	Other K13
+GIK073	Resurgence	Kicukiro	Other K13
+GIK075	Resurgence	Kicukiro	R561H + K189T
+GIK076	Resurgence	Kicukiro	R561H + K189T
+GIK078	Resurgence	Kicukiro	Wild Type
+GIK080	Resurgence	Kicukiro	R561H + K189T
+GIK083	Resurgence	Kicukiro	R561H + K189T
+GIK086	Resurgence	Kicukiro	R561H + K189T
+GIK088	Resurgence	Kicukiro	R561H + K189T
+GIK089	Resurgence	Kicukiro	Wild Type
+GIK090	Resurgence	Kicukiro	Wild Type
+GIK091	Resurgence	Kicukiro	R561H + K189T
+GIK105	Resurgence	Kicukiro	R561H + K189T
+KAR001	Resurgence	Kicukiro	R561H + K189T
+KAR002	Resurgence	Kicukiro	Wild Type
+KAR003	Resurgence	Kicukiro	Wild Type
+KAR004	Resurgence	Kicukiro	Wild Type
+KAR005	Resurgence	Kicukiro	R561H + K189T
+KAR006	Resurgence	Kicukiro	R561H + K189T
+KAR007	Resurgence	Kicukiro	Other K13
+KAR008	Resurgence	Kicukiro	Other K13
+KAR009	Resurgence	Kicukiro	R561H + K189T
+KAR010	Resurgence	Kicukiro	K189T only
+KAR012	Resurgence	Kicukiro	K189T only
+KAR019	Resurgence	Kicukiro	R561H + K189T
+KAR024	Resurgence	Kicukiro	Other K13
+KAR025	Resurgence	Kicukiro	K189T only
+KAR031	Resurgence	Kicukiro	R561H + K189T
+KAR036	Resurgence	Kicukiro	R561H + K189T
+KAR037	Resurgence	Kicukiro	Wild Type
+KAR041	Resurgence	Kicukiro	R561H + K189T
+KF003	Resurgence	Gasabo	R561H + K189T
+KF004	Resurgence	Gasabo	R561H + K189T
+KF005	Resurgence	Gasabo	Wild Type
+KF006	Resurgence	Gasabo	Wild Type
+KF008	Resurgence	Gasabo	R561H + K189T
+KF010	Resurgence	Gasabo	R561H + K189T
+KF014	Resurgence	Gasabo	Other K13
+KF015	Resurgence	Gasabo	R561H + K189T
+KF016	Resurgence	Gasabo	Wild Type
+KF017	Resurgence	Gasabo	Other K13
+KF021	Resurgence	Gasabo	Other K13
+KF022	Resurgence	Gasabo	R561H + K189T
+KF023	Resurgence	Gasabo	Wild Type
+KF024	Resurgence	Gasabo	Wild Type
+KF025	Resurgence	Gasabo	Other K13
+KF026	Resurgence	Gasabo	Wild Type
+KF027	Resurgence	Gasabo	Other K13
+KF029	Resurgence	Gasabo	Wild Type
+KF030	Resurgence	Gasabo	Wild Type
+KF031	Resurgence	Gasabo	R561H + K189T
+KF033	Resurgence	Gasabo	R561H + K189T
+KF034	Resurgence	Gasabo	K189T only
+KF036	Resurgence	Gasabo	K189T only
+KF037	Resurgence	Gasabo	Wild Type
+KF038	Resurgence	Gasabo	R561H + K189T
+KF039	Resurgence	Gasabo	R561H + K189T
+KF040	Resurgence	Gasabo	R561H + K189T
+KF041	Resurgence	Gasabo	Wild Type
+KF042	Resurgence	Gasabo	R561H + K189T
+KF044	Resurgence	Gasabo	Wild Type
+KF045	Resurgence	Gasabo	K189T only
+KF046	Resurgence	Gasabo	Wild Type
+KF050	Resurgence	Gasabo	Wild Type
+KF054	Resurgence	Gasabo	Wild Type
+KF055	Resurgence	Gasabo	Wild Type
+KF056	Resurgence	Gasabo	R561H + K189T
+KF057	Resurgence	Gasabo	Wild Type
+KF058	Resurgence	Gasabo	R561H + K189T
+KF059	Resurgence	Gasabo	R561H + K189T
+KF061	Resurgence	Gasabo	R561H + K189T
+KF062	Resurgence	Gasabo	R561H + K189T
+KF065	Resurgence	Gasabo	Other K13
+KF066	Resurgence	Gasabo	Other K13
+KF067	Resurgence	Gasabo	R561H + K189T
+KF069	Resurgence	Gasabo	R561H + K189T
+KF074	Resurgence	Gasabo	R561H + K189T
+KF075	Resurgence	Gasabo	Wild Type
+KF076	Resurgence	Gasabo	Wild Type
+KF078	Resurgence	Gasabo	R561H + K189T
+KF079	Resurgence	Gasabo	R561H + K189T
+KF080	Resurgence	Gasabo	Wild Type
+KF082	Resurgence	Gasabo	Other K13
+KF085	Resurgence	Gasabo	R561H + K189T
+KF086	Resurgence	Gasabo	Other K13
+KF087	Resurgence	Gasabo	Wild Type
+KF093	Resurgence	Gasabo	R561H + K189T
+KF094	Resurgence	Gasabo	Wild Type
+KF095	Resurgence	Gasabo	R561H + K189T
+KF096	Resurgence	Gasabo	Other K13
+KF100	Resurgence	Gasabo	K189T only
+KF102	Resurgence	Gasabo	R561H + K189T
+KF103	Resurgence	Gasabo	Other K13
+KF104	Resurgence	Gasabo	R561H + K189T
+KF105	Resurgence	Gasabo	Wild Type
+KF106	Resurgence	Gasabo	K189T only
+KF108	Resurgence	Gasabo	R561H + K189T
+KF109	Resurgence	Gasabo	Wild Type
+KF110	Resurgence	Gasabo	R561H + K189T
+KF111	Resurgence	Gasabo	R561H + K189T
+KF113	Resurgence	Gasabo	R561H + K189T
+KF115	Resurgence	Gasabo	R561H + K189T
+KF117	Resurgence	Gasabo	Wild Type
+KF121	Resurgence	Gasabo	R561H + K189T
+KF122	Resurgence	Gasabo	Other K13
+KF123	Resurgence	Gasabo	Other K13
+KF126	Resurgence	Gasabo	Other K13
+KF127	Resurgence	Gasabo	R561H + K189T
+KF129	Resurgence	Gasabo	R561H + K189T
+KF130	Resurgence	Gasabo	Other K13
+KF132	Resurgence	Gasabo	Wild Type
+KF133	Resurgence	Gasabo	R561H + K189T
+KF134	Resurgence	Gasabo	K189T only
+KF135	Resurgence	Gasabo	R561H + K189T
+KF137	Resurgence	Gasabo	R561H + K189T
+KF138	Resurgence	Gasabo	Wild Type
+KF141	Resurgence	Gasabo	Other K13
+KF142	Resurgence	Gasabo	Wild Type
+KF144	Resurgence	Gasabo	Wild Type
+KF145	Resurgence	Gasabo	Wild Type
+KF146	Resurgence	Gasabo	R561H + K189T
+KF154	Resurgence	Gasabo	R561H + K189T
+KF156	Resurgence	Gasabo	Wild Type
+KF157	Resurgence	Gasabo	R561H + K189T
+KF158	Resurgence	Gasabo	Wild Type
+KF159	Resurgence	Gasabo	R561H + K189T
+KF160	Resurgence	Gasabo	R561H + K189T
+KF161	Resurgence	Gasabo	Wild Type
+KF163	Resurgence	Gasabo	Wild Type
+KF168	Resurgence	Gasabo	K189T only
+KF171	Resurgence	Gasabo	R561H + K189T
+KF172	Resurgence	Gasabo	Other K13
+KF174	Resurgence	Gasabo	Other K13
+KF175	Resurgence	Gasabo	R561H + K189T
+KF176	Resurgence	Gasabo	R561H + K189T
+KF177	Resurgence	Gasabo	R561H + K189T
+KF178	Resurgence	Gasabo	R561H + K189T
+KF179	Resurgence	Gasabo	Wild Type
+KF180	Resurgence	Gasabo	R561H + K189T
+KF182	Resurgence	Gasabo	Other K13
+KF184	Resurgence	Gasabo	R561H + K189T
+KF189	Resurgence	Gasabo	Other K13
+KF190	Resurgence	Gasabo	Other K13
+KF192	Resurgence	Gasabo	K189T only
+KF193	Resurgence	Gasabo	R561H + K189T
+KF195	Resurgence	Gasabo	Wild Type
+KF196	Resurgence	Gasabo	R561H + K189T
+KF197	Resurgence	Gasabo	Other K13
+KF198	Resurgence	Gasabo	Wild Type
+KF200	Resurgence	Gasabo	R561H + K189T
+KF202	Resurgence	Gasabo	Other K13
+KF203	Resurgence	Gasabo	Wild Type
+KF207	Resurgence	Gasabo	Wild Type
+KF211	Resurgence	Gasabo	Other K13
+KF214	Resurgence	Gasabo	R561H + K189T
+KF225	Resurgence	Gasabo	R561H + K189T
+KF227	Resurgence	Gasabo	Wild Type
+KF230	Resurgence	Gasabo	R561H + K189T
+KF231	Resurgence	Gasabo	K189T only
+KF232	Resurgence	Gasabo	R561H + K189T
+KF233	Resurgence	Gasabo	R561H + K189T
+KF235	Resurgence	Gasabo	R561H + K189T
+KF236	Resurgence	Gasabo	Other K13
+KF238	Resurgence	Gasabo	Wild Type
+KF239	Resurgence	Gasabo	Other K13
+KF241	Resurgence	Gasabo	R561H + K189T
+KF242	Resurgence	Gasabo	Wild Type
+KF243	Resurgence	Gasabo	R561H + K189T
+KF244	Resurgence	Gasabo	Other K13
+KF245	Resurgence	Gasabo	R561H + K189T
+KFD001	Resurgence	Gasabo	R561H + K189T
+KFD002	Resurgence	Gasabo	R561H + K189T
+KFD003	Resurgence	Gasabo	Wild Type
+KFD005	Resurgence	Gasabo	Wild Type
+KFD006	Resurgence	Gasabo	R561H only
+KFD008	Resurgence	Gasabo	R561H + K189T
+KFD009	Resurgence	Gasabo	Wild Type
+KFD010	Resurgence	Gasabo	R561H + K189T
+KFD011	Resurgence	Gasabo	R561H + K189T
+KFD012	Resurgence	Gasabo	R561H only
+KFD013	Resurgence	Gasabo	R561H + K189T
+KFD014	Resurgence	Gasabo	R561H + K189T
+KFD015	Resurgence	Gasabo	Other K13
+KFD021	Resurgence	Gasabo	R561H + K189T
+KFD022	Resurgence	Gasabo	Wild Type
+KFD023	Resurgence	Gasabo	Wild Type
+KFD025	Resurgence	Gasabo	R561H only
+KFD031	Resurgence	Gasabo	R561H + K189T
+KFD033	Resurgence	Gasabo	Wild Type
+KFD034	Resurgence	Gasabo	R561H + K189T
+KFD035	Resurgence	Gasabo	R561H + K189T
+KFD036	Resurgence	Gasabo	R561H + K189T
+KFD038	Resurgence	Gasabo	R561H + K189T
+KFD043	Resurgence	Gasabo	Wild Type
+KFD044	Resurgence	Gasabo	R561H + K189T
+KFD048	Resurgence	Gasabo	R561H + K189T
+KFD050	Resurgence	Gasabo	R561H + K189T
+KFD054	Resurgence	Gasabo	R561H + K189T
+KFD058	Resurgence	Gasabo	Wild Type
+KFD060	Resurgence	Gasabo	Wild Type
+KFD063	Resurgence	Gasabo	K189T only
+KFD066	Resurgence	Gasabo	Other K13
+KFD161	Resurgence	Gasabo	R561H + K189T
+KFD166	Resurgence	Gasabo	Wild Type
+KFD167	Resurgence	Gasabo	R561H + K189T
+KFD168	Resurgence	Gasabo	R561H + K189T
+KFD171	Resurgence	Gasabo	R561H + K189T
+KFD172	Resurgence	Gasabo	R561H + K189T
+KFD175	Resurgence	Gasabo	Wild Type
+KFD176	Resurgence	Gasabo	Wild Type
+KFD178	Resurgence	Gasabo	Other K13
+KFD179	Resurgence	Gasabo	Other K13
+KFD180	Resurgence	Gasabo	R561H + K189T
+KHP001	Resurgence	Kicukiro	R561H + K189T
+KHP003	Resurgence	Kicukiro	Wild Type
+KHP004	Resurgence	Kicukiro	R561H + K189T
+RM001	Resurgence	Gasabo	Wild Type
+RM004	Resurgence	Gasabo	Wild Type
+RM005	Resurgence	Gasabo	Other K13
+RM006	Resurgence	Gasabo	Wild Type
+RM008	Resurgence	Gasabo	Wild Type
+RM010	Resurgence	Gasabo	Other K13
+RM013	Resurgence	Gasabo	Wild Type
+RM015	Resurgence	Gasabo	R561H + K189T
+RM019	Resurgence	Gasabo	Wild Type
+RM020	Resurgence	Gasabo	R561H + K189T
+RM021	Resurgence	Gasabo	Other K13
+RM022	Resurgence	Gasabo	Other K13
+RM023	Resurgence	Gasabo	Wild Type
+RM025	Resurgence	Gasabo	Wild Type
+RM035	Resurgence	Gasabo	R561H + K189T
+RM038	Resurgence	Gasabo	R561H + K189T
+RM039	Resurgence	Gasabo	R561H + K189T
+RM040	Resurgence	Gasabo	R561H + K189T
+RM042	Resurgence	Gasabo	Wild Type
+RM043	Resurgence	Gasabo	Wild Type
+RM044	Resurgence	Gasabo	Wild Type
+RM045	Resurgence	Gasabo	R561H + K189T
+RM046	Resurgence	Gasabo	R561H + K189T
+RM049	Resurgence	Gasabo	R561H + K189T
+RM050	Resurgence	Gasabo	Wild Type
+RM051	Resurgence	Gasabo	Other K13
+RM052	Resurgence	Gasabo	R561H + K189T
+RM053	Resurgence	Gasabo	Wild Type
+RM054	Resurgence	Gasabo	R561H + K189T
+RM055	Resurgence	Gasabo	R561H + K189T
+RM057	Resurgence	Gasabo	Other K13
+RM059	Resurgence	Gasabo	Wild Type
+RM060	Resurgence	Gasabo	R561H only
+RM062	Resurgence	Gasabo	R561H + K189T
+RM064	Resurgence	Gasabo	R561H + K189T
+RM070	Resurgence	Gasabo	Wild Type
+RM071	Resurgence	Gasabo	R561H + K189T
+RM074	Resurgence	Gasabo	R561H + K189T
+RM075	Resurgence	Gasabo	Wild Type
+RM076	Resurgence	Gasabo	R561H + K189T
+RM077	Resurgence	Gasabo	R561H + K189T
+RM079	Resurgence	Gasabo	K189T only
+RM080	Resurgence	Gasabo	R561H + K189T
+RM082	Resurgence	Gasabo	Wild Type
+RM086	Resurgence	Gasabo	R561H + K189T
+RM087	Resurgence	Gasabo	Other K13
+RM088	Resurgence	Gasabo	Wild Type
+RM089	Resurgence	Gasabo	Wild Type
+RM090	Resurgence	Gasabo	Wild Type
+RM093	Resurgence	Gasabo	R561H + K189T
+RM095	Resurgence	Gasabo	Wild Type
+RM097	Resurgence	Gasabo	R561H + K189T
+RM099	Resurgence	Gasabo	Wild Type
+RM100	Resurgence	Gasabo	R561H + K189T
+RM194	Resurgence	Gasabo	R561H + K189T
+RM195	Resurgence	Gasabo	Wild Type
+RM196	Resurgence	Gasabo	R561H + K189T
+RM197	Resurgence	Gasabo	R561H + K189T
+RM199	Resurgence	Gasabo	Wild Type
+RM201	Resurgence	Gasabo	Wild Type
+RM205	Resurgence	Gasabo	Wild Type
+RM206	Resurgence	Gasabo	Other K13
+RM209	Resurgence	Gasabo	Wild Type
+RM212	Resurgence	Gasabo	R561H + K189T
+RM213	Resurgence	Gasabo	Wild Type
+RM215	Resurgence	Gasabo	R561H + K189T
+RM217	Resurgence	Gasabo	Other K13
+RM218	Resurgence	Gasabo	K189T only
+RM275	Resurgence	Gasabo	Wild Type
+RM280	Resurgence	Gasabo	R561H + K189T
+RM282	Resurgence	Gasabo	Wild Type
+RM287	Resurgence	Gasabo	R561H + K189T
+RM291	Resurgence	Gasabo	R561H + K189T
+RM294	Resurgence	Gasabo	R561H + K189T
+RM295	Resurgence	Gasabo	Wild Type
+RM300	Resurgence	Gasabo	Other K13
+RM317	Resurgence	Gasabo	Wild Type
+RM318	Resurgence	Gasabo	R561H + K189T
+RM319	Resurgence	Gasabo	R561H + K189T
+RM320	Resurgence	Gasabo	R561H + K189T
+RM321	Resurgence	Gasabo	R561H + K189T
+RM325	Resurgence	Gasabo	R561H + K189T
+RM326	Resurgence	Gasabo	R561H + K189T
+RM347	Resurgence	Gasabo	Wild Type
+RM348	Resurgence	Gasabo	Other K13
+RM350	Resurgence	Gasabo	R561H + K189T
+RM351	Resurgence	Gasabo	R561H + K189T
+RM353	Resurgence	Gasabo	R561H + K189T
+RM360	Resurgence	Gasabo	R561H + K189T
+RM368	Resurgence	Gasabo	R561H + K189T
+RM369	Resurgence	Gasabo	Wild Type
+RM370	Resurgence	Gasabo	Wild Type
+RM372	Resurgence	Gasabo	R561H + K189T
+RM380	Resurgence	Gasabo	R561H + K189T
+RM381	Resurgence	Gasabo	Wild Type
+RM382	Resurgence	Gasabo	R561H + K189T
+RM383	Resurgence	Gasabo	R561H + K189T
+RM384	Resurgence	Gasabo	R561H + K189T
+RM385	Resurgence	Gasabo	R561H + K189T
+RM386	Resurgence	Gasabo	Other K13
+RM389	Resurgence	Gasabo	R561H + K189T
+RM392	Resurgence	Gasabo	R561H + K189T
+RM394	Resurgence	Gasabo	R561H + K189T
+RM396	Resurgence	Gasabo	Other K13
+RM397	Resurgence	Gasabo	Other K13
+RM398	Resurgence	Gasabo	R561H + K189T
+RM399	Resurgence	Gasabo	R561H + K189T
+RM400	Resurgence	Gasabo	R561H + K189T
+RM401	Resurgence	Gasabo	Wild Type
+RM402	Resurgence	Gasabo	R561H + K189T
+RM404	Resurgence	Gasabo	R561H + K189T
+RM405	Resurgence	Gasabo	R561H + K189T
+RM406	Resurgence	Gasabo	R561H + K189T
+RM407	Resurgence	Gasabo	R561H + K189T
+RM408	Resurgence	Gasabo	R561H + K189T
+RM409	Resurgence	Gasabo	R561H + K189T
+RM410	Resurgence	Gasabo	R561H + K189T
+RM411	Resurgence	Gasabo	R561H + K189T
+RM412	Resurgence	Gasabo	R561H + K189T
+RM413	Resurgence	Gasabo	R561H + K189T
+RM417	Resurgence	Gasabo	R561H + K189T
+RM419	Resurgence	Gasabo	R561H + K189T
+RM420	Resurgence	Gasabo	R561H + K189T
+RM426	Resurgence	Gasabo	Other K13
+RM427	Resurgence	Gasabo	R561H + K189T
+RM428	Resurgence	Gasabo	R561H + K189T
+RM432	Resurgence	Gasabo	R561H + K189T
+RM433	Resurgence	Gasabo	R561H + K189T
+RM437	Resurgence	Gasabo	Wild Type
+RM438	Resurgence	Gasabo	R561H + K189T
+RM441	Resurgence	Gasabo	R561H + K189T
+RM443	Resurgence	Gasabo	R561H + K189T
+RM447	Resurgence	Gasabo	Wild Type
+RM448	Resurgence	Gasabo	R561H + K189T
+RM449	Resurgence	Gasabo	R561H + K189T
+RM450	Resurgence	Gasabo	Other K13
+RM451	Resurgence	Gasabo	Wild Type
+RM452	Resurgence	Gasabo	Wild Type
+RM453	Resurgence	Gasabo	R561H + K189T
+RM454	Resurgence	Gasabo	R561H + K189T
+RM455	Resurgence	Gasabo	R561H + K189T
+RM459	Resurgence	Gasabo	R561H + K189T
+RM460	Resurgence	Gasabo	R561H + K189T
+RM461	Resurgence	Gasabo	R561H + K189T
+RM463	Resurgence	Gasabo	R561H + K189T
+RM465	Resurgence	Gasabo	R561H + K189T
+RM467	Resurgence	Gasabo	R561H + K189T
+RW_E1	Baseline-Kigali	Kicukiro	Wild Type
+RW_E2	Baseline-Kigali	Kicukiro	Other K13
+RW_E3	Baseline-Kigali	Kicukiro	R561H + K189T
+RW_E6	Baseline-Kigali	Kicukiro	Other K13
+RW_E7	Baseline-Kigali	Kicukiro	Wild Type
+RW_E8	Baseline-Kigali	Kicukiro	Wild Type
+RW_E9	Baseline-Kigali	Kicukiro	R561H + K189T
+RW_F2	Baseline-Kigali	Nyarugenge	R561H + K189T
+RW_F3	Baseline-Kigali	Nyarugenge	R561H + K189T
+RW_F4	Baseline-Kigali	Gasabo	Wild Type
+RW_F6	Baseline-Kigali	Gasabo	K189T only
+RW_F9	Baseline-Kigali	Kicukiro	R561H + K189T
+RW_J10	Baseline-Kigali	Kicukiro	Wild Type
+RW_J11	Baseline-Kigali	Kicukiro	Wild Type
+RW_J13	Baseline-Kigali	Nyarugenge	R561H + K189T
+RW_J15	Baseline-Kigali	Kicukiro	Wild Type
+RW_J17	Baseline-Kigali	Nyarugenge	R561H + K189T
+RW_J18	Baseline-Kigali	Gasabo	Wild Type
+RW_J19	Baseline-Kigali	Gasabo	Wild Type
+RW_J2	Baseline-Kigali	Gasabo	Wild Type
+RW_J20	Baseline-Kigali	Gasabo	Wild Type
+RW_J23	Baseline-Kigali	Gasabo	Wild Type
+RW_J24	Baseline-Kigali	Nyarugenge	R561H + K189T
+RW_J26	Baseline-Kigali	Nyarugenge	R561H + K189T
+RW_J3	Baseline-Kigali	Nyarugenge	Wild Type
+RW_J4	Baseline-Kigali	Nyarugenge	Wild Type
+RW_J47	Baseline-Kigali	Gasabo	Other K13
+RW_J48	Baseline-Kigali	Gasabo	Other K13
+RW_K1	Baseline-Kigali	Kicukiro	Other K13
+RW_K2	Baseline-Kigali	Kicukiro	R561H + K189T
+RW_K4	Baseline-Kigali	Kicukiro	Wild Type
+RW_K5	Baseline-Kigali	Kicukiro	Wild Type
+RW_S10	Baseline-Kigali	Nyarugenge	R561H + K189T
+RW_S11	Baseline-Kigali	Nyarugenge	R561H + K189T
+RW_S12	Baseline-Kigali	Gasabo	Wild Type
+RW_S13	Baseline-Kigali	Nyarugenge	Wild Type
+RW_S14	Baseline-Kigali	Gasabo	R561H + K189T
+RW_S15	Baseline-Kigali	Kicukiro	Wild Type
+RW_S17	Baseline-Kigali	Nyarugenge	K189T only
+RW_S19	Baseline-Kigali	Gasabo	Wild Type
+RW_S3	Baseline-Kigali	Kicukiro	R561H + K189T
+RW_S4	Baseline-Kigali	Nyarugenge	Wild Type
+RW_S7	Baseline-Kigali	Nyarugenge	R561H + K189T
+RW_S8	Baseline-Kigali	Gasabo	K189T only
+RW_SM102	Baseline-Kigali	Nyarugenge	Wild Type
+RW_SM17	Baseline-Kigali	Nyarugenge	R561H + K189T
+RW_SM18	Baseline-Kigali	Nyarugenge	R561H + K189T
+RW_SM19	Baseline-Kigali	Gasabo	Other K13
+RW_SM25	Baseline-Kigali	Nyarugenge	Other K13
+RW_SM26	Baseline-Kigali	Nyarugenge	Wild Type
+RW_SM29	Baseline-Kigali	Kicukiro	Wild Type
+RW_SM30	Baseline-Kigali	Nyarugenge	K189T only
+RW_SM33	Baseline-Kigali	Nyarugenge	Wild Type
+RW_SM34	Baseline-Kigali	Gasabo	R561H + K189T
+RW_SM35	Baseline-Kigali	Nyarugenge	R561H + K189T
+RW_SM36	Baseline-Kigali	Nyarugenge	Wild Type
+RW_SM37	Baseline-Kigali	Nyarugenge	Wild Type
+RW_SM38	Baseline-Kigali	Kicukiro	R561H + K189T
+RW_SM39	Baseline-Kigali	Nyarugenge	Wild Type
+RW_SM40	Baseline-Kigali	Nyarugenge	Other K13
+RW_SM42	Baseline-Kigali	Gasabo	Other K13
+RW_SM43	Baseline-Kigali	Kicukiro	Wild Type
+RW_SM47	Baseline-Kigali	Gasabo	K189T only
+RW_SM5	Baseline-Kigali	Kicukiro	R561H + K189T
+RW_SM51	Baseline-Kigali	Nyarugenge	R561H + K189T
+RW_SM52	Baseline-Kigali	Nyarugenge	R561H + K189T
+RW_SM53	Baseline-Kigali	Gasabo	Wild Type
+RW_SM56	Baseline-Kigali	Gasabo	R561H + K189T
+RW_SM58	Baseline-Kigali	Kicukiro	Wild Type
+RW_SM59	Baseline-Kigali	Nyarugenge	R561H + K189T
+RW_SM60	Baseline-Kigali	Kicukiro	Wild Type
+RW_SM61	Baseline-Kigali	Nyarugenge	R561H + K189T
+RW_SM62	Baseline-Kigali	Nyarugenge	Other K13
+RW_SM64	Baseline-Kigali	Nyarugenge	R561H + K189T
+RW_SM67	Baseline-Kigali	Nyarugenge	Other K13
+RW_SM68	Baseline-Kigali	Gasabo	Wild Type
+RW_SM71	Baseline-Kigali	Nyarugenge	Other K13
+RW_SM73	Baseline-Kigali	Gasabo	Wild Type
+RW_SM76	Baseline-Kigali	Gasabo	R561H + K189T
+RW_SM77	Baseline-Kigali	Gasabo	Wild Type
+RW_SM78	Baseline-Kigali	Gasabo	R561H + K189T
+RW_SM79	Baseline-Kigali	Nyarugenge	Other K13
+RW_SM80	Baseline-Kigali	Kicukiro	R561H + K189T
+RW_SM81	Baseline-Kigali	Gasabo	K189T only
+RW_SM82	Baseline-Kigali	Nyarugenge	K189T only
+RW_SM84	Baseline-Kigali	Gasabo	R561H + K189T
+RW_SM85	Baseline-Kigali	Gasabo	Wild Type
+RW_SM87	Baseline-Kigali	Kicukiro	K189T only
+RW_SM89	Baseline-Kigali	Nyarugenge	Other K13
+RW_SM9	Baseline-Kigali	Gasabo	R561H + K189T
+RW_SM90	Baseline-Kigali	Nyarugenge	Other K13
+RW_SM91	Baseline-Kigali	Nyarugenge	Other K13
+RW_SM92	Baseline-Kigali	Nyarugenge	Other K13
+RW_SM93	Baseline-Kigali	Nyarugenge	Wild Type
+RW_SM94	Baseline-Kigali	Gasabo	Wild Type
+RW_SM95	Baseline-Kigali	Kicukiro	Wild Type
+RW_SM98	Baseline-Kigali	Gasabo	Wild Type
+RW_SM99	Baseline-Kigali	Kicukiro	Other K13
+RW_SN1	Baseline-Kigali	Nyarugenge	Other K13
+RW_SN10	Baseline-Kigali	Kicukiro	R561H + K189T
+RW_SN100	Baseline-Kigali	Kicukiro	R561H + K189T
+RW_SN101	Baseline-Kigali	Nyarugenge	Wild Type
+RW_SN104	Baseline-Kigali	Nyarugenge	Other K13
+RW_SN106	Baseline-Kigali	Kicukiro	Wild Type
+RW_SN109	Baseline-Kigali	Gasabo	R561H only
+RW_SN11	Baseline-Kigali	Gasabo	Wild Type
+RW_SN110	Baseline-Kigali	Nyarugenge	R561H + K189T
+RW_SN112	Baseline-Kigali	Gasabo	Other K13
+RW_SN115	Baseline-Kigali	Kicukiro	R561H + K189T
+RW_SN119	Baseline-Kigali	Gasabo	Wild Type
+RW_SN121	Baseline-Kigali	Nyarugenge	Wild Type
+RW_SN13	Baseline-Kigali	Nyarugenge	Wild Type
+RW_SN14	Baseline-Kigali	Gasabo	Wild Type
+RW_SN15	Baseline-Kigali	Nyarugenge	Wild Type
+RW_SN16	Baseline-Kigali	Nyarugenge	R561H + K189T
+RW_SN18	Baseline-Kigali	Gasabo	R561H + K189T
+RW_SN19	Baseline-Kigali	Gasabo	R561H + K189T
+RW_SN20	Baseline-Kigali	Kicukiro	Wild Type
+RW_SN21	Baseline-Kigali	Kicukiro	Wild Type
+RW_SN22	Baseline-Kigali	Kicukiro	Wild Type
+RW_SN23	Baseline-Kigali	Nyarugenge	Wild Type
+RW_SN24	Baseline-Kigali	Gasabo	R561H + K189T
+RW_SN25	Baseline-Kigali	Gasabo	R561H + K189T
+RW_SN26	Baseline-Kigali	Kicukiro	R561H + K189T
+RW_SN27	Baseline-Kigali	Gasabo	Wild Type
+RW_SN28	Baseline-Kigali	Gasabo	Wild Type
+RW_SN29	Baseline-Kigali	Kicukiro	R561H + K189T
+RW_SN3	Baseline-Kigali	Gasabo	Wild Type
+RW_SN30	Baseline-Kigali	Gasabo	Wild Type
+RW_SN31	Baseline-Kigali	Gasabo	Wild Type
+RW_SN32	Baseline-Kigali	Nyarugenge	Wild Type
+RW_SN36	Baseline-Kigali	Gasabo	Other K13
+RW_SN38	Baseline-Kigali	Nyarugenge	R561H + K189T
+RW_SN41	Baseline-Kigali	Nyarugenge	Other K13
+RW_SN42	Baseline-Kigali	Kicukiro	Wild Type
+RW_SN43	Baseline-Kigali	Gasabo	Other K13
+RW_SN44	Baseline-Kigali	Kicukiro	R561H + K189T
+RW_SN45	Baseline-Kigali	Nyarugenge	Wild Type
+RW_SN47	Baseline-Kigali	Nyarugenge	Wild Type
+RW_SN50	Baseline-Kigali	Gasabo	Other K13
+RW_SN51	Baseline-Kigali	Gasabo	R561H + K189T
+RW_SN53	Baseline-Kigali	Gasabo	Other K13
+RW_SN54	Baseline-Kigali	Kicukiro	R561H + K189T
+RW_SN56	Baseline-Kigali	Gasabo	K189T only
+RW_SN58	Baseline-Kigali	Kicukiro	R561H + K189T
+RW_SN59	Baseline-Kigali	Gasabo	R561H + K189T
+RW_SN6	Baseline-Kigali	Gasabo	Wild Type
+RW_SN60	Baseline-Kigali	Kicukiro	R561H + K189T
+RW_SN61	Baseline-Kigali	Gasabo	Wild Type
+RW_SN62	Baseline-Kigali	Gasabo	R561H + K189T
+RW_SN63	Baseline-Kigali	Gasabo	Wild Type
+RW_SN64	Baseline-Kigali	Gasabo	Wild Type
+RW_SN65	Baseline-Kigali	Nyarugenge	Wild Type
+RW_SN66	Baseline-Kigali	Nyarugenge	Other K13
+RW_SN67	Baseline-Kigali	Nyarugenge	R561H + K189T
+RW_SN68	Baseline-Kigali	Kicukiro	Wild Type
+RW_SN69	Baseline-Kigali	Nyarugenge	K189T only
+RW_SN7	Baseline-Kigali	Gasabo	R561H + K189T
+RW_SN70	Baseline-Kigali	Kicukiro	Other K13
+RW_SN71	Baseline-Kigali	Kicukiro	Wild Type
+RW_SN72	Baseline-Kigali	Gasabo	R561H + K189T
+RW_SN73	Baseline-Kigali	Gasabo	K189T only
+RW_SN74	Baseline-Kigali	Gasabo	Other K13
+RW_SN75	Baseline-Kigali	Gasabo	Other K13
+RW_SN76	Baseline-Kigali	Gasabo	Other K13
+RW_SN77	Baseline-Kigali	Kicukiro	Other K13
+RW_SN78	Baseline-Kigali	Kicukiro	Other K13
+RW_SN79	Baseline-Kigali	Kicukiro	Other K13
+RW_SN8	Baseline-Kigali	Nyarugenge	R561H + K189T
+RW_SN80	Baseline-Kigali	Gasabo	R561H + K189T
+RW_SN82	Baseline-Kigali	Kicukiro	Wild Type
+RW_SN83	Baseline-Kigali	Nyarugenge	Wild Type
+RW_SN84	Baseline-Kigali	Kicukiro	R561H + K189T
+RW_SN86	Baseline-Kigali	Nyarugenge	Other K13
+RW_SN87	Baseline-Kigali	Kicukiro	Other K13
+RW_SN88	Baseline-Kigali	Gasabo	R561H + K189T
+RW_SN89	Baseline-Kigali	Gasabo	Other K13
+RW_SN9	Baseline-Kigali	Gasabo	Wild Type
+RW_SN90	Baseline-Kigali	Kicukiro	Wild Type
+RW_SN92	Baseline-Kigali	Gasabo	R561H + K189T
+RW_SN93	Baseline-Kigali	Gasabo	K189T only
+RW_SN95	Baseline-Kigali	Nyarugenge	Wild Type
+RW_SN96	Baseline-Kigali	Gasabo	R561H + K189T
+RW_SN98	Baseline-Kigali	Kicukiro	Wild Type
+RW_SN99	Baseline-Kigali	Nyarugenge	Other K13
+RW_ST1	Baseline-Kigali	Gasabo	K189T only
+RW_ST10	Baseline-Kigali	Kicukiro	Wild Type
+RW_ST11	Baseline-Kigali	Nyarugenge	R561H + K189T
+RW_ST12	Baseline-Kigali	Nyarugenge	Wild Type
+RW_ST13	Baseline-Kigali	Kicukiro	Wild Type
+RW_ST14	Baseline-Kigali	Gasabo	K189T only
+RW_ST15	Baseline-Kigali	Gasabo	Wild Type
+RW_ST16	Baseline-Kigali	Gasabo	Wild Type
+RW_ST17	Baseline-Kigali	Gasabo	R561H + K189T
+RW_ST19	Baseline-Kigali	Gasabo	Wild Type
+RW_ST2	Baseline-Kigali	Nyarugenge	R561H only
+RW_ST20	Baseline-Kigali	Kicukiro	Wild Type
+RW_ST21	Baseline-Kigali	Kicukiro	K189T only
+RW_ST23	Baseline-Kigali	Nyarugenge	Wild Type
+RW_ST24	Baseline-Kigali	Gasabo	R561H + K189T
+RW_ST25	Baseline-Kigali	Gasabo	Wild Type
+RW_ST27	Baseline-Kigali	Gasabo	K189T only
+RW_ST28	Baseline-Kigali	Gasabo	Other K13
+RW_ST29	Baseline-Kigali	Gasabo	Wild Type
+RW_ST30	Baseline-Kigali	Gasabo	Wild Type
+RW_ST32	Baseline-Kigali	Kicukiro	K189T only
+RW_ST33	Baseline-Kigali	Gasabo	K189T only
+RW_ST4	Baseline-Kigali	Gasabo	R561H + K189T
+RW_ST9	Baseline-Kigali	Gasabo	Wild Type
+RW_WB1	Baseline-Kigali	Nyarugenge	Wild Type
+RW_WB10	Baseline-Kigali	Nyarugenge	Wild Type
+RW_WB12	Baseline-Kigali	Kicukiro	Wild Type
+RW_WB13	Baseline-Kigali	Kicukiro	Wild Type
+RW_WB15	Baseline-Kigali	Nyarugenge	Other K13
+RW_WB2	Baseline-Kigali	Nyarugenge	Wild Type
+RW_WB3	Baseline-Kigali	Nyarugenge	Wild Type
+RW_WB5	Baseline-Kigali	Gasabo	R561H + K189T
+RW_WB6	Baseline-Kigali	Kicukiro	R561H + K189T
+RW_WB7	Baseline-Kigali	Gasabo	Wild Type
+RW_WB8	Resurgence	Kicukiro	Wild Type
+RW_WB9	Resurgence	Gasabo	Wild Type
+sample1	Resurgence	Gasabo	Other K13
+sample11	Resurgence	Gasabo	Other K13
+sample12	Resurgence	Gasabo	Wild Type
+sample13	Resurgence	Gasabo	Wild Type
+sample15	Resurgence	Gasabo	Wild Type
+sample17	Resurgence	Gasabo	R561H + K189T
+sample18	Resurgence	Gasabo	Other K13
+sample2	Resurgence	Gasabo	R561H + K189T
+sample20	Resurgence	Gasabo	R561H + K189T
+sample21	Resurgence	Gasabo	Wild Type
+sample23	Resurgence	Gasabo	Wild Type
+sample24	Resurgence	Gasabo	Wild Type
+sample27	Resurgence	Gasabo	Wild Type
+sample28	Resurgence	Gasabo	R561H + K189T
+sample3	Resurgence	Gasabo	Other K13
+sample30	Resurgence	Gasabo	Wild Type
+sample31	Resurgence	Gasabo	R561H + K189T
+sample32	Resurgence	Gasabo	Other K13
+sample34	Resurgence	Gasabo	Other K13
+sample35	Resurgence	Gasabo	K189T only
+sample36	Resurgence	Gasabo	Wild Type
+sample39	Resurgence	Gasabo	Wild Type
+sample4	Resurgence	Gasabo	R561H + K189T
+sample40	Resurgence	Gasabo	Wild Type
+sample41	Resurgence	Gasabo	Wild Type
+sample46	Resurgence	Gasabo	Wild Type
+sample47	Resurgence	Gasabo	K189T only
+sample48	Resurgence	Gasabo	Wild Type
+sample49	Resurgence	Gasabo	Other K13
+sample50	Resurgence	Gasabo	Other K13
+sample51	Resurgence	Gasabo	Other K13
+sample52	Resurgence	Gasabo	Wild Type
+sample53	Resurgence	Gasabo	Wild Type
+sample54	Resurgence	Gasabo	Wild Type
+sample55	Resurgence	Gasabo	Other K13
+sample7	Resurgence	Gasabo	Wild Type
+sample9	Resurgence	Gasabo	R561H + K189T

@@ -1,0 +1,56 @@
+cff-version: 1.2.0
+title: >-
+  Analysis code for "Adaptive restructuring of Plasmodium falciparum
+  populations associated with malaria resurgence in Rwanda"
+message: >-
+  If you use this code, please cite the Zenodo archive below and the
+  accompanying article.
+type: software
+authors:
+  - family-names: Diallo
+    given-names: Mariama Telly
+    orcid: https://orcid.org/0009-0009-9543-252X
+  - family-names: Kalimba
+    given-names: Edgar Mutebwa
+  - family-names: Mbonimpa
+    given-names: Jean-Bosco
+  - family-names: Ishimwe
+    given-names: Aimee Nadine Nsengiyumva
+  - family-names: Biryuwenze
+    given-names: Aloysie Basoma
+  - family-names: Uwase
+    given-names: Emelyne
+  - family-names: Noukimi
+    given-names: Sandra Fankem
+  - family-names: Yade
+    given-names: Mamadou Samb
+  - family-names: Diallo
+    given-names: Thierno Safaiou
+  - family-names: Habimana
+    given-names: Arsene Musana
+  - family-names: Selimaj Kontoni
+    given-names: Valbona
+  - family-names: Mugisha
+    given-names: Louis de Mont Fort Ntwali
+  - family-names: Efeti
+    given-names: Mary Teke
+  - family-names: Ghogomu
+    given-names: Stephen Mbigha
+  - family-names: Limgba
+    given-names: Augustin
+  - family-names: Abebe
+    given-names: Zerihun
+  - family-names: Souopgui
+    given-names: Jacob
+repository-code: https://github.com/mtd1997/Adaptive_Pf_resurgence_Rwanda
+license: MIT
+version: 1.0.0
+date-released: 2026-10-22
+doi: 10.5281/zenodo.XXXXXXXX
+keywords:
+  - Plasmodium falciparum
+  - malaria
+  - artemisinin resistance
+  - kelch13
+  - amplicon sequencing
+  - Rwanda

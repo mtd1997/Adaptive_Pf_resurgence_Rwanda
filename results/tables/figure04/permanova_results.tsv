@@ -1,0 +1,5 @@
+published_panel	analysis	subset	tested_variable	shown_on_panel	N	Df	SumOfSqs	R2	F	p_value	permutations
+4a / S4a	kigali_period	kigali	period	TRUE	805	1	0.28201940158145844	0.05350716681659515	45.3952248208944	0.001	999
+4b / S4b	resurgence_region	resurgence	region	TRUE	787	1	0.1271882685093251	0.03657648616276158	29.802616632645933	0.001	999
+4c / S4c	resurgence_k13	resurgence	region	TRUE	787	1	0.1271882685093251	0.03657648616276158	29.802616632645933	0.001	999
+4c / S4c	resurgence_k13	resurgence	k13_status	FALSE	787	4	0.4752102154020166	0.13665977272723423	30.946068217591915	0.001	999

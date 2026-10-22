@@ -1,0 +1,70 @@
+========================================================================
+FIGURE 2B — PER-GENE MUTATION PREVALENCE BY YEAR
+========================================================================
+Input:     /Users/matdiallo/Adaptive_Pf_resurgence_Rwanda/data/processed/Manuscript_data_29-07-2026.tsv
+Genes:     DHFR, DHPS, K13, MDR1, CRT
+Generated: 2026-10-22 13:34:14 CEST
+
+Rows used: 7919
+
+Period check: the PERIOD column agrees with the year for
+every sample.
+
+------------------------------------------------------------------------
+SAMPLES PER YEAR
+------------------------------------------------------------------------
+    year  period                    n    published
+    2021  Baseline-Kigali          30           30
+    2022  Baseline-Kigali         196          196
+    2023  Baseline-Kigali          31           31
+    2024  Resurgence              234          234
+    2025  Resurgence              685          685
+          total                  1176         1176
+
+  Every per-year total matches the published panel.
+
+------------------------------------------------------------------------
+PREVALENCE (mutated samples / samples sequenced that year)
+------------------------------------------------------------------------
+
+  DHFR
+    2021      30/30      100.0%
+    2022     196/196     100.0%
+    2023      31/31      100.0%
+    2024     234/234     100.0%
+    2025     685/685     100.0%
+
+  DHPS
+    2021      30/30      100.0%
+    2022     195/196      99.5%
+    2023      30/31       96.8%
+    2024     230/234      98.3%
+    2025     685/685     100.0%
+
+  K13
+    2021      15/30       50.0%
+    2022     120/196      61.2%
+    2023      15/31       48.4%
+    2024     162/234      69.2%
+    2025     440/685      64.2%
+
+  MDR1
+    2021      21/30       70.0%
+    2022     149/196      76.0%
+    2023      26/31       83.9%
+    2024     157/234      67.1%
+    2025     400/685      58.4%
+
+  CRT
+    2021       8/30       26.7%
+    2022      56/196      28.6%
+    2023       5/31       16.1%
+    2024      20/234       8.5%
+    2025      47/685       6.9%
+
+========================================================================
+WRITTEN
+========================================================================
+  figures/figure02/figure02b_gene_mutation_trends.svg / .png
+  tables/figure02/figure02b_gene_prevalence_by_year.tsv
+  tables/figure02/figure02b_samples_per_year.tsv

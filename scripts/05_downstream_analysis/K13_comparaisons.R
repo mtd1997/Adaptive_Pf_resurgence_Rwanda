@@ -19,8 +19,15 @@ for (pkg in packages) {
   }
 }
 
-input_file <- "/Users/diallo/Desktop/Rwanda_sequenced_data_24-12-2025.xlsx"
-output_dir <- "/Users/diallo/Desktop"
+input_file <- Sys.getenv(
+  "PF_SEQUENCED_DATA",
+  unset = file.path("data", "metadata", "rwanda_sequenced_data.xlsx")
+)
+output_dir <- Sys.getenv(
+  "PF_K13_OUTPUT_DIR",
+  unset = file.path("results", "tables", "k13_comparisons")
+)
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 
 df <- read_excel(input_file)
 
@@ -28,7 +35,7 @@ df <- read_excel(input_file)
 # 2. Small helper functions
 
 
-# Convert a p-value into the usual star notation used on the plots.
+# Convert a p-value into the usual star notation used on the plots
 p_to_stars <- function(p) {
   case_when(
     p < 0.0001 ~ "****",
@@ -39,7 +46,7 @@ p_to_stars <- function(p) {
   )
 }
 
-# Basic check to make sure the counts match the expected total.
+# Basic check to make sure the counts match the expected total
 check_counts <- function(counts_df, total_n, label) {
   cat("\n============================\n")
   cat("CHECK:", label, "\n")
@@ -63,7 +70,7 @@ check_counts <- function(counts_df, total_n, label) {
   cat("R561H + K189T =", mut, "\n")
 }
 
-# This classification keeps the main K13 groups used in the figures.
+# This classification keeps the main K13 groups used in the figures
 classify_k13 <- function(muts) {
   muts <- unique(muts)
   
@@ -90,7 +97,7 @@ classify_k13 <- function(muts) {
   return("Other (non-WHO)")
 }
 
-# Build one mutation category per sample.
+# Build one mutation category per sample
 make_k13_categories <- function(data) {
   data %>%
     filter(GENE_NAME == "K13") %>%
@@ -107,7 +114,7 @@ make_k13_categories <- function(data) {
     )
 }
 
-# Add samples with no K13 mutation as wild type.
+# Add samples with no K13 mutation as wild type
 add_wild_type <- function(k13_cat_df, total_samples) {
   counts <- k13_cat_df %>%
     count(category, name = "n")
@@ -120,7 +127,7 @@ add_wild_type <- function(k13_cat_df, total_samples) {
   )
 }
 
-# Safe extraction for one category count.
+# Safe extraction for one category count
 get_count <- function(counts_df, category_name) {
   value <- counts_df %>%
     filter(category == category_name) %>%
@@ -129,7 +136,7 @@ get_count <- function(counts_df, category_name) {
   if (length(value) == 0) 0 else value
 }
 
-# Run the exact binomial test between wild type and double mutant.
+# Run the exact binomial test between wild type and double mutant
 run_wt_double_binom <- function(counts_df) {
   wild_n <- get_count(counts_df, "Wild type")
   double_n <- get_count(counts_df, "R561H + K189T")
@@ -151,7 +158,6 @@ run_wt_double_binom <- function(counts_df) {
   )
 }
 
-# Print the exact CI for wild type and the complementary CI for the double mutant.
 print_binom_ci <- function(test_obj, wild_count, mutant_count, label) {
   total_tested <- wild_count + mutant_count
   wild_prop <- wild_count / total_tested
@@ -182,7 +188,7 @@ print_binom_ci <- function(test_obj, wild_count, mutant_count, label) {
   )
 }
 
-# Common order and colors for the K13 plots.
+# Common order and colors for the K13 plots
 category_order <- c(
   "Wild type",
   "H384R",
@@ -299,12 +305,6 @@ mut_sum_percent2_plot <- ggplot(
 
 print(mut_sum_percent2_plot)
 
-
-# 4. KFH comparison: 2021-2023 vs 2024-2025 Gasabo
-
-
-# First comparison kept as in the original analysis:
-# 2021-2023 all available samples vs 2024-2025 Gasabo/KFH samples.
 
 df_2123 <- df %>%
   filter(YEAR %in% c(2021, 2022, 2023))
@@ -965,8 +965,7 @@ ggsave(
 
 # 9. Confidence intervals for the binomial tests
 
-# The binomial test gives the 95% CI for the wild-type proportion.
-# For the double mutant, the CI is obtained as the complementary interval.
+# The binomial test gives the 95% CI for the wild-type proportion
 
 print_binom_ci(
   test_obj = k13_prop_test,
@@ -996,11 +995,6 @@ print_binom_ci(
   label = "Hotspots 2024-2025"
 )
 
-
-# 10. Logistic regression: Wild type vs R561H + K189T
-
-# Here the model is used as another way to compare the double-mutant
-# proportion with the wild-type proportion in each group.
 
 logistic_input <- tibble(
   comparison = c(

@@ -137,7 +137,7 @@ CATEGORY_COLOURS <- c(
   "Other (non-WHO)" = "#5B4CC4"
 )
 
-KFH_NAME <- "King Faisal Hospital"
+KFH_NAME <- "KFH"
 
 KIGALI_DISTRICTS <- c("Gasabo", "Kicukiro", "Nyarugenge")
 
@@ -146,15 +146,11 @@ HOTSPOT_DISTRICTS <- c(
   "Nyagatare", "Musanze", "Rutsiro"
 )
 
-# The two categories panels C and D compare.
+# The two categories panels C and D compare
 COMPARED_CATEGORIES <- c("Wild type", "R561H + K189T")
 
 PAIR_COLOURS <- c("Wild type" = "#2ECC71", "R561H + K189T" = "#FF7F0E")
 
-
-# The published panel, read off Supplementary Figure S3. Nothing is drawn
-# from these; they exist so the script can state whether it has reproduced
-# the figure or drifted from it.
 
 PUBLISHED_GROUPS <- tibble::tribble(
   ~group,                ~published_n, ~published_wild_percent, ~published_double_percent, ~published_binomial_p,
@@ -172,8 +168,6 @@ PUBLISHED_FISHER <- tibble::tribble(
   "Location: Kigali vs Hotspots",    "R561H + K189T",    1.71e-20
 )
 
-# A computed p-value counts as matching when it agrees with the published
-# one to the precision the figure prints it at -- three significant figures.
 matches_published <- function(computed, published) {
   !is.na(computed) & !is.na(published) &
     abs(computed - published) <= abs(published) * 0.02
@@ -220,7 +214,7 @@ if (grepl("\\.xlsx?$", INPUT_FILE, ignore.case = TRUE)) {
 }
 
 required_columns <- c(
-  "SAMPLE", "YEAR", "GENE_NAME", "HGVS_PROTEIN", "District", "Health_Center"
+  "SAMPLE", "YEAR", "GENE_NAME", "HGVS_PROTEIN", "District", "Site_Group"
 )
 
 missing_columns <- setdiff(required_columns, names(raw))
@@ -234,7 +228,7 @@ tidy <- raw %>%
   dplyr::mutate(
     dplyr::across(
       dplyr::all_of(c("SAMPLE", "GENE_NAME", "HGVS_PROTEIN",
-                      "District", "Health_Center")),
+                      "District", "Site_Group")),
       ~ stringr::str_trim(.x)
     ),
     year = suppressWarnings(as.integer(stringr::str_trim(YEAR)))
@@ -244,11 +238,6 @@ tidy <- raw %>%
 add_to_report(sprintf("Rows read:        %d", nrow(raw)))
 add_to_report(sprintf("Distinct samples: %d", dplyr::n_distinct(tidy$SAMPLE)))
 
-
-# A K13 row whose protein change is blank would otherwise be classified as
-# "Other (non-WHO)", because classify_k13 has no branch that returns wild
-# type. Such rows are dropped here and reported, so a blank cell cannot
-# quietly inflate the Other category.
 
 blank_k13 <- tidy %>%
   dplyr::filter(
@@ -267,11 +256,11 @@ if (nrow(blank_k13) > 0) {
 }
 
 
-# One row per sample for the grouping columns.
+# One row per sample for the grouping columns
 
 sample_metadata <- tidy %>%
   dplyr::distinct(SAMPLE, .keep_all = TRUE) %>%
-  dplyr::select(SAMPLE, year, District, Health_Center)
+  dplyr::select(SAMPLE, year, District, Site_Group)
 
 
 # ---- classify ----------------------------------------------------------
@@ -344,7 +333,7 @@ group_2123 <- classified %>%
   dplyr::mutate(group = "KFH 2021-2023")
 
 group_2425_kfh <- classified %>%
-  dplyr::filter(year %in% 2024:2025, Health_Center == KFH_NAME) %>%
+  dplyr::filter(year %in% 2024:2025, Site_Group == KFH_NAME) %>%
   dplyr::mutate(group = "KFH 2024-2025")
 
 group_kigali <- classified %>%
@@ -360,9 +349,7 @@ GROUP_ORDER <- c(
   "Kigali 2024-2025", "Hotspots 2024-2025"
 )
 
-# The facet headings as the published panel writes them. They do not follow
-# one pattern -- panel A puts the years first and panel B leaves no space
-# before the bracket -- so they are spelled out rather than built by paste.
+# The facet headings as the published panel writes them
 PANEL_HEADINGS <- c(
   "KFH 2021-2023"      = "2021-2023 KFH (N = %d)",
   "KFH 2024-2025"      = "2024-2025 KFH (N = %d)",
@@ -371,10 +358,10 @@ PANEL_HEADINGS <- c(
 )
 
 
-# Checks that the group definitions actually mean what their names say.
+# Checks that the group definitions actually mean what their names say
 
 non_kfh_baseline <- group_2123 %>%
-  dplyr::filter(Health_Center != KFH_NAME)
+  dplyr::filter(Site_Group != KFH_NAME)
 
 add_to_report("")
 add_to_report(strrep("-", 72))
@@ -392,11 +379,11 @@ if (nrow(non_kfh_baseline) == 0) {
     nrow(non_kfh_baseline), nrow(group_2123), KFH_NAME
   ))
   centre_counts <- non_kfh_baseline %>%
-    dplyr::count(Health_Center, name = "n") %>%
+    dplyr::count(Site_Group, name = "n") %>%
     dplyr::arrange(dplyr::desc(n))
   for (index in seq_len(nrow(centre_counts))) {
     add_to_report(sprintf("    %-32s %d",
-                          centre_counts$Health_Center[[index]],
+                          centre_counts$Site_Group[[index]],
                           centre_counts$n[[index]]))
   }
   add_to_report("  The panel label says KFH. Either the label or the filter")
@@ -445,9 +432,6 @@ counts <- all_groups %>%
   dplyr::mutate(prevalence = 100 * n / total_n)
 
 
-# The original script derived wild type by subtraction -- total minus the
-# samples that had a K13 record. Here wild type is counted directly, so the
-# two routes should agree exactly. Check that they do.
 subtraction_check <- all_groups %>%
   dplyr::group_by(group) %>%
   dplyr::summarise(
@@ -479,7 +463,7 @@ for (this_group in GROUP_ORDER) {
   ))
 }
 
-# Against the published panel.
+# Against the published panel
 
 published_group_check <- counts %>%
   dplyr::filter(category %in% COMPARED_CATEGORIES) %>%
@@ -538,7 +522,7 @@ if (!all(subtraction_check$agrees)) {
   add_to_report(strrep("!", 72))
 }
 
-# Every category must sum back to the group size.
+# Every category must sum back to the group size
 sum_check <- counts %>%
   dplyr::group_by(group) %>%
   dplyr::summarise(summed = sum(n), total_n = dplyr::first(total_n),
@@ -550,9 +534,6 @@ if (nrow(sum_check) > 0) {
        paste(sum_check$group, collapse = ", "), call. = FALSE)
 }
 
-
-# How the district-based Kigali group differs from Figure 3b's REGION-based
-# one, stated as a number rather than left for a reader to notice.
 
 if ("REGION" %in% names(raw)) {
 
@@ -690,7 +671,7 @@ for (index in seq_len(nrow(binomial_rows))) {
 }
 
 
-# Fisher's exact tests between groups. These use the full group size.
+# Fisher's exact tests between groups
 
 run_fisher <- function(category_name, group_one, group_two, comparison) {
 
@@ -774,7 +755,7 @@ for (index in seq_len(nrow(fisher_rows))) {
 }
 
 
-# The single verdict.
+# The single verdict
 
 everything_matches <- isTRUE(sizes_and_prevalences_match) &&
   all(binomial_rows$matches_paper, na.rm = TRUE) &&
@@ -801,8 +782,7 @@ if (everything_matches) {
 add_to_report(strrep("=", 72))
 
 
-# Intercept-only binomial model per group. Same null as the binomial test
-# above; reported for the odds ratio and its interval.
+# Intercept-only binomial model per group
 
 logistic_rows <- purrr::map_dfr(GROUP_ORDER, function(this_group) {
 
@@ -842,8 +822,6 @@ logistic_rows <- purrr::map_dfr(GROUP_ORDER, function(this_group) {
 
 # ---- the panels --------------------------------------------------------
 
-# Facets use free scales, so a bar's x position depends on which
-# categories that group has. Brackets are placed from those, not a fixed index.
 bracket_data <- function(plot_data) {
 
   plot_data %>%
@@ -1133,7 +1111,7 @@ for (extension in c("svg", "pdf", "png")) {
   )
 }
 
-# The individual panels too, since the original saved them separately.
+# The individual panels too, since the original saved them separately
 for (entry in list(
   list(name = "figureS3_panelA", plot = panel_a, width = 15, height = 7),
   list(name = "figureS3_panelB", plot = panel_b, width = 15, height = 7),
@@ -1163,7 +1141,7 @@ readr::write_tsv(
   all_groups %>%
     dplyr::mutate(group = as.character(group),
                   category = as.character(category)) %>%
-    dplyr::select(SAMPLE, group, year, District, Health_Center,
+    dplyr::select(SAMPLE, group, year, District, Site_Group,
                   k13_mutations, category) %>%
     dplyr::arrange(group, SAMPLE),
   file.path(TABLE_DIR, "figureS3_sample_level_categories.tsv")

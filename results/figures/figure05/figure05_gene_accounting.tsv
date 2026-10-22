@@ -1,0 +1,8 @@
+gene	N_variants	N_fst_outliers	N_delta_af_outliers	N_resistance_variants
+MSP2	10	0	0	0
+CSP	89	3	3	0
+DHFR	4	0	0	3
+MDR1	1	0	0	0
+DHPS	5	1	1	2
+K13	58	5	5	4
+CRT	0	0	0	0

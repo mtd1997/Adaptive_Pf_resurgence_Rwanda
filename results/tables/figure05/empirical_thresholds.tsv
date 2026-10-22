@@ -1,0 +1,3 @@
+Statistic	Quantile	Threshold	Definition
+Per-SNP F_ST	0.95	0.3755698889717884	Variants with F_ST >= 0.375570 are in the top 5% of the observed F_ST distribution.
+Absolute allele-frequency change	0.95	0.2609437751004014	Variants with |delta AF| >= 0.260944 are in the top 5% of the observed |delta AF| distribution.
