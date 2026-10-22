@@ -2,7 +2,7 @@
 FIGURE 2C — COMPOSITE RESISTANCE BACKGROUNDS
 ========================================================================
 Input:     /Users/matdiallo/Adaptive_Pf_resurgence_Rwanda/data/processed/Manuscript_data_29-07-2026.tsv
-Generated: 2026-10-22 13:34:16 CEST
+Generated: 2026-10-22 19:39:07 CEST
 
 Rows read: 7919
 Distinct samples in the file: 1176

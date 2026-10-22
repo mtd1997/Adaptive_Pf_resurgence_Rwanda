@@ -3,8 +3,8 @@ FIGURE 4D — KIGALI NEIGHBOUR-JOINING TREE
 ========================================================================
 VCF:       /Volumes/MTD_drive/manuscript_data_09-11-2025/final_analysis_19-12-2025/popgen_R_analysis/all_1179_withDhpsDhfr.vcf.gz
 Metadata:  /Users/matdiallo/Adaptive_Pf_resurgence_Rwanda/data/metadata/samples_metadata_figure04.tsv
-Reference: /Volumes/MTD_drive/manuscript_data_09-11-2025/final_analysis_19-12-2025/popgen_R_analysis/all_1179_withDhpsDhfr.vcf_Kigali_tree.nwk
-Generated: 2026-10-22 13:35:01 CEST
+Reference: data/processed/kigali_reference_tree.nwk
+Generated: 2026-10-22 19:39:52 CEST
 
 Metadata rows: 1178
 VCF samples after dropping the reference: 1014

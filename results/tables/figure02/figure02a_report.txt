@@ -2,7 +2,7 @@
 FIGURE 2A — COVERAGE
 ========================================================================
 Coverage file: /Users/matdiallo/Adaptive_Pf_resurgence_Rwanda/data/processed/coverage_all_samples.tsv
-Generated:     2026-10-22 13:34:11 CEST
+Generated:     2026-10-22 19:39:02 CEST
 
 Rows read: 8274
   dropped 0 placeholder row(s) with gene = "0" or no coverage value

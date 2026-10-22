@@ -2,7 +2,7 @@
 SUPPLEMENTARY FIGURE S3 — K13 CATEGORY COMPARISONS
 ========================================================================
 Input:     /Users/matdiallo/Adaptive_Pf_resurgence_Rwanda/data/processed/Manuscript_data_29-07-2026.tsv
-Generated: 2026-10-22 13:35:10 CEST
+Generated: 2026-10-22 19:40:02 CEST
 
 Rows read:        7919
 Distinct samples: 1176

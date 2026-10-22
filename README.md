@@ -12,7 +12,7 @@ If you use this code, please cite both the article and the archived code:
 
 > Diallo, M. T. *et al.* Adaptive restructuring of *Plasmodium falciparum* populations associated with malaria resurgence in Rwanda. *Nat. Commun.* (2026).
 
-> Diallo, M. T. Analysis code for "Adaptive restructuring of *Plasmodium falciparum* populations associated with malaria resurgence in Rwanda". *Zenodo* https://doi.org/10.5281/zenodo.XXXXXXXX (2026).
+> Diallo, M. T. *et al.* Analysis code for "Adaptive restructuring of *Plasmodium falciparum* populations associated with malaria resurgence in Rwanda". *Zenodo* https://doi.org/10.5281/zenodo.XXXXXXXX (2026).
 
 ## Data availability
 
@@ -48,17 +48,17 @@ results/
 
 ## Requirements
 
-R and Python, and the command-line tools below. The R scripts use `tidyverse`,
-`sf`, `ape`, `adegenet`, `vcfR`, `vegan`, `patchwork` and `ggrepel`;
-`scripts/install_r_packages.R` installs them.
+R and Python, and the command-line tools below. Install the R packages listed
+further down with `install.packages()`; the versions given are those used to
+produce the published figures.
 
 | Software | Version |
 | -------- | ------- |
-| R        | FILL IN |
-| Python   | FILL IN |
-| MinKNOW  | FILL IN |
+| R        | 4.5.1 |
+| Python   | 3.10.10 |
+| MinKNOW  | successive releases, 2021-2025 |
 | NanoPlot | 1.42.0 |
-| pycoQC   | FILL IN |
+| pycoQC   | 2.5.2 |
 | minimap2 | 2.28 |
 | samtools | 1.20 |
 | bedtools | 2.31 |
@@ -67,6 +67,20 @@ R and Python, and the command-line tools below. The R scripts use `tidyverse`,
 | bcftools | 1.20 |
 | vcftools | 0.1.16 |
 | SnpEff   | 5.2 |
+
+R package versions used to produce the published figures:
+
+| Package | Version | Package | Version |
+| --- | --- | --- | --- |
+| tidyverse | 2.0.0 | sf | 1.0.23 |
+| dplyr | 1.2.0 | ape | 5.8.1 |
+| tidyr | 1.3.2 | adegenet | 2.1.11 |
+| readr | 2.1.6 | vcfR | 1.15.0 |
+| tibble | 3.3.0 | vegan | 2.7.3 |
+| ggplot2 | 4.0.1 | readxl | 1.4.5 |
+| ggrepel | 0.9.6 | openxlsx | 4.2.8.1 |
+| ggbeeswarm | 0.7.3 | patchwork | 1.3.2 |
+| scales | 1.4.0 | | |
 
 Reference genome: *P. falciparum* 3D7, PlasmoDB release 68.
 
@@ -87,20 +101,29 @@ cp config.local.R.example config.local.R
 | `MALARIA_CASES_FILE` | monthly malaria case counts | Figure S1b |
 | `GADM_DIR` | unzipped GADM shapefiles | Figures 1, 3d, S1a |
 
-`config.local.R` is not tracked, so your paths stay on your machine. Scripts
-that do not need a missing path still run.
+`config.local.R` is not tracked by git, so the paths set in it stay on the
+machine where they were written. A script whose own inputs are present still
+runs even when other paths are unset.
 
 ## Regenerating the figures
 
 ```bash
 bash run_all_figures.sh
-bash run_all_figures.sh /path/to/Kigali_tree.nwk    # also checks Figure 4d
 ```
 
 Each script writes its figure to `results/figures/`, its Source Data table to
 `results/tables/`, and its full output to `results/logs/`. The run ends with a
 table showing, for each script, whether it completed and what its self-check
 concluded.
+
+Figure 4d is also checked against the tree used for the published panel, which
+is included at `data/processed/kigali_reference_tree.nwk`. The script rebuilds
+the tree from the genotypes and compares every patristic distance against the
+saved one. To check against a different tree, pass it as an argument:
+
+```bash
+bash run_all_figures.sh /path/to/another_tree.nwk
+```
 
 Scripts can also be run one at a time:
 

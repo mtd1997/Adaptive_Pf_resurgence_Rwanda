@@ -14,14 +14,12 @@ set -uo pipefail
 
 cd "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-TREE_REFERENCE="${1:-${FIGURE04D_REFERENCE_TREE:-}}"
+TREE_REFERENCE="${1:-${FIGURE04D_REFERENCE_TREE:-data/processed/kigali_reference_tree.nwk}}"
 LOG_DIR="results/logs"
 mkdir -p "${LOG_DIR}"
 
-# Order matters where one script hands a file to another:
-#   figure01 and figureS1b write panels that figureS1_assemble reads
-#   figure04_ibs_distance writes the matrix figure04_ibs_pcoa reads
-#   figure05_statistics writes the tables figure05_panels reads
+# Order matters: figureS1_assemble, figure04_ibs_pcoa and
+# figure05_selection_scan_panels each read a file an earlier script writes.
 SCRIPTS=(
   figure01_sampling_maps
   figureS1b_malaria_cases
@@ -70,8 +68,7 @@ for name in "${SCRIPTS[@]}"; do
     failures=$((failures + 1))
   fi
 
-  # Pull the strongest self-check line from the log. Patterns are tried in
-  # order of strength, so a weak "PASS" never masks a definitive verdict.
+  # Strongest pattern first, so a weak "PASS" never masks a real failure.
   verdict=""
   for pattern in \
     'DOES NOT MATCH THE PUBLISHED PANEL' \

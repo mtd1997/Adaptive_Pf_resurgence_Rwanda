@@ -2,7 +2,7 @@
 IBS DISTANCE MATRIX
 ========================================================================
 VCF:       /Volumes/MTD_drive/manuscript_data_09-11-2025/final_analysis_19-12-2025/popgen_R_analysis/all_1179_withDhpsDhfr.vcf.gz
-Generated: 2026-10-22 13:39:59 CEST
+Generated: 2026-10-22 19:39:16 CEST
 
 VCF: 226 variants, 1015 samples
 Dropped the reference control: 3D7

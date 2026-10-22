@@ -2,7 +2,7 @@
 FIGURE 3A — K13 MUTATION SPECTRUM
 ========================================================================
 Input:     /Users/matdiallo/Adaptive_Pf_resurgence_Rwanda/data/processed/Manuscript_data_29-07-2026.tsv
-Generated: 2026-10-22 13:34:17 CEST
+Generated: 2026-10-22 19:39:09 CEST
 
 Samples in the file:            1176
 Samples with a K13 mutation:    752

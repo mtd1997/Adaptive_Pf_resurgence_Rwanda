@@ -2,7 +2,7 @@
 FIGURE 3B — K13 CATEGORIES ACROSS FOUR GROUPS
 ========================================================================
 Input:     /Users/matdiallo/Adaptive_Pf_resurgence_Rwanda/data/processed/Manuscript_data_29-07-2026.tsv
-Generated: 2026-10-22 13:34:19 CEST
+Generated: 2026-10-22 19:39:10 CEST
 
 Rows read: 7919
 Distinct samples: 1176

@@ -3,7 +3,7 @@ FIGURE 2B — PER-GENE MUTATION PREVALENCE BY YEAR
 ========================================================================
 Input:     /Users/matdiallo/Adaptive_Pf_resurgence_Rwanda/data/processed/Manuscript_data_29-07-2026.tsv
 Genes:     DHFR, DHPS, K13, MDR1, CRT
-Generated: 2026-10-22 13:34:14 CEST
+Generated: 2026-10-22 19:39:05 CEST
 
 Rows used: 7919
 
